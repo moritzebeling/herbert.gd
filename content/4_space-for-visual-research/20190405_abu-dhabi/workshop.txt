@@ -1,0 +1,105 @@
+Title: Abu Dhabi
+
+----
+
+Subtitle: We need not destroy the past.  It is gone.
+
+----
+
+Body: 
+
+For this post we will focus on a process that will help improve planning for the future. behavior change is centered around understanding past behavior, and this process is as simple as that with a catch. if you are planning things for the next year or few months you don’t want to dig deep into the past because it opens things that while although important will detach you from your focus of planning for the immediate future.
+
+(image: 20190116_manifestofpractice_berlin_exhibitiondetail_26-768x512.jpg)
+
+----
+
+Gallery: 
+
+- diabetes-medical-tray.jpg
+
+----
+
+Link: https://moritzebeling.com
+
+----
+
+Tags: sfvr
+
+----
+
+Includedomain: 
+
+----
+
+Date: 2019-04-05
+
+----
+
+Coverimage: 
+
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_24-683x1024.jpg
+
+----
+
+Location-venue: 
+
+----
+
+Location-city: 
+
+----
+
+Location-country: 
+
+----
+
+Workflow-created: 2019-04-05 16:35
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-09 13:25
+
+----
+
+Workflow-updatedby: 
+
+- markus.weisbeck@uni-weimar.de
+
+----
+
+Bodycontent: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Imagegallery: 
+
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_25-683x1024.jpg
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_26-768x512.jpg
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_annemarxinfus-683x1024.jpg
+
+----
+
+Featuredon: grafik-design
+
+----
+
+Venue: Uni Weimar
+
+----
+
+City: Abu Dhabi
+
+----
+
+Country: Emirates

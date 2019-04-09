@@ -1,0 +1,77 @@
+Title: Herbert.gd
+
+----
+
+Hostname: herbert.gd
+
+----
+
+Description: wrt wert
+
+----
+
+Tags: 
+
+----
+
+Logo: 
+
+----
+
+Workflow-created: 2019-04-05 08:15
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-07 08:45
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Subtitle: 
+
+----
+
+Credits: 
+
+----
+
+Imagegallery: 
+
+----
+
+Links: 
+
+----
+
+Relateditems: 
+
+----
+
+Videolinks: 
+
+----
+
+Workflow-purpose: 
+
+----
+
+Workflow-notifications: 
+
+----
+
+Imagesingle: 
+
+----
+
+Text: 

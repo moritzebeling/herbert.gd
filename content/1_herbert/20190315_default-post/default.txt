@@ -1,0 +1,77 @@
+Title: Default post
+
+----
+
+Subtitle: Untertitel
+
+----
+
+Body: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Gallery: 
+
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_15-683x1024.jpg
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_16-768x512.jpg
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_18-683x1024.jpg
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_20-683x1024.jpg
+
+----
+
+Link: https://uni-weimar.de
+
+----
+
+Tags: tag1, tag2
+
+----
+
+Includedomain: 
+
+----
+
+Date: 2019-03-15
+
+----
+
+Coverimage: 
+
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_17-683x1024.jpg
+
+----
+
+Workflow-created: 2019-04-05 12:15
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-05 12:15
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Bodycontent: 
+
+----
+
+Imagegallery: 
+
+----
+
+Featuredon: 

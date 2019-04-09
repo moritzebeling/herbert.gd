@@ -1,0 +1,14 @@
+# list of authors with website
+label: Autoren
+type: structure
+translate: false
+sortable: true
+fields:
+  name:
+    label: Name
+    type: tags
+    max: 1
+    layout: list
+  link:
+    extends: fields/link
+    label: Website

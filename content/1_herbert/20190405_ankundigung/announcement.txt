@@ -1,0 +1,65 @@
+Title: Ankündigung
+
+----
+
+Subtitle: Untertitel
+
+----
+
+Body: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Link: https://moritzebeling.com
+
+----
+
+Newtab: true
+
+----
+
+Tags: announcement, tweet, keyword 1
+
+----
+
+Includedomain: grafik-design, manifest-of-practice, space-for-visual-research
+
+----
+
+Date: 2019-04-05
+
+----
+
+Coverimage: 
+
+----
+
+Workflow-created: 2019-04-05 11:50
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-09 12:40
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+----
+
+Targetblank: false
+
+----
+
+Featuredon: herbert-gd

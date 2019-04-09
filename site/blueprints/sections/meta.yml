@@ -1,0 +1,9 @@
+# fieldgroup for meta information
+type: fields
+fields:
+
+  metaLine: fields/line
+
+  tags: fields/tags
+
+  includeDomain: fields/includeDomain

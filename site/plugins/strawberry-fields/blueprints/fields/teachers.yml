@@ -1,0 +1,6 @@
+# teachers field with autocomplete
+label: Lehrpersonen
+type: tags
+icon: users
+translate: false
+layout: list

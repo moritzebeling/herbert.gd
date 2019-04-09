@@ -1,0 +1,46 @@
+# organize the internal workflow of this page
+
+label: Workflow
+icon: smile
+
+sections:
+  section_workflow:
+    type: fields
+    fields:
+
+      workflow_created:
+        label: Page created on
+        type: date
+        empty: Date on which this page was created
+        time: true
+        translate: false
+        disabled: true
+        default: now
+        width: 1/2
+        step: 1
+
+      workflow_createdBy:
+        type: users
+        width: 1/2
+        label: Created by
+        empty: Select user
+        multiple: false
+        disabled: true
+
+      workflow_updated:
+        label: Last updated on
+        type: date
+        empty: Date on which this page was last updated
+        time: true
+        translate: false
+        disabled: true
+        width: 1/2
+        step: 1
+
+      workflow_updatedBy:
+        type: users
+        width: 1/2
+        label: Last updated by
+        empty: Select user
+        multiple: false
+        disabled: true

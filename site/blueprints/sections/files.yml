@@ -1,0 +1,10 @@
+# list of all files
+headline: Hochgeladene Bilder
+type: files
+empty: Es wurde noch keine Bilder hochgeladen
+layout: list
+image:
+  back: white
+template: image
+sortable: false
+max: 99

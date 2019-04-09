@@ -1,0 +1,16 @@
+# site
+
+title: Site
+
+sections:
+
+  # list all domains
+  section_domains: sections/domains
+
+  # list of latest posts
+  section_posts:
+    extends: sections/posts
+    headline: Neueste Posts aller Domains
+    status: published
+    parent: site.children.template('domain')
+    info: "{{ page.parent.title }} &nbsp; &nbsp; {{ page.date }}"

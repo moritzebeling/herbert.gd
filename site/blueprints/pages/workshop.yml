@@ -1,0 +1,56 @@
+title: Workshop
+
+# sorting by date
+num: '{{ page.date.toDate("Ymd") }}'
+
+status:
+  draft:
+    label: Entwurf
+    text: Diese Seite ist für Andere nicht sichtbar
+  unlisted:
+    label: Versteckt
+    text: Diese Seite wird nicht aufgelisted, ist aber durch Eingabe der direkten URL sichtbar
+  listed:
+    label: Veröffentlicht
+    text: Diese Seite ist für jeden Sichtbar
+
+icon: ⚗️
+
+options:
+  changeSlug:	true
+  changeStatus:	true
+  changeTemplate:	true
+  changeTitle: true
+  delete:	true
+  preview: true
+  read:	true
+  update: true
+
+tabs:
+
+  tab_content:
+    label: Inhalt
+    icon: page
+
+    columns:
+      - width: 2/3
+        sections:
+
+          section_subtitle: sections/subtitle
+
+          section_content: sections/content
+
+          section_subpages: sections/subpages
+
+          section_meta: sections/meta
+
+      - width: 1/3
+        sections:
+
+          section_info: sections/info
+
+          section_location: sections/location
+
+          section_uploads: sections/files
+
+  tab_workflow: tabs/workflow

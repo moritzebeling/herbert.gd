@@ -1,0 +1,5 @@
+# unformatted subtitle
+label: Untertitel
+type: text
+translate: true
+maxlength: 70

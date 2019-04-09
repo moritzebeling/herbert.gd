@@ -1,0 +1,41 @@
+Title: Manifest of Practice
+
+----
+
+Hostname: manifest-of-practice.com
+
+----
+
+Description: wqer wert qwerwqer
+
+----
+
+Tags: 
+
+----
+
+Logo: 
+
+----
+
+Workflow-created: 2019-04-05 09:05
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-07 08:45
+
+----
+
+Workflow-updatedby: 
+
+- mail@eriksachse.com
+
+----
+
+Subtitle: 

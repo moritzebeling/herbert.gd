@@ -1,0 +1,7 @@
+# fieldgroup for subtitle
+type: fields
+fields:
+
+  subtitle: fields/subtitle
+
+  subtitleLine: fields/line

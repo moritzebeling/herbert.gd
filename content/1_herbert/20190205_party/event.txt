@@ -1,0 +1,117 @@
+Title: Party!!
+
+----
+
+Subtitle: Unter
+
+----
+
+Body: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Gallery: 
+
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_01-683x1024.jpg
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_02-683x1024.jpg
+
+----
+
+Link: http://facebook.com
+
+----
+
+Tags: party, musik
+
+----
+
+Includedomain: herbert
+
+----
+
+Date: 2019-02-05
+
+----
+
+Coverimage: 
+
+- >
+  20190116_manifestofpractice_berlin_exhibitiondetail_07-683x1024.jpg
+
+----
+
+Time: 10:00
+
+----
+
+Dateend: 2027-04-06
+
+----
+
+Location-venue: M1
+
+----
+
+Location-city: Weimar
+
+----
+
+Location-country: Deutschland
+
+----
+
+Workflow-created: 2019-04-05 12:00
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-05 12:00
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Venue: uni weimar
+
+----
+
+City: weimar
+
+----
+
+Country: deutschland
+
+----
+
+Starttime: 19:00
+
+----
+
+Enddate: 
+
+----
+
+Bodycontent: 
+
+----
+
+Imagegallery: 
+
+----
+
+Featuredon: 
+
+----
+
+Endtime: 

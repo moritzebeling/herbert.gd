@@ -1,0 +1,12 @@
+# logo
+
+title: Logo
+
+accept:
+  mime: image/png, image/svg
+
+options:
+  changeName: true
+  delete: true
+  replace: true
+  update: true

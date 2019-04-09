@@ -1,0 +1,71 @@
+Title: Titel Design
+
+----
+
+Subtitle: A Century of June
+
+----
+
+Body: For this post we will focus on a process that will help improve planning for the future. behavior change is centered around understanding past behavior, and this process is as simple as that with a catch. if you are planning things for the next year or few months you don’t want to dig deep into the past because it opens things that while although important will detach you from your focus of planning for the immediate future.
+
+----
+
+Gallery: 
+
+- >
+  0fc05c3a-1e02-46bb-9fd9-4f5757d76ca9-1.jpeg
+
+----
+
+Link: 
+
+----
+
+Tags: 
+
+----
+
+Includedomain: 
+
+----
+
+Date: 2019-04-09
+
+----
+
+Coverimage: 
+
+- >
+  0fc05c3a-1e02-46bb-9fd9-4f5757d76ca9-1.jpeg
+
+----
+
+Semester-term: winter
+
+----
+
+Semester-year: 2018
+
+----
+
+Teachers: Adrian Palko
+
+----
+
+Workflow-created: 2019-04-09 13:40
+
+----
+
+Workflow-createdby: 
+
+- markus.weisbeck@uni-weimar.de
+
+----
+
+Workflow-updated: 2019-04-09 13:45
+
+----
+
+Workflow-updatedby: 
+
+- markus.weisbeck@uni-weimar.de

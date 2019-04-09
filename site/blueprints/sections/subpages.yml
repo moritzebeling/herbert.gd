@@ -1,0 +1,8 @@
+# list of sub pages
+headline: Unterseiten
+type: pages
+status: all
+templates:
+  - subpage
+empty: Es wurden noch keine Unterseiten erstellt
+sortable: true

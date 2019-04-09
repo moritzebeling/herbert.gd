@@ -1,0 +1,7 @@
+# semester year
+type: number
+label: Jahr
+placeholder: 2019
+min: 1993
+max: 2050
+translate: false

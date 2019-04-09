@@ -1,0 +1,7 @@
+# fieldgroup for page authors
+type: fields
+fields:
+
+  authors: fields/authors
+
+  authorLine: fields/line

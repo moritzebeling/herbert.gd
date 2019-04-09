@@ -1,0 +1,89 @@
+Title: Sommersemester
+
+----
+
+Subtitle: 
+
+----
+
+Body: j,sef ae uasgljhgsdjf afgsjhfslj
+
+----
+
+Gallery: 
+
+----
+
+Link: 
+
+----
+
+Tags: 
+
+----
+
+Includedomain: 
+
+----
+
+Date: 2019-04-05
+
+----
+
+Coverimage: 
+
+----
+
+Semester-term: winter
+
+----
+
+Semester-year: 2019
+
+----
+
+Teachers: Markus Weisbeck, Adrian Palko
+
+----
+
+Workflow-created: 2019-04-05 15:35
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-09 12:40
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Bodycontent: 
+
+----
+
+Imagegallery: 
+
+----
+
+Featuredon: 
+
+----
+
+Venue: 
+
+----
+
+City: 
+
+----
+
+Country: 

@@ -1,0 +1,7 @@
+# select other domains
+type: checkboxes
+label: Außerdem auf folgenden Domains veröffentlichen
+options: query
+translate: false
+# offer all domains, exept the parent of this
+query: page.otherDomains

@@ -1,0 +1,5 @@
+# (publishing) date
+label: Datum
+type: date
+translate: false
+default: today

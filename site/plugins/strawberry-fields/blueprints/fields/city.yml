@@ -1,0 +1,7 @@
+# city input with autocomplete
+type: tags
+label: Stadt
+layout: list
+max: 1
+icon: globe
+translate: false

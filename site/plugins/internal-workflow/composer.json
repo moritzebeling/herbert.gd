@@ -1,0 +1,12 @@
+{
+    "name": "moritz-ebeling/internal-workflow",
+    "description": "Internal Workflow help system",
+    "version": "0.1-herbert",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moritz Ebeling",
+            "email": "email@moritzebeling.com"
+        }
+    ]
+}

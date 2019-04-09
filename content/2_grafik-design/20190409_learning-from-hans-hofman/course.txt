@@ -1,0 +1,63 @@
+Title: Learning from Hans Hofmann
+
+----
+
+Subtitle: 
+
+----
+
+Body: (vimeo: https://vimeo.com/237205250)
+
+----
+
+Gallery: 
+
+----
+
+Link: 
+
+----
+
+Tags: 
+
+----
+
+Includedomain: 
+
+----
+
+Date: 2019-04-09
+
+----
+
+Coverimage: 
+
+- banner_neu.png
+
+----
+
+Semester-term: summer
+
+----
+
+Teachers: Markus Weisbeck, Adrian Palko
+
+----
+
+Workflow-created: 2019-04-09 13:45
+
+----
+
+Workflow-createdby: 
+
+- adrian.palko@uni-weimar.de
+
+----
+
+Workflow-updated: 2019-04-09 14:00
+
+----
+
+Workflow-updatedby: 
+
+- adrian.palko@uni-weimar.de

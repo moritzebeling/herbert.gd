@@ -1,0 +1,7 @@
+# venue with autocomplete
+type: tags
+label: Veranstaltungsort
+help: z.B. "Bauhaus-Universität"
+layout: list
+max: 1
+translate: false

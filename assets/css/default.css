@@ -1,0 +1,171 @@
+/**
+* reset
+*/
+
+html, body, ul, ol, li, nav, h1, h2, h3, h4, h5, h6, figure {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+div, ul, ol, li, figure, article, main, section {
+    display: block;
+}
+
+/*
+* typography
+*/
+/* font sizes */
+h1 {
+    font-size: 4rem;
+}
+h2, .large {
+    font-size: 2rem;
+}
+html, body, h3, h4, h5 {
+    font-size: 1rem;
+}
+h6, .small, figcaption, h6 + p, h6 + p + p {
+    font-size: 0.7rem;
+}
+input, textarea {
+    font-size: inherit;
+}
+/* font wheight */
+h1, h2, h3, strong, .bold, h6 {
+    font-weight: bold;
+}
+html, h4, h5 {
+    font-weight: normal;
+}
+/* margins */
+h1, h2 {
+    padding: 0.5rem 0;
+}
+
+
+
+/*
+* default style
+*/
+:root {
+    --background-color: #fff;
+    --color: #000;
+    --border-color: #000;
+    --border: 1px solid #000;
+    --font-family: 'Helvetica';
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+/**
+* header
+*/
+body > header h1 {
+    margin-bottom: 8rem;
+}
+
+/**
+* navigation
+*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav.domains ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav.domains li {
+    padding: 1rem 1rem 1rem 0;
+    flex: 1;
+    display: inline-block;
+    border-bottom: var(--border);
+}
+nav.domains li + li {
+    margin-left: 1rem;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+/*
+* layout
+*/
+body {
+    padding: 0 1rem 8rem;
+}
+
+/**
+* feed
+*/
+.feed {
+    list-style: none;
+}
+.feed li {
+    border-top: var(--border);
+}
+.feed li > a {
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+}
+.feed li img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+/* list */
+.feed.list li > a {
+    display: flex;
+}
+.feed.list li > a > * {
+    flex: 1;
+}
+.feed.list li > a > .subtitle {
+    flex: 2;
+}
+.feed.list li img {
+    display: none;
+}
+/* grid */
+.feed.grid {
+    column-count: 4;
+    column-gap: 1rem;
+    column-width: 25%;
+}
+.feed.grid li {
+    -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+}
+.feed.grid li img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/**
+* article
+*/
+article {
+    border-top: var(--border);
+}
+article section + section {
+    margin-top: 1rem;
+}
+article section.meta > * {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,41 @@
+Title: Space for Visual Research
+
+----
+
+Hostname: spaceforvisualresearch.com
+
+----
+
+Subtitle: 
+
+----
+
+Logo: 
+
+----
+
+Description: 
+
+----
+
+Tags: 
+
+----
+
+Workflow-created: 2019-04-05 09:05
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-05 09:05
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com

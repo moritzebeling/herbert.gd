@@ -1,0 +1,11 @@
+
+/*
+* default style
+*/
+:root {
+    --background-color: #ccc;
+    --color: #000;
+    --border-color: #000;
+    --border: 1px solid #000;
+    --font-family: 'Helvetica';
+}

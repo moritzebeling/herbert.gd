@@ -1,0 +1,6 @@
+# unformatted description
+label: Description
+type: textarea
+buttons: false
+translate: true
+maxlength: 400

@@ -1,0 +1,39 @@
+Title: Grafik Design
+
+----
+
+Hostname: grafik-design-weimar.de
+
+----
+
+Description: 
+
+----
+
+Tags: 
+
+----
+
+Logo: 
+
+- arrow-right-b.svg
+
+----
+
+Workflow-created: 2019-04-05 09:05
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-04-05 09:05
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
