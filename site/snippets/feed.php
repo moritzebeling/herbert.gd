@@ -2,12 +2,12 @@
 
 /**
  * feed of posts that lists all posts from current domain and all featured posts from other domains
- * 
+ *
  */
 
 $layout = 'grid';
 if( $domain->id() == 'herbert'){
-  $layout = 'list';
+  $layout = 'grid';
 }
 
 ?>
@@ -16,15 +16,12 @@ if( $domain->id() == 'herbert'){
   <li class="post <?= $item->intendedTemplate() ?>">
     <a href="<?= $item->url() ?>">
 
-      <?php $thumbnail = $item->coverImage()->toFile();
-      if( $thumbnail ): ?>
-        <img src="<?= $thumbnail->url() ?>" alt="" />
-      <?php endif; ?>
+      <h3 class="title"><?= $item->title() ?></h3>
+      <h4 class="subtitle"><?= $item->subtitle() ?></h4>
 
       <span class="date"><?= $item->date() ?></span>
 
-      <h3 class="title"><?= $item->title() ?></h3>
-      <h4 class="subtitle"><?= $item->subtitle() ?></h4>
+      <?php snippet('fields/coverImage', ['page' => $item]); ?>
 
     </a>
   </li>
