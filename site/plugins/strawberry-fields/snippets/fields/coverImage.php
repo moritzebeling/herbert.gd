@@ -2,23 +2,23 @@
 
 /**
  * coverImage
- * 
+ *
  * snippet for rendering the cover image
- * 
- * recieves 
+ *
+ * recieves
  * - $page (field owner)
  * – $field (field name)
- * 
+ *
  */
 
 // validate owner
 if( !isset( $page ) ){
-  $page = $kirby->site(); 
+  $page = $kirby->site();
 }
 
 // validate field
 if( !isset( $field ) ){
-  $field = 'coverImage'; 
+  $field = 'coverImage';
 }
 
 $image = $page->{$field}()->toFile();
@@ -32,6 +32,6 @@ if( !$image ){
 ?>
 <div class="coverImage">
   <figure>
-    <img src="<?= $image->url() ?>">
+    <img src="<?= $image->thumb(['width'=>3])->url() ?>">
   </figure>
 </div>
