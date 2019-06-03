@@ -1,9 +1,0 @@
-# single image used as cover image
-label: Titelbild
-type: files
-multiple: false
-translate: false
-query: page.images
-layout: cards
-back: black
-empty: Es wurde noch kein Bild ausgewählt

@@ -1,0 +1,48 @@
+label: Content
+icon: page
+
+columns:
+  - width: 2/3
+    sections:
+      section_fields1:
+        type: fields
+        fields:
+
+          subtitle: fields/posts/subtitle
+
+          gallery: fields/posts/gallery
+
+          body: fields/posts/content
+
+          line2: fields/line
+
+          description: fields/description
+
+          tags: fields/tags
+
+  - width: 1/3
+    sections:
+
+      section_picture: sections/posts/picture
+
+      section_uploads: sections/uploads
+
+      section_fields2:
+        type: fields
+        fields:
+
+          line3: fields/line
+
+          time: fields/posts/time
+
+          line4: fields/line
+
+          channels: fields/posts/channels
+
+          line5: fields/line
+
+          credits: fields/posts/credits
+
+          line6: fields/line
+
+          location: fields/posts/location

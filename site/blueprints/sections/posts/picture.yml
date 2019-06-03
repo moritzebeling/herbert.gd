@@ -1,0 +1,5 @@
+# fieldgroup for general page info
+type: fields
+fields:
+
+  picture: fields/posts/picture

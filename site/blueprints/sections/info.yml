@@ -1,9 +1,0 @@
-# fieldgroup for general page info
-type: fields
-fields:
-
-  date: fields/date
-
-  coverImage: fields/coverImage
-
-  infoLine: fields/line

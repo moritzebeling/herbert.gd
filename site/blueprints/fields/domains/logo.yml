@@ -1,0 +1,13 @@
+# logo as svg or png
+# https://getkirby.com/docs/reference/panel/fields/files
+
+type: files
+label: Logo
+
+multiple: false
+translate: false
+query: page.images
+layout: cards
+back: black
+template: logo
+help: Logo als svg

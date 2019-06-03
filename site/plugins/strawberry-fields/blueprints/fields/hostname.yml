@@ -1,8 +1,0 @@
-# hostname to specify a domains address
-type: text
-label: Hostname
-placeholder: xyz.com
-minlength: 5
-maxlength: 64
-help: z.B. "herbert.gd" oder "spaceforvisualresearch.com", ohne "http" oder "www"
-# regex testing woul be nice here

@@ -1,0 +1,16 @@
+label: Posts
+icon: bars
+
+sections:
+
+  section_drafts:
+    extends: sections/domains/posts
+    status: draft
+    headline: Entwürfe
+    empty: Es wurden noch keine neuen Posts erstellt
+
+  section_published:
+    extends: sections/domains/posts
+    status: published
+    headline: Veröffentlichte Posts
+    empty: Es wurden noch keine Posts veröffentlicht

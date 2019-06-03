@@ -1,7 +1,0 @@
-# select semester term
-type: select
-label: Semester
-translate: false
-options:
-  winter: Winter
-  summer: Sommer

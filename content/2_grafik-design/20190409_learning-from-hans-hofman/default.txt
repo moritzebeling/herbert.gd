@@ -1,0 +1,91 @@
+Title: Learning from Hans Hofmann
+
+----
+
+Subtitle: 
+
+----
+
+Description: 
+
+----
+
+Gallery: 
+
+----
+
+Body: (vimeo: https://vimeo.com/237205250)
+
+----
+
+Tags: 
+
+----
+
+Picture: 
+
+----
+
+Issemester: true
+
+----
+
+Date: 2019-04-09
+
+----
+
+Semester: 
+
+- 
+  term: winter
+  year: 2010
+
+----
+
+Channels: 
+
+----
+
+Credits: 
+
+----
+
+Location: 
+
+----
+
+Workflow-created: 2019-04-09 13:45
+
+----
+
+Workflow-createdby: 
+
+----
+
+Workflow-updated: 2019-06-03 21:15
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Link: 
+
+----
+
+Includedomain: 
+
+----
+
+Coverimage: - banner_neu.png
+
+----
+
+Semester-term: summer
+
+----
+
+Teachers: Markus Weisbeck, Adrian Palko

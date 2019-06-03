@@ -1,0 +1,98 @@
+Title: Ankündigung
+
+----
+
+Location: 
+
+- 
+  title: M1
+  url: null
+  address: |
+    Marienstraße 1
+    Raum 101
+  city: Weimar
+  country: Deutschland
+
+----
+
+Issemester: false
+
+----
+
+Date: 
+
+----
+
+Semester: 
+
+- 
+  term: winter
+  year: 2019
+
+----
+
+Channels: 
+
+----
+
+Subtitle: Untertitel qwefqw
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+----
+
+Gallery: 
+
+----
+
+Body: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Tags: announcement, tweet, keyword 1
+
+----
+
+Picture: 
+
+----
+
+Workflow-created: 2019-04-05 11:50
+
+----
+
+Workflow-createdby: 
+
+- admin@moritzebeling.com
+
+----
+
+Workflow-updated: 2019-06-03 19:45
+
+----
+
+Workflow-updatedby: 
+
+- admin@moritzebeling.com
+
+----
+
+Includedomain: grafik-design, manifest-of-practice, space-for-visual-research
+
+----
+
+Newtab: true
+
+----
+
+Coverimage: 
+
+----
+
+Targetblank: false
+
+----
+
+Featuredon: herbert-gd

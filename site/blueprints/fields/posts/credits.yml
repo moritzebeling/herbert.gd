@@ -1,0 +1,27 @@
+# list of authors with website
+# https://getkirby.com/docs/reference/panel/fields/structure
+
+label: Credits
+type: structure
+
+translate: false
+sortable: true
+help: Beteiligte (Lehr-)Personen
+fields:
+  role:
+    label: Funktion
+    type: text
+    help: z.B. "Dozent", "Fotograf"
+    icon: tag
+  name:
+    label: Name
+    type: text
+    icon: account
+  link:
+    extends: fields/url
+    label: Website
+columms:
+  role:
+    width: 1/2
+  name:
+    width: 1/2

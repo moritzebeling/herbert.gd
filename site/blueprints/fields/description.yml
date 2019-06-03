@@ -1,0 +1,10 @@
+# unformatted description
+# https://getkirby.com/docs/reference/panel/fields/textarea
+
+label: Beschreibung
+type: textarea
+
+buttons: false
+translate: true
+maxlength: 300
+help: Unformatierte Kurzbeschreibung, unter anderem für Suchergebnisse

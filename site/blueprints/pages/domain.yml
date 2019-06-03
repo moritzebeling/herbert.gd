@@ -1,16 +1,5 @@
 title: Domain
 
-status:
-  draft:
-    label: Entwurf
-    text: Diese Seite ist für Andere nicht sichtbar
-  unlisted:
-    label: Versteckt
-    text: Diese Seite wird nicht aufgelisted, ist aber durch Eingabe der direkten URL sichtbar
-  listed:
-    label: Veröffentlicht
-    text: Diese Seite ist für jeden Sichtbar
-
 icon: 🌍
 
 options:
@@ -29,55 +18,8 @@ options:
 
 tabs:
 
-  tab_posts:
-    label: Posts
-    icon: bars
+  tab_posts: tabs/domains/posts
 
-    sections:
+  tab_info: tabs/domains/info
 
-      section_drafts:
-        extends: sections/posts
-        status: draft
-        headline: Entwürfe
-        empty: Es wurden noch keine neuen Posts erstellt
-
-      section_published:
-        extends: sections/posts
-        status: published
-        headline: Posts
-        empty: Es wurden noch keine Posts veröffentlicht
-
-
-  # tab: this page content
-  tab_content:
-    label: Info
-    icon: page
-
-    columns:
-      - width: 2/3
-        sections:
-
-          section_fields1:
-            type: fields
-            fields:
-
-              hostname: fields/hostname
-
-              description: fields/description
-
-              tags: fields/tags
-
-      - width: 1/3
-        sections:
-
-          section_fields2:
-            type: fields
-            fields:
-
-              logo: fields/logo
-
-          section_files: sections/files
-
-
-  # tab: internal workflow
   tab_workflow: tabs/workflow

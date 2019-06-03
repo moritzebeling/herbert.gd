@@ -5,11 +5,11 @@ title: Site
 sections:
 
   # list all domains
-  section_domains: sections/domains
+  section_domains: sections/site/domains
 
   # list of latest posts
   section_posts:
-    extends: sections/posts
+    extends: sections/domains/posts
     headline: Neueste Posts aller Domains
     status: published
     parent: site.children.template('domain')

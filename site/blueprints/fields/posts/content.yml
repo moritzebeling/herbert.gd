@@ -1,0 +1,7 @@
+# formattable main content
+https://getkirby.com/docs/reference/panel/fields/textarea
+
+label: Seiteninhalt
+type: textarea
+
+translate: true

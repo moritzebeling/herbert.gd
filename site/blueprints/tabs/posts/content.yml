@@ -1,0 +1,30 @@
+label: Content
+icon: page
+
+columns:
+  - width: 2/3
+    sections:
+      section_fields:
+        type: fields
+        fields:
+
+          subtitle: fields/posts/subtitle
+
+          description: fields/description
+
+          line1: fields/line
+
+          gallery: fields/posts/gallery
+
+          body: fields/posts/content
+
+          line2: fields/line
+
+          tags: fields/tags
+
+  - width: 1/3
+    sections:
+
+      section_picture: sections/posts/picture
+
+      section_uploads: sections/uploads

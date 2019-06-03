@@ -1,0 +1,14 @@
+type: group
+fields:
+
+  isSemester: fields/posts/isSemester
+
+  date:
+    extends: fields/date
+    when:
+      isSemester: false
+
+  semester:
+    extends: fields/posts/semester
+    when:
+      isSemester: true

@@ -1,0 +1,8 @@
+# external link
+# https://getkirby.com/docs/reference/panel/fields/url
+
+label: Url
+type: url
+
+translate: false
+placeholder: https://

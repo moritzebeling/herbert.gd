@@ -1,7 +1,0 @@
-# country input with autocomplete
-type: tags
-label: Land
-layout: list
-max: 1
-icon: globe
-translate: false

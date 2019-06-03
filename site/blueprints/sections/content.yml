@@ -1,9 +1,0 @@
-# fieldgroup for main content
-type: fields
-fields:
-
-  body: fields/body
-
-  gallery: fields/gallery
-
-  link: fields/link

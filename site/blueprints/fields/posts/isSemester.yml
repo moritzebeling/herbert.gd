@@ -1,0 +1,10 @@
+# (publishing) date
+# https://getkirby.com/docs/reference/panel/fields/toggle
+
+type: toggle
+label: Datumsanzeige
+
+translate: false
+text:
+  - Veröffentlichungsdatum
+  - Semester

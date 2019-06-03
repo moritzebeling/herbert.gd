@@ -1,9 +1,0 @@
-# fieldgroup for announcement post
-type: fields
-fields:
-
-  body: fields/description
-  
-  link: fields/link
-  
-  newTab: fields/newTab

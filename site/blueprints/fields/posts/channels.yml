@@ -1,0 +1,12 @@
+# select other domains
+# https://getkirby.com/docs/reference/panel/fields/checkboxes
+
+type: checkboxes
+label: Veröffentlichen auf
+
+options: query
+translate: false
+# offer all domains, exept the parent of this
+# page method within plugin
+query: page.otherDomains
+help: Wird außerdem auf den ausgewählten Domains veröffentlicht

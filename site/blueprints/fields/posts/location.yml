@@ -1,0 +1,39 @@
+# optional location
+# https://getkirby.com/docs/reference/panel/fields/structure
+
+type: structure
+label: (Veranstaltungs-) Ort
+
+help: Optional
+max: 1
+translate: false
+empty: Kein Ort angegeben
+fields:
+  title:
+    type: text
+    label: Veranstaltungsort
+    width: 1/2
+    icon: globe
+  url:
+    extends: fields/url
+    width: 1/2
+  address:
+    type: textarea
+    label: Adresse
+    buttons: false
+    icon: globe
+  city:
+    type: text
+    label: Stadt
+    width: 1/2
+    icon: globe
+  country:
+    type: text
+    label: Land
+    width: 1/2
+    icon: globe
+columns:
+  title:
+    width: 1/2
+  city:
+    width: 1/2
