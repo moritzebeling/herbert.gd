@@ -2,24 +2,24 @@
 
 /**
  * tags
- * 
+ *
  * snippet for rendering the tag list
- * 
- * recieves 
+ *
+ * recieves
  * - $page (field owner)
  * – $field (field name)
  * - $searchbase (url of search page)
- * 
+ *
  */
 
 // validate owner
 if( !isset( $page ) ){
-  $page = $kirby->site(); 
+  $page = $kirby->site();
 }
 
 // validate field
 if( !isset( $field ) ){
-  $field = 'tags'; 
+  $field = 'tags';
 }
 
 // abort if field is empty
@@ -29,7 +29,7 @@ if( $page->{$field}()->isEmpty() ){
 
 // validate search base
 if( !isset( $searchbase ) ){
-  $searchbase = $domain->id().'/s'; 
+  $searchbase = $domain->id().'/s';
 }
 
 // compose search base
@@ -40,6 +40,6 @@ $link = $searchbase.'/'.rawurlencode( $item );
 <ul class="tags">
   <?php foreach( $page->{$field}()->split() as $item ): ?>
     <?php //  ?>
-    <li><a href="<?= $link; ?>"><?= $item; ?></a></li>
+    <li><a href="<?= $link; ?>" rel="tag"><?= $item; ?></a></li>
   <?php endforeach; ?>
 </ul>
