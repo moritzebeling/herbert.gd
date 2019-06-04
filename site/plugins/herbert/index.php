@@ -2,7 +2,7 @@
 
 /**
  * herbert
- * 
+ *
  */
 
 Kirby::plugin('moritz-ebeling/herbert', [
@@ -15,26 +15,26 @@ Kirby::plugin('moritz-ebeling/herbert', [
         },
         'feed' => function ( $domain = false, $features = true ) {
             // $domain must be page object
-            
-            // returns a list of posts
+
             if( $domain === false ){
 
-                // all posts accross all domains
+                // returns a list of all posts accros all domains
                 return $this->domains()->children()->listed();
-            
-            } else if ( $features === true ) {
-
-                // only of given domain, including features
-                $posts = $domain->children()->listed();
-                $features = $this->domains()->not( $domain )->children()->listed()->filterBy( 'includeDomain', $domain->id(), ',' );
-                return $posts->merge( $features )->sortBy('date','desc');
-
-            } else {
-
-                // only whithin given domain
-                return $domain->children()->listed();
 
             }
+
+            $posts = $domain->children()->listed();
+
+            if ( $features === true ) {
+
+                // including features from other domains
+                $features = $this->domains()->not( $domain )->children()->listed()->filterBy( 'includeDomain', $domain->id(), ',' );
+                $posts = $posts->merge( $features )->sortBy('date','desc');
+
+            }
+
+            return $posts;
+
         }
     ],
 
@@ -60,6 +60,18 @@ Kirby::plugin('moritz-ebeling/herbert', [
             $domain = $this->domain();
             return kirby()->site()->domains()->not( $domain );
 
+        },
+        'published' => function(){
+            if( $this->intendedTemplate() != 'default' ){
+              return false;
+            }
+            if( $this->isSemester()->isTrue() ){
+              $semester = $this->semester()->yaml();
+              $semester = $semester[0];
+              return $semester['term'] . ' ' . $semester['year'];
+            } else {
+              return $this->date();
+            }
         }
     ],
 

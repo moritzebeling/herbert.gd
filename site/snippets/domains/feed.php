@@ -7,18 +7,30 @@
 
 ?>
 <ul class="feed">
-<?php foreach ( $site->feed( $domain ) as $item ): ?>
-  <li class="post <?= $item->intendedTemplate() ?>">
-    <a href="<?= $item->url() ?>">
+<?php foreach ( $site->feed( $domain ) as $item ):
 
-      <h3 class="title"><?= $item->title() ?></h3>
-      <h4 class="subtitle"><?= $item->subtitle() ?></h4>
+  snippet('domains/feed-item', ['item' => $item]);
 
-      <span class="date"><?= $item->date() ?></span>
+  // to fake some mass
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
+  snippet('domains/feed-item', ['item' => $item]);
 
-      <?php snippet('fields/picture', ['page' => $item]); ?>
-
-    </a>
-  </li>
-<?php endforeach; ?>
+endforeach; ?>
 </ul>

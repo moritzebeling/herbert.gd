@@ -57,7 +57,7 @@ Semester:
 
 ----
 
-Channels: herbert
+Channels: herbert, manifest-of-practice, space-for-visual-research
 
 ----
 
@@ -92,7 +92,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-04 07:25
+Workflow-updated: 2019-06-04 08:15
 
 ----
 
