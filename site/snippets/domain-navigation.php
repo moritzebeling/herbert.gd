@@ -2,7 +2,7 @@
 
 /**
  * menu of all availible domains
- * 
+ *
  */
 
 ?>
@@ -14,7 +14,7 @@
       <?php
       $class = $item->id();
       if( $item == $page->domain() ){ $class .= ' active'; } ?>
-      <a href="<?= $item->url() ?>" class="<?= $class ?>">
+      <a href="<?= $item->url() ?>" class="<?= $class ?>" title="<?= $item->title()->html() ?>">
         <?= $item->title()->html() ?>
       </a>
 

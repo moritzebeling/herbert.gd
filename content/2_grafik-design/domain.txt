@@ -6,17 +6,24 @@ Hostname: grafik-design-weimar.de
 
 ----
 
+Links: 
+
+- 
+  title: Bauhaus-Universität Weimar
+  link: >
+    https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/grafikdesign
+
+----
+
 Description: 
 
 ----
 
-Tags: 
+Tags: grafik, design, visuelle, kommunikation
 
 ----
 
 Logo: 
-
-- arrow-right-b.svg
 
 ----
 
@@ -30,7 +37,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-04-05 09:05
+Workflow-updated: 2019-06-04 07:00
 
 ----
 

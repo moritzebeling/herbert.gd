@@ -6,19 +6,19 @@ Hostname: spaceforvisualresearch.com
 
 ----
 
-Subtitle: 
+Links: 
+
+----
+
+Description: The Space for Visual Research was established at the Bauhaus University in Weimar in 2013 as a workshop and laboratory for experimental research into new graphic, abstract, and visual worlds. The Space’s mission is to support the exploratory urge for new aesthetics, in particular by empowering design students to create their own individual imagery.
+
+----
+
+Tags: sfvr, workshop, experiment
 
 ----
 
 Logo: 
-
-----
-
-Description: 
-
-----
-
-Tags: 
 
 ----
 
@@ -32,10 +32,14 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-04-05 09:05
+Workflow-updated: 2019-06-04 07:05
 
 ----
 
 Workflow-updatedby: 
 
 - admin@moritzebeling.com
+
+----
+
+Subtitle: 

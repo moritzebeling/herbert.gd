@@ -2,7 +2,7 @@
 
 <main>
 
-    <?php snippet('post-content') ?>
+    <?php snippet('posts/content') ?>
 
 </main>
 

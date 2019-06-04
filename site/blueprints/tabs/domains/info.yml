@@ -24,4 +24,6 @@ columns:
 
       section_logo: sections/domains/logo
 
-      section_uploads: sections/uploads
+      section_uploads:
+        extends: sections/uploads
+        template: logo

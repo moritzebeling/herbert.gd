@@ -24,6 +24,7 @@ fields:
     max: 2050
     translate: false
     width: 1/2
+    help: Anfangsjahr bei Wintersemestern
 columns:
   term:
     width: 1/2

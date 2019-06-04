@@ -6,11 +6,23 @@ Hostname: manifest-of-practice.com
 
 ----
 
-Description: wqer wert qwerwqer
+Links: 
+
+- 
+  title: Instagram
+  link: >
+    https://www.instagram.com/manifestofpractice
 
 ----
 
-Tags: 
+Description: 
+
+In Weimar entstand das Bauhaus  –  die innovativste Kunstschule der Moderne. Heute – 100 Jahre später – ist die Bauhaus-Universität Weimar einer der Hotspots deutscher und europäischer Hochschulen, an denen Kunst, Design und Architektur gelehrt wird.
+»Manifest of Practice« stellt zeitgenössische Positionen der Fakultät Kunst und Gestaltung vor und zeigt exemplarisch den aktuellen Dialog zwischen künstlerischen und entwerfenden Disziplinen an der Universität. Dieser »Campus der Ideen« steht für ein internationales und interdisziplinäres Miteinander im 21. Jahrhundert.
+
+----
+
+Tags: manifest, workshop, bauhaus
 
 ----
 
@@ -28,13 +40,13 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-04-07 08:45
+Workflow-updated: 2019-06-04 07:00
 
 ----
 
 Workflow-updatedby: 
 
-- mail@eriksachse.com
+- admin@moritzebeling.com
 
 ----
 

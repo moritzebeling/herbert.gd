@@ -1,9 +1,0 @@
-Caption: Lorem ipsum dolor sit amet.
-
-----
-
-Credits: Max Mustermann
-
-----
-
-Template: image

@@ -17,11 +17,10 @@ fields:
     label: Name
     type: text
     icon: account
+    required: true
   link:
     extends: fields/url
     label: Website
-columms:
-  role:
-    width: 1/2
+columns:
   name:
-    width: 1/2
+    width: 1/1

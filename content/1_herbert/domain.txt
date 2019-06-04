@@ -8,13 +8,17 @@ Hostname: herbert.gd
 
 Links: 
 
+- 
+  title: Facebook
+  link: https://www.facebook.com/herbertbu
+
 ----
 
-Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Description: This publication represents the Graphic Design Class of the Visual Communication department at Bauhaus-University Weimar. Named after our patron „saint“ Herbert Bayer, we follow the Ideas of the traditional Bauhaus movement. It stands for an eagerness to experiment, openness, creativity, a close link to industrial practice and internationality with the goal of analytic, constructive and innovative working.
 
 ----
 
-Tags: 
+Tags: herbert
 
 ----
 
@@ -32,7 +36,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-03 21:00
+Workflow-updated: 2019-06-04 07:00
 
 ----
 

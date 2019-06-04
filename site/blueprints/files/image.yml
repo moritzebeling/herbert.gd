@@ -16,7 +16,7 @@ fields:
     extends: fields/description
     label: Bildunterschrift
     maxlength: 200
-  
+
   credits:
-    label: Credit Namen
-    type: tags
+    label: Credits
+    type: text

@@ -1,9 +1,0 @@
-Caption: Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-
-----
-
-Credits: 
-
-----
-
-Template: image

@@ -2,7 +2,7 @@
 
 <main>
 
-    <?php snippet('feed') ?>
+    <?php snippet('domains/feed') ?>
 
 </main>
 

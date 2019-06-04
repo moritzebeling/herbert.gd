@@ -4,11 +4,6 @@ type: pages
 status: all
 sortBy: date desc
 templates:
-  - workshop
-  - course
-  - event
-  - project
-  - announcement
   - default
 empty: Es wurden noch keine Posts erstellt
 info: " {{ page.date }}"
