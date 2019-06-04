@@ -7,30 +7,30 @@
 
 ?>
 <ul class="feed">
-<?php foreach ( $site->feed( $domain ) as $item ):
+  <?php foreach ( $site->feed( $domain ) as $item ):
 
-  snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
 
-  // to fake some mass
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
-  snippet('domains/feed-item', ['item' => $item]);
+    // to fake some mass
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
+    snippet('domains/feed-item', ['item' => $item]);
 
-endforeach; ?>
+  endforeach; ?>
 </ul>

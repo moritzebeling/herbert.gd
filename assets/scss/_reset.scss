@@ -4,33 +4,26 @@
 
 html, body, h1, h2, h3, h4, h5, h6, ul, ol, li, p, figure, img {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 div, section, nav, header, footer, main, figure, figcaption {
-  display: block;
-}
-
+  display: block; }
 ol, ul, li {
-  list-style: none;
-}
+  list-style: none; }
 
 hr, image, iframe, input, textarea {
   border: none;
-  outline: none;
-}
+  outline: none; }
 
 /*
 * typography
 */
 html, body, h1, h2, h3, h4, h5, h6, strong, b, blockquote, em, i, button, input, address {
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 input, button, blockquote {
-  font-family: inherit;
-}
+  font-family: inherit; }
 
 
 /*
@@ -40,19 +33,16 @@ input, button, blockquote {
 img {
   display: block;
   height: auto;
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 /*
 * links and buttons
 */
 
 a {
-  color: inherit;
-}
+  color: inherit; }
 a, button {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 /*
 * forms
@@ -66,8 +56,6 @@ input, textarea {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: transparent;
-}
+  background-color: transparent; }
 button {
-  background-color: transparent;
-}
+  background-color: transparent; }

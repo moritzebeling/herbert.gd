@@ -6,7 +6,7 @@
  */
 
 ?>
-<nav id="domain-navigation" class="domains" role="navigation">
+<nav id="domain-navigation" class="domains links" role="navigation">
   <ul>
   <?php foreach ( $site->domains() as $item ): ?>
     <li>

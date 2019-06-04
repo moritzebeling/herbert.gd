@@ -15,7 +15,7 @@ Links:
 
 ----
 
-Description: 
+Description: Grafikdesign ist eine Tätigkeit, Sprache, Gedanken und größere gedankliche Zusammenhänge mittels Typographie, Bild, Farbe und Material visuell darzustellen bzw. augenscheinlich vermittelbar zu machen.
 
 ----
 
@@ -37,7 +37,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-04 07:00
+Workflow-updated: 2019-06-04 08:40
 
 ----
 

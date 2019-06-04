@@ -32,6 +32,6 @@ if( !$image ){
 ?>
 <div class="thumbnail">
   <figure>
-    <img src="<?= $image->thumb(['width'=>100])->url() ?>">
+    <img src="<?= $image->thumb(['width'=>700])->url() ?>">
   </figure>
 </div>

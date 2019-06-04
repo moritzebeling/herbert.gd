@@ -37,7 +37,7 @@ $link = $searchbase.'/'.rawurlencode( $item );
 
 // output
 ?>
-<ul class="tags">
+<ul class="links tags">
   <?php foreach( $page->{$field}()->split() as $item ): ?>
     <?php //  ?>
     <li><a href="<?= $link; ?>" rel="tag"><?= $item; ?></a></li>

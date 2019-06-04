@@ -10,6 +10,8 @@
   <?= css('assets/css/default.css') ?>
   <?= css('assets/css/'.$domain->id().'.css') ?>
 
+  <?= js('assets/js/default.js') ?>
+
   <?php
   /*
   insert here:
@@ -23,9 +25,8 @@
   ?>
 
 </head>
-<body>
+<body class="<?= $page->intendedTemplate() ?>">
 
   <header>
     <?php snippet('domain-navigation'); ?>
-    <h1><?= $domain->title() ?></h1>
   </header>
