@@ -7,7 +7,6 @@
 
   <title><?= $domain->title() ?> | <?= $page->title() ?></title>
 
-  <?= css('assets/css/reset.css') ?>
   <?= css('assets/css/default.css') ?>
   <?= css('assets/css/'.$domain->id().'.css') ?>
 
