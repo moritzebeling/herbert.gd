@@ -39,7 +39,9 @@ $c = $images->count();
     $caption = $image->caption();
     ?>
     <figure onclick="gallerySwitch(event)">
-      <img src="<?= $image->url() ?>" <?php if( $caption ): ?>alt="<?= $caption; ?>"<?php endif; ?>>
+      <img src="<?= $image->url() ?>"
+        srcset="<?= $image->srcset([300, 450, 600, 800, 1000, 1600]) ?>"
+        <?php if( $caption ): ?>alt="<?= $caption; ?>"<?php endif; ?>>
       <?php if( $caption ): ?>
         <figcaption>
           <span class="count"><?= $i.' / '.$c; $i++; ?></span>

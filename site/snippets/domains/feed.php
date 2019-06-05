@@ -11,26 +11,31 @@
 
     snippet('domains/feed-item', ['item' => $item]);
 
-    // to fake some mass
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
-    snippet('domains/feed-item', ['item' => $item]);
+  endforeach; ?>
+
+
+
+  <?php
+  // fake som mass
+  foreach ( $site->feed( $domain ) as $item ):
+
     snippet('domains/feed-item', ['item' => $item]);
 
   endforeach; ?>
+  <?php foreach ( $site->feed( $domain ) as $item ):
+
+    snippet('domains/feed-item', ['item' => $item]);
+
+  endforeach; ?>
+  <?php foreach ( $site->feed( $domain ) as $item ):
+
+    snippet('domains/feed-item', ['item' => $item]);
+
+  endforeach; ?>
+  <?php foreach ( $site->feed( $domain ) as $item ):
+
+    snippet('domains/feed-item', ['item' => $item]);
+
+  endforeach; ?>
+  
 </ul>

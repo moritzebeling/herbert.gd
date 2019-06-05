@@ -32,6 +32,7 @@ if( !$image ){
 ?>
 <div class="thumbnail">
   <figure>
-    <img src="<?= $image->thumb(['width'=>700])->url() ?>">
+    <img src="<?= $image->url() ?>"
+      srcset="<?= $image->srcset([300, 450, 600, 800, 1000, 1600]) ?>">
   </figure>
 </div>
