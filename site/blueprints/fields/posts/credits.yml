@@ -17,7 +17,6 @@ fields:
     label: Name
     type: text
     icon: account
-    required: true
   link:
     extends: fields/url
     label: Website

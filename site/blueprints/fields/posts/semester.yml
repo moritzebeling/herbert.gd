@@ -12,7 +12,6 @@ fields:
     type: select
     label: Halbjahr
     translate: false
-    required: true
     width: 1/2
     options:
       winter: Winter
