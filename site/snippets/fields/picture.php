@@ -31,8 +31,11 @@ if( !$image ){
 // output
 ?>
 <div class="thumbnail">
-  <figure>
-    <img src="<?= $image->url() ?>"
-      srcset="<?= $image->srcset([300, 450, 600, 800, 1000, 1600]) ?>">
+  <figure class="progressive">
+    <img
+      src="<?= $image->resize(10)->url() ?>"
+      data-progressive="<?= $image->resize(1000)->url() ?>"
+      class="progressive__img progressive--not-loaded"
+      alt="<?= $image->caption()->html(); ?>" />
   </figure>
 </div>

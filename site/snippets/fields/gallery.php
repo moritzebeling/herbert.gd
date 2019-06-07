@@ -34,18 +34,17 @@ $c = $images->count();
 // output
 ?>
 <section class="gallery">
-  <?php foreach($images as $image):
-    // image caption
-    $caption = $image->caption();
-    ?>
-    <figure onclick="gallerySwitch(event)">
-      <img src="<?= $image->url() ?>"
-        srcset="<?= $image->srcset([300, 450, 600, 800, 1000, 1600]) ?>"
-        <?php if( $caption ): ?>alt="<?= $caption; ?>"<?php endif; ?>>
+  <?php foreach($images as $image): ?>
+    <figure onclick="gallerySwitch(event)" class="progressive">
+      <img
+        src="<?= $image->resize(160)->url() ?>"
+        class="progressive__img progressive--not-loaded"
+        data-progressive="<?= $image->resize(1600)->url() ?>"
+        alt="<?= $image->caption()->html(); ?>" />
       <?php if( $caption ): ?>
         <figcaption>
           <span class="count"><?= $i.' / '.$c; $i++; ?></span>
-          <?= $caption; ?>
+          <?= $image->caption()->html(); ?>
         </figcaption>
       <?php endif; ?>
     </figure>
