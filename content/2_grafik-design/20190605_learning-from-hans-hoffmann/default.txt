@@ -1,0 +1,103 @@
+Title: Learning from Hans Hofmann
+
+----
+
+Subtitle: First Look at this Semester
+
+----
+
+Gallery: 
+
+- img_5507.jpg
+- img_5508.jpg
+- img_5509.jpg
+- img_5511.jpg
+- img_5512.jpg
+- img_5513.jpg
+- img_5514.jpg
+
+----
+
+Body: 
+
+Ein Research Projekt, auf der Suche nach Form, Farbe, Komposition. 
+Inspiriert durch Werke und Aufgaben von Hans Hofman versuchen wir 
+die Bereichen der Ästhetischen Grenzen unterschiedlicher Medien auszudehnen.
+
+----
+
+Description: 
+
+----
+
+Tags: 
+
+----
+
+Picture: 
+
+- img_5492_bw.jpg
+
+----
+
+Issemester: true
+
+----
+
+Date: 2019-06-05
+
+----
+
+Semester: 
+
+- 
+  term: summer
+  year: 2019
+
+----
+
+Channels: herbert
+
+----
+
+Credits: 
+
+- 
+  role: Prof
+  name: Markus Weisbeck
+  link: ""
+- 
+  role: Dozent
+  name: Adrian Palko
+  link: ""
+
+----
+
+Location: 
+
+- 
+  title: Raum 101
+  url: ""
+  address: Marienstraße 1
+  city: Weimar
+  country: Deutschland
+
+----
+
+Workflow-created: 2019-06-05 08:15
+
+----
+
+Workflow-createdby: 
+
+- adrian.palko@uni-weimar.de
+
+----
+
+Workflow-updated: 2019-06-05 12:25
+
+----
+
+Workflow-updatedby: 
+
+- adrian.palko@uni-weimar.de

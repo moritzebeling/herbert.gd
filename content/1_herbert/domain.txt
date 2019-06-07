@@ -1,4 +1,4 @@
-Title: Herbert.gd
+Title: VK.gd
 
 ----
 
@@ -30,9 +30,7 @@ Workflow-created: 2019-04-05 08:15
 
 ----
 
-Workflow-createdby: 
-
-- admin@moritzebeling.com
+Workflow-createdby: - admin@moritzebeling.com
 
 ----
 
@@ -40,9 +38,7 @@ Workflow-updated: 2019-06-04 07:00
 
 ----
 
-Workflow-updatedby: 
-
-- admin@moritzebeling.com
+Workflow-updatedby: - admin@moritzebeling.com
 
 ----
 

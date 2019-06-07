@@ -1,0 +1,73 @@
+Title: Born to be Bauhaus
+
+----
+
+Subtitle: Ausstellungseröffnung am 07.06.2019
+
+----
+
+Gallery: 
+
+- btbb19_plakat2_final_uberarbeitet.jpg
+
+----
+
+Body: Born to be Bauhaus ist ein Kooperationsprojekt zwischen dem Archiv der Moderne der Bauhaus-Universität Weimar und dem Über Land e.V. der Kulturfabrik Apolda zum 100-jährigen Jubiläum der Bauhaus-Ausstellung 1923. Im Rahmen dessen werden von 2017-2021 jährlich fünf Künstler*innen der Fakultät Kunst und Gestaltung der Bauhaus-Universität Weimar gekürt. Das geschieht durch eine Jury, die Expert*innen aus den Bereichen Kuration, Kunsttheorie, Kunstmarkt, Kunstproduktion und Kreativwirtschaft versammelt. Die Auslobung findet jährlich im Sommersemester statt. Die jeweiligen fünf Kunstwerke werden schließlich vom Archiv der Moderne in die Kustodie der Bauhaus-Universität Weimar aufgenommen, was sie zu unveräußerlichem öffentlichen Kunstgut macht. Darüberhinaus stellen die Preisträger*innen ihre Kunst (über die angekauften Werke hinaus) in der Kulturfabrik Apolda aus.
+
+----
+
+Description: 
+
+----
+
+Tags: 
+
+----
+
+Picture: 
+
+- banner_neu.png
+
+----
+
+Issemester: false
+
+----
+
+Date: 2019-06-05
+
+----
+
+Semester: 
+
+----
+
+Channels: herbert
+
+----
+
+Credits: 
+
+----
+
+Location: 
+
+----
+
+Workflow-created: 2019-06-05 07:05
+
+----
+
+Workflow-createdby: 
+
+- adrian.palko@uni-weimar.de
+
+----
+
+Workflow-updated: 2019-06-05 09:05
+
+----
+
+Workflow-updatedby: 
+
+- adrian.palko@uni-weimar.de
