@@ -6,7 +6,10 @@ type: structure
 
 translate: false
 sortable: true
-help: Beteiligte (Lehr-)Personen
+help: Beteiligte (Lehr-)Personen, Autoren, Studierende
+columns:
+  name:
+    width: 1/2
 fields:
   role:
     label: Funktion
@@ -20,6 +23,3 @@ fields:
   link:
     extends: fields/url
     label: Website
-columns:
-  name:
-    width: 1/1

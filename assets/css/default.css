@@ -248,6 +248,28 @@ section.gallery figure figcaption {
   }
 }
 /*
+* content
+*/
+ul.tags:before {
+  content: "Keywords:";
+  margin-right: 0.15em;
+  display: inline-block;
+}
+ul.tags li {
+  display: inline-block;
+  margin-right: 0.15em;
+}
+
+ul.credits li {
+  display: inline-block;
+  margin-right: 0.15em;
+}
+ul.credits li a {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+/*
 * search
 */
 .searchform form {
@@ -268,8 +290,6 @@ section.gallery figure figcaption {
   flex: 1;
   border: 1px solid #000;
   border-radius: 10em;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 .searchform input[type=submit]:hover {
   background-color: #000;

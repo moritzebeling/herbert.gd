@@ -29,17 +29,13 @@ if( $page->{$field}()->isEmpty() ){
 
 // validate search base
 if( !isset( $searchbase ) ){
-  $searchbase = $site->find('search')->url().'/?q=';
+  $searchbase = $site->find('search')->url().option('searchbase');
 }
 
 // output
 ?>
 <ul class="links tags">
   <?php foreach( $page->{$field}()->split() as $item ): ?>
-    <?php
-    // compose search base
-    $link = $searchbase.rawurlencode( $item );
-    ?>
-    <li><a href="<?= $link; ?>" rel="tag"><?= $item; ?></a></li>
+    <li><a href="<?= $searchbase.rawurlencode( $item ); ?>" rel="tag"><?= $item; ?></a></li>
   <?php endforeach; ?>
 </ul>

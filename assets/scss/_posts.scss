@@ -100,3 +100,14 @@ ul.tags {
     margin-right: 0.15em;
   }
 }
+
+ul.credits {
+  li {
+    a {
+      display: inline-block;
+      border-bottom: 1px solid #000;
+    }
+    display: inline-block;
+    margin-right: 0.15em;
+  }
+}

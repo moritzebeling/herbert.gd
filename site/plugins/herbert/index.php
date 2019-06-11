@@ -85,7 +85,7 @@ Kirby::plugin('moritz-ebeling/herbert', [
     'controllers' => [
         'search' => function ( $site ) {
             $query   = get('q');
-            $results = $site->search($query, 'title|subtitle|tags|description|body|credits|location|date');
+            $results = $site->index()->listed()->search($query, 'title|subtitle|tags|description|body|credits|location|date');
 
             return [
               'query'   => $query,

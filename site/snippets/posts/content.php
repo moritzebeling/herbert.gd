@@ -48,6 +48,7 @@ $template = $page->intendedTemplate();
 
   <section class="meta">
 
+    <?php snippet('fields/credits') ?>
     <?php snippet('fields/link') ?>
     <?php snippet('fields/tags') ?>
 
