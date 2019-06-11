@@ -28,7 +28,7 @@ Kirby::plugin('moritz-ebeling/herbert', [
             if ( $features === true ) {
 
                 // including features from other domains
-                $features = $this->domains()->not( $domain )->children()->listed()->filterBy( 'includeDomain', $domain->id(), ',' );
+                $features = $this->domains()->not( $domain )->children()->listed()->filterBy( 'channels', $domain->id(), ',' );
                 $posts = $posts->merge( $features )->sortBy('date','desc');
 
             }
