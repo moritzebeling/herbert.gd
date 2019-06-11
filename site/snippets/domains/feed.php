@@ -12,30 +12,4 @@
     snippet('domains/feed-item', ['item' => $item]);
 
   endforeach; ?>
-
-
-
-  <?php
-  // fake som mass
-  foreach ( $site->feed( $domain ) as $item ):
-
-    snippet('domains/feed-item', ['item' => $item]);
-
-  endforeach; ?>
-  <?php foreach ( $site->feed( $domain ) as $item ):
-
-    snippet('domains/feed-item', ['item' => $item]);
-
-  endforeach; ?>
-  <?php foreach ( $site->feed( $domain ) as $item ):
-
-    snippet('domains/feed-item', ['item' => $item]);
-
-  endforeach; ?>
-  <?php foreach ( $site->feed( $domain ) as $item ):
-
-    snippet('domains/feed-item', ['item' => $item]);
-
-  endforeach; ?>
-  
 </ul>
