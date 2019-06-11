@@ -59,6 +59,9 @@ header, .header, section {
     margin-bottom: 0.2em;
   }
 }
+.grid li > a {
+  display: block;
+}
 
 a.keyword {
   border-bottom: 1px solid #ddd !important;
@@ -79,6 +82,69 @@ nav {
   }
 }
 
+/*
+* grid
+*/
+
+.grid {
+
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: block;
+  flex-wrap: wrap;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  * {
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  > .item {
+
+    display: block;
+    padding: 0.5rem;
+    margin-bottom: 4em;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+}
+@media (min-width: 700px) {
+  .grid {
+
+    display: flex;
+
+    > .item {
+      width: 50%;
+      transition: width 300ms ease;
+    }
+
+  }
+}
+@media (min-width: 1200px) {
+  .grid > .item {
+    width: 33.33%;
+  }
+}
+@media (min-width: 1600px) {
+  .grid > .item {
+    width: 25%;
+  }
+}
+@media (min-width: 2000px) {
+  .grid > .item {
+    width: 20%;
+  }
+}
 
 @import 'domains';
 

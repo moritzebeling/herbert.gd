@@ -55,7 +55,9 @@ Tags:
 
 ----
 
-Picture: - scan_cover.jpg
+Picture: 
+
+- scan_cover.jpg
 
 ----
 
@@ -91,8 +93,10 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-11 12:45
+Workflow-updated: 2019-06-11 13:20
 
 ----
 
-Workflow-updatedby: - admin@moritzebeling.com
+Workflow-updatedby: 
+
+- admin@moritzebeling.com

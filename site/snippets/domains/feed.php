@@ -12,7 +12,7 @@ if( !$collection ){
 }
 
 ?>
-<ul class="feed">
+<ul class="feed grid">
   <?php foreach ( $collection as $item ):
 
     snippet('domains/feed-item', ['item' => $item]);

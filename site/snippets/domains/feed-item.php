@@ -8,7 +8,7 @@
  */
 
 ?>
-<li class="post">
+<li class="item post">
   <a href="<?= $item->url() ?>">
 
     <div class="thumbnail">
@@ -18,7 +18,7 @@
     <h3 class="title"><?= $item->title() ?></h3>
     <h4 class="subtitle"><?= $item->subtitle() ?></h4>
 
-    <span class="published"><?= ucwords( $item->published() ) ?></span>
+    <span style="display:none;" class="published"><?= ucwords( $item->published() ) ?></span>
 
   </a>
 </li>

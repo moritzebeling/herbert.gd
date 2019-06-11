@@ -33,9 +33,9 @@ $c = $images->count();
 
 // output
 ?>
-<section class="gallery">
+<section class="gallery grid">
   <?php foreach($images as $image): ?>
-    <figure onclick="gallerySwitch(event)">
+    <figure class="item" onclick="gallerySwitch(event)">
 
       <?php snippet('picture', ['image' => $image, 'figtag' => false ]); ?>
 

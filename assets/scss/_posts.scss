@@ -6,10 +6,6 @@ section.gallery {
   figure {
     margin-bottom: 0.2rem;
 
-    img {
-      width: 100%;
-      height: auto;
-    }
     figcaption {
       margin-bottom: 1em;
       margin-top: 0.5em;
@@ -21,22 +17,11 @@ section.gallery {
 
   section.gallery {
 
-    margin-right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
     figure {
-      width: 25%;
-      margin-bottom: 1rem;
-      margin-right: 1rem;
       transition: width 300ms ease;
       position: relative;
 
       img {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
         transition: opacity 200ms ease;
         opacity: 1;
       }
@@ -62,7 +47,6 @@ section.gallery {
     }
 
     figure.expose {
-      width: 100%;
       position: static;
 
       figcaption{
@@ -74,14 +58,6 @@ section.gallery {
       img {
         opacity: 1;
       }
-    }
-  }
-}
-
-@media (min-width: 1600px) {
-  section.gallery {
-    figure {
-      width: 15%;
     }
   }
 }
