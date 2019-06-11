@@ -153,6 +153,10 @@ ul.feed li {
 ul.feed li figure {
   margin-bottom: 0.5em;
 }
+ul.feed li figure img {
+  width: 100%;
+  height: auto;
+}
 
 @media (min-width: 600px) {
   ul.feed {

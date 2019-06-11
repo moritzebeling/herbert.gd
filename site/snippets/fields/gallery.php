@@ -35,18 +35,15 @@ $c = $images->count();
 ?>
 <section class="gallery">
   <?php foreach($images as $image): ?>
-    <figure onclick="gallerySwitch(event)" class="progressive">
-      <img
-        src="<?= $image->resize(160)->url() ?>"
-        class="progressive__img progressive--not-loaded"
-        data-progressive="<?= $image->resize(1600)->url() ?>"
-        alt="<?= $image->caption()->html(); ?>" />
-      <?php if( $caption ): ?>
-        <figcaption>
-          <span class="count"><?= $i.' / '.$c; $i++; ?></span>
-          <?= $image->caption()->html(); ?>
-        </figcaption>
-      <?php endif; ?>
+    <figure onclick="gallerySwitch(event)">
+
+      <?php snippet('picture', ['image' => $image, 'figtag' => false ]); ?>
+
+      <figcaption>
+        <span class="count"><?= $i.' / '.$c; $i++; ?></span>
+        <?= $image->caption()->html(); ?>
+      </figcaption>
+
     </figure>
   <?php endforeach ?>
 </section>

@@ -7,9 +7,6 @@
 
   <title><?= $domain->title() ?> | <?= $page->title() ?></title>
 
-  <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.css">
-
   <?= css('assets/css/default.css') ?>
   <?= css('assets/css/'.$domain->id().'.css') ?>
 
