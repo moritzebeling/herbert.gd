@@ -1,0 +1,102 @@
+/*
+* post content
+*/
+section.gallery {
+
+  figure {
+    margin-bottom: 0.2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      margin-bottom: 1em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+
+  section.gallery {
+
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    figure {
+      width: 25%;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      transition: width 300ms ease;
+      position: relative;
+
+      img {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        transition: opacity 200ms ease;
+        opacity: 1;
+      }
+
+      figcaption {
+        top: 0;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        padding: 1em;
+        transition: opacity 200ms ease;
+        opacity: 0;
+      }
+    }
+
+    figure:hover {
+      figcaption {
+        opacity: 1;
+      }
+      img {
+        opacity: 0.3;
+      }
+    }
+
+    figure.expose {
+      width: 100%;
+      position: static;
+
+      figcaption{
+        position: static;
+        opacity: 1;
+      }
+    }
+    figure.expose:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  section.gallery {
+    figure {
+      width: 15%;
+    }
+  }
+}
+
+/*
+* content
+*/
+ul.tags {
+  &:before {
+    content: 'Keywords:';
+    margin-right: 0.15em;
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    margin-right: 0.15em;
+  }
+}

@@ -1,0 +1,56 @@
+/*
+* domain
+*/
+
+ul.websites {
+  margin-top: 1rem;
+}
+
+/*
+* feed
+*/
+ul.feed {
+  margin: 1rem;
+
+  li {
+    margin-bottom: 1rem;
+    figure {
+      margin-bottom: 0.5em;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  ul.feed {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      width: 25%;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+
+      .published {
+        display: none;
+      }
+
+    }
+  }
+
+}
+
+@media (min-width: 1600px) {
+  ul.feed {
+    li {
+      width: 15%;
+    }
+  }
+}
