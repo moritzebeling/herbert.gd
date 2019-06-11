@@ -1,8 +1,8 @@
-Title: Samuel Solazzo
+Title: Somehow there...
 
 ----
 
-Subtitle: »Somehow there... « — Abschlussarbeit
+Subtitle: Abschlussarbeit von Samuel Solazzo
 
 ----
 
@@ -55,9 +55,7 @@ Tags:
 
 ----
 
-Picture: 
-
-- scan_cover.jpg
+Picture: - scan_cover.jpg
 
 ----
 
@@ -91,14 +89,10 @@ Workflow-created: 2019-06-05 12:20
 
 Workflow-createdby: 
 
-- adrian.palko@uni-weimar.de
+----
+
+Workflow-updated: 2019-06-11 12:45
 
 ----
 
-Workflow-updated: 2019-06-05 12:20
-
-----
-
-Workflow-updatedby: 
-
-- adrian.palko@uni-weimar.de
+Workflow-updatedby: - admin@moritzebeling.com

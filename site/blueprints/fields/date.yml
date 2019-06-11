@@ -3,3 +3,4 @@ label: Datum
 type: date
 translate: false
 default: today
+help: Veröffentlichungs- oder Veransatltungsdatum

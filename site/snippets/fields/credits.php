@@ -40,10 +40,10 @@ if( !isset( $searchbase ) ){
         <span><?= $item['role'] ?> </span>
       <?php endif; ?>
 
-      <?php if($item['link']): ?>
-        <a href="<?= $item['link'] ?>" target="_blank" title="<?= $item['name']; ?>">
-      <?php else: ?>
-        <a href="<?= $searchbase.rawurlencode( $item['name'] ); ?>" title="<?= $item['name']; ?>">
+      <?php if($item['link']): // ext url ?>
+        <a href="<?= $item['link'] ?>" target="_blank" title="Open <?= parse_url( $item['link'], PHP_URL_HOST ) ?>">
+      <?php else: // internal search ?>
+        <a class="keyword" href="<?= $searchbase.rawurlencode( $item['name'] ); ?>" title="Search for <?= $item['name']; ?>">
       <?php endif; ?>
 
           <?= $item['name']; ?>

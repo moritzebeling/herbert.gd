@@ -7,6 +7,7 @@ label: Semester
 max: 1
 translate: false
 empty: Kein Semester angegeben
+help: Optional
 fields:
   term:
     type: select

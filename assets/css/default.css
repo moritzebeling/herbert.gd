@@ -122,6 +122,10 @@ header, .header, section {
   margin-bottom: 0.2em;
 }
 
+a.keyword {
+  border-bottom: 1px solid #ddd !important;
+}
+
 /*
 * header
 */
@@ -251,18 +255,20 @@ section.gallery figure figcaption {
 * content
 */
 ul.tags:before {
-  content: "Keywords:";
+  content: "Keywords";
   margin-right: 0.15em;
   display: inline-block;
 }
 ul.tags li {
   display: inline-block;
   margin-right: 0.15em;
+  text-transform: capitalize;
 }
 
 ul.credits li {
   display: inline-block;
   margin-right: 0.15em;
+  text-transform: capitalize;
 }
 ul.credits li a {
   display: inline-block;

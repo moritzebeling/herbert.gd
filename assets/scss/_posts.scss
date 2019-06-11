@@ -91,13 +91,14 @@ section.gallery {
 */
 ul.tags {
   &:before {
-    content: 'Keywords:';
+    content: 'Keywords';
     margin-right: 0.15em;
     display: inline-block;
   }
   li {
     display: inline-block;
     margin-right: 0.15em;
+    text-transform: capitalize;
   }
 }
 
@@ -109,5 +110,6 @@ ul.credits {
     }
     display: inline-block;
     margin-right: 0.15em;
+    text-transform: capitalize;
   }
 }

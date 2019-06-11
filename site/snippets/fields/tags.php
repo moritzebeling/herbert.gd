@@ -36,6 +36,6 @@ if( !isset( $searchbase ) ){
 ?>
 <ul class="links tags">
   <?php foreach( $page->{$field}()->split() as $item ): ?>
-    <li><a href="<?= $searchbase.rawurlencode( $item ); ?>" rel="tag"><?= $item; ?></a></li>
+    <li><a class="keyword" href="<?= $searchbase.rawurlencode( $item ); ?>" rel="tag"><?= $item; ?></a></li>
   <?php endforeach; ?>
 </ul>

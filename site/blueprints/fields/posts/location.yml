@@ -14,7 +14,7 @@ fields:
     label: Veranstaltungsort
     width: 1/2
     icon: globe
-  url:
+  link:
     extends: fields/url
     width: 1/2
   address:

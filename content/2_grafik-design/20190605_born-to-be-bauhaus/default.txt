@@ -20,7 +20,7 @@ Description:
 
 ----
 
-Tags: 
+Tags: moderne, archiv, ausstellung, apolda
 
 ----
 
@@ -52,6 +52,13 @@ Credits:
 
 Location: 
 
+- 
+  title: Lichthaus
+  url: http://www.lichthaus.info
+  address: E-Werk
+  city: Weimar
+  country: Deutschland
+
 ----
 
 Workflow-created: 2019-06-05 07:05
@@ -60,14 +67,12 @@ Workflow-created: 2019-06-05 07:05
 
 Workflow-createdby: 
 
-- adrian.palko@uni-weimar.de
-
 ----
 
-Workflow-updated: 2019-06-05 09:05
+Workflow-updated: 2019-06-11 12:15
 
 ----
 
 Workflow-updatedby: 
 
-- adrian.palko@uni-weimar.de
+- admin@moritzebeling.com

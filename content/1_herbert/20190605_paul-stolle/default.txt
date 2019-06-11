@@ -62,7 +62,7 @@ Credits:
 - 
   role: null
   name: Paul Stolle
-  link: http://paulstolle.com
+  link: null
 
 ----
 
@@ -78,7 +78,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-11 12:10
+Workflow-updated: 2019-06-11 12:25
 
 ----
 

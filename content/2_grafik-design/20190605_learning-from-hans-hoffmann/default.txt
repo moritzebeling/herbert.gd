@@ -18,11 +18,7 @@ Gallery:
 
 ----
 
-Body: 
-
-Ein Research Projekt, auf der Suche nach Form, Farbe, Komposition. 
-Inspiriert durch Werke und Aufgaben von Hans Hofman versuchen wir 
-die Bereichen der Ästhetischen Grenzen unterschiedlicher Medien auszudehnen.
+Body: Ein Research Projekt, auf der Suche nach Form, Farbe, Komposition. Inspiriert durch Werke und Aufgaben von Hans Hofman versuchen wir die Bereichen der Ästhetischen Grenzen unterschiedlicher Medien auszudehnen.
 
 ----
 
@@ -40,7 +36,7 @@ Picture:
 
 ----
 
-Issemester: true
+Issemester: false
 
 ----
 
@@ -65,11 +61,11 @@ Credits:
 - 
   role: Prof
   name: Markus Weisbeck
-  link: ""
+  link: null
 - 
   role: Dozent
   name: Adrian Palko
-  link: ""
+  link: null
 
 ----
 
@@ -77,10 +73,11 @@ Location:
 
 - 
   title: Raum 101
-  url: ""
+  link: null
   address: Marienstraße 1
   city: Weimar
   country: Deutschland
+  url: ""
 
 ----
 
@@ -90,14 +87,12 @@ Workflow-created: 2019-06-05 08:15
 
 Workflow-createdby: 
 
-- adrian.palko@uni-weimar.de
-
 ----
 
-Workflow-updated: 2019-06-05 12:25
+Workflow-updated: 2019-06-11 12:50
 
 ----
 
 Workflow-updatedby: 
 
-- adrian.palko@uni-weimar.de
+- admin@moritzebeling.com

@@ -26,19 +26,8 @@ $template = $page->intendedTemplate();
   </section>
   <section class="info">
 
-    <?php if( $template == 'event' || $template == 'workshop' ):
-      snippet('fields/datetime');
-      snippet('fields/location');
-    endif; ?>
-
-    <?php if( $template == 'course' || $template == 'workshop' ):
-      snippet('fields/teachers');
-      snippet('fields/semester');
-    endif; ?>
-
-    <?php if( $template == 'project' ):
-      snippet('fields/authors');
-    endif; ?>
+    <?php snippet('fields/date') ?>
+    <?php snippet('fields/location') ?>
 
   </section>
 

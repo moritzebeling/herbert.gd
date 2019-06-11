@@ -3,12 +3,6 @@ fields:
 
   isSemester: fields/posts/isSemester
 
-  date:
-    extends: fields/date
-    when:
-      isSemester: false
+  date: fields/date
 
-  semester:
-    extends: fields/posts/semester
-    when:
-      isSemester: true
+  semester: fields/posts/semester

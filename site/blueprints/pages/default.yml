@@ -17,6 +17,6 @@ options:
 
 tabs:
 
-  tab_info: tabs/posts/both
+  tab_info: tabs/posts/content
 
   tab_workflow: tabs/workflow
