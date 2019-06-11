@@ -107,8 +107,7 @@ nav {
   > .item {
 
     display: block;
-    padding: 0.5rem;
-    margin-bottom: 4em;
+    margin-bottom: 4rem;
 
     img {
       width: 100%;
@@ -118,13 +117,15 @@ nav {
   }
 
 }
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .grid {
 
     display: flex;
 
     > .item {
+      margin-bottom: 0rem;
       width: 50%;
+      padding: 0.5rem;
       transition: width 300ms ease;
     }
 

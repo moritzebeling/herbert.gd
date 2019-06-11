@@ -162,20 +162,21 @@ nav a.active:before {
 }
 .grid > .item {
   display: block;
-  padding: 0.5rem;
-  margin-bottom: 4em;
+  margin-bottom: 4rem;
 }
 .grid > .item img {
   width: 100%;
   height: auto;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .grid {
     display: flex;
   }
   .grid > .item {
+    margin-bottom: 0rem;
     width: 50%;
+    padding: 0.5rem;
     transition: width 300ms ease;
   }
 }
@@ -218,7 +219,6 @@ section.gallery figure figcaption {
 
 @media (min-width: 600px) {
   section.gallery figure {
-    transition: width 300ms ease;
     position: relative;
   }
   section.gallery figure img {
@@ -230,7 +230,7 @@ section.gallery figure figcaption {
     left: 0;
     margin: 0;
     position: absolute;
-    padding: 1em;
+    padding: 1.5em;
     transition: opacity 200ms ease;
     opacity: 0;
   }
@@ -240,10 +240,11 @@ section.gallery figure figcaption {
   section.gallery figure:hover img {
     opacity: 0.3;
   }
-  section.gallery figure.expose {
+  section.gallery .item.expose {
     position: static;
+    width: 100%;
   }
-  section.gallery figure.expose figcaption {
+  section.gallery .item.expose figcaption {
     position: static;
     opacity: 1;
   }
