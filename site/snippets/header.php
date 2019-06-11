@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title><?= $domain->title() ?> | <?= $page->title() ?></title>
+  <title><?= $page->domain()->title() ?> | <?= $page->title() ?></title>
 
   <?= css('assets/css/default.css') ?>
-  <?= css('assets/css/'.$domain->id().'.css') ?>
+  <?= css('assets/css/'.$page->domain()->id().'.css') ?>
 
   <?= js('assets/js/default.js') ?>
 

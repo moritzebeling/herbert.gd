@@ -220,3 +220,39 @@ section.gallery {
     }
   }
 }
+
+/*
+* search
+*/
+.searchform {
+
+  form {
+    display: flex;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    border-radius: 10em;
+  }
+
+  input {
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  input[type="text"] {
+  }
+  input[type="submit"] {
+    cursor: pointer;
+    flex: 1;
+    border: 1px solid #000;
+    border-radius: 10em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  input[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+}

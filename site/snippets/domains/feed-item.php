@@ -3,6 +3,8 @@
 /**
  * feed of posts that lists all posts from current domain and all featured posts from other domains
  *
+ * recieves
+ * - $item
  */
 
 ?>

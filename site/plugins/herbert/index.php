@@ -7,7 +7,6 @@
 
 Kirby::plugin('moritz-ebeling/herbert', [
 
-    // site methods
     'siteMethods' => [
         'domains' => function () {
             // returns a list of all domains
@@ -38,7 +37,6 @@ Kirby::plugin('moritz-ebeling/herbert', [
         }
     ],
 
-    // page methods
     'pageMethods' => [
         'domain' => function () {
 
@@ -52,7 +50,7 @@ Kirby::plugin('moritz-ebeling/herbert', [
                 return $domain;
             }
 
-            return false;
+            return $this->site();
 
         },
         'otherDomains' => function () {
@@ -75,7 +73,6 @@ Kirby::plugin('moritz-ebeling/herbert', [
         }
     ],
 
-    // routes
     'routes' => [
         [
             'pattern' => '',
@@ -83,6 +80,19 @@ Kirby::plugin('moritz-ebeling/herbert', [
                 go( kirby()->site()->domains()->first()->url() );
             }
         ]
-        ],
+    ],
+
+    'controllers' => [
+        'search' => function ( $site ) {
+            $query   = get('q');
+            $results = $site->search($query, 'title|subtitle|tags|description|body|credits|location|date');
+
+            return [
+              'query'   => $query,
+              'results' => $results,
+            ];
+        }
+    ]
+
 
 ]);
