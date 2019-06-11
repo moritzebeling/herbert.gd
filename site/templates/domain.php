@@ -7,7 +7,7 @@
 
       <ul class="links websites">
         <?php foreach( $domain->links()->yaml() as $item ): ?>
-          <li><a href="<?= $item['url']; ?>"><?= $item['title']; ?></a></li>
+          <li><a href="<?= $item['link']; ?>" target="_blank"><?= $item['title']; ?></a></li>
         <?php endforeach; ?>
       </ul>
 
