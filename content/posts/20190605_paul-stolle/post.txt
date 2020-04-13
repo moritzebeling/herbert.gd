@@ -13,7 +13,7 @@ Die Musiker des Gewandhausorchesters Leipzig gehörten zu den wenigen Privilegie
 
 ----
 
-Link:
+Link: 
 
 ----
 
@@ -21,11 +21,7 @@ Linkredirect: false
 
 ----
 
-Keywords: qwef, few
-
-----
-
-Type: Curriculum
+Curriculum: 
 
 ----
 
@@ -33,23 +29,35 @@ Date: 2019-06-05
 
 ----
 
-Semester:
+Semester: 
 
 ----
 
-Channels:
+Channels: herbert-gd
 
 ----
 
-Persons:
+Type: 
 
 ----
 
 Location:
 
--
+- 
   name: M1
   city: Weimar
+
+----
+
+Persons: 
+
+----
+
+Categories: 
+
+----
+
+Keywords: qwef, few
 
 ----
 
@@ -67,11 +75,11 @@ Gallery:
 
 ----
 
-Description:
+Description: 
 
 ----
 
-Tags:
+Tags: 
 
 ----
 
@@ -96,11 +104,11 @@ Workflow-created: 2019-06-05 13:00
 
 ----
 
-Workflow-createdby:
+Workflow-createdby: 
 
 ----
 
-Workflow-updated: 2020-04-13 12:24
+Workflow-updated: 2020-04-13 14:13
 
 ----
 
