@@ -30,7 +30,7 @@ Channels:
 
 ----
 
-Type: Announcement
+Type: announcement
 
 ----
 
@@ -50,11 +50,11 @@ Persons:
 
 ----
 
-Keywords: qwefqwef, ew
+Categories: 
 
 ----
 
-Categories: 
+Keywords: qwefqwef, ew
 
 ----
 
@@ -90,7 +90,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2020-04-13 12:32
+Workflow-updated: 2020-04-13 12:42
 
 ----
 

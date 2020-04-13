@@ -36,20 +36,10 @@ tabs:
       - width: 1/2
         fields:
 
-          posttypes:
-            label: Post Types
-            type: structure
-            fields:
-              name:
-                type: text
-
-      - width: 1/2
-        fields:
-
           categories:
             label: Post Categories
             type: structure
-            max: 20
+            max: 15
             fields:
               name:
                 type: text

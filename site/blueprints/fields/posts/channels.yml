@@ -5,6 +5,7 @@ type: checkboxes
 label: Channels
 
 translate: false
+max: 3
 
 options: query
 query: site.children.listed

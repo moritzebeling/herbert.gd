@@ -1,0 +1,5 @@
+type: radio
+options:
+  curriculum: Curriculum
+  work: Single Work Showcase
+  announcement: Announcement

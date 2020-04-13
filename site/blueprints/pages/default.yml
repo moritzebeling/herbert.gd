@@ -46,7 +46,6 @@ columns:
             width: 1/3
             icon: open
 
-
   - width: 1/3
     sections:
 
@@ -62,27 +61,15 @@ columns:
 
           channels: fields/posts/channels
 
-          type:
-            type: radio
-            options: query
-            query:
-              fetch: site.find('posts').posttypes.toStructure
-              text: "{{ structureItem.name }}"
-              value: "{{ structureItem.name }}"
+          type: fields/posts/type
 
           location: fields/posts/location
 
           persons: fields/posts/persons
 
+          categories: fields/posts/categories
+
           keywords:
             extends: fields/keywords
             required: true
             min: 2
-
-          categories:
-            type: checkboxes
-            options: query
-            query:
-              fetch: site.find('posts').categories.toStructure
-              text: "{{ structureItem.name }}"
-              value: "{{ structureItem.name }}"
