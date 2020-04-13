@@ -5,7 +5,7 @@
  *
  */
 
-Kirby::plugin('moritz-ebeling/herbert', [
+Kirby::plugin('moritzebeling/herbert', [
 
   'pagesMethods' => [
     'pluckStructure' => function ( $structureField, $innerField = false ) {
