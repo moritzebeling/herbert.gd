@@ -1,0 +1,55 @@
+title: Posts
+
+icon: 🏓
+
+options:
+  changeSlug:	true
+  changeStatus:	true
+  changeTemplate:	true
+  changeTitle:	true
+  delete:	true
+  preview: true
+  read:	true
+  update: true
+
+tabs:
+
+  content:
+    label: Posts
+    icon: list-bullet
+    sections:
+
+      drafts:
+        extends: sections/posts
+        status: drafts
+        headline: Drafts
+
+      posts:
+        extends: sections/posts
+        status: published
+
+  category:
+    label: Categories & Meta
+    icon: cog
+    columns:
+
+      - width: 1/2
+        fields:
+
+          posttypes:
+            label: Post types
+            type: structure
+            fields:
+              name:
+                type: text
+
+      - width: 1/2
+        fields:
+
+          categories:
+            label: Disciplines
+            type: structure
+            max: 10
+            fields:
+              name:
+                type: text
