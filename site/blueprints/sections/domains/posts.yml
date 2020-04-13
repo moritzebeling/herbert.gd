@@ -1,9 +1,0 @@
-# list of posts
-headline: Posts
-type: pages
-status: all
-sortBy: date desc
-templates:
-  - default
-empty: Es wurden noch keine Posts erstellt
-info: " {{ page.date }}"
