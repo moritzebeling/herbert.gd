@@ -29,6 +29,7 @@ tabs:
         fields:
 
           domain:
+            disabled: true
             type: text
             label: Dedicated Domain
-            placeholder: herbert.gd
+            placeholder: "{{ page.slug }}.com"
