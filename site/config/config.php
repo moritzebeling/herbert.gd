@@ -5,23 +5,27 @@
  *
  */
 
-return [
+ return [
 
-    // while debugging
-    'debug' => true,
-    'cache' => false,
-    'whoops' => true,
-    'panel' =>[
-        'install' => true
-    ],
+   'home' => 'index',
 
-    'searchbase' => '/?q=',
+   'debug' => false,
+   'whoops' => false,
 
-    'thumbs' => [
-      'srcsets' => [
-        'default' => [240, 320, 480, 640, 720, 920, 1020, 1280, 1366, 1440, 1600, 1920, 2560],
-        'thumbnail' => [240, 320, 480, 640, 720, 920, 1020, 1280]
-      ]
-    ]
+   'cache' => [
+     'pages' => [
+       'active' => true
+     ],
+   ],
 
-];
+   'smartypants' => true,
+
+   'thumbs' => [
+ 		'srcsets' => [
+ 			'small' => [ 80, 120, 240, 360],
+ 			'medium' => [360, 480, 640, 880, 1200],
+ 			'large' => [640, 880, 1200, 1600, 2000],
+ 		]
+ 	],
+
+ ];
