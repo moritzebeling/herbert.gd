@@ -11,4 +11,13 @@ $channel = isset( $channel ) ? $channel : $page;
 
 	<?php snippet('fields/links'); ?>
 
+	<div class="search">
+
+    <form>
+      <input type="text" name="q" value="">
+      <input type="submit" value="Search">
+    </form>
+
+  </div>
+
 </header>
