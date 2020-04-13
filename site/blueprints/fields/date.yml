@@ -1,6 +1,5 @@
 # (publishing) date
-label: Datum
+label: Post Date
 type: date
 translate: false
 default: today
-help: Veröffentlichungs- oder Veransatltungsdatum

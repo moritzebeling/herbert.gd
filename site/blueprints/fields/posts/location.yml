@@ -2,38 +2,32 @@
 # https://getkirby.com/docs/reference/panel/fields/structure
 
 type: structure
-label: (Veranstaltungs-) Ort
+label: Associated Location
 
-help: Optional
 max: 1
 translate: false
-empty: Kein Ort angegeben
 fields:
-  title:
-    type: text
-    label: Veranstaltungsort
+
+  name:
+    type: tags
+    label: Name
     width: 1/2
-    icon: globe
-  link:
-    extends: fields/url
-    width: 1/2
-  address:
-    type: textarea
-    label: Adresse
-    buttons: false
-    icon: globe
+    icon: home
+    options: query
+    max: 1
+    query: page.siblings.pluckStructure('location','name')
+
   city:
-    type: text
+    type: tags
     label: Stadt
+    max: 1
     width: 1/2
     icon: globe
-  country:
-    type: text
-    label: Land
-    width: 1/2
-    icon: globe
+    options: query
+    query: page.siblings.pluckStructure('location','city')
+
 columns:
-  title:
+  name:
     width: 1/2
   city:
     width: 1/2

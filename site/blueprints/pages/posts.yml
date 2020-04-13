@@ -37,7 +37,7 @@ tabs:
         fields:
 
           posttypes:
-            label: Post types
+            label: Post Types
             type: structure
             fields:
               name:
@@ -47,9 +47,9 @@ tabs:
         fields:
 
           categories:
-            label: Disciplines
+            label: Post Categories
             type: structure
-            max: 10
+            max: 20
             fields:
               name:
                 type: text

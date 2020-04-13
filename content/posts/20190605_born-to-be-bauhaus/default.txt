@@ -6,31 +6,15 @@ Subtitle: Ausstellungseröffnung am 07.06.2019
 
 ----
 
-Gallery: 
-
-- btbb19_plakat2_final_uberarbeitet.jpg
-
-----
-
 Body: Born to be Bauhaus ist ein Kooperationsprojekt zwischen dem Archiv der Moderne der Bauhaus-Universität Weimar und dem Über Land e.V. der Kulturfabrik Apolda zum 100-jährigen Jubiläum der Bauhaus-Ausstellung 1923. Im Rahmen dessen werden von 2017-2021 jährlich fünf Künstler*innen der Fakultät Kunst und Gestaltung der Bauhaus-Universität Weimar gekürt. Das geschieht durch eine Jury, die Expert*innen aus den Bereichen Kuration, Kunsttheorie, Kunstmarkt, Kunstproduktion und Kreativwirtschaft versammelt. Die Auslobung findet jährlich im Sommersemester statt. Die jeweiligen fünf Kunstwerke werden schließlich vom Archiv der Moderne in die Kustodie der Bauhaus-Universität Weimar aufgenommen, was sie zu unveräußerlichem öffentlichen Kunstgut macht. Darüberhinaus stellen die Preisträger*innen ihre Kunst (über die angekauften Werke hinaus) in der Kulturfabrik Apolda aus.
 
 ----
 
-Description: 
+Link: 
 
 ----
 
-Tags: moderne, archiv, ausstellung, apolda
-
-----
-
-Picture: 
-
-- banner_neu.png
-
-----
-
-Issemester: false
+Linkredirect: false
 
 ----
 
@@ -42,22 +26,59 @@ Semester:
 
 ----
 
-Channels: herbert
+Channels: 
+
+----
+
+Type: Announcement
+
+----
+
+Location:
+
+- 
+  name: M1
+  city: Weimar
+  title: Lichthaus
+  url: http://www.lichthaus.info
+  address: E-Werk
+  country: Deutschland
+
+----
+
+Persons: 
+
+----
+
+Keywords: qwefqwef, ew
+
+----
+
+Categories: 
+
+----
+
+Gallery: - btbb19_plakat2_final_uberarbeitet.jpg
+
+----
+
+Description: 
+
+----
+
+Tags: moderne, archiv, ausstellung, apolda
+
+----
+
+Picture: - banner_neu.png
+
+----
+
+Issemester: false
 
 ----
 
 Credits: 
-
-----
-
-Location: 
-
-- 
-  title: Lichthaus
-  url: http://www.lichthaus.info
-  address: E-Werk
-  city: Weimar
-  country: Deutschland
 
 ----
 
@@ -69,10 +90,75 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-11 12:15
+Workflow-updated: 2020-04-13 12:32
 
 ----
 
-Workflow-updatedby: 
+Workflow-updatedby: 3Ob4e8fO
 
-- admin@moritzebeling.com
+----
+
+Image:
+
+- 
+  filename: banner_neu.png
+  dragText: '(image: banner_neu.png)'
+  icon:
+    type: file-image
+    ratio: 3/2
+    back: white
+    color: '#de935f'
+    cover: false
+    url: >
+      http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner_neu.png
+    cards:
+      url: >
+        data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw
+      srcset: >
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-352x.png
+        352w,
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-864x.png
+        864w,
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-1408x.png
+        1408w
+    list:
+      url: >
+        data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw
+      srcset: >
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-38x38.png
+        1x,
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-76x76.png
+        2x
+  id: posts/born-to-be-bauhaus/banner_neu.png
+  image:
+    ratio: 3/2
+    back: white
+    cover: false
+    url: >
+      http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner_neu.png
+    cards:
+      url: >
+        data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw
+      srcset: >
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-352x.png
+        352w,
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-864x.png
+        864w,
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-1408x.png
+        1408w
+    list:
+      url: >
+        data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw
+      srcset: >
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-38x38.png
+        1x,
+        http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner-neu-76x76.png
+        2x
+  info: ""
+  link: >
+    /pages/posts+born-to-be-bauhaus/files/banner_neu.png
+  text: banner_neu.png
+  type: image
+  url: >
+    http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner_neu.png
+  uuid: banner_neu.png

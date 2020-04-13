@@ -1,5 +1,5 @@
 # unformatted subtitle
-label: Untertitel
+label: Subtitle
 type: text
 translate: true
 maxlength: 70

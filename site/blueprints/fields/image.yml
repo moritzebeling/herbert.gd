@@ -3,6 +3,7 @@ type: files
 
 multiple: false
 layout: cards
+size: huge
 
 image:
   back: white

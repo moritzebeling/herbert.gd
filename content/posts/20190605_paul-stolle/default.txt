@@ -6,7 +6,54 @@ Subtitle: Abschlussarbeit von Paul Stolle
 
 ----
 
-Gallery: 
+Body:
+
+Reisen ist heutzutage etwas Selbstverständliches. Egal ob geschäftlich oder privat, ob in die Nachbarstadt oder auf die andere Seite der Erde — wir können jederzeit aufbrechen in die Ferne. Doch diese Zeit der unbegrenzten Möglichkeiten ist noch keine dreißig Jahre alt. Vor der Wiedervereinigung war es nur einem Teil der Deutschen vorbehalten, die Welt zu bereisen.
+Die Musiker des Gewandhausorchesters Leipzig gehörten zu den wenigen Privilegierten, die dank ihrer Profession die DDR zeitweise verlassen durften. Auf zahlreichen Tourneen bereisten sie die unterschiedlichsten Länder. Ihre persönlichen Erinnerungen und Erfahrungen spiegeln die unglaubliche Reisegeschichte des ältesten bürgerlichen Konzertorchesters Deutschlands wider und erlauben zugleich einen Blick in das professionelle Musikerleben. Umrahmt von Bildern und Zeitdokumenten entsteht die subjektive Reisecollage einer bald vergessenen Zeit.
+
+----
+
+Link: 
+
+----
+
+Linkredirect: false
+
+----
+
+Keywords: qwef, few
+
+----
+
+Type: Curriculum
+
+----
+
+Date: 2019-06-05
+
+----
+
+Semester: 
+
+----
+
+Channels: 
+
+----
+
+Persons: 
+
+----
+
+Location:
+
+- 
+  name: M1
+  city: Weimar
+
+----
+
+Gallery:
 
 - ehmwg-buch-01.jpg
 - ehmwg-buch-02.jpg
@@ -20,13 +67,6 @@ Gallery:
 
 ----
 
-Body: 
-
-Reisen ist heutzutage etwas Selbstverständliches. Egal ob geschäftlich oder privat, ob in die Nachbarstadt oder auf die andere Seite der Erde — wir können jederzeit aufbrechen in die Ferne. Doch diese Zeit der unbegrenzten Möglichkeiten ist noch keine dreißig Jahre alt. Vor der Wiedervereinigung war es nur einem Teil der Deutschen vorbehalten, die Welt zu bereisen.
-Die Musiker des Gewandhausorchesters Leipzig gehörten zu den wenigen Privilegierten, die dank ihrer Profession die DDR zeitweise verlassen durften. Auf zahlreichen Tourneen bereisten sie die unterschiedlichsten Länder. Ihre persönlichen Erinnerungen und Erfahrungen spiegeln die unglaubliche Reisegeschichte des ältesten bürgerlichen Konzertorchesters Deutschlands wider und erlauben zugleich einen Blick in das professionelle Musikerleben. Umrahmt von Bildern und Zeitdokumenten entsteht die subjektive Reisecollage einer bald vergessenen Zeit.
-
-----
-
 Description: 
 
 ----
@@ -35,9 +75,7 @@ Tags:
 
 ----
 
-Picture: 
-
-- ehmwg-buch-00.jpg
+Picture: - ehmwg-buch-00.jpg
 
 ----
 
@@ -45,28 +83,12 @@ Issemester: false
 
 ----
 
-Date: 2019-06-05
-
-----
-
-Semester: 
-
-----
-
-Channels: grafik-design
-
-----
-
-Credits: 
+Credits:
 
 - 
   role: null
   name: Paul Stolle
   link: null
-
-----
-
-Location: 
 
 ----
 
@@ -78,10 +100,8 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2019-06-11 12:25
+Workflow-updated: 2020-04-13 12:24
 
 ----
 
-Workflow-updatedby: 
-
-- admin@moritzebeling.com
+Workflow-updatedby: 3Ob4e8fO

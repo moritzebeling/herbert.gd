@@ -1,7 +1,12 @@
 # formattable main content
-https://getkirby.com/docs/reference/panel/fields/textarea
+# https://getkirby.com/docs/reference/panel/fields/textarea
 
-label: Seiteninhalt
+label: Content
 type: textarea
 
 translate: true
+
+buttons:
+  - italic
+  - link
+  - email

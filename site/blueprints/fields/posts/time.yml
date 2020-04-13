@@ -1,8 +1,0 @@
-type: group
-fields:
-
-  isSemester: fields/posts/isSemester
-
-  date: fields/date
-
-  semester: fields/posts/semester

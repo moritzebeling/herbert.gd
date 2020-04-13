@@ -7,8 +7,8 @@ label: Semester
 max: 1
 translate: false
 empty: Kein Semester angegeben
-help: Optional
 fields:
+
   term:
     type: select
     label: Halbjahr
@@ -17,6 +17,7 @@ fields:
     options:
       winter: Winter
       summer: Sommer
+
   year:
     type: number
     label: Jahr
@@ -25,8 +26,3 @@ fields:
     translate: false
     width: 1/2
     help: Anfangsjahr bei Wintersemestern
-columns:
-  term:
-    width: 1/2
-  year:
-    width: 1/2

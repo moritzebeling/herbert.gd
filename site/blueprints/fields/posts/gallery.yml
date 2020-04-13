@@ -1,9 +1,0 @@
-# image gallery
-label: Bildergalerie
-type: files
-multiple: true
-translate: false
-query: page.images
-layout: cards
-back: black
-empty: Es wurden noch keine Bilder ausgewählt
