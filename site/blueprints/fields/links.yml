@@ -15,4 +15,5 @@ fields:
 
   url:
     extends: fields/url
+    required: true
     width: 1/2

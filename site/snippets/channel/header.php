@@ -9,4 +9,6 @@ $channel = isset( $channel ) ? $channel : $page;
 
 	<div><?= $channel->description()->kirbytext(); ?></div>
 
+	<?php snippet('fields/links'); ?>
+
 </header>
