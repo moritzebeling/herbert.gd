@@ -1,0 +1,65 @@
+Title: Space for Visual Research
+
+----
+
+Gallery: 
+
+----
+
+Body: 
+
+----
+
+Description: 
+
+----
+
+Tags: 
+
+----
+
+Picture: 
+
+----
+
+Issemester: false
+
+----
+
+Date: 2020-04-13
+
+----
+
+Semester: 
+
+----
+
+Channels: 
+
+----
+
+Credits: 
+
+----
+
+Location: 
+
+----
+
+Workflow-created: 2020-04-13 09:25
+
+----
+
+Workflow-createdby:
+
+- 3Ob4e8fO
+
+----
+
+Workflow-updated: 
+
+----
+
+Workflow-updatedby:
+
+- 3Ob4e8fO
