@@ -8,4 +8,7 @@ translate: false
 max: 3
 
 options: query
-query: site.children.listed
+query:
+  fetch: site.children.listed
+  text: "{{ page.title }}"
+  value: "{{ page.slug }}"

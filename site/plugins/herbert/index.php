@@ -29,6 +29,27 @@ Kirby::plugin('moritzebeling/herbert', [
   	},
   ],
 
+  'fileMethods' => [
+    'figure' => function ( $includeCaption = false ) {
+
+  		$img = Html::tag( 'img', null, [
+  			'src' => $this->url(),
+  			'title' => $this->title()->value(),
+  			'alt' => $this->description()->value()
+  		]);
+
+  		$caption = '';
+  		if( $includeCaption === true ){
+  			if( $this->description()->isNotEmpty() ){
+  				$caption = Html::tag('figcaption', $this->description()->value() );
+  			}
+  		}
+
+  		return '<figure>'.$img.$caption.'</figure>';
+
+  	},
+  ],
+
   'controllers' => [
       'search' => function ( $site ) {
           $query   = get('q');

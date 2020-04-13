@@ -30,6 +30,7 @@ if( $figtag !== false ): ?>
     src="<?= $image->resize(2)->url() ?>"
     data-srcset="<?= $image->srcset( $sizes ); ?>"
     />
+    
 <?php if( $figtag !== false ): ?>
 </figure>
 <?php endif; ?>

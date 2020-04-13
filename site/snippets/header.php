@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="<?= $kirby->language() ?>">
+<html>
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title><?= $page->domain()->title() ?> | <?= $page->title() ?></title>
+  <title><?= $page->title() ?> • <?= $site->title() ?></title>
 
   <?= css('assets/css/default.css') ?>
   <?= css('assets/css/'.$page->domain()->id().'.css') ?>
@@ -27,6 +27,14 @@
 </head>
 <body class="<?= $page->intendedTemplate() ?>">
 
-  <header>
-    <?php snippet('domain-navigation'); ?>
+  <header class="site-header">
+
+    <a id="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
+
+    <ol class="channels">
+      <?php foreach( $kirby->collection('channels') as $channel ): ?>
+        <li><a href="<?= $channel->url() ?>"><?= $channel->title() ?></a></li>
+      <?php endforeach; ?>
+    </ol>
+
   </header>
