@@ -46,6 +46,20 @@ columns:
             width: 1/3
             icon: open
 
+          curriculum:
+            type: pages
+            label: Associated Curriculum
+            max: 1
+            when:
+              type: showcase
+            query: page.siblings.filterBy('type', 'curriculum')
+
+      # associates:
+        # type: pages
+        # headline: Associated Work Showcases
+        # parent: page.parent
+        # create: false
+
   - width: 1/3
     sections:
 
@@ -69,7 +83,4 @@ columns:
 
           categories: fields/posts/categories
 
-          keywords:
-            extends: fields/keywords
-            required: true
-            min: 2
+          keywords: fields/keywords

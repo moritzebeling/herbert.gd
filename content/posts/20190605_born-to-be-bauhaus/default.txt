@@ -18,6 +18,12 @@ Linkredirect: false
 
 ----
 
+Curriculum:
+
+- posts/learning-from-hans-hoffmann
+
+----
+
 Date: 2019-06-05
 
 ----
@@ -30,7 +36,7 @@ Channels:
 
 ----
 
-Type: announcement
+Type: showcase
 
 ----
 
@@ -55,6 +61,10 @@ Categories:
 ----
 
 Keywords: qwefqwef, ew
+
+----
+
+Subposts: 
 
 ----
 
@@ -90,7 +100,7 @@ Workflow-createdby:
 
 ----
 
-Workflow-updated: 2020-04-13 12:42
+Workflow-updated: 2020-04-13 12:51
 
 ----
 
@@ -162,3 +172,7 @@ Image:
   url: >
     http://localhost:8000/media/pages/posts/born-to-be-bauhaus/1191654108-1559946680/banner_neu.png
   uuid: banner_neu.png
+
+----
+
+Template: announcement
