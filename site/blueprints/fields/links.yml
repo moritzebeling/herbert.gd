@@ -1,16 +1,18 @@
 # external links
 # https://getkirby.com/docs/reference/panel/fields/structure
 
-label: Externe Links
+label: External Links
 type: structure
 
 translate: false
+
 fields:
+
   title:
     type: text
     label: Titel
     width: 1/2
-    help: z.B. "Instagram" oder "Bauhaus-Universität Weimar"
-  link:
+
+  url:
     extends: fields/url
     width: 1/2

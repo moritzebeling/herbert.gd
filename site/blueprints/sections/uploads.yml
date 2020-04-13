@@ -1,11 +1,8 @@
 # list of all files
-headline: Hochgeladene Bilder
+headline: Uploads
 type: files
-empty: Es wurde noch keine Bilder hochgeladen
+empty: No uploads yet
 layout: list
 image:
   back: white
-template: image
-sortable: false
-max: 99
-help: Bilder müssen zuerst hier hochgeladen werden
+sortable: true

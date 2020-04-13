@@ -1,8 +1,10 @@
 # taglist for search and cross referenceing
 # https://getkirby.com/docs/reference/panel/fields/tags
 
-label: Tags
+label: Keywords
 type: tags
 
 max: 10
-help: Schlagworte für Suche und Querverlinkung
+
+options: query
+query: site.index.pluck("keywords", ",", true)

@@ -1,0 +1,22 @@
+# images
+
+title: Bild
+
+accept:
+  mime: image/*
+
+options:
+  changeName: true
+  delete: true
+  replace: true
+  update: true
+
+fields:
+
+  description:
+    extends: fields/description
+    label: Caption
+
+  credits:
+    label: Credits
+    type: text

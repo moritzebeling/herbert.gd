@@ -1,0 +1,8 @@
+label: Image
+type: files
+
+multiple: false
+layout: cards
+
+image:
+  back: white
