@@ -10,7 +10,7 @@ Body: Ein Research Projekt, auf der Suche nach Form, Farbe, Komposition. Inspiri
 
 ----
 
-Link: 
+Link:
 
 ----
 
@@ -18,7 +18,7 @@ Linkredirect: false
 
 ----
 
-Curriculum: 
+Curriculum:
 
 ----
 
@@ -28,13 +28,13 @@ Date: 2019-06-05
 
 Semester:
 
-- 
+-
   term: summer
   year: 2019
 
 ----
 
-Channels: 
+Channels:
 
 ----
 
@@ -44,7 +44,7 @@ Type: announcement
 
 Location:
 
-- 
+-
   name: ""
   city: Weimar
   title: Raum 101
@@ -55,11 +55,11 @@ Location:
 
 ----
 
-Persons: 
+Persons:
 
 ----
 
-Categories: 
+Categories:
 
 ----
 
@@ -79,11 +79,11 @@ Gallery:
 
 ----
 
-Description: 
+Description:
 
 ----
 
-Tags: 
+Tags:
 
 ----
 
@@ -97,11 +97,11 @@ Issemester: false
 
 Credits:
 
-- 
+-
   role: Prof
   name: Markus Weisbeck
   link: null
-- 
+-
   role: Dozent
   name: Adrian Palko
   link: null
@@ -112,7 +112,7 @@ Workflow-created: 2019-06-05 08:15
 
 ----
 
-Workflow-createdby: 
+Workflow-createdby:
 
 ----
 

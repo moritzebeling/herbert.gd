@@ -10,20 +10,28 @@ tabs:
       - width: 1/2
         sections:
 
-          # list all domains
-          channels:
-            headline: Channels
-            extends: sections/pages
-            template: channel
-
-      - width: 1/2
-        sections:
-
           # list of latest posts
           posts:
             headline: Content
             extends: sections/pages
             template: posts
+            create: false
+
+          drafts:
+            extends: sections/posts
+            headline: Posts in the making
+            status: draft
+            parent: site.find('posts')
+            template: post
+
+      - width: 1/2
+        sections:
+
+          # list all domains
+          channels:
+            headline: Channels
+            extends: sections/pages
+            template: channel
 
   info:
     extends: tabs/info

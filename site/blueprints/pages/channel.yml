@@ -2,6 +2,10 @@ title: Channel
 
 icon: 🌍
 
+status:
+  draft: Draft
+  listed: Visible
+
 options:
   # set user permissions
   changeSlug:	false

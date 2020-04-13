@@ -13,7 +13,7 @@ Die Musiker des Gewandhausorchesters Leipzig gehörten zu den wenigen Privilegie
 
 ----
 
-Link: 
+Link:
 
 ----
 
@@ -33,21 +33,21 @@ Date: 2019-06-05
 
 ----
 
-Semester: 
+Semester:
 
 ----
 
-Channels: 
+Channels:
 
 ----
 
-Persons: 
+Persons:
 
 ----
 
 Location:
 
-- 
+-
   name: M1
   city: Weimar
 
@@ -67,11 +67,11 @@ Gallery:
 
 ----
 
-Description: 
+Description:
 
 ----
 
-Tags: 
+Tags:
 
 ----
 
@@ -85,7 +85,7 @@ Issemester: false
 
 Credits:
 
-- 
+-
   role: null
   name: Paul Stolle
   link: null
@@ -96,7 +96,7 @@ Workflow-created: 2019-06-05 13:00
 
 ----
 
-Workflow-createdby: 
+Workflow-createdby:
 
 ----
 

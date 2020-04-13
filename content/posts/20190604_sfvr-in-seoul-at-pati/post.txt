@@ -2,11 +2,11 @@ Title: SfVR in Seoul at PaTI
 
 ----
 
-Subtitle: 
+Subtitle:
 
 ----
 
-Gallery: 
+Gallery:
 
 - 1swhwe-grbyyste3vgvbgq.jpg
 - fullsizeoutput_d1c.jpeg
@@ -17,19 +17,19 @@ Gallery:
 
 ----
 
-Body: 
+Body:
 
 ----
 
-Description: 
+Description:
 
 ----
 
-Tags: 
+Tags:
 
 ----
 
-Picture: 
+Picture:
 
 - fullsizeoutput_d30.jpeg
 
@@ -43,7 +43,7 @@ Date: 2019-06-04
 
 ----
 
-Semester: 
+Semester:
 
 ----
 
@@ -51,11 +51,11 @@ Channels: herbert
 
 ----
 
-Credits: 
+Credits:
 
 ----
 
-Location: 
+Location:
 
 ----
 
@@ -63,7 +63,7 @@ Workflow-created: 2019-06-04 14:55
 
 ----
 
-Workflow-createdby: 
+Workflow-createdby:
 
 - markus.weisbeck@uni-weimar.de
 
@@ -73,6 +73,6 @@ Workflow-updated: 2019-06-05 07:05
 
 ----
 
-Workflow-updatedby: 
+Workflow-updatedby:
 
 - adrian.palko@uni-weimar.de

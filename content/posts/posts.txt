@@ -1,61 +1,61 @@
-Title: Posts
+Title: All Posts
 
 ----
 
 Posttypes:
 
-- 
+-
   name: Curriculum
-- 
+-
   name: Student work
-- 
+-
   name: Announcement
 
 ----
 
 Categories:
 
-- 
+-
   name: Graphic Design
-- 
+-
   name: Photography
-- 
+-
   name: Moving Image
-- 
+-
   name: Editorial
-- 
+-
   name: Identity
-- 
+-
   name: Virtual Experience
-- 
+-
   name: Spatial Experience
-- 
+-
   name: Event
-- 
+-
   name: Exhibition
 
 ----
 
 Disciplines:
 
-- 
+-
   name: Graphic Design
-- 
+-
   name: Photography
-- 
+-
   name: Typography
-- 
+-
   name: Moving Image
-- 
+-
   name: Spatial Experience
-- 
+-
   name: Virtual Experience
 
 ----
 
 Mediatypes:
 
-- 
+-
   name: Poster
-- 
+-
   name: Website

@@ -2,11 +2,11 @@ Title: Mel Nguyen
 
 ----
 
-Subtitle: 
+Subtitle:
 
 ----
 
-Gallery: 
+Gallery:
 
 - 20141807_melnguyen1.jpg
 - 20141807_melnguyen2.jpg
@@ -24,7 +24,7 @@ Body: In the work of Mel Nguyen the borders between graphic design and art disso
 
 ----
 
-Description: 
+Description:
 
 ----
 
@@ -32,7 +32,7 @@ Tags: missy, student
 
 ----
 
-Picture: 
+Picture:
 
 - 20141807_melnguyen6.jpg
 
@@ -46,19 +46,19 @@ Date: 2019-06-04
 
 ----
 
-Semester: 
+Semester:
 
 ----
 
-Channels: 
+Channels:
 
 ----
 
-Credits: 
+Credits:
 
 ----
 
-Location: 
+Location:
 
 ----
 
@@ -66,7 +66,7 @@ Workflow-created: 2019-06-04 09:35
 
 ----
 
-Workflow-createdby: 
+Workflow-createdby:
 
 - admin@moritzebeling.com
 
@@ -76,6 +76,6 @@ Workflow-updated: 2019-06-11 11:05
 
 ----
 
-Workflow-updatedby: 
+Workflow-updatedby:
 
 - admin@moritzebeling.com

@@ -2,15 +2,19 @@ title: Posts
 
 icon: 🏓
 
+status:
+  listed: Visible
+
 options:
-  changeSlug:	true
-  changeStatus:	true
-  changeTemplate:	true
-  changeTitle:	true
-  delete:	true
+  changeSlug: false
+  changeStatus: false
+  changeTemplate: false
+  changeTitle: false
+  delete: false
   preview: true
   read:	true
   update: true
+  duplicate: false
 
 tabs:
 
