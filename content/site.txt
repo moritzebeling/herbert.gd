@@ -6,7 +6,14 @@ Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
 
 ----
 
-Links: 
+Links:
+
+- 
+  title: ""
+  url: https://facebook.com
+- 
+  title: Twitter
+  url: https://twitter.com
 
 ----
 

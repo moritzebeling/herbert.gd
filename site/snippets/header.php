@@ -9,8 +9,10 @@
 
   <link rel="canonical" href="<?= $page->url() ?>" />
 
-  <?= css('assets/css/default.css') ?>
-  <?= css('assets/css/'.$page->domain()->id().'.css') ?>
+  <?= css([
+    'assets/css/reset.css',
+    'assets/css/global.css'
+  ]) ?>
 
   <?= js('assets/js/default.js') ?>
 
