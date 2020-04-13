@@ -75,7 +75,7 @@ columns:
 
           channels: fields/posts/channels
 
-          type: fields/posts/type
+          # type: fields/posts/type
 
           location: fields/posts/location
 

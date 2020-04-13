@@ -29,6 +29,10 @@ Kirby::plugin('moritzebeling/herbert', [
   	},
   ],
 
+  'pageMethods' => [
+
+  ],
+
   'fileMethods' => [
     'figure' => function ( $includeCaption = false ) {
 
