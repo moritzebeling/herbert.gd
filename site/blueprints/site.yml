@@ -26,27 +26,11 @@ tabs:
             template: posts
 
   info:
-    label: Info
-
+    extends: tabs/info
     columns:
-
-      - width: 2/3
+      main:
         fields:
 
-          image: fields/image
-
-          description: fields/description
-
-          links: fields/links
-
-          keywords: fields/keywords
-
           imprint:
-            type: url
+            extends: fields/url
             label: Imprint Link
-
-      - width: 1/3
-        sections:
-
-          uploads:
-            extends: sections/uploads

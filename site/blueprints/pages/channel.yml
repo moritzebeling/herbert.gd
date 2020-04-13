@@ -1,4 +1,4 @@
-title: Domain
+title: Channel
 
 icon: 🌍
 
@@ -18,8 +18,13 @@ options:
 
 tabs:
 
-  tab_posts: tabs/domains/posts
+  info:
+    extends: tabs/info
+    columns:
+      main:
+        fields:
 
-  tab_info: tabs/domains/info
-
-  tab_workflow: tabs/workflow
+          domain:
+            type: text
+            label: Dedicated Domain
+            placeholder: herbert.gd

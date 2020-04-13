@@ -1,0 +1,23 @@
+label: Info
+icon: page
+
+columns:
+
+  main:
+    width: 2/3
+    fields:
+
+      description: fields/description
+
+      links: fields/links
+
+      keywords: fields/keywords
+
+  files:
+    width: 1/3
+    sections:
+
+      image: sections/image
+
+      uploads:
+        extends: sections/uploads

@@ -6,4 +6,4 @@ type: textarea
 
 buttons: false
 translate: true
-maxlength: 300
+maxlength: 400
