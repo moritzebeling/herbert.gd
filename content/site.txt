@@ -1,1 +1,21 @@
 Title: Herbert.gd
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Links: 
+
+----
+
+Keywords: keyword one, two, three
+
+----
+
+Imprint: https://uni-weimar.de/impressum
+
+----
+
+Image: 

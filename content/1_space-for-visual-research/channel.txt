@@ -2,15 +2,31 @@ Title: Space for Visual Research
 
 ----
 
+Description: Need some more space
+
+----
+
+Links: 
+
+----
+
+Keywords: four, five, six
+
+----
+
+Domain: 
+
+----
+
+Image: 
+
+----
+
 Gallery: 
 
 ----
 
 Body: 
-
-----
-
-Description: 
 
 ----
 
@@ -50,16 +66,12 @@ Workflow-created: 2020-04-13 09:25
 
 ----
 
-Workflow-createdby:
-
-- 3Ob4e8fO
+Workflow-createdby: - 3Ob4e8fO
 
 ----
 
-Workflow-updated: 
+Workflow-updated: 2020-04-13 13:07
 
 ----
 
-Workflow-updatedby:
-
-- 3Ob4e8fO
+Workflow-updatedby: 3Ob4e8fO
