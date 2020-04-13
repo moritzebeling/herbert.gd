@@ -1,5 +1,5 @@
 
-	<footer class="site-foter">
+	<footer class="site-footer">
 
 		<a href="<?= $site->url() ?>">&copy; <?= date('Y') ?></a>
 

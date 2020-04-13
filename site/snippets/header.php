@@ -11,7 +11,8 @@
 
   <?= css([
     'assets/css/reset.css',
-    'assets/css/global.css'
+    'assets/css/global.css',
+    '@auto'
   ]) ?>
 
   <?= js('assets/js/default.js') ?>
