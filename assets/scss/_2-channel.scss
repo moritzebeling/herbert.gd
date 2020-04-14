@@ -1,5 +1,9 @@
 header.channel-header {
+  padding: $padding;
 
+  h1 {
+    margin-bottom: $padding;
+  }
 }
 
 .content.posts,
@@ -16,6 +20,9 @@ header.channel-header {
     margin-bottom: 3rem;
     .info {
       margin: 0.5rem 0;
+      .date {
+        float: right;
+      }
       .type {
         display: none;
       }

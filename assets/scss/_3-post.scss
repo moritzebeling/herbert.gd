@@ -1,7 +1,7 @@
 body.post {
 
   p + p {
-    text-indent: 3em;
+    text-indent: 2.5em;
   }
 
   .post-header {
@@ -16,7 +16,7 @@ body.post {
     header,
     .text {
       flex: 0 1 50%;
-      width: 100%;
+      width: 50%;
     }
 
     header {
@@ -34,7 +34,7 @@ body.post {
       .key,
       .value {
         flex: 0 1 50%;
-        width: 100%;
+        width: 50%;
       }
     }
 

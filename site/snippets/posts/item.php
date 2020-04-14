@@ -4,6 +4,8 @@
 
 <div class="info">
 
+	<span class="date"><?= $post->date()->toDate('Y'); ?></span>
+
 	<h3 class="title"><?= $post->title(); ?></h3>
 
 	<?php if( $post->subtitle()->isNotEmpty() ): ?>
@@ -13,7 +15,5 @@
 	<?php if( $post->type()->isNotEmpty() ): ?>
 		<span class="type"><?= $post->type(); ?></span>
 	<?php endif; ?>
-
-	<span class="date"><?= $post->date()->toDate('Y'); ?></span>
 
 </div>
