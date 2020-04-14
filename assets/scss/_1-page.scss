@@ -3,8 +3,6 @@ header.site-header {
   position: sticky;
   top: 0;
 
-  padding: 1rem;
-
   #logo {
     width: 33vw;
     height: auto;
@@ -13,6 +11,21 @@ header.site-header {
 }
 
 footer.site-footer {
-  padding: 1rem;
+  margin-top: 16rem;
   font-size: 0.8rem;
+
+  a, ul {
+    display: inline-block;
+  }
+  a + a {
+    margin-left: 0.5em;
+  }
+
+}
+
+.grid {
+  padding: 0;
+  [class*="col-"] {
+    padding: 0;
+  }
 }

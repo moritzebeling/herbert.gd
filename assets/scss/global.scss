@@ -42,11 +42,13 @@ $border: $border-width $border-style $black;
 // typography
 //
 html {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 body {
+  background-color: #eee;
+  padding: 1rem;
   font-family: $font;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 h1, h2 {
   font-size: $font-large;

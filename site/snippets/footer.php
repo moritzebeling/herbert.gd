@@ -1,15 +1,23 @@
+	<footer class="site-footer grid">
 
-	<footer class="site-footer">
+		<div class="col-6">
 
-		<a href="<?= $site->url() ?>">&copy; <?= date('Y') ?></a>
+			&copy; <?= date('Y') ?>
 
-		<?php if( $site->imprint()->isNotEmpty() ): ?>
-			<a target="_blank" href="<?= $site->imprint() ?>">Imprint</a>
-		<?php endif; ?>
+			<a href="<?= $site->url() ?>"><?= $site->title() ?></a>
 
-		<?php snippet('fields/links',[
-			'links' => $site->links()
-		]); ?>
+		</div>
+		<div class="col-6">
+
+			<?php if( $site->imprint()->isNotEmpty() ): ?>
+				<a target="_blank" href="<?= $site->imprint() ?>">Imprint</a>
+			<?php endif; ?>
+
+			<?php snippet('fields/links',[
+				'links' => $site->links()
+			]); ?>
+
+		</div>
 
 	</footer>
 

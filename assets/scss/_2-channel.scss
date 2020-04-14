@@ -1,17 +1,20 @@
 header.channel-header {
 
-  padding: 1rem;
-
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.5rem;
 
   li {
-    flex: 0 1 auto;
-    width: 25%;
-    padding: 0.5rem;
+
+    .info {
+      margin: 0.5rem 0;
+      .type {
+        display: none;
+      }
+    }
+
   }
+
 }
