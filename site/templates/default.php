@@ -1,41 +1,44 @@
 <?php snippet('header') ?>
 
-<main class="grid">
+<main>
 
-  <div class="col-12">
-    <?php snippet('post/gallery') ?>
-  </div>
+  <?php snippet('post/gallery') ?>
 
-  <section class="meta col-6">
+  <section class="content">
 
-    <h1><?= $page->title()->html() ?></h1>
-    <?php if( $page->subtitle()->isNotEmpty() ): ?>
-      <h2><?= $page->subtitle() ?></h2>
-    <?php endif; ?>
-    
+    <div>
+      <h1><?= $page->title()->html() ?></h1>
+      <?php if( $page->subtitle()->isNotEmpty() ): ?>
+        <h2><?= $page->subtitle() ?></h2>
+      <?php endif; ?>
+    </div>
+
+    <div>
+      <?php snippet('post/content') ?>
+      <?php if( $page->link()->isNotEmpty() ): ?>
+        <div class="link">
+          Website: <a target="_blank"><?= parse_url( $page->link(), PHP_URL_HOST ) ?></h2>
+        </div>
+      <?php endif; ?>
+    </div>
+
+    <div>
+      <?php snippet('post/semester') ?>
+    </div>
+
+    <div>
+      <?php snippet('post/location') ?>
+    </div>
+
+    <div>
+      <?php snippet('post/persons') ?>
+    </div>
+
+    <div>
+      <?php snippet('post/keywords') ?>
+    </div>
+
   </section>
-
-  <section class="content col-6">
-
-    <?php snippet('post/content') ?>
-
-    <?php if( $page->link()->isNotEmpty() ): ?>
-      <div class="link">
-        Website: <a target="_blank"><?= parse_url( $page->link(), PHP_URL_HOST ) ?></h2>
-      </div>
-    <?php endif; ?>
-
-    <?php snippet('post/semester') ?>
-
-    <?php snippet('post/location') ?>
-
-    <?php snippet('post/persons') ?>
-
-    <?php snippet('post/keywords') ?>
-
-  </section>
-
-
 
 </main>
 

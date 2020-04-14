@@ -40,14 +40,16 @@
 </head>
 <body class="<?= $page->intendedTemplate() ?>">
 
-  <header class="site-header">
+  <header class="site-header grid">
+    <div class="col-12">
 
-    <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
+      <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
 
-    <ol class="channels">
-      <?php foreach( $kirby->collection('channels') as $channel ): ?>
-        <li><a href="<?= $channel->url() ?>"><?= $channel->title() ?></a></li>
-      <?php endforeach; ?>
-    </ol>
+      <ol class="channels">
+        <?php foreach( $kirby->collection('channels') as $channel ): ?>
+          <li><a href="<?= $channel->url() ?>"><?= $channel->title() ?></a></li>
+        <?php endforeach; ?>
+      </ol>
 
+    </div>
   </header>

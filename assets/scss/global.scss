@@ -38,6 +38,8 @@ $border-style: solid;
 $border-width: 1px;
 $border: $border-width $border-style $black;
 
+$padding: 1rem;
+
 //
 // typography
 //
@@ -46,13 +48,19 @@ html {
 }
 body {
   background-color: #eee;
-  padding: 1rem;
   font-family: $font;
   line-height: 1.15;
 }
-h1, h2 {
+h1 {
   font-size: $font-large;
   line-height: 1.1;
+}
+
+.grid {
+  padding: $padding / 2;
+  [class*="col-"] {
+    padding: $padding / 2;
+  }
 }
 
 //
@@ -62,3 +70,5 @@ h1, h2 {
 @import '1-page';
 
 @import '2-channel';
+
+@import '3-post';
