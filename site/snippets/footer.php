@@ -23,19 +23,24 @@
 		</div>
 	</footer>
 
-	<?= css('assets/css/swiper.min.css') ?>
 	<?= js('assets/js/swiper.min.js') ?>
 
 	<script>
 
 		const swiper = new Swiper('.gallery', {
-			speed: 500,
+			speed: 700,
 			spaceBetween: 200,
 			loop: true,
+			lazy: true,
+			grabCursor: true,
 			navigation: {
 		    nextEl: '.swiper-button-next',
 		    prevEl: '.swiper-button-prev',
 		  },
+			pagination: {
+        el: '.swiper-pagination',
+				type: 'fraction',
+      },
 			keyboard: {
 		    enabled: true,
 		    onlyInViewport: true,

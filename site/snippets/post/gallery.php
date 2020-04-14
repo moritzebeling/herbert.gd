@@ -11,21 +11,34 @@ if( $images->count() < 1 ){
   <div class="swiper-wrapper">
     <?php foreach($images as $image): ?>
 
-      <figure class="swiper-slide">
+      <div class="swiper-slide">
 
-        <?= $image->tag() ?>
+        <figure class="img">
 
-        <?php if( $image->description()->isNotEmpty() ): ?>
-          <figcaption><?= $image->description()->kirbytext(); ?></figcaption>
-        <?php endif; ?>
+          <?= $image->tag() ?>
 
-      </figure>
+          <?php if( $image->description()->isNotEmpty() ): ?>
+            <figcaption><?= $image->description()->kirbytext(); ?></figcaption>
+          <?php endif; ?>
+
+        </figure>
+
+      </div>
 
     <?php endforeach ?>
   </div>
 
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="controls">
+
+    <div class="left">
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="right">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+  </div>
 
 </section>

@@ -10,8 +10,9 @@
   <link rel="canonical" href="<?= $page->url() ?>" />
 
   <?= css([
-    'assets/css/reflex.css',
     'assets/css/reset.css',
+    'assets/css/reflex.css',
+    'assets/css/swiper.min.css',
     'assets/css/global.css',
     '@auto'
   ]) ?>
