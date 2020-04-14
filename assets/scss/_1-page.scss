@@ -2,10 +2,28 @@ header.site-header {
 
   position: sticky;
   top: 0;
+  padding: 0.5rem $padding;
+  display: flex;
+  z-index: 100;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
 
   #logo {
-    width: 33vw;
+    width: 10rem;
     height: auto;
+    transform: translateY(0.2rem);
+    svg polyline {
+      stroke-width: 3px;
+    }
+  }
+  .channels {
+    flex: 1;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin-right: 0.5em;
+    }
   }
 
 }

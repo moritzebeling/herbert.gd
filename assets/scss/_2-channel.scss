@@ -2,6 +2,11 @@ header.channel-header {
 
 }
 
+.content.posts,
+.gallery {
+  background-color: #eee;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
