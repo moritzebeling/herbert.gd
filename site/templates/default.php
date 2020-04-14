@@ -1,23 +1,21 @@
 <?php snippet('header') ?>
 
-<main>
+<main class="grid">
 
-  <header class="post-header">
+  <div class="col-12">
+    <?php snippet('post/gallery') ?>
+  </div>
+
+  <section class="meta col-6">
 
     <h1><?= $page->title()->html() ?></h1>
     <?php if( $page->subtitle()->isNotEmpty() ): ?>
       <h2><?= $page->subtitle() ?></h2>
     <?php endif; ?>
+    
+  </section>
 
-    <?php snippet('post/semester') ?>
-
-    <?php snippet('post/location') ?>
-
-  </header>
-
-  <?php snippet('post/gallery') ?>
-
-  <section class="content">
+  <section class="content col-6">
 
     <?php snippet('post/content') ?>
 
@@ -27,15 +25,17 @@
       </div>
     <?php endif; ?>
 
-  </section>
+    <?php snippet('post/semester') ?>
 
-  <section class="meta">
+    <?php snippet('post/location') ?>
 
     <?php snippet('post/persons') ?>
 
     <?php snippet('post/keywords') ?>
 
   </section>
+
+
 
 </main>
 
