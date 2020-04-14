@@ -2,26 +2,19 @@ Title: Herbert.gd
 
 ----
 
-Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Description: 
 
 ----
 
-Links:
-
-- 
-  title: ""
-  url: https://facebook.com
-- 
-  title: Twitter
-  url: https://twitter.com
+Links: 
 
 ----
 
-Keywords: keyword one, two, three
+Keywords: Herbert, Weimar, Grafik, Design, VK, M1, Bauhaus, Universität, Kunst, Gestaltung
 
 ----
 
-Imprint: https://uni-weimar.de/impressum
+Imprint: https://www.uni-weimar.de/de/fs/impressum/
 
 ----
 

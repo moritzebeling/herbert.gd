@@ -33,29 +33,3 @@ Categories:
   name: Event
 -
   name: Exhibition
-
-----
-
-Disciplines:
-
--
-  name: Graphic Design
--
-  name: Photography
--
-  name: Typography
--
-  name: Moving Image
--
-  name: Spatial Experience
--
-  name: Virtual Experience
-
-----
-
-Mediatypes:
-
--
-  name: Poster
--
-  name: Website
