@@ -10,11 +10,20 @@ $keywords = $page->keywords()->split();
 $list = array_merge( $categories, $keywords );
 
 ?>
-<ul class="keywords">
-  Search for: 
-  <?php foreach( $list as $item ): ?>
+<div class="row keywords">
 
-    <li><?= ucwords( $item ) ?></li>
+  <div class="key">
+    Keywords
+  </div>
 
-  <?php endforeach; ?>
-</ul>
+  <ul class="value">
+
+    <?php foreach( $list as $item ): ?>
+
+      <li><?= ucwords( $item ) ?></li>
+
+    <?php endforeach; ?>
+
+  </ul>
+
+</div>

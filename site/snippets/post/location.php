@@ -10,16 +10,22 @@ $location = $locations->first();
 
 // output
 ?>
-<div class="location">
-  
-  Location:
+<div class="row location">
 
-  <?php if( $location->name()->isNotEmpty() ): ?>
-    <span class="name"><?= $location->name() ?></span>
-  <?php endif; ?>
+  <div class="key">
+    Location
+  </div>
 
-  <?php if( $location->city()->isNotEmpty() ): ?>
-    <span class="city"><?= $location->city() ?></span>
-  <?php endif; ?>
+  <div class="value">
+
+    <?php if( $location->name()->isNotEmpty() ): ?>
+      <span class="name"><?= $location->name() ?></span>
+    <?php endif; ?>
+
+    <?php if( $location->city()->isNotEmpty() ): ?>
+      <span class="city"><?= $location->city() ?></span>
+    <?php endif; ?>
+
+  </div>
 
 </div>

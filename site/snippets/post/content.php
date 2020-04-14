@@ -5,6 +5,6 @@ if( $page->body()->isEmpty() ){
 }
 
 ?>
-<div class="content">
+<div>
   <?= $page->body()->kirbytext(); ?>
 </div>

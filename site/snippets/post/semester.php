@@ -9,14 +9,22 @@ if( $semesters->count() < 1 ){
 $semester = $semesters->first();
 
 ?>
-<div class="semester">
+<div class="row semester">
 
-  <?php if( $semester->term()->isNotEmpty() ): ?>
-    <span class="term"><?= ucwords( $semester->term() ) ?></span>
-  <?php endif; ?>
+  <div class="key">
+    Semester
+  </div>
 
-  <?php if( $semester->year()->isNotEmpty() ): ?>
-    <span class="year"><?= $semester->year() ?></span>
-  <?php endif; ?>
+  <div class="value">
+
+    <?php if( $semester->term()->isNotEmpty() ): ?>
+      <span class="term"><?= ucwords( $semester->term() ) ?></span>
+    <?php endif; ?>
+
+    <?php if( $semester->year()->isNotEmpty() ): ?>
+      <span class="year"><?= $semester->year() ?></span>
+    <?php endif; ?>
+
+  </div>
 
 </div>

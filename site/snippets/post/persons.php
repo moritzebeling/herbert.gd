@@ -7,11 +7,20 @@ if( $persons->count() < 1 ){
 }
 
 ?>
-<ul class="persons">
-  People involved:
-  <?php foreach( $persons as $person ): ?>
+<div class="row persons">
 
-    <li><?= $person->name() ?></li>
+  <div class="key">
+    Persons
+  </div>
 
-  <?php endforeach; ?>
-</ul>
+  <ul class="value">
+
+    <?php foreach( $persons as $person ): ?>
+
+      <li><?= $person->name() ?></li>
+
+    <?php endforeach; ?>
+
+  </ul>
+
+</div>

@@ -6,14 +6,14 @@
 
   <section class="content">
 
-    <div>
+    <header class="post-header">
       <h1><?= $page->title()->html() ?></h1>
       <?php if( $page->subtitle()->isNotEmpty() ): ?>
         <h2><?= $page->subtitle() ?></h2>
       <?php endif; ?>
-    </div>
+    </header>
 
-    <div>
+    <div class="text">
       <?php snippet('post/content') ?>
       <?php if( $page->link()->isNotEmpty() ): ?>
         <div class="link">
@@ -22,21 +22,16 @@
       <?php endif; ?>
     </div>
 
-    <div>
-      <?php snippet('post/semester') ?>
-    </div>
+  </section>
+  <section class="meta">
 
-    <div>
-      <?php snippet('post/location') ?>
-    </div>
+    <?php snippet('post/semester') ?>
 
-    <div>
-      <?php snippet('post/persons') ?>
-    </div>
+    <?php snippet('post/location') ?>
 
-    <div>
-      <?php snippet('post/keywords') ?>
-    </div>
+    <?php snippet('post/persons') ?>
+
+    <?php snippet('post/keywords') ?>
 
   </section>
 
