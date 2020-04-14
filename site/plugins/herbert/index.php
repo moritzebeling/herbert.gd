@@ -29,17 +29,14 @@ Kirby::plugin('moritzebeling/herbert', [
   	},
   ],
 
-  'pageMethods' => [
-
-  ],
-
   'fileMethods' => [
-    'tag' => function () {
+    'tag' => function ( string $size = 'large' ) {
 
   		return Html::tag( 'img', null, [
   			'src' => $this->url(),
   			'title' => $this->title()->value(),
-  			'alt' => $this->description()->value()
+  			'alt' => $this->description()->value(),
+        'srcset' => $this->srcset( $size )
   		]);
 
   	},

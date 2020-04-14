@@ -1,5 +1,5 @@
 <?php if( $image = $post->image() ): ?>
-	<?= $image->figure() ?>
+	<?= $image->tag('medium') ?>
 <?php endif; ?>
 
 <div class="info">
