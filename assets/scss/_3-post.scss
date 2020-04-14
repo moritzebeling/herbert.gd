@@ -1,0 +1,30 @@
+body.post {
+
+  main {
+    padding: $padding / 2;
+  }
+
+  section.content {
+
+    font-size: 1.2rem;
+
+    p + p {
+      text-indent: 3em;
+    }
+
+    padding: 1rem;
+
+    > div {
+      padding: 0.5em 0;
+      + div {
+        border-top: 1px solid #000;
+      }
+    }
+
+  }
+
+}
+
+.gallery {
+  background-color: #ddd;
+}
