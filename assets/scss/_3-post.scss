@@ -11,16 +11,18 @@ body.post {
   .content {
     padding: 0 1rem;
     margin: 1rem 0;
-    display: flex;
-
-    header,
-    .text {
-      flex: 0 1 50%;
-      width: 50%;
-    }
 
     header {
       padding-right: 10%;
+    }
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      header,
+      .text {
+        flex: 0 1 50%;
+        width: 50%;
+      }
     }
 
   }
