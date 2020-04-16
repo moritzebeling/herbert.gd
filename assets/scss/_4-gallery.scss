@@ -5,11 +5,8 @@
   figure {
     padding: 0.5rem;
     img {
-      max-height: 70vh;
-      max-width: 100%;
-      width: auto;
+      width: 100%;
       height: auto;
-      margin: 0 auto;
     }
     figcaption {
       margin-top: 1em;
@@ -37,6 +34,23 @@
   }
 
   &.swiper-container {
+    figure {
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      .img {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          width: 100%;
+          height: unset;
+          object-fit: contain;
+        }
+      }
+    }
     .controls {
       position: static;
       display: flex;

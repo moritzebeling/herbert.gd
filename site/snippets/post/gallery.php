@@ -13,9 +13,11 @@ if( $images->count() < 1 ){
 
       <div class="swiper-slide">
 
-        <figure class="img">
+        <figure>
 
-          <?= $image->tag() ?>
+          <div class="img">
+            <?= $image->tag() ?>
+          </div>
 
           <?php if( $image->description()->isNotEmpty() ): ?>
             <figcaption><?= $image->description()->kirbytext(); ?></figcaption>
