@@ -35,8 +35,9 @@ if( $images->count() < 1 ){
     </div>
 
     <div class="right">
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-index">Index</div>
+      <div class="swiper-button-prev"><span class="arrow"></span></div>
+      <div class="swiper-button-next"><span class="arrow"></span></div>
     </div>
 
   </div>

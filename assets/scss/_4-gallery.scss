@@ -1,0 +1,108 @@
+.gallery {
+
+  padding: 0.5rem;
+
+  figure {
+    padding: 0.5rem;
+    img {
+      max-height: 70vh;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+    }
+    figcaption {
+      margin-top: 1em;
+    }
+  }
+
+  &.index {
+    .controls {
+      display: none;
+    }
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      .swiper-slide {
+        flex: 1 0 auto;
+        width: 25%;
+      }
+    }
+    figure {
+      cursor: pointer;
+      figcaption {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  &.swiper-container {
+    .controls {
+      position: static;
+      display: flex;
+      padding: 0.5rem;
+      user-select: none;
+
+      .left,
+      .right {
+        position: static;
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next,
+      .swiper-pagination,
+      .swiper-button-index {
+        position: static;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        height: unset;
+        width: unset;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .swiper-pagination {
+        text-align: left;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        background: none;
+        margin: 0 0.5em;
+        .arrow {
+          border-top: 1.5px solid #000;
+          border-left: 1.5px solid #000;
+          width: 0.7em;
+          height: 0.7em;
+          display: inline-block;
+        }
+
+      }
+      .swiper-button-prev {
+        .arrow {
+          transform: rotate(-45deg);
+        }
+      }
+      .swiper-button-next {
+        .arrow {
+          transform: rotate(135deg);
+        }
+      }
+
+      .swiper-button-index {
+        margin-right: 0.5em;
+      }
+
+    }
+  }
+
+}
