@@ -29,7 +29,7 @@ class Keyword {
        $html .= '<span class="count">'.$count.'</span>';
     }
 
-    return '<a class="keyword" href="'.$url.'">'.$html.'</a>';
+    return '<a title="Search for '.$keyword.'" class="keyword" href="'.$url.'">'.$html.'</a>';
 
   }
 
