@@ -1,0 +1,88 @@
+//
+// sass --watch --style=compressed site/plugins/kirby-panelmodifications:site/plugins/kirby-panelmodifications
+// add some styles to kirby panel
+//
+
+// highlight code blocks in info boxes
+.k-text {
+    pre {
+        background-color: rgba(120,120,120,0.1);
+        border-radius: 2px;
+        padding: 2px 5px;
+        margin-bottom: 1.5em;
+    }
+    p > code {
+        background-color: rgba(120,120,120,0.1);
+        border-radius: 2px;
+        padding: 0 3px;
+        display: inline-block;
+    }
+    code {
+        font-size: 110%;
+    }
+}
+
+// same margin between sections and fields
+.k-fieldset .k-grid {
+  grid-row-gap: 3rem;
+}
+
+// color all disabled fields grey
+.k-field[data-disabled] {
+  .k-card,
+  .k-list-item {
+      border: 1px solid #ccc;
+  }
+  .k-card,
+  .k-list-item,
+  .k-structure-table,
+  .k-image[data-back=white] span {
+      background-color: #f3f3f3;
+  }
+  .k-structure-table {
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    border: 1px solid #d9d9d9;
+    th, td {
+      background-color: #f0f0f0;
+      border-color: #d9d9d9;
+    }
+    .k-structure-table-option button {
+      visibility: hidden;
+    }
+  }
+}
+
+// mak image back a little more grey
+.k-image[data-back=white] span,
+.k-list-item-image .k-icon {
+  background-color: #fafafa;
+}
+
+// make dialog box wider
+.k-dialog-box {
+  &[data-size=small],
+  &[data-size=medium] {
+    width: 75vw;
+  }
+}
+
+// hide page status dots when status can’t be changes by user
+.k-pages-section .k-list-item {
+  .k-list-item-status.k-button[data-disabled] {
+    display: none;
+  }
+}
+
+// hide dots on site view
+.k-site-view {
+  .k-pages-section .k-list-item {
+    .k-list-item-options {
+      display: none;
+    }
+  }
+}
+
+.k-header .k-headline-editable .k-icon {
+  opacity: 0.3;
+}
