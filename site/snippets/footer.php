@@ -42,7 +42,7 @@
 		const gContainer = document.querySelector('.gallery');
 		let gSwiper, figures;
 
-		if( gContainer ){
+		if( gContainer && gContainer.classList.contains('multiple') ){
 
 			figures = gContainer.getElementsByTagName('FIGURE');
 			startSwiper();
