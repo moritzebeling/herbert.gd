@@ -4,6 +4,7 @@ tabs:
 
   content:
     label: Content
+    icon: home
 
     columns:
 
@@ -16,6 +17,7 @@ tabs:
             extends: sections/pages
             template: posts
             create: false
+            info: "{{ page.children.count }} Posts"
 
           drafts:
             extends: sections/posts
