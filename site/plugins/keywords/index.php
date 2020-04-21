@@ -64,7 +64,7 @@ class Keyword {
 Kirby::plugin('herbert/keywords', [
 
   'options' => [
-    'search.path' => 's',
+    'search.path' => '',
     'search.parameter' => 'search',
     'cache' => true,
     'expires' => 1440
