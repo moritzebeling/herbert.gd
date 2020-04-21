@@ -56,11 +56,15 @@ h1, h2 {
 }
 
 .grid {
-  padding: $padding / 2;
+  padding: $padding / 4 * 3;
   [class*="col-"] {
-    padding: $padding / 2;
+    padding: $padding / 4;
   }
 }
+
+$gallery-bg: #000;
+$gallery-color: #fff;
+$gallery-inactive: #999;
 
 //
 // modules
