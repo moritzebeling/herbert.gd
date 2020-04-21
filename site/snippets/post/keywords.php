@@ -20,7 +20,7 @@ $list = array_merge( $categories, $keywords );
 
     <?php foreach( $list as $item ): ?>
 
-      <li><?= ucwords( $item ) ?></li>
+      <li><?= Keyword::link( $item ); ?></li>
 
     <?php endforeach; ?>
 
