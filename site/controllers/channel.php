@@ -1,10 +1,16 @@
 <?php
 
-return function ( $kirby, $page ) {
+return function ( $page ) {
 
-	$posts = $page->children()->listed();
+	$posts = $page->children()->listed()->flip();
+
+	$layout = $page->layout()->isNotEmpty() ? $page->layout()->value() : 'list';
+
+	$dateFormat = $page->dateFormat()->isNotEmpty() ? $page->dateFormat()->value() : 'date';
 
 	return [
-	  'posts' => $posts
+	  'posts' => $posts,
+		'layout' => $layout,
+		'dateFormat' => $dateFormat,
 	];
 };
