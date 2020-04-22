@@ -1,0 +1,65 @@
+title: Info
+
+icon: phone
+
+options:
+  changeSlug:	false
+  changeStatus:	false
+  changeTemplate:	false
+  changeTitle: false
+  delete:	false
+  preview: true
+  read:	true
+  update: true
+
+columns:
+
+  - width: 2/3
+    fields:
+
+      body: fields/posts/content
+
+      contact:
+        type: email
+
+      team:
+        type: structure
+        fields:
+          image:
+            extends: fields/image
+            width: 1/2
+          name:
+            type: text
+          text:
+            type: textarea
+            label: Bio
+            buttons: false
+          link: fields/url
+        columns:
+          image:
+            width: 1/3
+          name:
+            width: 1/3
+          link:
+            width: 1/3
+
+      credits:
+        type: structure
+        fields:
+          job:
+            type: text
+            width: 1/2
+          name:
+            type: text
+            width: 1/2
+          link: fields/url
+
+
+      imprint:
+        extends: fields/url
+        label: Link to external Imprint
+
+  - width: 1/3
+    sections:
+
+      uploads: sections/uploads
