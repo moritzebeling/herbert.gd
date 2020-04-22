@@ -2,7 +2,15 @@ Title: Herbert.gd
 
 ----
 
-Featured: 
+Featured:
+
+- activities/bauhaus-masters-2019-copy
+- space-for-visual-research/2nd-book
+- activities/bauhaus-masters-2019
+- activities/robin-weissenborn
+- >
+  activities/bauhaus-masters-2019-copy-copy
+- space-for-visual-research/1st-book
 
 ----
 

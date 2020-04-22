@@ -42,3 +42,36 @@ tabs:
             type: text
             label: Dedicated Domain
             placeholder: "{{ page.slug }}.com"
+
+  settings:
+    icon: cog
+    columns:
+
+      - width: 1/2
+        fields:
+
+          layout:
+            type: select
+            options:
+              list: List
+              cards: Cards
+            required: true
+            width: 1/2
+
+          dateFormat:
+            label: Date format
+            type: select
+            options:
+              date: Date
+              semester: Semester
+            required: true
+            width: 1/2
+
+      - width: 1/2
+        fields:
+
+          categories:
+            type: structure
+            fields:
+              name:
+                type: text
