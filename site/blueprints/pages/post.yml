@@ -44,7 +44,7 @@ columns:
         type: fields
         fields:
 
-          body: fields/post/content
+          body: fields/content
 
           attributes: fields/post/attributes
 

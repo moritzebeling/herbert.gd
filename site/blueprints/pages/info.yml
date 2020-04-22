@@ -17,7 +17,7 @@ columns:
   - width: 2/3
     fields:
 
-      body: fields/posts/content
+      body: fields/content
 
       contact:
         type: email
