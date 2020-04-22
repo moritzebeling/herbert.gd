@@ -56,7 +56,15 @@ tabs:
               list: List
               cards: Cards
             required: true
-            width: 1/2
+
+          categories:
+            type: structure
+            fields:
+              name:
+                type: text
+
+      - width: 1/2
+        fields:
 
           dateFormat:
             label: Date format
@@ -65,12 +73,8 @@ tabs:
               date: Date
               semester: Semester
             required: true
-            width: 1/2
 
-      - width: 1/2
-        fields:
-
-          categories:
+          attributes:
             type: structure
             fields:
               name:

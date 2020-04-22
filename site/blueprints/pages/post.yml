@@ -14,7 +14,7 @@ status:
     label: Published
     text: The post is online and listed on the website.
 
-icon: 🏓
+icon: folder
 
 options:
   changeSlug:	true
@@ -33,7 +33,7 @@ columns:
         type: fields
         fields:
 
-          subtitle: fields/posts/subtitle
+          subtitle: fields/post/subtitle
 
       uploads:
         extends: sections/uploads
@@ -44,32 +44,9 @@ columns:
         type: fields
         fields:
 
-          body: fields/posts/content
+          body: fields/post/content
 
-          link:
-            extends: fields/url
-            label: External Link
-            width: 2/3
-
-          linkRedirect:
-            type: toggle
-            label: Open Link Instantly
-            width: 1/3
-            icon: open
-
-          curriculum:
-            type: pages
-            label: Associated Curriculum
-            max: 1
-            when:
-              type: showcase
-            query: page.siblings.filterBy('type', 'curriculum')
-
-      # associates:
-        # type: pages
-        # headline: Associated Work Showcases
-        # parent: page.parent
-        # create: false
+          attributes: fields/post/attributes
 
   - width: 1/3
     sections:
@@ -82,16 +59,6 @@ columns:
             extends: fields/date
             required: true
 
-          semester: fields/posts/semester
-
-          channels: fields/posts/channels
-
-          # type: fields/posts/type
-
-          location: fields/posts/location
-
-          persons: fields/posts/persons
-
-          categories: fields/posts/categories
+          categories: fields/post/categories
 
           keywords: fields/keywords

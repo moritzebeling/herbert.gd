@@ -2,6 +2,6 @@ type: checkboxes
 options: query
 max: 3
 query:
-  fetch: site.find('posts').categories.toStructure
+  fetch: page.parent.categories.toStructure
   text: "{{ structureItem.name }}"
   value: "{{ structureItem.name }}"
