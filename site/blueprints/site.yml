@@ -11,36 +11,29 @@ tabs:
       - width: 1/2
         sections:
 
-          # list of latest posts
-          posts:
-            headline: Content
+          channels:
             extends: sections/pages
-            template: posts
-            create: false
+            headline: Channels
+            template: channel
             info: "{{ page.children.count }} Posts"
 
-          drafts:
-            extends: sections/posts
-            headline: Posts in the making
-            status: draft
-            parent: site.find('posts')
-            template: post
+          pages:
+            extends: sections/pages
+            headline: Other pages
+            templates:
+              - info
+              - default
+            create:
+              - default
 
       - width: 1/2
-        sections:
-
-          # list all domains
-          channels:
-            headline: Channels
-            extends: sections/pages
-            template: channel
-
-  info:
-    extends: tabs/info
-    columns:
-      main:
         fields:
 
-          imprint:
-            extends: fields/url
-            label: Imprint Link
+          featured: fields/featured
+
+  meta:
+    extends: tabs/meta
+
+  settings:
+    label: Settings
+    icon: cog

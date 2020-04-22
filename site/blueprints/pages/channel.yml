@@ -1,17 +1,24 @@
 title: Channel
 
-icon: 🌍
+icon: globe
 
 status:
-  draft: Draft
-  listed: Visible
+  draft:
+    label: Draft
+    text: The channel and all its posts are in draft mode and only visible to logged in users.
+  unlisted:
+    label: In Review
+    text: The channel and all its posts are online but only visible with the direct URL.
+  listed:
+    label: Published
+    text: The channel and all its posts are online and listed on the website.
 
 options:
   # set user permissions
-  changeSlug:	false
+  changeSlug:	true
   changeStatus:	true
   changeTemplate:	false
-  changeTitle:	true
+  changeTitle: true
   # set user permissions
   delete:	true
   # info: can also be a url
@@ -22,8 +29,10 @@ options:
 
 tabs:
 
-  info:
-    extends: tabs/info
+  posts: tabs/posts
+
+  meta:
+    extends: tabs/meta
     columns:
       main:
         fields:
