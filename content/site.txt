@@ -2,6 +2,10 @@ Title: Herbert.gd
 
 ----
 
+Featured: 
+
+----
+
 Description: This publications represents the Graphic Design Class of the Visual Communication Department at the Bauhaus Universität Weimar.
 
 ----
@@ -14,8 +18,8 @@ Keywords: Herbert, Weimar, Grafik, Design, VK, M1, Bauhaus, Universität, Kunst,
 
 ----
 
-Imprint: https://www.uni-weimar.de/de/fs/impressum/
+Image: 
 
 ----
 
-Image: 
+Imprint: 
