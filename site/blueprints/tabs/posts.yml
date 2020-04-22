@@ -1,0 +1,12 @@
+label: Posts
+icon: list-bullet
+sections:
+
+  drafts:
+    extends: sections/posts
+    status: drafts
+    headline: Drafts
+
+  posts:
+    extends: sections/posts
+    status: published

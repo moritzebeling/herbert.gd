@@ -1,0 +1,97 @@
+title: Default Post
+
+# sorting by date
+num: '{{ page.date.toDate("Ymd") }}'
+
+status:
+  draft:
+    label: Draft
+    text: The post is still in draft mode and only visible to logged in editors.
+  unlisted:
+    label: In Review
+    text: The post is online but can only be visited with the direct URL.
+  listed:
+    label: Published
+    text: The post is online and listed on the website.
+
+icon: 🏓
+
+options:
+  changeSlug:	true
+  changeStatus:	true
+  changeTemplate:	true
+  changeTitle:	true
+  delete:	true
+  preview: true
+  read:	true
+  update: true
+
+columns:
+  - width: 2/3
+    sections:
+      fields1:
+        type: fields
+        fields:
+
+          subtitle: fields/posts/subtitle
+
+      uploads:
+        extends: sections/uploads
+        layout: cards
+        headline: Gallery
+
+      fields2:
+        type: fields
+        fields:
+
+          body: fields/posts/content
+
+          link:
+            extends: fields/url
+            label: External Link
+            width: 2/3
+
+          linkRedirect:
+            type: toggle
+            label: Open Link Instantly
+            width: 1/3
+            icon: open
+
+          curriculum:
+            type: pages
+            label: Associated Curriculum
+            max: 1
+            when:
+              type: showcase
+            query: page.siblings.filterBy('type', 'curriculum')
+
+      # associates:
+        # type: pages
+        # headline: Associated Work Showcases
+        # parent: page.parent
+        # create: false
+
+  - width: 1/3
+    sections:
+
+      fields3:
+        type: fields
+        fields:
+
+          date:
+            extends: fields/date
+            required: true
+
+          semester: fields/posts/semester
+
+          channels: fields/posts/channels
+
+          # type: fields/posts/type
+
+          location: fields/posts/location
+
+          persons: fields/posts/persons
+
+          categories: fields/posts/categories
+
+          keywords: fields/keywords
