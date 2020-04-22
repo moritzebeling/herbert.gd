@@ -86,3 +86,20 @@
 .k-header .k-headline-editable .k-icon {
   opacity: 0.3;
 }
+
+.k-section[type="pagetable"] {
+  table {
+    border: 1px solid #e3e3e3;
+    th {
+      border-color: #e3e3e3 !important;
+      background-color: transparent;
+    }
+  }
+  .category-label {
+    font-size: 0.7rem;
+    padding: 0.2em 0.3em;
+    border-radius: 3px;
+    background-color: #eeeeee;
+    margin-right: 0.3em;
+  }
+}

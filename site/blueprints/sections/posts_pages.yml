@@ -1,0 +1,7 @@
+headline: Posts
+type: pages
+image:
+  back: white
+headline: Posts
+info: "{{ page.info }}"
+sortBy: date desc

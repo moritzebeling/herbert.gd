@@ -1,7 +1,29 @@
 headline: Posts
-type: pages
 image:
   back: white
 headline: Posts
-info: "{{ page.info }}"
 sortBy: date desc
+type: pagetable
+empty: No Posts created yet
+translations:
+  empty: No Posts created yet
+limitOptions:
+  - 25
+  - 50
+columns:
+  title:
+    label: Title
+    text: '{{ page.title }}'
+    width: 1/4
+  subtitle:
+    label: Subtitle
+    text: '{{ page.subtitle }}'
+  categories:
+    label: Category
+    text: '{{ page.categories.toCategoryLabel }}'
+    width: 1/6
+  date:
+    label: Date
+    type: text
+    text: '{{ page.date.toDate("d-m-Y") }}'
+    width: 1/6

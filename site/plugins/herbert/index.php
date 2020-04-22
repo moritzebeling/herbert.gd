@@ -40,6 +40,17 @@ Kirby::plugin('moritzebeling/herbert', [
   	},
   ],
 
+  'fieldMethods' => [
+    'toCategoryLabel' => function($field) {
+      $values = $field->split(',');
+      $return = '';
+      foreach( $values as $v ){
+        $return .= '<span class="category-label">' . $v . '</span>';
+      }
+      return $return;
+    },
+  ],
+
   'fileMethods' => [
     'tag' => function ( string $size = 'large' ) {
 
