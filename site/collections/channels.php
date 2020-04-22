@@ -1,5 +1,5 @@
 <?php
 
 return function ($site) {
-	return $site->channels();
+	return $site->children()->template('channel')->listed();
 };

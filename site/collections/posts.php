@@ -1,5 +1,5 @@
 <?php
 
 return function ($site) {
-	return $site->posts();
+	return $site->children()->template('channel')->listed()->children()->sortBy('date','desc');
 };

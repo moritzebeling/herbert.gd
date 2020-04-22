@@ -7,15 +7,6 @@
 
 Kirby::plugin('moritzebeling/herbert', [
 
-  'siteMethods' => [
-    'channels' => function (): Kirby\Cms\Pages {
-      return $this->children()->template('channel');
-  	},
-    'posts' => function (): Kirby\Cms\Pages {
-  		return $this->channels()->children()->sortBy('date','desc');
-  	},
-  ],
-
   'pageMethods' => [
     'info' => function (): string {
       if( $this->hasChildren() ){
