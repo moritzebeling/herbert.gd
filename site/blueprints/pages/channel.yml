@@ -70,8 +70,10 @@ tabs:
             label: Date format
             type: select
             options:
-              date: Date
+              day: Day
+              month: Month
               semester: Semester
+              year: Year
             required: true
 
           attributes:
