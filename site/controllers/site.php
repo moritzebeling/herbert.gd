@@ -8,7 +8,7 @@ return function ( $kirby ) {
 
 	} else {
 
-		$posts = $kirby->collection('posts');
+		$posts = $kirby->collection('featured');
 
 	}
 

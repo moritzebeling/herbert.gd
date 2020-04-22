@@ -1,7 +1,10 @@
 <?php
 
 return function ( $kirby, $page ) {
+
+	$posts = $page->children()->listed();
+
 	return [
-	  'posts' => $kirby->collection('posts')->filterBy('channels', $page->slug() )
+	  'posts' => $posts
 	];
 };
