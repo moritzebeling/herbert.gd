@@ -1,5 +1,5 @@
 @mixin galleryHoverItem {
-  color: $gallery-inactive;
+  color: $gallery-color;
   transition: color 300ms ease;
   &:hover {
     color: $gallery-color;
@@ -87,7 +87,7 @@
       display: flex;
       padding: $padding / 4;
       user-select: none;
-      color: $gallery-inactive;
+      color: $gallery-color;
       margin-top: 0.5rem;
 
       .left,
@@ -126,8 +126,8 @@
         margin: 0 0.5em;
         cursor: pointer;
         .arrow {
-          border-top: 1px solid $gallery-inactive;
-          border-left: 1px solid $gallery-inactive;
+          border-top: 1px solid $gallery-color;
+          border-left: 1px solid $gallery-color;
           width: 0.7em;
           height: 0.7em;
           display: inline-block;
