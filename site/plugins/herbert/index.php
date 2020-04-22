@@ -7,6 +7,26 @@
 
 Kirby::plugin('moritzebeling/herbert', [
 
+  'siteMethods' => [
+    'channels' => function (): Kirby\Cms\Pages {
+      return $this->children()->template('channel');
+  	},
+    'posts' => function (): Kirby\Cms\Pages {
+  		return $this->channels()->children()->sortBy('date','desc');
+  	},
+  ],
+
+  'pageMethods' => [
+    'info' => function (): string {
+      if( $this->hasChildren() ){
+        return $this->children()->count() . ' posts';
+      } else if( $this->content()->date()->exists() ){
+        return $this->date()->toDate('d-m-Y');
+      }
+      return '';
+  	},
+  ],
+
   'pagesMethods' => [
     'pluckStructure' => function ( $structureField, $innerField = false ) {
   		/*

@@ -3,5 +3,5 @@ type: pages
 image:
   back: white
 headline: Posts
-info: "{{ page.date.toDate('d-m-Y') }}"
+info: "{{ page.info }}"
 sortBy: date desc

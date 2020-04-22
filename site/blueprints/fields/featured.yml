@@ -1,2 +1,8 @@
 label: Featured posts
 type: pages
+layout: list
+query: site.channels
+info: "{{ page.info }}"
+image:
+  back: white
+subpages: true
