@@ -49,6 +49,21 @@ Kirby::plugin('moritzebeling/herbert', [
       }
       return $return;
     },
+    'toAnchor' => function($field, string $text = null, bool $external = true ) {
+      if( $field->isEmpty() ){
+        return;
+      }
+      if( $text !== null ){
+        $text = parse_url( $field->value, PHP_URL_HOST );
+      }
+      if( $external === true ){
+        $attr = [
+          'target' => '_blank',
+          'rel' => 'noopener'
+        ];
+      }
+      return Html::a($field->value, $text, $attr ?? []);
+    },
   ],
 
   'fileMethods' => [

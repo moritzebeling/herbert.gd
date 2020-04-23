@@ -15,11 +15,6 @@
 
     <div class="text">
       <?php snippet('post/content') ?>
-      <?php if( $page->link()->isNotEmpty() ): ?>
-        <div class="link">
-          Website: <a target="_blank"><?= parse_url( $page->link(), PHP_URL_HOST ) ?></h2>
-        </div>
-      <?php endif; ?>
     </div>
 
   </section>
