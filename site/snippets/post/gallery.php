@@ -22,8 +22,15 @@ if( $count < 1 ){
             <?= $image->tag() ?>
           </div>
 
-          <?php if( $image->description()->isNotEmpty() ): ?>
-            <figcaption><?= $image->description()->kirbytext(); ?></figcaption>
+          <?php if( $image->description()->isNotEmpty() || $image->credits()->isNotEmpty() ): ?>
+            <figcaption>
+              <?php if( $image->description()->isNotEmpty() ): ?>
+                <?= $image->description()->kirbytextinline(); ?>
+              <?php endif; ?>
+              <?php if( $image->credits()->isNotEmpty() ): ?>
+                <span class="credits">&copy; <?= $image->credits()->html(); ?></span>
+              <?php endif; ?>
+            </figcaption>
           <?php endif; ?>
 
         </figure>

@@ -31,6 +31,9 @@
     }
     figcaption {
       margin-top: 1em;
+      .credits {
+        color: $gallery-inactive;
+      }
     }
   }
 

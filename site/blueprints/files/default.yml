@@ -20,3 +20,4 @@ fields:
   credits:
     label: Credits
     type: text
+    before: ©
