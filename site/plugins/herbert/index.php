@@ -55,6 +55,7 @@ Kirby::plugin('moritzebeling/herbert', [
       }
       if( $text !== null ){
         $text = parse_url( $field->value, PHP_URL_HOST );
+        $text = str_replace('www.','',$text);
       }
       if( $external === true ){
         $attr = [
