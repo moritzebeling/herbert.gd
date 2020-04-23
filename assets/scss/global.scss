@@ -104,6 +104,6 @@ a.keyword {
     @include cards;
   }
   .list {
-    @include list;
+    @include table;
   }
 }

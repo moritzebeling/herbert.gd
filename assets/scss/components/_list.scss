@@ -21,3 +21,20 @@
 		}
 	}
 }
+
+@mixin table {
+	td {
+		border-top: 1px solid #000;
+		padding: 0.5em 0;
+		vertical-align: top;
+		width: auto;
+
+		&.min {
+	    width: 20%;
+	    white-space: nowrap;
+		}
+		&.right {
+			text-align: right;
+		}
+	}
+}

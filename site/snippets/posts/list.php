@@ -1,35 +1,30 @@
-<?php
-
-$layout = isset( $layout ) ? $layout : 'cards';
-
-?>
 <section class="posts">
 
-	<ol class="list">
+	<table class="list">
 		<?php foreach( $posts as $post ): ?>
-			<li class="post">
-				<a href="<?= $post->url() ?>">
+			<tr>
 
-					<div>
-						<span class="date"><?= $post->displayDate(); ?></span>
-					</div>
+				<td class="min">
+					<span class="date"><?= $post->displayDate(); ?></span>
+				</td>
 
-					<div class="title">
+				<td class="title">
+					<a href="<?= $post->url() ?>">
 						<h3><?= $post->title(); ?></h3>
 						<h4><?= $post->subtitle(); ?></h4>
-					</div>
+					</a>
+				</td>
 
-					<div class="right">
-						<ul class="categories">
-							<?php foreach( $post->categories()->split() as $category ): ?>
-								<li><?= ucwords( $category ); ?></li>
-							<?php endforeach; ?>
-						</ul>
-					</div>
+				<td class="right">
+					<ul class="categories">
+						<?php foreach( $post->categories()->split() as $category ): ?>
+							<li><?= ucwords( $category ); ?></li>
+						<?php endforeach; ?>
+					</ul>
+				</td>
 
-				</a>
-			</li>
+			</tr>
 		<?php endforeach; ?>
-	</ol>
+	</table>
 
 </section>

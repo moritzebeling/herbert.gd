@@ -1,8 +1,3 @@
-<?php
-
-$layout = isset( $layout ) ? $layout : 'cards';
-
-?>
 <section class="posts">
 	<ol class="cards">
 		<?php foreach( $posts as $post ): ?>
