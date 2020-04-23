@@ -53,9 +53,11 @@ Kirby::plugin('moritzebeling/herbert', [
       if( $field->isEmpty() ){
         return;
       }
-      if( $text !== null ){
+      if( $text === null ){
         $text = parse_url( $field->value, PHP_URL_HOST );
-        $text = str_replace('www.','',$text);
+      } else {
+        $text = str_replace('http://','',$text);
+        $text = str_replace('https://','',$text);
       }
       if( $external === true ){
         $attr = [
@@ -63,6 +65,7 @@ Kirby::plugin('moritzebeling/herbert', [
           'rel' => 'noopener'
         ];
       }
+      $text = str_replace('www.','',$text);
       return Html::a($field->value, $text, $attr ?? []);
     },
   ],

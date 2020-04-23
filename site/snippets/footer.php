@@ -4,13 +4,23 @@
 
 		<a href="<?= $site->url() ?>"><?= $site->title() ?></a>
 
-		<?php if( $site->imprint()->isNotEmpty() ): ?>
-			<a target="_blank" href="<?= $site->imprint() ?>">Imprint</a>
-		<?php endif; ?>
+		<?php foreach( $site->children()->unlisted() as $item ):
+			switch ( $item->intendedTemplate()->name() ) {
+				case 'error':
+				case 'index':
+					continue 2;
+			}
+			?>
+			<a href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
+		<?php endforeach; ?>
 
 		<?php snippet('fields/links',[
 			'links' => $site->links()
 		]); ?>
+
+		<?php if( $info = page('info') ): ?>
+			<?= $info->imprint()->toAnchor('Imprint') ?>
+		<?php endif; ?>
 
 	</footer>
 

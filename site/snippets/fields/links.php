@@ -7,7 +7,6 @@ if( $links->count() < 1 ){
 }
 ?>
 <?php foreach ($links as $link): ?>
-  <a target="_blank" href="<?= $link->url() ?>">
-    <?php e( $link->title()->isNotEmpty(), $link->title()->html(), parse_url( $link->url(), PHP_URL_HOST ) ) ?>
-  </a>
+  <?php $title = $link->title()->isNotEmpty() ? $link->title()->value() : null;
+  echo $link->url()->toAnchor( $title ) ?>
 <?php endforeach; ?>
