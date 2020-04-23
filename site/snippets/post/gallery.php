@@ -12,7 +12,7 @@ if( $count < 1 ){
 ?>
 <section class="swiper-container gallery <?php e( $count > 1, 'multiple' ) ?>">
   <div class="swiper-wrapper">
-    <?php foreach($images as $image): ?>
+    <?php foreach($images->sortBy('sort') as $image): ?>
 
       <div class="swiper-slide">
 
