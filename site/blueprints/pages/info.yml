@@ -19,9 +19,6 @@ columns:
 
       body: fields/content
 
-      contact:
-        type: email
-
       team:
         type: structure
         fields:
@@ -30,6 +27,7 @@ columns:
             width: 1/2
           name:
             type: text
+            required: true
           text:
             type: textarea
             label: Bio
@@ -43,15 +41,20 @@ columns:
           link:
             width: 1/3
 
+      contact:
+        type: email
+
       credits:
         type: structure
         fields:
           job:
             type: text
             width: 1/2
+            required: true
           name:
             type: text
             width: 1/2
+            required: true
           link: fields/url
 
 
