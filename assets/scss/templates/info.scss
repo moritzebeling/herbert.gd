@@ -1,1 +1,32 @@
 @import '../variables';
+
+main {
+
+	header, section {
+		margin: 1rem 0;
+	}
+
+	.team {
+		li {
+			padding: 1rem 0;
+			display: flex;
+			> div {
+				flex: 1;
+			}
+			+ li {
+				border-top: 1px solid #000;
+			}
+		}
+	}
+
+	.credits {
+		li {
+			display: flex;
+			> div {
+				flex: 1;
+			}
+		}
+	}
+
+
+}
