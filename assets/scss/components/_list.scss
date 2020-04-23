@@ -1,0 +1,28 @@
+@mixin list {
+	> li {
+    border-top: 1px solid #000;
+    > a {
+  		display: flex;
+      > div {
+        flex: 1 0 auto;
+        padding: 0.5em 0;
+        &.title {
+          flex-basis: 50%;
+        }
+        &.right {
+          text-align: right;
+        }
+      }
+  	}
+		.categories {
+			li {
+				display: inline;
+				background-color: #000;
+				color: #fff;
+				padding: 0.2em 0.3em;
+				font-size: 0.8em;
+				border-radius: 5px;
+			}
+		}
+	}
+}

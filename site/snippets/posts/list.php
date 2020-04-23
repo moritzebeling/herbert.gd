@@ -3,21 +3,29 @@
 $layout = isset( $layout ) ? $layout : 'cards';
 
 ?>
-<section class="content posts">
+<section class="posts">
 
-	<ol class="cards grid">
+	<ol class="list">
 		<?php foreach( $posts as $post ): ?>
-			<li class="post col-xlg-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<li class="post">
+				<a href="<?= $post->url() ?>">
 
-				<?php if( $post->linkRedirect()->isTrue() && $post->link()->isNotEmpty() ): ?>
-					<a href="<?= $post->link() ?>" target="_blank">
-				<?php else: ?>
-					<a href="<?= $post->url() ?>">
-				<?php endif; ?>
+					<div>
+						<span class="date"><?= $post->date()->toDate('Y'); ?></span>
+					</div>
 
-					<?php snippet('posts/item',[
-						'post' => $post
-					]) ?>
+					<div class="title">
+						<h3><?= $post->title(); ?></h3>
+						<h4><?= $post->subtitle(); ?></h4>
+					</div>
+
+					<div class="right">
+						<ul class="categories">
+							<?php foreach( $post->categories()->split() as $category ): ?>
+								<li><?= ucwords( $category ); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
 
 				</a>
 			</li>

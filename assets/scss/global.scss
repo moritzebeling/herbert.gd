@@ -98,6 +98,12 @@ a.keyword {
 }
 
 @import 'components/cards';
-.cards {
-	@include cards;
+@import 'components/list';
+.posts {
+  .cards {
+    @include cards;
+  }
+  .list {
+    @include list;
+  }
 }
