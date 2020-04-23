@@ -11,7 +11,7 @@ $layout = isset( $layout ) ? $layout : 'cards';
 				<a href="<?= $post->url() ?>">
 
 					<div>
-						<span class="date"><?= $post->date()->toDate('Y'); ?></span>
+						<span class="date"><?= $post->displayDate(); ?></span>
 					</div>
 
 					<div class="title">

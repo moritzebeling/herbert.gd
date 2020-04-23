@@ -5,7 +5,54 @@
  *
  */
 
+function dateToSemester( int $time ): string {
+  $month = date('n', $time);
+  $year = date('y', $time);
+
+  if( $month <= 3 ){
+    return 'W '.($year+1999).'/'.$year;
+  } else if( $month <= 9 ){
+    return 'S '.($year+2000);
+  } else {
+    return 'W '.($year+2000).'/'.($year+1);
+  }
+}
+
+class ChannelPage extends Page
+{
+    // your custom page methods
+}
+class PostPage extends Page
+{
+  public function displayDate(): string {
+
+    $format = $this->parent()->dateFormat()->isNotEmpty() ? $this->parent()->dateFormat()->value() : 'year';
+
+    if( $format === 'semester' ){
+      return $this->date()->toSemester();
+    }
+
+    switch ($format) {
+      case 'day':
+        $dateFormat = 'd/m/Y';
+        break;
+      case 'month':
+        $dateFormat = 'm/Y';
+        break;
+      default:
+        $dateFormat = 'Y';
+    }
+
+    return $this->date()->toDate( $dateFormat );
+  }
+}
+
 Kirby::plugin('moritzebeling/herbert', [
+
+  'pageModels' => [
+    'channel' => 'ChannelPage',
+    'post' => 'PostPage',
+  ],
 
   'pageMethods' => [
     'info' => function (): string {
@@ -48,6 +95,9 @@ Kirby::plugin('moritzebeling/herbert', [
         $return .= '<span class="category-label">' . $v . '</span>';
       }
       return $return;
+    },
+    'toSemester' => function($field) {
+      return dateToSemester( strtotime($field->value ) );
     },
     'toAnchor' => function($field, string $text = null, bool $external = true ) {
       if( $field->isEmpty() ){

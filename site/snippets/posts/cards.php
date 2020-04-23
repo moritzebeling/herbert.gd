@@ -16,7 +16,7 @@ $layout = isset( $layout ) ? $layout : 'cards';
 
 					<div class="info">
 
-						<span class="date"><?= $post->date()->toDate('Y'); ?></span>
+						<span class="date"><?= $post->displayDate(); ?></span>
 
 						<h3 class="title"><?= $post->title(); ?></h3>
 
