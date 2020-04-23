@@ -1,3 +1,5 @@
+@import '../variables';
+
 @mixin galleryHoverItem {
   color: $gallery-color;
   transition: color 300ms ease;

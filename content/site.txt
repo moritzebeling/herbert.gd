@@ -18,7 +18,14 @@ Description: This publications represents the Graphic Design Class of the Visual
 
 ----
 
-Links: 
+Links:
+
+- 
+  title: Bauhaus-Universität Weimar
+  url: https://uni-weimar.de/gd
+- 
+  title: ""
+  url: https://facebokk.com/herbert
 
 ----
 

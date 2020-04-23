@@ -1,6 +1,8 @@
 // https://sass-lang.com/documentation
 // sass --watch --style=compressed assets/scss:assets/css
 
+@import 'variables';
+
 //
 // fonts
 //
@@ -13,32 +15,6 @@
 	font-style: normal;
 }
 */
-
-//
-// variables
-//
-
-// colors
-$white: #fff;
-$black: #000;
-$blue: #00f;
-$red: #f00;
-$green: #0f0;
-$yellow: #ff0;
-
-// typography
-$font: Helvetica, Arial, sans-serif;
-$font-size: 1rem;
-$font-small: 0.8rem;
-$font-medium: 1.6rem;
-$font-large: 2.8rem;
-
-// borders
-$border-style: solid;
-$border-width: 1px;
-$border: $border-width $border-style $black;
-
-$padding: 1rem;
 
 //
 // typography
@@ -62,18 +38,61 @@ h1, h2 {
   }
 }
 
-$gallery-bg: #000;
-$gallery-color: #fff;
-$gallery-inactive: #999;
+header.site-header {
 
-//
-// modules
-//
+  position: sticky;
+  top: 0;
+  padding: 0.5rem $padding;
+  display: flex;
+  z-index: 100;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
 
-@import '1-page';
+  #logo {
+    width: 10rem;
+    height: auto;
+    transform: translateY(0.2rem);
+    svg polyline {
+      stroke-width: 3px;
+    }
+  }
+  .channels {
+    flex: 1;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+  }
 
-@import '2-channel';
+}
 
-@import '3-post';
+main {
+  margin: 1rem;
+}
 
-@import '4-gallery';
+footer.site-footer {
+  margin-top: 10vw;
+  font-size: 0.8rem;
+  padding: $padding;
+
+  a, ul {
+    display: inline-block;
+  }
+  a + a {
+    margin-left: 0.5em;
+  }
+
+}
+
+
+a.keyword {
+  .count {
+    font-size: 0.7em;
+    display: inline-block;
+    vertical-align: 0.33em;
+    border-bottom: 1px solid #000;
+    margin-left: 0.2em;
+  }
+}
