@@ -1,29 +1,18 @@
 <?php
 
-if( $page->categories()->isEmpty() && $page->keywords()->isEmpty() ){
+if( $page->keywords()->isEmpty() ){
   return;
 }
 
-$categories = $page->categories()->split();
 $keywords = $page->keywords()->split();
 
-$list = array_merge( $categories, $keywords );
-
 ?>
-<div class="row keywords">
+<ul class="keywords">
 
-  <div class="key">
-    Keywords
-  </div>
+  <?php foreach( $keywords as $keyword ): ?>
 
-  <ul class="value">
+    <li><?= Keyword::link( $keyword ); ?></li>
 
-    <?php foreach( $list as $item ): ?>
+  <?php endforeach; ?>
 
-      <li><?= Keyword::link( $item ); ?></li>
-
-    <?php endforeach; ?>
-
-  </ul>
-
-</div>
+</ul>
