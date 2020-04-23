@@ -8,19 +8,19 @@ main {
 
 	.team {
 		li {
-			padding: 1rem 0;
+			padding: 0.5rem 0;
 			display: flex;
+			border-top: 1px solid #000;
 			> div {
 				flex: 1;
-			}
-			+ li {
-				border-top: 1px solid #000;
 			}
 		}
 	}
 
 	.credits {
 		li {
+			border-top: 1px solid #000;
+			padding: 0.5rem 0;
 			display: flex;
 			> div {
 				flex: 1;

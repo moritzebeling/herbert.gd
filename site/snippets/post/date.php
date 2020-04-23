@@ -6,5 +6,5 @@ if( $page->date()->isEmpty() ){
 
 ?>
 <span class="date">
-  <?= $page->displayDate(); ?>
+  <?= Keyword::link( $page->displayDate() ); ?>
 </span>

@@ -25,6 +25,7 @@ html {
 body {
   font-family: $font;
   line-height: 1.15;
+  background-color: #eee;
 }
 h1, h2 {
   font-size: $font-large;
@@ -45,7 +46,7 @@ header.site-header {
   padding: 0.5rem $padding;
   display: flex;
   z-index: 100;
-  background-color: #fff;
+  background-color: #eee;
   align-items: center;
   justify-content: center;
 
@@ -70,6 +71,15 @@ header.site-header {
 
 main {
   margin: 1rem;
+
+  header {
+    margin: 2rem 0 4rem;
+  }
+
+  section {
+    margin: 1rem 0;
+  }
+
 }
 
 footer.site-footer {

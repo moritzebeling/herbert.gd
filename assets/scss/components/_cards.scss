@@ -25,5 +25,18 @@
 	flex-wrap: wrap;
 	li {
 		@include carditem;
+
+    .info {
+			margin-top: 2px;
+			margin-bottom: 1em;
+      .date {
+        float: right;
+        clear: both;
+      }
+      .type {
+        display: none;
+      }
+    }
+
 	}
 }

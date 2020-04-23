@@ -1,1 +1,1 @@
-main header,main section{margin:1rem 0}main .team li{padding:1rem 0;display:flex}main .team li>div{flex:1}main .team li+li{border-top:1px solid #000}main .credits li{display:flex}main .credits li>div{flex:1}/*# sourceMappingURL=info.css.map */
+main header,main section{margin:1rem 0}main .team li{padding:.5rem 0;display:flex;border-top:1px solid #000}main .team li>div{flex:1}main .credits li{border-top:1px solid #000;padding:.5rem 0;display:flex}main .credits li>div{flex:1}/*# sourceMappingURL=info.css.map */

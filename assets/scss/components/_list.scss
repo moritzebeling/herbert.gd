@@ -14,7 +14,7 @@
         }
       }
   	}
-		.categories {
+		ul {
 			li {
 				display: inline;
 			}
@@ -35,6 +35,11 @@
 		}
 		&.right {
 			text-align: right;
+		}
+		ul {
+			li {
+				display: inline;
+			}
 		}
 	}
 }

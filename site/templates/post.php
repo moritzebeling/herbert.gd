@@ -4,29 +4,42 @@
 
   <?php snippet('post/gallery') ?>
 
+  <header class="post-header">
+    <h1><?= $page->title()->html() ?></h1>
+    <?php if( $page->subtitle()->isNotEmpty() ): ?>
+      <h2><?= $page->subtitle() ?></h2>
+    <?php endif; ?>
+  </header>
+
   <section class="content">
 
-    <header class="post-header">
-      <h1><?= $page->title()->html() ?></h1>
-      <?php if( $page->subtitle()->isNotEmpty() ): ?>
-        <h2><?= $page->subtitle() ?></h2>
-      <?php endif; ?>
-    </header>
-
-    <div class="text">
-      <?php snippet('post/content') ?>
-    </div>
+    <?php if( $page->body()->isNotEmpty() ): ?>
+      <?= $page->body()->kirbytext(); ?>
+    <?php endif ?>
 
   </section>
+
   <section class="meta">
+    
+    <div>
+      <?php snippet('post/date') ?>
+    </div>
 
-    <?php snippet('post/date') ?>
-
-    <?php snippet('post/categories') ?>
-
-    <?php snippet('post/keywords') ?>
+    <div>
+      <div>Categories</div>
+      <div>
+        <?php snippet('post/categories') ?>
+      </div>
+    </div>
 
     <?php snippet('post/attributes') ?>
+
+    <div>
+      <div>Keywords</div>
+      <div>
+        <?php snippet('post/keywords') ?>
+      </div>
+    </div>
 
   </section>
 

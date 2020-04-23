@@ -7,17 +7,14 @@ if( $attributes->count() < 1 ){
 }
 
 ?>
-<ul class="attributes">
+<?php foreach( $attributes as $attribute ): ?>
 
-  <?php foreach( $attributes as $attribute ): ?>
+  <div>
 
-    <li>
+    <div class="attribute"><?= $attribute->attribute()->html() ?></div>
+    
+    <div class="value"><?= Keyword::link( $attribute->value()->html() ) ?></div>
 
-      <span class="attribute"><?= $attribute->attribute()->html() ?></span>
-      <span class="value"><?= Keyword::link( $attribute->value()->html() ) ?></span>
+  </div>
 
-    </li>
-
-  <?php endforeach; ?>
-
-</ul>
+<?php endforeach; ?>
