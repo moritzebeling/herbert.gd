@@ -4,7 +4,9 @@
 
   <?php snippet('channel/header'); ?>
 
-  <?php snippet('posts/list'); ?>
+  <?php
+  $layout = isset($layout) ? $layout : 'list';
+  snippet('posts/'.$layout); ?>
 
 </main>
 
