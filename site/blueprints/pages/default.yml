@@ -20,6 +20,14 @@ options:
   read:	true
   update: true
 
-fields:
+columns:
 
-  body: fields/content
+  - width: 2/3
+    fields:
+
+      body: fields/content
+
+  - width: 1/3
+    sections:
+
+      uploads: sections/uploads

@@ -2,36 +2,15 @@
 
 <main>
 
-  <?php snippet('post/gallery') ?>
+  <header class="post-header">
+    <h1><?= $page->title()->html() ?></h1>
+  </header>
 
   <section class="content">
 
-    <header class="post-header">
-      <h1><?= $page->title()->html() ?></h1>
-      <?php if( $page->subtitle()->isNotEmpty() ): ?>
-        <h2><?= $page->subtitle() ?></h2>
-      <?php endif; ?>
-    </header>
-
-    <div class="text">
-      <?php snippet('post/content') ?>
-      <?php if( $page->link()->isNotEmpty() ): ?>
-        <div class="link">
-          Website: <a target="_blank"><?= parse_url( $page->link(), PHP_URL_HOST ) ?></h2>
-        </div>
-      <?php endif; ?>
-    </div>
-
-  </section>
-  <section class="meta">
-
-    <?php snippet('post/semester') ?>
-
-    <?php snippet('post/location') ?>
-
-    <?php snippet('post/persons') ?>
-
-    <?php snippet('post/keywords') ?>
+    <?php if( $page->body()->isNotEmpty() ): ?>
+      <?= $page->body()->kirbytext(); ?>
+    <?php endif ?>
 
   </section>
 
