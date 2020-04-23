@@ -24,7 +24,7 @@ class Keyword {
     $url = Keyword::url( $keyword );
     $count = Keyword::count( $keyword );
 
-    $html = $keyword;
+    $html = ucwords( $keyword );
     if( $count > 0 ){
        $html .= '<span class="count">'.$count.'</span>';
     }
