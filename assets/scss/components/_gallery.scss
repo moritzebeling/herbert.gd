@@ -1,4 +1,5 @@
 @import '../variables';
+@import 'cards';
 
 @mixin galleryHoverItem {
   color: $gallery-color;
@@ -47,8 +48,7 @@
       display: flex;
       flex-wrap: wrap;
       .swiper-slide {
-        flex: 0 1 auto;
-        width: 25%;
+        @include carditem;
       }
     }
     figure {

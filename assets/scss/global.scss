@@ -96,3 +96,8 @@ a.keyword {
     margin-left: 0.2em;
   }
 }
+
+@import 'components/cards';
+.cards {
+	@include cards;
+}

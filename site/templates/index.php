@@ -6,7 +6,7 @@
     'channel' => $site
   ]); ?>
 
-  <?php snippet('posts/list'); ?>
+  <?php snippet('posts/cards'); ?>
 
 </main>
 
