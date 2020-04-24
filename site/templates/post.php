@@ -20,26 +20,41 @@
   </section>
 
   <section class="meta">
-    
-    <div>
-      <?php snippet('post/date') ?>
-    </div>
 
     <div>
-      <div>Categories</div>
+      <div><?= ucwords( $page->parent()->dateFormat() ); ?></div>
       <div>
-        <?php snippet('post/categories') ?>
+        <?php snippet('post/date') ?>
       </div>
     </div>
+
+    <?php if( $page->categories()->isNotEmpty() ): ?>
+      <div>
+        <div>Categories</div>
+        <div>
+          <ul class="categories">
+            <?php foreach( $page->categories()->split() as $category ): ?>
+              <li><?= Keyword::link( $category ); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <?php snippet('post/attributes') ?>
 
-    <div>
-      <div>Keywords</div>
+    <?php if( $page->keywords()->isNotEmpty() ): ?>
       <div>
-        <?php snippet('post/keywords') ?>
+        <div>Keywords</div>
+        <div>
+          <ul class="keywords">
+            <?php foreach( $page->keywords()->split() as $keyword ): ?>
+              <li><?= Keyword::link( $keyword ); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
 
   </section>
 
