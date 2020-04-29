@@ -3,8 +3,13 @@
 
 main {
 
-  section {
+  margin: 0;
 
+  header, section {
+    margin: 1rem;
+  }
+  section.images {
+    margin: 0;
   }
 
   p + p {

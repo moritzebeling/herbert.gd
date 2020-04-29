@@ -4,7 +4,7 @@
 	@media (min-width: 576px) {
     width: 50%;
   }
-	@media (min-width: 768px) {
+	@media (min-width: 992px) {
     width: 33.32%;
   }
 	@media (min-width: 1200px) {
@@ -14,7 +14,7 @@
     width: 25%;
   }
 
-	padding: 2px;
+	padding: 1rem;
 	> a {
 		display: block;
 	}

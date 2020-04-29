@@ -2,14 +2,14 @@
 
 <main>
 
-  <?php snippet('post/gallery') ?>
-
   <header class="post-header">
     <h1><?= $page->title()->html() ?></h1>
     <?php if( $page->subtitle()->isNotEmpty() ): ?>
       <h2><?= $page->subtitle() ?></h2>
     <?php endif; ?>
   </header>
+
+  <?php snippet('post/gallery') ?>
 
   <section class="content">
 

@@ -1,6 +1,6 @@
-<section class="posts">
+<section class="posts list">
 
-	<table class="list">
+	<table>
 		<?php foreach( $posts as $post ): ?>
 			<tr>
 

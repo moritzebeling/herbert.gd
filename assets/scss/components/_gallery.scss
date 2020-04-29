@@ -189,3 +189,23 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  figure {
+    padding: 1rem;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 100%;
+    &.portrait {
+      flex-basis: 50%;
+      width: 50%;
+    }
+    figcaption {
+      margin-top: 0.5em;
+      font-size: 0.7rem;
+    }
+  }
+}

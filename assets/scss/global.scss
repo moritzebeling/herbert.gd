@@ -32,21 +32,16 @@ h1, h2 {
   line-height: 1.1;
 }
 
-.grid {
-  padding: $padding / 4 * 3;
-  [class*="col-"] {
-    padding: $padding / 4;
-  }
-}
 
 header.site-header {
 
   position: sticky;
   top: 0;
-  padding: 0.5rem $padding;
+  padding: 0.5rem 1rem;
   display: flex;
   z-index: 100;
   background-color: #eee;
+  color: #000;
   align-items: center;
   justify-content: center;
 
@@ -63,10 +58,18 @@ header.site-header {
     text-align: right;
     li {
       display: inline-block;
-      margin-right: 0.5em;
+      margin-left: 0.5em;
+    }
+    a:hover,
+    a.active {
+      border-bottom: 1px solid #000;
     }
   }
 
+}
+
+header.channel-header {
+  display: none;
 }
 
 main {
@@ -84,14 +87,17 @@ main {
 
 footer.site-footer {
   margin-top: 10vw;
-  font-size: 0.8rem;
-  padding: $padding;
+  padding: 1rem 2rem;
 
   a, ul {
     display: inline-block;
   }
   a + a {
     margin-left: 0.5em;
+  }
+  a:hover,
+  a.active {
+    border-bottom: 1px solid #000;
   }
 
 }
@@ -110,10 +116,10 @@ a.keyword {
 @import 'components/cards';
 @import 'components/list';
 .posts {
-  .cards {
+  &.cards ol {
     @include cards;
   }
-  .list {
+  &.list {
     @include table;
   }
 }

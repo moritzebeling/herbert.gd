@@ -1,5 +1,5 @@
-<section class="posts">
-	<ol class="cards">
+<section class="posts cards">
+	<ol>
 		<?php foreach( $posts as $post ): ?>
 			<li class="post">
 

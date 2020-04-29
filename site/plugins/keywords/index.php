@@ -68,6 +68,6 @@ Kirby::plugin('herbert/keywords', [
     'search.parameter' => 'search',
     'cache' => true,
     'expires' => 1440
-  ]
+  ],
 
 ]);

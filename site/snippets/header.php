@@ -46,11 +46,8 @@
 
     <ol class="channels">
       <?php foreach( $kirby->collection('channels') as $channel ): ?>
-        <li><a href="<?= $channel->url() ?>"><?= $channel->title() ?></a></li>
+        <li><a href="<?= $channel->url() ?>" <?php e($channel->is( $page ),'class="active"') ?>><?= $channel->title() ?></a></li>
       <?php endforeach; ?>
-      <?php if( $info = page('info') ): ?>
-        <li><a href="<?= $info->url() ?>"><?= $info->title() ?></a></li>
-      <?php endif; ?>
     </ol>
 
   </header>
