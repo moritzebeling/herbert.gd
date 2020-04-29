@@ -1,37 +1,30 @@
 <section class="posts list">
 
-	<ul>
+	<table>
 		<?php foreach( $posts as $post ): ?>
-			<li>
+			<tr>
 
-				<div class="date">
-					<?= $post->displayDate(); ?>
-				</div>
+				<td class="min">
+					<span class="date"><?= $post->displayDate(); ?></span>
+				</td>
 
-				<div class="title">
+				<td class="title">
 					<a href="<?= $post->url() ?>">
-						
 						<h3><?= $post->title(); ?></h3>
 						<h4><?= $post->subtitle(); ?></h4>
-						<div class="image">
-							<?php if( $image = $post->image() ): ?>
-								<?= $image->tag('medium') ?>
-							<?php endif; ?>
-						</div>
-
 					</a>
-				</div>
+				</td>
 
-				<div class="categories right">
-					<ul>
+				<td class="right">
+					<ul class="categories">
 						<?php foreach( $post->categories()->split() as $category ): ?>
 							<li><?= ucwords( $category ); ?></li>
 						<?php endforeach; ?>
 					</ul>
-				</div>
+				</td>
 
-			</li>
+			</tr>
 		<?php endforeach; ?>
-	</ul>
+	</table>
 
 </section>

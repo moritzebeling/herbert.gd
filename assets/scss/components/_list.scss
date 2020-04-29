@@ -1,24 +1,38 @@
 @mixin list {
-	> li {
+	> ul > li {
     border-top: 1px solid #000;
-    > a {
-  		display: flex;
-      > div {
-        flex: 1 0 auto;
-        padding: 0.5em 0;
-        &.title {
-          flex-basis: 50%;
-        }
-        &.right {
-          text-align: right;
-        }
-      }
-  	}
-		ul {
-			li {
-				display: inline;
+		display: flex;
+		overflow-y: hidden;
+
+    > div {
+      flex: 0 0 15%;
+      padding: 0.7rem 1rem 0.7rem 0;
+			&.date {
+				span {
+					display: block;
+				}
 			}
-		}
+			&.title {
+				font-size: 2.6rem;
+				line-height: 0.9;
+				flex-basis: 70%;
+				max-height: 8rem;
+				transition: max-height 500ms ease;
+				&:hover {
+					max-height: 14rem;
+				}
+				img {
+					height: auto;
+					width: 100%;
+					margin-top: 0.5rem;
+				}
+      }
+      &.right {
+        text-align: right;
+				padding-right: 0;
+      }
+
+    }
 	}
 }
 

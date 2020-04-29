@@ -120,6 +120,6 @@ a.keyword {
     @include cards;
   }
   &.list {
-    @include table;
+    @include list;
   }
 }
