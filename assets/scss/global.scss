@@ -127,3 +127,20 @@ a.keyword {
     @include list;
   }
 }
+
+i.slash {
+  color: red;
+  i {
+    display: none;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0.03em;
+    background-color: #000;
+    height: .8em;
+    transform: rotate(24deg);
+    margin: 0 0.15em 0 0.2em;
+    vertical-align: -0.02em;
+  }
+}

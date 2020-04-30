@@ -120,5 +120,15 @@
 
 	</script>
 
+	<script>
+		// replace slashes
+		let replaceSlashes = document.querySelectorAll('.replaceSlashes,.date,.title');
+		console.log( replaceSlashes );
+		for (let element of replaceSlashes) {
+			let html = element.innerHTML;
+			element.innerHTML = html.replace(/(\w|\d)\//g,"$1<i class=\"slash\"><i>/</i></i>");
+		}
+	</script>
+
 </body>
 </html>
