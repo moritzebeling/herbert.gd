@@ -81,11 +81,12 @@ header.site-header {
     }
   }
 
+  &.js-is-stuck,
   &.js-is-sticky {
     border-bottom: $border;
     #logo {
       margin-top: 0;
-      width: 10vw;
+      width: 11vw;
       height: auto;
       svg polyline {
         stroke-width: 3px;
