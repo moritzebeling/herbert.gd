@@ -31,6 +31,9 @@ h1, h2 {
   line-height: 1.1;
 }
 
+li {
+  break-inside: avoid;
+}
 img {
   box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
 }
@@ -111,8 +114,8 @@ main {
 }
 
 footer.site-footer {
-  margin-top: 10vw;
-  padding: 1rem 2rem;
+  margin-top: 8rem;
+  padding: 1rem;
 
   a, ul {
     display: inline-block;

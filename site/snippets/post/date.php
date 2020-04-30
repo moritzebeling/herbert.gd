@@ -6,5 +6,5 @@ if( $page->date()->isEmpty() ){
 
 ?>
 <span class="date">
-  <?= Keyword::link( $page->displayDate() ); ?>
+  <?= SiteSearch::date( $page->dateFormat(), $page->date()->toDate('Y-m-d'), $page->displayDate() ); ?>
 </span>

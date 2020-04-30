@@ -11,7 +11,7 @@ $categories = $page->categories()->split();
 
   <?php foreach( $categories as $category ): ?>
 
-    <li><?= Keyword::link( $category ); ?></li>
+    <li><?= SiteSearch::link( $category ); ?></li>
 
   <?php endforeach; ?>
 

@@ -34,7 +34,7 @@
         <div>
           <ul class="categories">
             <?php foreach( $page->categories()->split() as $category ): ?>
-              <li><?= Keyword::link( $category ); ?></li>
+              <li><?= SiteSearch::link( $category ); ?></li>
             <?php endforeach; ?>
           </ul>
         </div>
@@ -49,7 +49,7 @@
         <div>
           <ul class="keywords">
             <?php foreach( $page->keywords()->split() as $keyword ): ?>
-              <li><?= Keyword::link( $keyword ); ?></li>
+              <li><?= SiteSearch::link( $keyword ); ?></li>
             <?php endforeach; ?>
           </ul>
         </div>

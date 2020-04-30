@@ -10,11 +10,11 @@ function dateToSemester( int $time ): string {
   $year = date('y', $time);
 
   if( $month <= 3 ){
-    return '<span class="term">Winter</span> '.($year+1999).'/'.$year;
+    return 'Winter '.($year+1999).'/'.$year;
   } else if( $month <= 9 ){
-    return '<span class="term">Sommer</span> '.($year+2000);
+    return 'Sommer '.($year+2000);
   } else {
-    return '<span class="term">Winter</span> '.($year+2000).'/'.($year+1);
+    return 'Winter '.($year+2000).'/'.($year+1);
   }
 }
 
@@ -24,9 +24,13 @@ class ChannelPage extends Page
 }
 class PostPage extends Page
 {
+  public function dateFormat(): string {
+
+    return $this->parent()->dateFormat()->isNotEmpty() ? $this->parent()->dateFormat()->value() : 'semester';
+  }
   public function displayDate(): string {
 
-    $format = $this->parent()->dateFormat()->isNotEmpty() ? $this->parent()->dateFormat()->value() : 'year';
+    $format = $this->dateFormat();
 
     if( $format === 'semester' ){
       return $this->date()->toSemester();
@@ -162,18 +166,6 @@ Kirby::plugin('moritzebeling/herbert', [
   		return '<figure>'.$img.$caption.'</figure>';
 
   	},
-  ],
-
-  'controllers' => [
-      'search' => function ( $site ) {
-          $query   = get('q');
-          $results = $site->index()->listed()->search($query, 'title|subtitle|tags|description|body|credits|location|date');
-
-          return [
-            'query'   => $query,
-            'results' => $results,
-          ];
-      }
   ]
 
 

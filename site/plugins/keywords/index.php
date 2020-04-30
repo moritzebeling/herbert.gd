@@ -5,42 +5,232 @@
  *
  */
 
-class Keyword {
+class SiteSearch {
 
-  public function url( string $keyword ): string
+  public function url( array $query ): string
   {
 
-    $query = '?' . http_build_query([
-      'search' => $keyword
-    ]);
+    $string = '?' . http_build_query( $query );
 
-    return kirby()->site()->url() .'/'. option('herbert.keywords.search.path') . $query;
+    return kirby()->site()->url() .'/'. option('herbert.site-search.search.path') . $string;
 
   }
 
-  public function link( string $keyword ): string
+  public function slug( array $query ): string
   {
 
-    $url = Keyword::url( $keyword );
-    $count = Keyword::count( $keyword );
+    return strtolower( http_build_query( $query ) );
 
-    $html = ucwords( $keyword );
-    if( $count > 0 ){
-       $html .= '<span class="count">'.$count.'</span>';
+  }
+
+  public function link( $query, string $text = '' ): string
+  {
+
+    if( $text === '' && is_string( $query ) ){
+      $text = ucwords( $query );
     }
 
-    return '<a title="Search for '.$keyword.'" class="keyword" href="'.$url.'">'.$html.'</a>';
+    if( !is_array( $query ) ){
+      $query = [
+        'search' => $query
+      ];
+    }
+
+    $count = SiteSearch::query( $query )->count();
+
+    if( $count > 0 ){
+       $count = '<span class="count">'.$count.'</span>';
+    } else {
+      $count = '';
+    }
+
+    return '<a title="Search for '.$text.'" class="keyword" href="'.SiteSearch::url( $query ).'">'.$text.$count.'</a>';
 
   }
 
-  public function count( string $keyword )
+  public function date( string $format, string $date, string $text ): string
+  {
+
+    if( $format === 'semester' ){
+      $query = [
+        'semester' => $date
+      ];
+    } else {
+      $query = [
+        'date' => $date
+      ];
+    }
+
+    return SiteSearch::link( $query, $text );
+  }
+
+  public function validateQuery( array $query ): array {
+
+    if( isset($query['date']) ){
+
+      $time = strtotime( $query['date'] );
+
+      $frame = 3600 * 24 * 30;
+
+      $query['after'] = $time - $frame;
+      $query['before'] = $time + $frame;
+
+      unset( $query['date'] );
+
+    } else if ( isset($query['semester']) ){
+
+      $time = strtotime( $query['semester'] );
+
+      $month = date('n', $time);
+      $year = date('Y', $time);
+
+      if( $month <= 3 ){
+        $query['after'] = strtotime( ($year-1).'-10-01' );
+        $query['before'] = strtotime( $year.'-03-31' );
+      } else if( $month <= 9 ){
+        $query['after'] = strtotime( $year.'-04-01' );
+        $query['before'] = strtotime( $year.'-09-30' );
+      } else {
+        $query['after'] = strtotime( $year.'-10-01' );
+        $query['before'] = strtotime( ($year+1).'-03-31' );
+      }
+
+      unset( $query['semester'] );
+
+    }
+
+    return $query;
+  }
+
+  public function query( array $query ): Kirby\Cms\Pages
   {
 
     $kirby = kirby();
 
-    if( option('herbert.keywords.cache',false) ){
+    if( option('herbert.site-search.cache',false) ){
 
-      $slug = Str::slug( $keyword );
+      $slug = SiteSearch::slug( $query );
+
+      $cache = $kirby->cache('herbert.site-search');
+
+      $result = $cache->get( $slug );
+      if( $result !== null ){
+        // return cache
+        $pages = [];
+        foreach( $result as $page ){
+          $pages[] = page( $page['id'] );
+        }
+        return new Pages( $pages );
+      }
+
+    }
+
+    $query = SiteSearch::validateQuery( $query );
+
+    $result = $kirby->collection('posts');
+
+    foreach ($query as $key => $value) {
+      switch ($key) {
+        case 'after':
+          $result = $result->filter(function ( $page ) use ( $value ) {
+            return $page->date()->toDate() > $value;
+          });
+          break;
+        case 'before':
+          $result = $result->filter(function ( $page ) use ( $value ) {
+            return $page->date()->toDate() < $value;
+          });
+          break;
+        case 'search':
+          $result = $result->search( $value );
+          break;
+        default:
+          $result = $result->filterBy( $key, $value );
+          break;
+      }
+    }
+
+    if( option('herbert.site-search.cache',false) ){
+
+      // save the cache
+      $cache->set( $slug, $result->toArray(), option('herbert.site-search.expires',1440) );
+
+    }
+
+    return $result;
+
+  }
+
+  /*
+  public function build( $query = [] ){
+    if( !is_array( $query ) ){
+      $query = [
+        'search' => $query
+      ];
+    }
+    return $query;
+  }
+  */
+
+  /*
+  public function date( string $format, string $date, string $text = '' ): string
+  {
+
+    $time = strtotime( $date );
+
+    $text = $text === '' ? date('d/m/Y',$time) : $text;
+
+    if( $format === 'semester' ){
+
+      $month = date('n', $time);
+      $year = date('Y', $time);
+
+      if( $month <= 3 ){
+        // winter prev
+        $query = [
+          'after' => strtotime( ($year-1).'-10-01' ),
+          'before' => strtotime( $year.'-03-31' )
+        ];
+      } else if( $month <= 9 ){
+        // summer
+        $query = [
+          'after' => strtotime( $year.'-04-01' ),
+          'before' => strtotime( $year.'-09-30' )
+        ];
+
+      } else {
+        // winter next
+        $query = [
+          'after' => strtotime( $year.'-10-01' ),
+          'before' => strtotime( ($year+1).'-03-31' )
+        ];
+      }
+
+    } else {
+
+      $days = 60;
+      $frame = 3600 * 12 * $days;
+
+      $query = [
+        'after' => $time - $frame,
+        'before' => $time + $frame
+      ];
+
+    }
+
+    return SiteSearch::link( $query, $text );
+
+  }
+  */
+  /*
+  public function count( string $search, array $filters = [] )
+  {
+
+    $kirby = kirby();
+
+    if( option('herbert.site-search.cache',false) ){
+
+      $slug = Str::slug( $search );
 
       $cache = $kirby->cache('herbert.keywords');
 
@@ -48,24 +238,24 @@ class Keyword {
       if( $count !== null ){
         return $count;
       }
-      $count = $kirby->collection('posts')->search( $keyword )->count();
-      $cache->set( $slug, $count, option('herbert.keywords.expires',1440) );
+      $count = $kirby->collection('posts')->search( $search )->count();
+      $cache->set( $slug, $count, option('herbert.site-search.expires',1440) );
 
       return $count;
 
     }
 
-    return $kirby->collection('posts')->search( $keyword )->count();
+    return $kirby->collection('posts')->search( $search )->count();
 
   }
+  */
 
 }
 
-Kirby::plugin('herbert/keywords', [
+Kirby::plugin('herbert/site-search', [
 
   'options' => [
-    'search.path' => '',
-    'search.parameter' => 'search',
+    'search.path' => 'index',
     'cache' => true,
     'expires' => 1440
   ],

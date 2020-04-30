@@ -5,7 +5,7 @@
 			<li>
 
 				<div class="date">
-					<?= $post->displayDate(); ?>
+					<?= str_replace(' ','<br />',$post->displayDate() ); ?>
 				</div>
 
 				<div class="title">

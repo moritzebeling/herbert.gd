@@ -7,6 +7,7 @@
 		<?php foreach( $site->children()->unlisted() as $item ):
 			switch ( $item->intendedTemplate()->name() ) {
 				case 'error':
+				case 'start':
 				case 'index':
 					continue 2;
 			}

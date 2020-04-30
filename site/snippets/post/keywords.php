@@ -11,7 +11,7 @@ $keywords = $page->keywords()->split();
 
   <?php foreach( $keywords as $keyword ): ?>
 
-    <li><?= Keyword::link( $keyword ); ?></li>
+    <li><?= SiteSearch::link( $keyword ); ?></li>
 
   <?php endforeach; ?>
 

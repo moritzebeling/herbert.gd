@@ -12,8 +12,8 @@ if( $attributes->count() < 1 ){
   <div>
 
     <div class="attribute"><?= $attribute->attribute()->html() ?></div>
-    
-    <div class="value"><?= Keyword::link( $attribute->value()->html() ) ?></div>
+
+    <div class="value"><?= SiteSearch::link( $attribute->value()->value() ) ?></div>
 
   </div>
 

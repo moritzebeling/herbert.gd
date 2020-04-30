@@ -2,7 +2,16 @@
 
 return function ( $kirby, $page ) {
 
-	$posts = $kirby->collection('posts');
+	$query = kirby()->request()->get();
+	if( !empty( $query ) ){
+
+		$posts = SiteSearch::query( $query );
+
+	} else {
+
+		$posts = kirby()->collection('posts');
+
+	}
 
 	return [
 	  'posts' => $posts,
