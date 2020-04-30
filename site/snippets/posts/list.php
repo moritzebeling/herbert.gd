@@ -4,14 +4,14 @@
 		<?php foreach( $posts as $post ): ?>
 			<li>
 
-				<div class="date replaceSlashes">
+				<div class="date">
 					<?= $post->displayDate(); ?>
 				</div>
 
 				<div class="title">
 					<a href="<?= $post->url() ?>">
 
-						<h3 class="replaceSlashes"><?= $post->title(); ?></h3>
+						<h3><?= $post->title(); ?></h3>
 						<h4><?= $post->subtitle(); ?></h4>
 						<div class="image">
 							<?php if( $image = $post->image() ): ?>

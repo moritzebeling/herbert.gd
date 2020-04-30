@@ -122,11 +122,16 @@
 
 	<script>
 		// replace slashes
-		let replaceSlashes = document.querySelectorAll('.replaceSlashes,.date,.title');
+		let replaceSlashes = document.querySelectorAll('.title,.subtitle,.date,.replaceSpecialChars');
 		console.log( replaceSlashes );
 		for (let element of replaceSlashes) {
 			let html = element.innerHTML;
-			element.innerHTML = html.replace(/(\w|\d)\//g,"$1<i class=\"slash\"><i>/</i></i>");
+			html = html.replace(/(\/)(?!([^<]+)?>)/g,"<i class=\"special slash\"><i>/</i></i>");
+			html = html.replace(/-(?!([^<]+)?>)/g,"<i class=\"special minus\"><i>-</i></i>");
+			html = html.replace(/–(?!([^<]+)?>)/g,"<i class=\"special dash\"><i>–</i></i>");
+			html = html.replace(/_(?!([^<]+)?>)/g,"<i class=\"special lodash\"><i>_</i></i>");
+			html = html.replace(/\|(?!([^<]+)?>)/g,"<i class=\"special pipe\"><i>|</i></i>");
+			element.innerHTML = html;
 		}
 	</script>
 
