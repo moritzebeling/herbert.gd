@@ -1,6 +1,8 @@
+@import '../variables';
+
 @mixin list {
 	> ul > li {
-    border-top: 1px solid #000;
+    border-top: $border;
 		display: flex;
 		overflow-y: hidden;
 
@@ -11,6 +13,7 @@
 				span {
 					display: block;
 				}
+				@include tabularFigures;
 			}
 			&.title {
 				font-size: 2.6rem;
@@ -38,7 +41,7 @@
 
 @mixin table {
 	td {
-		border-top: 1px solid #000;
+		border-top: $border;
 		padding: 0.5em 0;
 		vertical-align: top;
 		width: auto;

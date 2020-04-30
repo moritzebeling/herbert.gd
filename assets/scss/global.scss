@@ -62,8 +62,12 @@ header.site-header {
     }
     a:hover,
     a.active {
-      border-bottom: 1px solid #000;
+      border-bottom: $border;
     }
+  }
+
+  &.js-is-sticky {
+    border-bottom: $border;
   }
 
 }
@@ -97,7 +101,7 @@ footer.site-footer {
   }
   a:hover,
   a.active {
-    border-bottom: 1px solid #000;
+    border-bottom: $border;
   }
 
 }
@@ -108,7 +112,7 @@ a.keyword {
     font-size: 0.7em;
     display: inline-block;
     vertical-align: 0.33em;
-    border-bottom: 1px solid #000;
+    border-bottom: $border;
     margin-left: 0.2em;
   }
 }
