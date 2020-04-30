@@ -44,10 +44,12 @@
 
     <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
 
-    <ol class="channels">
-      <?php foreach( $kirby->collection('channels') as $channel ): ?>
-        <li><a href="<?= $channel->url() ?>" <?php e($channel->is( $page ),'class="active"') ?>><?= $channel->title() ?></a></li>
-      <?php endforeach; ?>
-    </ol>
+    <nav>
+      <ol class="channels">
+        <?php foreach( $kirby->collection('channels') as $channel ): ?>
+          <li><a href="<?= $channel->url() ?>" <?php e($channel->is( $page ),'class="active"') ?>><?= $channel->title() ?></a></li>
+        <?php endforeach; ?>
+      </ol>
+    </nav>
 
   </header>

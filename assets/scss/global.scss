@@ -25,11 +25,14 @@ html {
 body {
   font-family: $font;
   line-height: 1.15;
-  background-color: #eee;
 }
 h1, h2 {
   font-size: $font-large;
   line-height: 1.1;
+}
+
+img {
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
 }
 
 
@@ -40,34 +43,51 @@ header.site-header {
   padding: 0.5rem 1rem;
   display: flex;
   z-index: 100;
-  background-color: #eee;
+  background-color: #fff;
   color: #000;
-  align-items: center;
-  justify-content: center;
+
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
 
   #logo {
-    width: 10rem;
+    width: 25vw;
     height: auto;
+    margin-top: 0.5rem;
     transform: translateY(0.2rem);
+    transition-property: width, height;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
     svg polyline {
-      stroke-width: 3px;
+      stroke-width: 2px;
     }
   }
-  .channels {
+  nav {
     flex: 1;
     text-align: right;
-    li {
-      display: inline-block;
-      margin-left: 0.5em;
-    }
-    a:hover,
-    a.active {
-      border-bottom: $border;
+    margin-top: 0.5rem;
+    .channels {
+      li {
+        display: inline-block;
+        margin-left: 1em;
+      }
+      a:hover,
+      a.active {
+        border-bottom: $border;
+      }
     }
   }
 
   &.js-is-sticky {
     border-bottom: $border;
+    #logo {
+      margin-top: 0;
+      width: 10vw;
+      height: auto;
+      svg polyline {
+        stroke-width: 3px;
+      }
+    }
   }
 
 }
@@ -78,6 +98,7 @@ header.channel-header {
 
 main {
   margin: 1rem;
+  margin-top: 4rem;
 
   header {
     margin: 2rem 0 4rem;

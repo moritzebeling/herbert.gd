@@ -3,9 +3,9 @@
 <main>
 
   <header class="post-header">
-    <h1><?= $page->title()->html() ?></h1>
+    <h1 class="title"><?= $page->title()->html() ?></h1>
     <?php if( $page->subtitle()->isNotEmpty() ): ?>
-      <h2><?= $page->subtitle() ?></h2>
+      <h2 class="subtitle"><?= $page->subtitle() ?></h2>
     <?php endif; ?>
   </header>
 
