@@ -1,31 +1,5 @@
 @import '../variables';
 
-body {
-	background-color: #000;
-	color: #999;
-}
-
 header.site-header {
-	background-color: #000;
-	color: #fff;
 	margin: 4rem 0;
-	
-	#logo {
-    svg polyline {
-      stroke: #fff;
-    }
-  }
-	.channels {
-		a:hover,
-		a.active {
-			border-bottom: 1px solid #fff;
-		}
-	}
-}
-
-footer.site-footer {
-	a:hover,
-	a.active {
-		border-bottom: 1px solid #fff;
-	}
 }

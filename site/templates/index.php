@@ -2,11 +2,11 @@
 
 <main>
 
-  <?php snippet('channel/header',[
-    'channel' => $site
-  ]); ?>
+  <?php snippet('channel/header'); ?>
 
-  <?php snippet('posts/cards'); ?>
+  <?php
+  $layout = isset($layout) ? $layout : 'list';
+  snippet('posts/'.$layout); ?>
 
 </main>
 

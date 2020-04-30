@@ -7,7 +7,7 @@
 
  return [
 
-   'home' => 'index',
+   'home' => 'start',
 
    'debug' => false,
    'whoops' => false,
