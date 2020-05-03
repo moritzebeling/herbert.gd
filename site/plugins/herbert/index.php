@@ -101,7 +101,7 @@ Kirby::plugin('moritzebeling/herbert', [
       return $return;
     },
     'toSemester' => function($field) {
-      return dateToSemester( strtotime($field->value ) );
+      return dateToSemester( strtotime( $field->value ) );
     },
     'toAnchor' => function($field, string $text = null, bool $external = true ) {
       if( $field->isEmpty() ){

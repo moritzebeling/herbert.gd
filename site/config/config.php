@@ -5,27 +5,29 @@
  *
  */
 
- return [
+date_default_timezone_set('Europe/Berlin');
 
-   'home' => 'start',
+return [
 
-   'debug' => false,
-   'whoops' => false,
+  'home' => 'start',
 
-   'cache' => [
-     'pages' => [
-       'active' => true
-     ],
-   ],
+  'debug' => false,
+  'whoops' => false,
 
-   'smartypants' => true,
+  'cache' => [
+    'pages' => [
+      'active' => true
+    ],
+  ],
 
-   'thumbs' => [
- 		'srcsets' => [
- 			'small' => [ 240, 360, 640 ],
- 			'medium' => [480, 640, 880, 1200],
- 			'large' => [640, 880, 1200, 1600, 2000],
- 		]
- 	],
+  'smartypants' => true,
 
- ];
+  'thumbs' => [
+  	'srcsets' => [
+  		'small' => [ 240, 360, 640 ],
+  		'medium' => [480, 640, 880, 1200],
+  		'large' => [640, 880, 1200, 1600, 2000],
+  	]
+  ],
+
+];
