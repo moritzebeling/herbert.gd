@@ -1,27 +1,36 @@
-<section class="posts cards">
+<section class="posts list">
+
 	<ol>
 		<?php foreach( $posts as $post ): ?>
-			<li class="post">
-
+			<li>
 				<a href="<?= $post->url() ?>">
 
-					<?php if( $image = $post->image() ): ?>
-						<?= $image->tag('medium') ?>
-					<?php endif; ?>
+					<div class="image">
+						<?php if( $image = $post->image() ): ?>
+							<?= $image->tag('medium') ?>
+						<?php else: ?>
+							<figure class="placeholder"></figure>
+						<?php endif; ?>
+					</div>
+
+					<div class="title">
+						<h3><?= $post->title(); ?></h3>
+						<h4><?= $post->subtitle(); ?></h4>
+					</div>
 
 					<div class="info">
 
-						<span class="date"><?= $post->displayDate(); ?></span>
+						<div class="categories right">
+							<ul>
+								<?php foreach( $post->categories()->split() as $category ): ?>
+									<li><?= ucwords( $category ); ?></li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
 
-						<h3 class="title"><?= $post->title(); ?></h3>
-
-						<?php if( $post->subtitle()->isNotEmpty() ): ?>
-							<h4 class="subtitle"><?= $post->subtitle(); ?></h4>
-						<?php endif; ?>
-
-						<?php if( $post->type()->isNotEmpty() ): ?>
-							<span class="type"><?= $post->type(); ?></span>
-						<?php endif; ?>
+						<div class="date">
+							<?= $post->displayDate(); ?>
+						</div>
 
 					</div>
 
@@ -29,4 +38,5 @@
 			</li>
 		<?php endforeach; ?>
 	</ol>
+
 </section>

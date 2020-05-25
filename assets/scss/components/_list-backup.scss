@@ -1,0 +1,62 @@
+@import '../variables';
+
+@mixin list {
+	> ul > li {
+    border-top: $border;
+		display: flex;
+		overflow-y: hidden;
+
+    > div {
+      flex: 0 0 15%;
+      padding: 0.7rem 1rem 0.7rem 0;
+			&.date {
+				span {
+					display: block;
+				}
+				@include tabularFigures;
+			}
+			&.title {
+				font-size: 2.6rem;
+				line-height: 0.9;
+				flex-basis: 70%;
+				max-height: 8rem;
+				transition: max-height 500ms ease;
+				&:hover {
+					max-height: 14rem;
+				}
+				img {
+					height: auto;
+					width: 100%;
+					margin-top: 0.5rem;
+				}
+      }
+      &.right {
+        text-align: right;
+				padding-right: 0;
+      }
+
+    }
+	}
+}
+
+@mixin table {
+	td {
+		border-top: $border;
+		padding: 0.5em 0;
+		vertical-align: top;
+		width: auto;
+
+		&.min {
+	    width: 20%;
+	    white-space: nowrap;
+		}
+		&.right {
+			text-align: right;
+		}
+		ul {
+			li {
+				display: inline;
+			}
+		}
+	}
+}

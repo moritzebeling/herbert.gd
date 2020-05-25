@@ -34,9 +34,6 @@ h1, h2 {
 li {
   break-inside: avoid;
 }
-img {
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
-}
 
 
 header.site-header {
@@ -101,7 +98,7 @@ header.channel-header {
 }
 
 main {
-  margin: 1rem;
+  // margin: 1rem;
   margin-top: 4rem;
 
   header {
@@ -146,65 +143,12 @@ a.keyword {
 @import 'components/list';
 .posts {
   &.cards ol {
-    @include cards;
+    @include list;
   }
-  &.list {
+  &.list ol {
     @include list;
   }
 }
 
 
-
-
-
-i.special {
-  i {
-    display: none;
-  }
-  &:before {
-    content: "";
-    display: inline-block;
-    background-color: #000;
-  }
-
-  &.slash {
-    &:before {
-      width: 0.03em;
-      max-width: 1px;
-      height: .8em;
-      transform: rotate(24deg);
-      vertical-align: -0.02em;
-      margin-left: 0.2em;
-      margin-right: 0.15em;
-    }
-  }
-  &.pipe {
-    &:before {
-      width: 1px;
-      height: 0.76em;
-      margin-left: 0.25em;
-      margin-right: 0.2em;
-    }
-  }
-  &.minus,
-  &.dash,
-  &.lodash {
-    &:before {
-      width: 0.7em;
-      height: 1px;
-      margin-left: 0.5px;
-    }
-  }
-  &.minus,
-  &.dash {
-    &:before {
-      vertical-align: 0.3em;
-    }
-  }
-  &.minus {
-    &:before {
-      width: 0.4em;
-    }
-  }
-
-}
+@import 'components/specialCharacters';

@@ -1,40 +1,51 @@
 @import '../variables';
 
 @mixin list {
-	> ul > li {
-    border-top: $border;
-		display: flex;
-		overflow-y: hidden;
 
-    > div {
-      flex: 0 0 15%;
-      padding: 0.7rem 1rem 0.7rem 0;
-			&.date {
-				span {
-					display: block;
-				}
-				@include tabularFigures;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.5rem;
+
+	> li {
+		width: 50%;
+		margin-bottom: 1rem;
+		padding: 0.5rem;
+    > a {
+			display: flex;
+			flex-wrap: wrap;
+
+			div {
+				flex: 0 0 auto;
 			}
-			&.title {
-				font-size: 2.6rem;
-				line-height: 0.9;
-				flex-basis: 70%;
-				max-height: 8rem;
-				transition: max-height 500ms ease;
-				&:hover {
-					max-height: 14rem;
-				}
-				img {
-					height: auto;
-					width: 100%;
-					margin-top: 0.5rem;
-				}
-      }
-      &.right {
-        text-align: right;
-				padding-right: 0;
-      }
 
+			.image {
+				width: 100%;
+				height: 30vw;
+				overflow-y: hidden;
+				margin-bottom: 0.25rem;
+				background-color: #eee;
+				box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+				.placeholder {
+					border-color: #eee;
+					height: 100%;
+				}
+			}
+
+			.title {
+				width: 50%;
+			}
+
+			.info {
+				width: 50%;
+				text-align: right;
+				// font-size: 0.7rem;
+				div {
+					display: inline-block;
+				}
+				.date {
+					@include tabularFigures;
+				}
+			}
     }
 	}
 }
