@@ -6,9 +6,6 @@ status:
   draft:
     label: Draft
     text: The channel and all its posts are in draft mode and only visible to logged in users.
-  unlisted:
-    label: In Review
-    text: The channel and all its posts are online but only visible with the direct URL.
   listed:
     label: Published
     text: The channel and all its posts are online and listed on the website.
@@ -26,6 +23,7 @@ options:
   read:	true
   # set user permissions
   update: true
+  duplicate: false
 
 tabs:
 
@@ -50,12 +48,7 @@ tabs:
       - width: 1/2
         fields:
 
-          layout:
-            type: select
-            options:
-              list: List
-              cards: Cards
-            required: true
+          layout: fields/layoutSelect
 
           categories:
             type: structure
@@ -66,15 +59,7 @@ tabs:
       - width: 1/2
         fields:
 
-          dateFormat:
-            label: Date format
-            type: select
-            options:
-              day: Day
-              month: Month
-              semester: Semester
-              year: Year
-            required: true
+          dateFormat: fields/dateFormatSelect
 
           attributes:
             type: structure

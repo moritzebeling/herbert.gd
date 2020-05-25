@@ -35,5 +35,15 @@ tabs:
     extends: tabs/meta
 
   settings:
-    label: Settings
     icon: cog
+    columns:
+
+      - width: 1/2
+        fields:
+
+          layout: fields/layoutSelect
+
+      - width: 1/2
+        fields:
+
+          dateFormat: fields/dateFormatSelect

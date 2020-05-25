@@ -29,4 +29,12 @@ Image:
 
 ----
 
+Layout: preview
+
+----
+
+Dateformat: 
+
+----
+
 Imprint: 

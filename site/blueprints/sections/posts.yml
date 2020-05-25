@@ -7,7 +7,9 @@ type: pagetable
 empty: No Posts created yet
 translations:
   empty: No Posts created yet
+template: post
 limitOptions:
+  - 10
   - 25
   - 50
 columns:

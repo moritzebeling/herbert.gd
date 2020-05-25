@@ -1,0 +1,6 @@
+type: select
+options:
+  list: List
+  cards: Cards
+  preview: Preview
+required: true

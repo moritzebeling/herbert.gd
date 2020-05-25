@@ -1,0 +1,7 @@
+label: Date format
+type: select
+options:
+  day: Tag
+  month: Monat
+  semester: Semester
+  year: Jahr

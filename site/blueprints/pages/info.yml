@@ -3,14 +3,15 @@ title: Info
 icon: phone
 
 options:
-  changeSlug:	false
-  changeStatus:	false
-  changeTemplate:	false
+  changeSlug: false
+  changeStatus: false
+  changeTemplate: false
   changeTitle: false
-  delete:	false
+  delete: false
   preview: true
   read:	true
   update: true
+  duplicate: false
 
 columns:
 
