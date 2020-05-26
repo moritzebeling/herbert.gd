@@ -18,6 +18,15 @@ function dateToSemester( int $time ): string {
   }
 }
 
+class HomePage extends Page
+{
+  public function layout(): string {
+    return $this->site()->layout();
+  }
+  public function dateFormat(): string {
+    return $this->site()->dateFormat();
+  }
+}
 class ChannelPage extends Page
 {
   public function image( string $filename = null ) {
@@ -38,7 +47,7 @@ class ChannelPage extends Page
     if( $this->content()->layout()->isNotEmpty() ) {
       return $this->content()->layout()->value();
     }
-    return $this->site()->dateFormat();
+    return $this->site()->layout();
   }
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
@@ -71,15 +80,15 @@ class PostPage extends Page
   public function dateFormat(): string {
     return $this->channel()->dateFormat();
   }
-  public function displayDate(): string {
+  public function displayDate( string $format = null ): string {
 
-    $format = $this->dateFormat();
-
-    if( $format === 'semester' ){
-      return $this->date()->toSemester();
-    }
+    $format = $format !== null ? $format : $this->dateFormat();
 
     switch ($format) {
+      case 'none':
+        return '';
+      case 'semester':
+        return $this->date()->toSemester();
       case 'day':
         $dateFormat = 'd/m/Y';
         break;
@@ -99,6 +108,7 @@ Kirby::plugin('moritzebeling/herbert', [
   'pageModels' => [
     'channel' => 'ChannelPage',
     'post' => 'PostPage',
+    'start' => 'HomePage',
   ],
 
   'siteMethods' => [

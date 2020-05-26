@@ -1,7 +1,10 @@
 label: Date format
 type: select
 options:
-  day: Tag
-  month: Monat
+  none: Hidden
+  day: Day
+  month: Month
   semester: Semester
-  year: Jahr
+  year: Year
+default: none
+required: true

@@ -27,11 +27,11 @@ Image:
 
 ----
 
-Layout: preview
+Layout: list
 
 ----
 
-Dateformat: 
+Dateformat: none
 
 ----
 

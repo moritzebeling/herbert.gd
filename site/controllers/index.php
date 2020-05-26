@@ -14,7 +14,6 @@ return function ( $kirby, $page ) {
 	}
 
 	return [
-	  'posts' => $posts,
-		'layout' => $page->layout(),
+	  'posts' => $posts
 	];
 };

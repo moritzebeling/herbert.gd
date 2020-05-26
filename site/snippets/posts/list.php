@@ -1,4 +1,4 @@
-<section class="posts list">
+<section class="posts gallery">
 
 	<ol>
 		<?php foreach( $posts as $post ): ?>
@@ -13,23 +13,27 @@
 						<?php endif; ?>
 					</div>
 
-					<div class="title">
-						<h3><?= $post->title(); ?></h3>
-						<h4><?= $post->subtitle(); ?></h4>
-					</div>
-
 					<div class="info">
 
-						<div class="categories right">
-							<ul>
-								<?php foreach( $post->categories()->split() as $category ): ?>
-									<li><?= ucwords( $category ); ?></li>
-								<?php endforeach; ?>
-							</ul>
+						<div class="title">
+							<h3><?= $post->title(); ?></h3>
+							<h4><?= $post->subtitle(); ?></h4>
 						</div>
 
-						<div class="date">
-							<?= $post->displayDate(); ?>
+						<div class="meta">
+
+							<div class="categories">
+								<ul>
+									<?php foreach( $post->categories()->split() as $category ): ?>
+										<li><?= ucwords( $category ); ?></li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+
+							<div class="date">
+								<?= $post->displayDate(); ?>
+							</div>
+
 						</div>
 
 					</div>

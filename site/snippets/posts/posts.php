@@ -1,4 +1,11 @@
-<section class="posts gallery">
+<?php
+
+// $posts defined in controller
+
+$dateFormat = $page->dateFormat();
+
+?>
+<section class="posts <?= $page->layout(); ?>">
 
 	<ol>
 		<?php foreach( $posts as $post ): ?>
@@ -31,7 +38,7 @@
 							</div>
 
 							<div class="date">
-								<?= $post->displayDate(); ?>
+								<?= $post->displayDate( $dateFormat ); ?>
 							</div>
 
 						</div>

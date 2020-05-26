@@ -5,7 +5,6 @@ return function ( $kirby, $site ) {
 	$posts = $kirby->collection('featured');
 
 	return [
-	  'posts' => $posts,
-		'layout' => $site->layout(),
+	  'posts' => $posts
 	];
 };

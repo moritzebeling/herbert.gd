@@ -79,4 +79,4 @@
 
 </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer');

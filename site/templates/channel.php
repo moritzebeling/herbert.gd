@@ -4,10 +4,8 @@
 
   <?php snippet('channel/header'); ?>
 
-  <?php
-  $layout = isset($layout) ? $layout : 'list';
-  snippet('posts/'.$layout); ?>
+  <?php snippet('posts/posts'); ?>
 
 </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer');

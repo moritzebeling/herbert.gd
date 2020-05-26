@@ -6,8 +6,8 @@
     'channel' => $site
   ]); ?>
 
-  <?php snippet('posts/cards'); ?>
+  <?php snippet('posts/posts'); ?>
 
 </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer');

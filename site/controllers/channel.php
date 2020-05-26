@@ -3,7 +3,6 @@
 return function ( $page ) {
 
 	return [
-	  'posts' => $page->posts(),
-		'layout' => $page->layout(),
+	  'posts' => $page->posts()
 	];
 };
