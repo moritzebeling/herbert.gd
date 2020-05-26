@@ -17,6 +17,7 @@
         animation: fadein 1s;
 }
 
+/*
 .gallery {
 
   background-color: $gallery-bg;
@@ -74,7 +75,7 @@
       height: 70vh;
       display: flex;
       flex-direction: column;
-      .img {
+      .image {
         flex: 1;
         display: flex;
         align-items: flex-start;
@@ -164,6 +165,7 @@
   }
 
 }
+*/
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -191,17 +193,31 @@
 }
 
 
-.images {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   figure {
-    padding: 1rem;
+    + figure {
+      margin-top: 1rem;
+    }
     flex-shrink: 0;
     flex-grow: 1;
     flex-basis: 100%;
     &.portrait {
       flex-basis: 50%;
       width: 50%;
+    }
+    &.video {
+      .player {
+        position: relative;
+        padding-top: 56.25%;
+        iframe {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
     figcaption {
       margin-top: 0.5em;

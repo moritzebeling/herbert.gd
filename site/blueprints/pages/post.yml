@@ -35,6 +35,11 @@ columns:
 
           subtitle: fields/post/subtitle
 
+          image:
+            extends: fields/image
+            title:
+            layout: list
+
       uploads:
         extends: sections/uploads
         layout: cards

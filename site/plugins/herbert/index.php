@@ -20,10 +20,36 @@ function dateToSemester( int $time ): string {
 
 class ChannelPage extends Page
 {
-    // your custom page methods
+  public function image( string $filename = null ) {
+    if( $filename !== null ){
+      return parent::image( $filename );
+    } else if( $image = $this->content()->image()->toFile() ){
+      return $image;
+    }
+    return $this->images()->first();
+  }
 }
 class PostPage extends Page
 {
+  public function images() {
+    return parent::images()->sortBy('sort', 'ASC');
+  }
+  public function image( string $filename = null ) {
+    if( $filename !== null ){
+      return parent::image( $filename );
+    } else if( $image = $this->content()->image()->toFile() ){
+      return $image;
+    }
+    return $this->images()->first();
+  }
+  public function gallery( bool $filter = true ) {
+    if( $filter === true ){
+      return $this->images()->filter(function($image) {
+        return !$image->exclude()->isTrue();
+      });
+    }
+    return $this->images();
+  }
   public function dateFormat(): string {
 
     return $this->parent()->dateFormat()->isNotEmpty() ? $this->parent()->dateFormat()->value() : 'semester';
@@ -164,6 +190,18 @@ Kirby::plugin('moritzebeling/herbert', [
   		}
 
   		return '<figure>'.$img.$caption.'</figure>';
+
+  	},
+    'panelinfo' => function () {
+
+      $help = '';
+      if( $this->exclude()->isTrue() ){
+        $help .= '<span class="k-icon k-icon-protected"><svg viewBox="0 0 16 16"><use xlink:href="#icon-protected"></use></svg></span>';
+      }
+      if( $this->videoUrl()->isNotEmpty() ){
+        $help .= '<span class="k-icon k-icon-video"><svg viewBox="0 0 16 16"><use xlink:href="#icon-video"></use></svg></span>';
+      }
+      return $help;
 
   	},
   ]

@@ -6,3 +6,4 @@ layout: list
 image:
   back: white
 sortable: true
+info: "{{ file.panelinfo }}"

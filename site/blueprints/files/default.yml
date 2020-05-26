@@ -13,6 +13,9 @@ options:
 
 fields:
 
+  sort:
+    type: hidden
+
   description:
     extends: fields/description
     label: Caption
@@ -21,3 +24,17 @@ fields:
     label: Credits
     type: text
     before: ©
+
+  exclude:
+    type: toggle
+    label: Exclude from gallery
+    text:
+      - Include in gallery
+      - Hidden in gallery
+
+  videoUrl:
+    type: url
+    placeholder: https://
+    label: Video Url
+    help: If this image is actually a placeholder for a video. YouTube or Vimeo only!
+    icon: video

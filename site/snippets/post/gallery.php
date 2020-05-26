@@ -1,6 +1,6 @@
 <?php
 
-$images = isset( $images ) ? $images : $page->images();
+$images = isset( $images ) ? $images : $page->gallery();
 
 $count = $images->count();
 if( $count < 1 ){
@@ -8,20 +8,20 @@ if( $count < 1 ){
 }
 
 ?>
-<section class="images">
-  <?php foreach($images->sortBy('sort') as $image):
-    if( $image->isPortrait() ){
-      $class = "portrait";
-    } else {
-      $class = "landscape";
-    }
-    ?>
+<section class="gallery">
+  <?php foreach($images as $image): ?>
 
-    <figure class="<?= $class ?>">
-
-      <div class="img">
-        <?= $image->tag() ?>
-      </div>
+    <?php if( $image->videoUrl()->isEmpty() ): ?>
+      <figure class="<?php e($image->isPortrait(),'portrait','landscape') ?>">
+        <div class="image">
+          <?= $image->tag() ?>
+        </div>
+    <?php else: ?>
+      <figure class="video">
+        <div class="player">
+          <?= video( $image->videoUrl()->value() ) ?>
+        </div>
+    <?php endif; ?>
 
       <?php if( $image->description()->isNotEmpty() || $image->credits()->isNotEmpty() ): ?>
         <figcaption>
