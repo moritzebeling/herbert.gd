@@ -28,6 +28,12 @@ class ChannelPage extends Page
     }
     return $this->images()->first();
   }
+  public function dateFormat(): string {
+    if( $this->content()->dateFormat()->isNotEmpty() ) {
+      return $this->content()->dateFormat()->value();
+    }
+    return $this->site()->dateFormat();
+  }
 }
 class PostPage extends Page
 {
@@ -50,9 +56,11 @@ class PostPage extends Page
     }
     return $this->images();
   }
+  public function channel(): ChannelPage {
+    return $this->parent();
+  }
   public function dateFormat(): string {
-
-    return $this->parent()->dateFormat()->isNotEmpty() ? $this->parent()->dateFormat()->value() : 'semester';
+    return $this->channel()->dateFormat();
   }
   public function displayDate(): string {
 
@@ -84,6 +92,15 @@ Kirby::plugin('moritzebeling/herbert', [
     'post' => 'PostPage',
   ],
 
+  'siteMethods' => [
+    'dateFormat' => function (): string {
+      if( $this->content()->dateFormat()->isNotEmpty() ) {
+        return $this->content()->dateFormat()->value();
+      }
+      return 'semester';
+  	}
+  ],
+
   'pageMethods' => [
     'info' => function (): string {
       if( $this->hasChildren() ){
@@ -92,7 +109,7 @@ Kirby::plugin('moritzebeling/herbert', [
         return $this->date()->toDate('d-m-Y');
       }
       return '';
-  	},
+  	}
   ],
 
   'pagesMethods' => [
