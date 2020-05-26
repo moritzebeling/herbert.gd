@@ -118,6 +118,9 @@ Kirby::plugin('moritzebeling/herbert', [
 
   'pageMethods' => [
     'info' => function (): string {
+      return 'legacyyyyy';
+  	},
+    'panelinfo' => function (): string {
       if( $this->hasChildren() ){
         return $this->children()->count() . ' posts';
       } else if( $this->content()->date()->exists() ){
@@ -224,7 +227,7 @@ Kirby::plugin('moritzebeling/herbert', [
   		return '<figure>'.$img.$caption.'</figure>';
 
   	},
-    'panelinfo' => function () {
+    'panelinfo' => function (): string {
 
       $help = '';
       if( $this->exclude()->isTrue() ){

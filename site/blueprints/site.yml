@@ -15,7 +15,6 @@ tabs:
             extends: sections/pages
             headline: Channels
             template: channel
-            info: "{{ page.info }}"
 
           pages:
             extends: sections/pages

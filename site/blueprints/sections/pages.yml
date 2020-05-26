@@ -2,4 +2,4 @@ headline: Pages
 type: pages
 image:
   back: white
-info: "{{ page.info }}"
+info: "{{ page.panelinfo }}"
