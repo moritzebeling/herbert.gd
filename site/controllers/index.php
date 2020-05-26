@@ -15,7 +15,6 @@ return function ( $kirby, $page ) {
 
 	return [
 	  'posts' => $posts,
-		'layout' => 'list',
-		'dateformat' => 'semester',
+		'layout' => $page->layout(),
 	];
 };

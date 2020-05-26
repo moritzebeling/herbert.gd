@@ -1,10 +1,11 @@
 <?php
 
-return function ( $kirby ) {
+return function ( $kirby, $site ) {
 
 	$posts = $kirby->collection('featured');
 
 	return [
-	  'posts' => $posts
+	  'posts' => $posts,
+		'layout' => $site->layout(),
 	];
 };

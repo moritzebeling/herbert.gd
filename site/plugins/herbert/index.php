@@ -34,6 +34,15 @@ class ChannelPage extends Page
     }
     return $this->site()->dateFormat();
   }
+  public function layout(): string {
+    if( $this->content()->layout()->isNotEmpty() ) {
+      return $this->content()->layout()->value();
+    }
+    return $this->site()->dateFormat();
+  }
+  public function posts(): Kirby\Cms\Pages {
+    return $this->children()->listed()->flip();
+  }
 }
 class PostPage extends Page
 {
@@ -98,6 +107,12 @@ Kirby::plugin('moritzebeling/herbert', [
         return $this->content()->dateFormat()->value();
       }
       return 'semester';
+  	},
+    'layout' => function (): string {
+      if( $this->content()->layout()->isNotEmpty() ) {
+        return $this->content()->layout()->value();
+      }
+      return 'cards';
   	}
   ],
 
