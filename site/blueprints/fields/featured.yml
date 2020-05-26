@@ -2,7 +2,7 @@ label: Featured posts
 type: pages
 layout: list
 query: kirby.collection('channels')
-info: "{{ page.info }}"
+info: "{{ file.panelinfo }}"
 image:
   back: white
 subpages: true
