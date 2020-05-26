@@ -5,7 +5,7 @@ i.special {
   &:before {
     content: "";
     display: inline-block;
-    background-color: #000;
+    background-color: currentColor;
   }
 
   &.slash {
