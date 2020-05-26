@@ -12,13 +12,25 @@ $dateFormat = $page->dateFormat();
 			<li>
 				<a href="<?= $post->url() ?>">
 
-					<div class="image">
-						<?php if( $image = $post->image() ): ?>
-							<?= $image->tag('medium') ?>
-						<?php else: ?>
-							<figure class="placeholder"></figure>
-						<?php endif; ?>
-					</div>
+					<?php if( $image = $post->image() ):
+
+						if( $image->videoUrl()->isEmpty() ): ?>
+				      <figure class="<?php e($image->isPortrait(),'portrait','landscape') ?>">
+				        <div class="image">
+				          <?= $image->tag() ?>
+				        </div>
+							</figure>
+				    <?php else: ?>
+				      <figure class="video">
+				        <div class="player">
+				          <?= video( $image->videoUrl()->value() ) ?>
+				        </div>
+							</figure>
+				    <?php endif;
+
+					else: ?>
+						<figure></figure>
+					<?php endif; ?>
 
 					<div class="info">
 

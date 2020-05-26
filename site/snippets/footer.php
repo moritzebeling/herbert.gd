@@ -27,7 +27,7 @@
 
 	<?= js('assets/js/stickyBits.min.js') ?>
 	<script>
-		stickybits('.sticky', { useStickyClasses: true });
+		// stickybits('.sticky', { useStickyClasses: true });
 	</script>
 
 	<?= js('assets/js/swiper.min.js') ?>

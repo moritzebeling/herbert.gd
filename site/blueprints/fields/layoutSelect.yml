@@ -2,6 +2,6 @@ type: select
 options:
   list: List
   cards: Cards
-  gallery: Gallery
+  preview: Preview
 required: true
 default: cards

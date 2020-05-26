@@ -30,9 +30,16 @@ h1, h2 {
   font-size: $font-large;
   line-height: 1.1;
 }
-
 li {
   break-inside: avoid;
+}
+figure {
+  img {
+    @include boxShadow;
+  }
+  figcaption {
+    font-size: $font-small;
+  }
 }
 
 
@@ -40,32 +47,23 @@ header.site-header {
 
   position: sticky;
   top: 0;
+  width: 100%;
   padding: 0.5rem 1rem;
   display: flex;
   z-index: 100;
-  background-color: #fff;
-  color: #000;
-
-  transition-property: background-color;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
 
   #logo {
-    width: 25vw;
+    width: 12vw;
     height: auto;
-    margin-top: 0.5rem;
     transform: translateY(0.2rem);
-    transition-property: width, height;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
     svg polyline {
-      stroke-width: 2px;
+      stroke-width: 3px;
     }
   }
   nav {
     flex: 1;
     text-align: right;
-    margin-top: 0.5rem;
+    display: flex;
     .channels {
       li {
         display: inline-block;
@@ -78,19 +76,6 @@ header.site-header {
     }
   }
 
-  &.js-is-stuck,
-  &.js-is-sticky {
-    border-bottom: $border;
-    #logo {
-      margin-top: 0;
-      width: 11vw;
-      height: auto;
-      svg polyline {
-        stroke-width: 3px;
-      }
-    }
-  }
-
 }
 
 header.channel-header {
@@ -98,22 +83,18 @@ header.channel-header {
 }
 
 main {
-  // margin: 1rem;
-  margin-top: 4rem;
 
   header {
-    margin: 2rem 0 4rem;
   }
 
   section {
-    margin: 1rem 0;
   }
 
 }
 
 footer.site-footer {
-  margin-top: 8rem;
   padding: 1rem;
+  font-size: $font-small;
 
   a, ul {
     display: inline-block;
@@ -139,14 +120,30 @@ a.keyword {
   }
 }
 
+@import 'components/preview';
 @import 'components/cards';
 @import 'components/list';
 .posts {
+  &.preview ol {
+    @include preview;
+  }
   &.cards ol {
-    @include list;
+    @include cards;
   }
   &.list ol {
     @include list;
+  }
+  li > a {
+    display: block;
+  }
+  .info {
+    .title {
+      margin-top: 0.5em;
+    }
+    .meta {
+      margin-top: 0.5em;
+      font-size: $font-small;
+    }
   }
 }
 

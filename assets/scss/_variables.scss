@@ -9,7 +9,7 @@ $yellow: #ff0;
 // typography
 $font: Helvetica, Arial, sans-serif;
 $font-size: 1rem;
-$font-small: 0.8rem;
+$font-small: 0.7rem;
 $font-medium: 1.6rem;
 $font-large: 2.8rem;
 
@@ -29,4 +29,10 @@ $gallery-inactive: #999;
 	-moz-font-feature-settings: "tnum";
 	-webkit-font-feature-settings: "tnum";
 	font-feature-settings: "tnum";
+}
+
+@mixin boxShadow {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
 }

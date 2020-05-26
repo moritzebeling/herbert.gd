@@ -40,7 +40,7 @@
 </head>
 <body class="<?= $page->intendedTemplate() ?>">
 
-  <header class="site-header sticky">
+  <header class="site-header">
 
     <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
 

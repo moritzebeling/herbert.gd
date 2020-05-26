@@ -5,13 +5,13 @@
 	width: 100%;
 
 	@media (min-width: 576px) {
-    width: 50%;
+    width: 33.3%;
   }
 	@media (min-width: 992px) {
-    width: 33.32%;
+    width: 25%;
   }
 	@media (min-width: 1600px) {
-    width: 25%;
+    width: 20%;
   }
 
 	padding: 1rem;
@@ -21,22 +21,10 @@
 }
 
 @mixin cards {
-  display: flex;
+	display: flex;
 	flex-wrap: wrap;
-	li {
+
+	> li {
 		@include carditem;
-
-    .info {
-			margin-top: 2px;
-			margin-bottom: 1em;
-      .date {
-        float: right;
-        clear: both;
-      }
-      .type {
-        display: none;
-      }
-    }
-
 	}
 }
