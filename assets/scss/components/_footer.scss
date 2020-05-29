@@ -1,0 +1,16 @@
+footer.site-footer {
+  padding: 1rem;
+  font-size: $font-small;
+
+  a, ul {
+    display: inline-block;
+  }
+  a + a {
+    margin-left: 0.5em;
+  }
+  a:hover,
+  a.active {
+    border-bottom: $border;
+  }
+
+}

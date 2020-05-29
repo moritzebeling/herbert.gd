@@ -33,7 +33,7 @@ Layout: list
 
 ----
 
-Dateformat: none
+Dateformat: year
 
 ----
 

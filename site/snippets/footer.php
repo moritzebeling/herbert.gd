@@ -25,7 +25,23 @@
 
 	</footer>
 
-	<?= js('assets/js/stickyBits.min.js') ?>
+	<?= js('assets/js/morutilities.js') ?>
+	<script>
+		let hasScrolled = false;
+		onScroll(( scrollPos )=>{
+
+      if( hasScrolled === false && scrollPos > 100 ){
+        document.body.classList.add('has-scrolled');
+        hasScrolled = true;
+      } else if( hasScrolled === true && scrollPos < 100 ){
+        document.body.classList.remove('has-scrolled');
+        hasScrolled = false;
+      }
+
+		});
+  </script>
+
+	<?php // js('assets/js/stickyBits.min.js') ?>
 	<script>
 		// stickybits('.sticky', { useStickyClasses: true });
 	</script>

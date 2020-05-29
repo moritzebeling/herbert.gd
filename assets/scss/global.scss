@@ -55,46 +55,15 @@ figure {
 }
 
 
-header.site-header {
-
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  display: flex;
-  z-index: 100;
-
-  #logo {
-    width: 12vw;
-    height: auto;
-    transform: translateY(0.2rem);
-    svg polyline {
-      stroke-width: 3px;
-    }
-  }
-  nav {
-    flex: 1;
-    text-align: right;
-    display: flex;
-    .channels {
-      li {
-        display: inline-block;
-        margin-left: 1em;
-      }
-      a:hover,
-      a.active {
-        border-bottom: $border;
-      }
-    }
-  }
-
-}
+@import 'components/navigation';
 
 header.channel-header {
   display: none;
 }
 
 main {
+
+  margin-top: 8rem;
 
   header {
   }
@@ -104,22 +73,7 @@ main {
 
 }
 
-footer.site-footer {
-  padding: 1rem;
-  font-size: $font-small;
-
-  a, ul {
-    display: inline-block;
-  }
-  a + a {
-    margin-left: 0.5em;
-  }
-  a:hover,
-  a.active {
-    border-bottom: $border;
-  }
-
-}
+@import 'components/footer';
 
 
 a.keyword {
