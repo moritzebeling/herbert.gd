@@ -150,11 +150,15 @@ a.keyword {
   }
   .info {
     .title {
-      margin-top: 0.5em;
+      .headline {
+        font-size: $font-large;
+      }
+      .subline {
+        font-size: $font-large;
+      }
     }
     .meta {
-      margin-top: 0.5em;
-      font-size: $font-small;
+      font-size: $font-large;
     }
   }
 }

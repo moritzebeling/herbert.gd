@@ -5,7 +5,7 @@
 $dateFormat = $page->dateFormat();
 
 ?>
-<section class="posts <?= $page->layout(); ?>">
+<section class="posts list">
 
 	<ol>
 		<?php foreach( $posts as $post ): ?>
@@ -34,8 +34,10 @@ $dateFormat = $page->dateFormat();
 					<div class="info">
 
 						<div class="title">
-							<h3><?= $post->title(); ?></h3>
-							<h4><?= $post->subtitle(); ?></h4>
+							<h3 class="headline"><?= $post->title(); ?></h3>
+							<?php if( $post->subtitle()->isNotEmpty() ): ?>
+								<h4 class="subline"><?= $post->subtitle(); ?></h4>
+							<?php endif; ?>
 						</div>
 
 						<div class="meta">
