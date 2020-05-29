@@ -3,30 +3,32 @@
 @mixin carditem {
 	grid-column-end: span 1;
 	grid-row-end: span 1;
+	padding-bottom: 2rem;
 
-	border-bottom: 1px solid currentColor;
-	border-right: 1px solid currentColor;
-	padding: 1rem;
+	// border-bottom: 1px solid currentColor;
+	// border-right: 1px solid currentColor;
+	// padding: 1rem;
 
 	&:nth-child(1),
 	&:nth-child(2),
 	&:nth-child(3) {
-		border-top: 1px solid currentColor;
+		// border-top: 1px solid currentColor;
 	}
 	&:nth-child(3n+1) {
-		padding-left: 0;
+		// padding-left: 0;
 	}
 	&:nth-child(3n) {
-		padding-right: 0;
-		border-right: none;
+		// padding-right: 0;
+		// border-right: none;
 	}
 
 }
 
 @mixin cards {
 	display: grid;
-	grid-template-columns: 32% 36% 32%;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-auto-flow: row;
+	gap: 1rem;
 
 	padding: 0.25rem 1rem;
 
@@ -45,8 +47,8 @@
 		}
 		.info {
 			flex: 1;
-			display: flex;
-			flex-direction: column;
+			// display: flex;
+			// flex-direction: column;
 			.title {
 				flex: 1;
 			}
