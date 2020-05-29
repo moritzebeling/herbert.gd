@@ -21,15 +21,14 @@ $dateFormat = $page->dateFormat();
 				        </div>
 							</figure>
 				    <?php else: ?>
-				      <figure class="video">
-				        <div class="player">
-				          <?= video( $image->videoUrl()->value() ) ?>
-				        </div>
+							<figure class="video">
+								<?php snippet('post/video',[
+									'videoUrl' => $image->videoUrl()->value()
+								]); ?>
 							</figure>
 				    <?php endif;
-
 					else: ?>
-						<figure></figure>
+						<figure class="placeholder"></figure>
 					<?php endif; ?>
 
 					<div class="info">

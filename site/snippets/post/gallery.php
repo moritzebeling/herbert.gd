@@ -18,9 +18,9 @@ if( $count < 1 ){
         </div>
     <?php else: ?>
       <figure class="video">
-        <div class="player">
-          <?= video( $image->videoUrl()->value() ) ?>
-        </div>
+        <?php snippet('post/video',[
+          'videoUrl' => $image->videoUrl()->value()
+        ]); ?>
     <?php endif; ?>
 
       <?php if( $image->description()->isNotEmpty() || $image->credits()->isNotEmpty() ): ?>
