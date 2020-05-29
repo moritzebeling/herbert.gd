@@ -90,6 +90,33 @@ a.keyword {
 @import 'components/cards';
 @import 'components/list';
 .posts {
+
+  .results-options {
+    padding: 0.25rem 1rem;
+    display: flex;
+    .left {
+      flex: 1 1 auto;
+      li {
+        margin-right: 0.25em;
+      }
+    }
+    .right {
+      flex: 1 1 auto;
+      text-align: right;
+      li {
+        margin-left: 0.25em;
+      }
+    }
+    label {
+      display: none;
+    }
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
   &.preview ol {
     @include preview;
   }

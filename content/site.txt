@@ -29,7 +29,7 @@ Image:
 
 ----
 
-Layout: list
+Layout: preview
 
 ----
 
