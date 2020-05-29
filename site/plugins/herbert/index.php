@@ -56,7 +56,7 @@ class ChannelPage extends Page
 class PostPage extends Page
 {
   public function images() {
-    return parent::images()->sortBy('sort', 'ASC');
+    return parent::images()->sortBy('sort', 'ASC', 'filename', 'ASC');
   }
   public function image( string $filename = null ) {
     if( $filename !== null ){

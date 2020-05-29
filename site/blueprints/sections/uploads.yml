@@ -7,3 +7,4 @@ image:
   back: white
 sortable: true
 info: "{{ file.panelinfo }}"
+# sortBy: sort asc, filename asc

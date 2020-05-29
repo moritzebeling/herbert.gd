@@ -4,10 +4,12 @@ Title: Herbert.gd
 
 Featured:
 
-- >
-  grafik-design/visuelle-politische-botschaften
-- grafik-design/plain-line-word-rythm
-- grafik-design/ways-of-seeing-ss
+- grafik-design/learning-from-hans-hofmann
+- grafik-design/la-strada
+- grafik-design/natur-elektronatur
+- space-for-visual-research/2nd-book
+- activities/robin-weissenborn
+- grafik-design/the-five-obstructions
 
 ----
 
@@ -31,7 +33,7 @@ Layout: preview
 
 ----
 
-Dateformat: year
+Dateformat: none
 
 ----
 

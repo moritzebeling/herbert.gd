@@ -10,7 +10,7 @@ if( $count < 1 ){
 ?>
 <section class="gallery">
   <?php foreach($images as $image): ?>
-
+    
     <?php if( $image->videoUrl()->isEmpty() ): ?>
       <figure class="<?php e($image->isPortrait(),'portrait','landscape') ?>">
         <div class="image">
