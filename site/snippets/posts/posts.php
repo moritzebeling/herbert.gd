@@ -50,9 +50,7 @@ $dateFormat = $page->dateFormat();
 								]); ?>
 							</figure>
 				    <?php endif;
-					else: ?>
-						<figure class="placeholder"></figure>
-					<?php endif; ?>
+					endif; ?>
 
 					<div class="info">
 
