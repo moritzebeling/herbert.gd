@@ -52,6 +52,14 @@ class ChannelPage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
   }
+  public function json(): array {
+    return [
+      'title' => $this->title()->value(),
+      'href' => $this->url(),
+      'template' => 'channel',
+      'posts' => $this->posts()->json()
+    ];
+  }
 }
 class PostPage extends Page
 {
@@ -101,6 +109,23 @@ class PostPage extends Page
 
     return $this->date()->toDate( $dateFormat );
   }
+  public function json(): array {
+
+    $return = [
+      'href' => $this->url(),
+      'title' => $this->title()->value(),
+      'subtitle' => $this->subtitle()->value(),
+      'categories' => $this->categories()->split(),
+      'date' => $this->displayDate(),
+      'keywords' => $this->keywords()->split(),
+    ];
+
+    if( $image = $this->image() ){
+      $return['image'] = $image->json();
+    }
+
+    return $return;
+  }
 }
 
 Kirby::plugin('moritzebeling/herbert', [
@@ -137,7 +162,14 @@ Kirby::plugin('moritzebeling/herbert', [
         return $this->date()->toDate('d-m-Y');
       }
       return '';
-  	}
+  	},
+    'json' => function (): array {
+      return [
+        'title' => $this->title()->value(),
+        'href' => $this->url(),
+        'template' => $this->intendedTemplate()
+      ];
+  	},
   ],
 
   'pagesMethods' => [
@@ -160,6 +192,13 @@ Kirby::plugin('moritzebeling/herbert', [
   		}
   		return array_unique($return);
   	},
+    'json' => function(): array {
+      $json = [];
+      foreach($this as $page) {
+        $json[] = $page->json();
+      }
+      return $json;
+    }
   ],
 
   'fieldMethods' => [
@@ -249,6 +288,21 @@ Kirby::plugin('moritzebeling/herbert', [
       return $help;
 
   	},
+    'json' => function(): array {
+
+      if( $this->videoUrl()->isNotEmpty() ){
+        return [
+          'type' => 'video',
+          'html' => video( $this->videoUrl()->value(), option('video') )
+        ];
+      }
+      return [
+        'type' => 'image',
+        'orientation' => $this->orientation(),
+        'html' => $this->tag()
+      ];
+
+    }
   ]
 
 
