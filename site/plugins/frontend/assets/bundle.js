@@ -58,10 +58,6 @@ var app = (function () {
     function empty() {
         return text('');
     }
-    function listen(node, event, handler, options) {
-        node.addEventListener(event, handler, options);
-        return () => node.removeEventListener(event, handler, options);
-    }
     function attr(node, attribute, value) {
         if (value == null)
             node.removeAttribute(attribute);
@@ -70,19 +66,6 @@ var app = (function () {
     }
     function children(element) {
         return Array.from(element.childNodes);
-    }
-    function select_option(select, value) {
-        for (let i = 0; i < select.options.length; i += 1) {
-            const option = select.options[i];
-            if (option.__value === value) {
-                option.selected = true;
-                return;
-            }
-        }
-    }
-    function select_value(select) {
-        const selected_option = select.querySelector(':checked') || select.options[0];
-        return selected_option && selected_option.__value;
     }
     function custom_event(type, detail) {
         const e = document.createEvent('CustomEvent');
@@ -369,29 +352,12 @@ var app = (function () {
         dispatch_dev("SvelteDOMRemove", { node });
         detach(node);
     }
-    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
-        const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
-        if (has_prevent_default)
-            modifiers.push('preventDefault');
-        if (has_stop_propagation)
-            modifiers.push('stopPropagation');
-        dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
-        const dispose = listen(node, event, handler, options);
-        return () => {
-            dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
-            dispose();
-        };
-    }
     function attr_dev(node, attribute, value) {
         attr(node, attribute, value);
         if (value == null)
             dispatch_dev("SvelteDOMRemoveAttribute", { node, attribute });
         else
             dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
-    }
-    function prop_dev(node, property, value) {
-        node[property] = value;
-        dispatch_dev("SvelteDOMSetProperty", { node, property, value });
     }
     function set_data_dev(text, data) {
         data = '' + data;
@@ -491,11 +457,11 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[1] = list[i];
+    	child_ctx[2] = list[i];
     	return child_ctx;
     }
 
-    // (9:1) {#if 'image' in post}
+    // (17:2) {#if 'image' in post}
     function create_if_block_1(ctx) {
     	let if_block_anchor;
 
@@ -539,14 +505,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(9:1) {#if 'image' in post}",
+    		source: "(17:2) {#if 'image' in post}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:2) {:else}
+    // (22:3) {:else}
     function create_else_block(ctx) {
     	let figure;
     	let div;
@@ -558,9 +524,9 @@ var app = (function () {
     			figure = element("figure");
     			div = element("div");
     			attr_dev(div, "class", "image");
-    			add_location(div, file, 15, 4, 254);
+    			add_location(div, file, 23, 5, 419);
     			attr_dev(figure, "class", figure_class_value = /*post*/ ctx[0].image.orientation);
-    			add_location(figure, file, 14, 3, 208);
+    			add_location(figure, file, 22, 4, 372);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, figure, anchor);
@@ -582,14 +548,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(14:2) {:else}",
+    		source: "(22:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (10:2) {#if post.image.type === 'video'}
+    // (18:3) {#if post.image.type === 'video'}
     function create_if_block_2(ctx) {
     	let figure;
     	let raw_value = /*post*/ ctx[0].image.html + "";
@@ -598,7 +564,7 @@ var app = (function () {
     		c: function create() {
     			figure = element("figure");
     			attr_dev(figure, "class", "video");
-    			add_location(figure, file, 10, 3, 131);
+    			add_location(figure, file, 18, 4, 291);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, figure, anchor);
@@ -615,14 +581,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(10:2) {#if post.image.type === 'video'}",
+    		source: "(18:3) {#if post.image.type === 'video'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (27:3) {#if post.subtitle}
+    // (35:4) {#if post.subtitle}
     function create_if_block(ctx) {
     	let h4;
     	let t_value = /*post*/ ctx[0].subtitle + "";
@@ -633,7 +599,7 @@ var app = (function () {
     			h4 = element("h4");
     			t = text(t_value);
     			attr_dev(h4, "class", "subline");
-    			add_location(h4, file, 27, 4, 454);
+    			add_location(h4, file, 35, 5, 629);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -651,31 +617,31 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(27:3) {#if post.subtitle}",
+    		source: "(35:4) {#if post.subtitle}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:5) {#each post.categories as category}
+    // (44:6) {#each post.categories as category}
     function create_each_block(ctx) {
     	let li;
-    	let t_value = /*category*/ ctx[1] + "";
+    	let t_value = /*category*/ ctx[2] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file, 36, 6, 620);
+    			add_location(li, file, 44, 7, 802);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*post*/ 1 && t_value !== (t_value = /*category*/ ctx[1] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*post*/ 1 && t_value !== (t_value = /*category*/ ctx[2] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -686,7 +652,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(36:5) {#each post.categories as category}",
+    		source: "(44:6) {#each post.categories as category}",
     		ctx
     	});
 
@@ -694,6 +660,7 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
+    	let li;
     	let a;
     	let t0;
     	let div4;
@@ -723,6 +690,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			li = element("li");
     			a = element("a");
     			if (if_block0) if_block0.c();
     			t0 = space();
@@ -745,26 +713,29 @@ var app = (function () {
     			div2 = element("div");
     			t5 = text(t5_value);
     			attr_dev(h3, "class", "headline");
-    			add_location(h3, file, 25, 3, 388);
+    			add_location(h3, file, 33, 4, 561);
     			attr_dev(div0, "class", "title");
-    			add_location(div0, file, 24, 2, 365);
-    			add_location(ul, file, 34, 4, 568);
+    			add_location(div0, file, 32, 3, 537);
+    			add_location(ul, file, 42, 5, 748);
     			attr_dev(div1, "class", "categories");
-    			add_location(div1, file, 33, 3, 539);
+    			add_location(div1, file, 41, 4, 718);
     			attr_dev(div2, "class", "date");
-    			add_location(div2, file, 41, 3, 677);
+    			add_location(div2, file, 49, 4, 863);
     			attr_dev(div3, "class", "meta");
-    			add_location(div3, file, 31, 2, 516);
+    			add_location(div3, file, 39, 3, 694);
     			attr_dev(div4, "class", "info");
-    			add_location(div4, file, 22, 1, 343);
+    			add_location(div4, file, 30, 2, 514);
     			attr_dev(a, "href", a_href_value = /*post*/ ctx[0].href);
-    			add_location(a, file, 6, 0, 45);
+    			add_location(a, file, 14, 1, 202);
+    			attr_dev(li, "class", /*orientation*/ ctx[1]);
+    			add_location(li, file, 13, 0, 174);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, a, anchor);
+    			insert_dev(target, li, anchor);
+    			append_dev(li, a);
     			if (if_block0) if_block0.m(a, null);
     			append_dev(a, t0);
     			append_dev(a, div4);
@@ -844,11 +815,15 @@ var app = (function () {
     			if (dirty & /*post*/ 1 && a_href_value !== (a_href_value = /*post*/ ctx[0].href)) {
     				attr_dev(a, "href", a_href_value);
     			}
+
+    			if (dirty & /*orientation*/ 2) {
+    				attr_dev(li, "class", /*orientation*/ ctx[1]);
+    			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(a);
+    			if (detaching) detach_dev(li);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     			destroy_each(each_blocks, detaching);
@@ -868,6 +843,14 @@ var app = (function () {
 
     function instance($$self, $$props, $$invalidate) {
     	let { post = {} } = $$props;
+    	let orientation = "";
+
+    	if ("image" in post) {
+    		if ("orientation" in post.image) {
+    			orientation = post.image.orientation;
+    		}
+    	}
+
     	const writable_props = ["post"];
 
     	Object.keys($$props).forEach(key => {
@@ -881,17 +864,18 @@ var app = (function () {
     		if ("post" in $$props) $$invalidate(0, post = $$props.post);
     	};
 
-    	$$self.$capture_state = () => ({ post });
+    	$$self.$capture_state = () => ({ post, orientation });
 
     	$$self.$inject_state = $$props => {
     		if ("post" in $$props) $$invalidate(0, post = $$props.post);
+    		if ("orientation" in $$props) $$invalidate(1, orientation = $$props.orientation);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [post];
+    	return [post, orientation];
     }
 
     class Item extends SvelteComponentDev {
@@ -917,63 +901,19 @@ var app = (function () {
     }
 
     /* src/components/List.svelte generated by Svelte v3.23.0 */
-
-    const { Object: Object_1 } = globals;
     const file$1 = "src/components/List.svelte";
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
-    	return child_ctx;
-    }
-
-    function get_each_context_1(ctx, list, i) {
-    	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
-    	return child_ctx;
-    }
-
-    function get_each_context_2(ctx, list, i) {
-    	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
+    	child_ctx[5] = list[i];
     	return child_ctx;
     }
 
     // (18:0) {#if posts.length > 0}
     function create_if_block$1(ctx) {
-    	let nav;
-    	let div0;
-    	let label0;
-    	let t1;
-    	let select0;
-    	let t2;
-    	let div1;
-    	let label1;
-    	let t4;
-    	let select1;
-    	let option;
-    	let t6;
     	let ol;
     	let current;
-    	let mounted;
-    	let dispose;
-    	let each_value_2 = Object.keys(/*layoutOptions*/ ctx[4]);
-    	validate_each_argument(each_value_2);
-    	let each_blocks_2 = [];
-
-    	for (let i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
-    	}
-
-    	let each_value_1 = /*categories*/ ctx[2];
-    	validate_each_argument(each_value_1);
-    	let each_blocks_1 = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-    	}
-
-    	let each_value = /*posts*/ ctx[1];
+    	let each_value = /*posts*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -987,84 +927,16 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			nav = element("nav");
-    			div0 = element("div");
-    			label0 = element("label");
-    			label0.textContent = "Layout";
-    			t1 = space();
-    			select0 = element("select");
-
-    			for (let i = 0; i < each_blocks_2.length; i += 1) {
-    				each_blocks_2[i].c();
-    			}
-
-    			t2 = space();
-    			div1 = element("div");
-    			label1 = element("label");
-    			label1.textContent = "Category";
-    			t4 = space();
-    			select1 = element("select");
-    			option = element("option");
-    			option.textContent = "All";
-
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
-    			}
-
-    			t6 = space();
     			ol = element("ol");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(label0, "for", "results-layout");
-    			add_location(label0, file$1, 22, 3, 321);
-    			attr_dev(select0, "name", "results-layout");
-    			if (/*layout*/ ctx[0] === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[5].call(select0));
-    			add_location(select0, file$1, 23, 3, 367);
-    			attr_dev(div0, "class", "left");
-    			add_location(div0, file$1, 21, 2, 299);
-    			attr_dev(label1, "for", "results-filter");
-    			add_location(label1, file$1, 31, 3, 591);
-    			option.__value = "";
-    			option.value = option.__value;
-    			add_location(option, file$1, 33, 4, 694);
-    			attr_dev(select1, "name", "results-filter");
-    			if (/*filter*/ ctx[3] === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[6].call(select1));
-    			add_location(select1, file$1, 32, 3, 639);
-    			attr_dev(div1, "class", "right");
-    			add_location(div1, file$1, 30, 2, 568);
-    			attr_dev(nav, "class", "results-options");
-    			add_location(nav, file$1, 19, 1, 266);
-    			attr_dev(ol, "class", /*layout*/ ctx[0]);
-    			add_location(ol, file$1, 42, 1, 856);
+    			attr_dev(ol, "class", "cards");
+    			add_location(ol, file$1, 44, 1, 867);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, nav, anchor);
-    			append_dev(nav, div0);
-    			append_dev(div0, label0);
-    			append_dev(div0, t1);
-    			append_dev(div0, select0);
-
-    			for (let i = 0; i < each_blocks_2.length; i += 1) {
-    				each_blocks_2[i].m(select0, null);
-    			}
-
-    			select_option(select0, /*layout*/ ctx[0]);
-    			append_dev(nav, t2);
-    			append_dev(nav, div1);
-    			append_dev(div1, label1);
-    			append_dev(div1, t4);
-    			append_dev(div1, select1);
-    			append_dev(select1, option);
-
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(select1, null);
-    			}
-
-    			select_option(select1, /*filter*/ ctx[3]);
-    			insert_dev(target, t6, anchor);
     			insert_dev(target, ol, anchor);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -1072,75 +944,10 @@ var app = (function () {
     			}
 
     			current = true;
-
-    			if (!mounted) {
-    				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[5]),
-    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[6])
-    				];
-
-    				mounted = true;
-    			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*Object, layoutOptions*/ 16) {
-    				each_value_2 = Object.keys(/*layoutOptions*/ ctx[4]);
-    				validate_each_argument(each_value_2);
-    				let i;
-
-    				for (i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
-
-    					if (each_blocks_2[i]) {
-    						each_blocks_2[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks_2[i] = create_each_block_2(child_ctx);
-    						each_blocks_2[i].c();
-    						each_blocks_2[i].m(select0, null);
-    					}
-    				}
-
-    				for (; i < each_blocks_2.length; i += 1) {
-    					each_blocks_2[i].d(1);
-    				}
-
-    				each_blocks_2.length = each_value_2.length;
-    			}
-
-    			if (dirty & /*layout, Object, layoutOptions*/ 17) {
-    				select_option(select0, /*layout*/ ctx[0]);
-    			}
-
-    			if (dirty & /*categories*/ 4) {
-    				each_value_1 = /*categories*/ ctx[2];
-    				validate_each_argument(each_value_1);
-    				let i;
-
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
-
-    					if (each_blocks_1[i]) {
-    						each_blocks_1[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks_1[i] = create_each_block_1(child_ctx);
-    						each_blocks_1[i].c();
-    						each_blocks_1[i].m(select1, null);
-    					}
-    				}
-
-    				for (; i < each_blocks_1.length; i += 1) {
-    					each_blocks_1[i].d(1);
-    				}
-
-    				each_blocks_1.length = each_value_1.length;
-    			}
-
-    			if (dirty & /*filter, categories*/ 12) {
-    				select_option(select1, /*filter*/ ctx[3]);
-    			}
-
-    			if (dirty & /*posts, filter*/ 10) {
-    				each_value = /*posts*/ ctx[1];
+    			if (dirty & /*posts, filter*/ 3) {
+    				each_value = /*posts*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
 
@@ -1166,10 +973,6 @@ var app = (function () {
 
     				check_outros();
     			}
-
-    			if (!current || dirty & /*layout*/ 1) {
-    				attr_dev(ol, "class", /*layout*/ ctx[0]);
-    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1190,14 +993,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(nav);
-    			destroy_each(each_blocks_2, detaching);
-    			destroy_each(each_blocks_1, detaching);
-    			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(ol);
     			destroy_each(each_blocks, detaching);
-    			mounted = false;
-    			run_all(dispose);
     		}
     	};
 
@@ -1212,113 +1009,26 @@ var app = (function () {
     	return block;
     }
 
-    // (25:4) {#each Object.keys(layoutOptions) as option }
-    function create_each_block_2(ctx) {
-    	let option;
-    	let t_value = /*layoutOptions*/ ctx[4][/*option*/ ctx[13]] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*option*/ ctx[13];
-    			option.value = option.__value;
-    			add_location(option, file$1, 25, 5, 473);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block_2.name,
-    		type: "each",
-    		source: "(25:4) {#each Object.keys(layoutOptions) as option }",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (35:4) {#each categories as category}
-    function create_each_block_1(ctx) {
-    	let option;
-    	let t_value = /*category*/ ctx[10] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*category*/ ctx[10];
-    			option.value = option.__value;
-    			add_location(option, file$1, 35, 5, 764);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*categories*/ 4 && t_value !== (t_value = /*category*/ ctx[10] + "")) set_data_dev(t, t_value);
-
-    			if (dirty & /*categories*/ 4 && option_value_value !== (option_value_value = /*category*/ ctx[10])) {
-    				prop_dev(option, "__value", option_value_value);
-    			}
-
-    			option.value = option.__value;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block_1.name,
-    		type: "each",
-    		source: "(35:4) {#each categories as category}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (45:3) {#if filter === '' || post.categories.includes(filter) }
+    // (47:3) {#if filter === '' || post.categories.includes(filter) }
     function create_if_block_1$1(ctx) {
-    	let li;
-    	let t;
     	let current;
 
     	const item = new Item({
-    			props: { post: /*post*/ ctx[7] },
+    			props: { post: /*post*/ ctx[5] },
     			$$inline: true
     		});
 
     	const block = {
     		c: function create() {
-    			li = element("li");
     			create_component(item.$$.fragment);
-    			t = space();
-    			add_location(li, file$1, 45, 4, 966);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			mount_component(item, li, null);
-    			append_dev(li, t);
+    			mount_component(item, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
     			const item_changes = {};
-    			if (dirty & /*posts*/ 2) item_changes.post = /*post*/ ctx[7];
+    			if (dirty & /*posts*/ 1) item_changes.post = /*post*/ ctx[5];
     			item.$set(item_changes);
     		},
     		i: function intro(local) {
@@ -1331,8 +1041,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
-    			destroy_component(item);
+    			destroy_component(item, detaching);
     		}
     	};
 
@@ -1340,16 +1049,16 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(45:3) {#if filter === '' || post.categories.includes(filter) }",
+    		source: "(47:3) {#if filter === '' || post.categories.includes(filter) }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:2) {#each posts as post}
+    // (46:2) {#each posts as post}
     function create_each_block$1(ctx) {
-    	let show_if = /*filter*/ ctx[3] === "" || /*post*/ ctx[7].categories.includes(/*filter*/ ctx[3]);
+    	let show_if = /*filter*/ ctx[1] === "" || /*post*/ ctx[5].categories.includes(/*filter*/ ctx[1]);
     	let if_block_anchor;
     	let current;
     	let if_block = show_if && create_if_block_1$1(ctx);
@@ -1365,13 +1074,13 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*filter, posts*/ 10) show_if = /*filter*/ ctx[3] === "" || /*post*/ ctx[7].categories.includes(/*filter*/ ctx[3]);
+    			if (dirty & /*posts*/ 1) show_if = /*filter*/ ctx[1] === "" || /*post*/ ctx[5].categories.includes(/*filter*/ ctx[1]);
 
     			if (show_if) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty & /*filter, posts*/ 10) {
+    					if (dirty & /*posts*/ 1) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -1409,7 +1118,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(44:2) {#each posts as post}",
+    		source: "(46:2) {#each posts as post}",
     		ctx
     	});
 
@@ -1419,7 +1128,7 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*posts*/ ctx[1].length > 0 && create_if_block$1(ctx);
+    	let if_block = /*posts*/ ctx[0].length > 0 && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -1435,11 +1144,11 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (/*posts*/ ctx[1].length > 0) {
+    			if (/*posts*/ ctx[0].length > 0) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty & /*posts*/ 2) {
+    					if (dirty & /*posts*/ 1) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -1498,29 +1207,17 @@ var app = (function () {
     	let { categories = [] } = $$props;
     	const writable_props = ["posts", "layout", "categories"];
 
-    	Object_1.keys($$props).forEach(key => {
+    	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<List> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("List", $$slots, []);
 
-    	function select0_change_handler() {
-    		layout = select_value(this);
-    		$$invalidate(0, layout);
-    		$$invalidate(4, layoutOptions);
-    	}
-
-    	function select1_change_handler() {
-    		filter = select_value(this);
-    		$$invalidate(3, filter);
-    		$$invalidate(2, categories);
-    	}
-
     	$$self.$set = $$props => {
-    		if ("posts" in $$props) $$invalidate(1, posts = $$props.posts);
-    		if ("layout" in $$props) $$invalidate(0, layout = $$props.layout);
-    		if ("categories" in $$props) $$invalidate(2, categories = $$props.categories);
+    		if ("posts" in $$props) $$invalidate(0, posts = $$props.posts);
+    		if ("layout" in $$props) $$invalidate(2, layout = $$props.layout);
+    		if ("categories" in $$props) $$invalidate(3, categories = $$props.categories);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1533,32 +1230,24 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("posts" in $$props) $$invalidate(1, posts = $$props.posts);
-    		if ("layout" in $$props) $$invalidate(0, layout = $$props.layout);
-    		if ("layoutOptions" in $$props) $$invalidate(4, layoutOptions = $$props.layoutOptions);
-    		if ("filter" in $$props) $$invalidate(3, filter = $$props.filter);
-    		if ("categories" in $$props) $$invalidate(2, categories = $$props.categories);
+    		if ("posts" in $$props) $$invalidate(0, posts = $$props.posts);
+    		if ("layout" in $$props) $$invalidate(2, layout = $$props.layout);
+    		if ("layoutOptions" in $$props) layoutOptions = $$props.layoutOptions;
+    		if ("filter" in $$props) $$invalidate(1, filter = $$props.filter);
+    		if ("categories" in $$props) $$invalidate(3, categories = $$props.categories);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		layout,
-    		posts,
-    		categories,
-    		filter,
-    		layoutOptions,
-    		select0_change_handler,
-    		select1_change_handler
-    	];
+    	return [posts, filter, layout, categories];
     }
 
     class List extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { posts: 1, layout: 0, categories: 2 });
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { posts: 0, layout: 2, categories: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,

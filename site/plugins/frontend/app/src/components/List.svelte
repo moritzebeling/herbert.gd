@@ -17,6 +17,7 @@
 
 {#if posts.length > 0}
 
+	<!--
 	<nav class="results-options">
 
 		<div class="left">
@@ -39,13 +40,12 @@
 		</div>
 
 	</nav>
+	-->
 
-	<ol class="{layout}">
+	<ol class="cards">
 		{#each posts as post}
 			{#if filter === '' || post.categories.includes(filter) }
-				<li>
-					<Item post={post} />
-				</li>
+				<Item post={post} />
 			{/if}
 		{/each}
 	</ol>

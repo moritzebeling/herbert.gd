@@ -16,7 +16,7 @@ $font-large: 2rem;
 // borders
 $border-style: solid;
 $border-width: 1px;
-$border: $border-width $border-style $black;
+$border: $border-width $border-style currentColor;
 
 $padding: 1rem;
 
