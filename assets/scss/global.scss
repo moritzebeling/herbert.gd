@@ -30,6 +30,13 @@ h1, h2 {
   font-size: $font-large;
   line-height: 1.1;
 }
+p {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+  + p {
+    text-indent: 2em;
+  }
+}
 li {
   break-inside: avoid;
 }

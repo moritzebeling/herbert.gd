@@ -19,23 +19,20 @@
     <section class="team">
       <ul>
         <?php foreach( $team as $member ): ?>
-          <li>
-            <div>
+          <li class="person">
 
-              <?php if( $image = $member->image()->toFile() ): ?>
-                <?= $image->figure(); ?>
-              <?php endif; ?>
+            <?php if( $image = $member->image()->toFile() ): ?>
+              <?= $image->figure(); ?>
+            <?php endif; ?>
 
-            </div>
-            <div>
+            <h3 class="name"><?= $member->name()->html(); ?></h3>
 
-              <h3 class="name"><?= $member->name()->html(); ?></h3>
+            <div class="about"><?= $member->text()->kirbytext(); ?></div>
 
-              <?= $member->text()->kirbytext(); ?>
-
-              <?= $member->link()->toAnchor(); ?>
-
-            </div>
+            <?php if( $member->link()->isNotEmpty() ): ?>
+              <div class="link"><?= $member->link()->toAnchor(); ?></div>
+            <?php endif; ?>
+            
           </li>
         <?php endforeach; ?>
       </ul>
@@ -47,12 +44,6 @@
       <?= Html::email( $page->contact() ) ?>
     </section>
   <?php endif ?>
-
-  <?php if( $page->imprint()->isNotEmpty() ): ?>
-    <section class="imprint">
-      <?= $page->imprint()->toAnchor('Imprint'); ?>
-    </section>
-  <?php endif; ?>
 
   <section class="credits">
     <ul>
@@ -76,6 +67,12 @@
       <?php endforeach; ?>
     </ul>
   </section>
+
+  <?php if( $page->imprint()->isNotEmpty() ): ?>
+    <section class="imprint">
+      <div class="button"><?= $page->imprint()->toAnchor('Imprint'); ?></div>
+    </section>
+  <?php endif; ?>
 
 </main>
 

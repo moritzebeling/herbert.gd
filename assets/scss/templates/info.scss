@@ -1,20 +1,14 @@
 @import '../variables';
 
+p {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+}
+
 main {
 
-	header, section {
-		margin: 1rem 0;
-	}
-
-	.team {
-		li {
-			padding: 0.5rem 0;
-			display: flex;
-			border-top: 1px solid #000;
-			> div {
-				flex: 1;
-			}
-		}
+	header {
+		display: none;
 	}
 
 	.credits {
@@ -24,6 +18,53 @@ main {
 			display: flex;
 			> div {
 				flex: 1;
+			}
+		}
+	}
+
+	section {
+
+		margin: 1rem;
+
+		&.content {
+			font-size: 2rem;
+		}
+
+		&.team {
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				li {
+					flex: 0 0 50%;
+					padding: 0.5rem;
+				}
+			}
+			.person {
+				figure {
+					width: 50%;
+				}
+				.name {
+					font-size: 2rem;
+					margin: 1rem 0;
+				}
+			}
+		}
+
+		&.imprint {
+			text-align: center;
+			.button {
+				display: flex;
+				margin: 10rem auto;
+				width: 10rem;
+				height: 10rem;
+				border-radius: 200%;
+				border: 1px solid #000;
+				align-items: center;
+				a {
+					flex: 1;
+				}
 			}
 		}
 	}
