@@ -140,7 +140,6 @@
 	<script>
 		// replace slashes
 		let replaceSlashes = document.querySelectorAll('.title,.subtitle,.date,.replaceSpecialChars');
-		console.log( replaceSlashes );
 		for (let element of replaceSlashes) {
 			let html = element.innerHTML;
 			html = html.replace(/(\/)(?!([^<]+)?>)/g,"<i class=\"special slash\"><i>/</i></i>");

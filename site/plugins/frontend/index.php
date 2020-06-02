@@ -5,7 +5,7 @@
  *
  */
 
-Kirby::plugin('herbert/api-results', [
+Kirby::plugin('herbert/frontend', [
 
   'routes' => [
     [

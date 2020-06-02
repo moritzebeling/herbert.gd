@@ -117,13 +117,13 @@ a.keyword {
     }
   }
 
-  &.preview ol {
+  ol.preview {
     @include preview;
   }
-  &.cards ol {
+  ol.cards {
     @include cards;
   }
-  &.list ol {
+  ol.list {
     @include list;
   }
   li > a {

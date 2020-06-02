@@ -4,7 +4,7 @@
 
   <?php snippet('channel/header'); ?>
 
-  <?php snippet('posts/posts'); ?>
+  <?php snippet('posts/api'); ?>
 
 </main>
 

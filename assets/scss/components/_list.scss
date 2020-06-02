@@ -12,25 +12,25 @@
 
 			padding: 0.25rem 0;
 
-			figure {
-				display: none;
+		}
+
+		figure {
+			display: none;
+		}
+
+		.info {
+
+			display: flex;
+
+			.title {
+				flex: 1;
+				font-size: 2rem;
+				display: inline-block;
 			}
-
-			.info {
-
-				display: flex;
-
-				.title {
-					flex: 1;
-					font-size: 2rem;
-					display: inline-block;
-				}
-				.meta {
-					text-align: right;
-					display: inline-block;
-				}
+			.meta {
+				text-align: right;
+				display: inline-block;
 			}
-
 		}
 	}
 }
