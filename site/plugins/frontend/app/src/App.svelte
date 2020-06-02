@@ -1,22 +1,25 @@
 <script>
 
 	import { writable } from 'svelte/store';
-	let posts = [];
+	let data = {};
 
-	const requestUrl = window.location.href + '.json';
-	console.log( requestUrl );
+	function requestUrl(){
+		let location = window.location.pathname;
+		if( location === '/' ){
+			location = 'start';
+		}
+		console.log( location );
+		return location + '.json';
+	}
 
-	fetch( requestUrl, {
+	fetch( requestUrl(), {
 		method: "GET"
 	})
 	.then(response => response.json())
 	.then(response => {
 
 		console.log( response.data );
-		if('posts' in response.data ){
-			posts = response.data.posts;
-			console.log( posts );
-		}
+		data = response.data;
 
 	})
 	.catch(error => {
@@ -27,7 +30,9 @@
 
 </script>
 
-<List posts={posts} />
+{#if 'posts' in data}
+	<List {...data} />
+{/if}
 
 <style>
 </style>

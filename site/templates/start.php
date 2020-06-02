@@ -6,7 +6,7 @@
     'channel' => $site
   ]); ?>
 
-  <?php snippet('posts/posts'); ?>
+  <?php snippet('posts/api'); ?>
 
 </main>
 

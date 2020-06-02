@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="date">
-				{post.subtitle}
+				{post.date}
 			</div>
 
 		</div>

@@ -126,6 +126,9 @@ a.keyword {
   ol.list {
     @include list;
   }
+  li.hidden {
+    display: none;
+  }
   li > a {
     display: block;
   }

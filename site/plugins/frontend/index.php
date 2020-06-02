@@ -15,14 +15,16 @@ Kirby::plugin('herbert/frontend', [
         $kirby = kirby();
 
         if( $page = page( $path ) ){
-
-          return [
-            'status' => 200,
-            'request' => $kirby->request()->url()->toString(),
-            'data' => $page->json()
-          ];
-
+          
+        } else {
+          $page = kirby()->site()->homePage();
         }
+
+        return [
+          'status' => 200,
+          'request' => $kirby->request()->url()->toString(),
+          'data' => $page->json()
+        ];
 
       }
     ]
