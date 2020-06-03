@@ -42,7 +42,7 @@
 	</nav>
 	-->
 
-	<ol class="cards">
+	<ol class="{layout}">
 		{#each posts as post}
 			{#if filter === '' || post.categories.includes(filter) }
 				<Item post={post} />

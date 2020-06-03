@@ -3,19 +3,32 @@ header.site-header {
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   z-index: 100;
+  background-color: #eee;
+
+  .container {
+    display: flex;
+    border-bottom: $border;
+    #logo {
+      order: 2;
+    }
+    nav {
+      order: 1;
+      flex: 1;
+    }
+  }
 
   transition-property: background-color;
   transition-duration: 400ms;
   transition-timing-function: ease;
 
   #logo {
-    width: 12rem;
-    height: 4rem;
-    transform: translateY(0.2rem);
+    width: 8rem;
+    height: 3rem;
+    transform: translateY(0.1rem);
     svg polyline {
-      stroke-width: 2.2px;
+      stroke-width: 3px;
     }
   }
   nav {
@@ -30,11 +43,9 @@ header.site-header {
         margin-right: 0.5em;
       }
       a {
-        border-bottom: 1px solid transparent;
       }
       a:hover,
       a.active {
-        border-bottom-color: currentColor;
       }
     }
   }
@@ -43,14 +54,6 @@ header.site-header {
 body.has-scrolled {
   header.site-header {
     nav {
-      opacity: 0;
-      // display: none;
-    }
-    &:hover {
-      background: #ddd;
-      nav {
-        opacity: 1;
-      }
     }
   }
 }

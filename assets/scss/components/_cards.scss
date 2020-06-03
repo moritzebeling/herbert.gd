@@ -8,8 +8,13 @@
 	border-right: $border;
 	padding: 0 1rem;
 
+	min-height: 8em;
+
 	&.portrait {
-		grid-row-end: span 1;
+		grid-row-end: span 2;
+	}
+	&.landscape {
+		grid-column-end: span 1;
 	}
 
 	&:nth-child(1),
@@ -21,16 +26,17 @@
 		}
 	}
 	&:nth-child(4n) {
-		border-right: none;
+		// border-right: none;
 	}
 
 }
 
 @mixin cards {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-auto-flow: row;
 	max-width: 100%;
+
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 
 	> li {
 		@include carditem;
@@ -60,7 +66,7 @@
 		}
 
 		figure + .info {
-			margin-top: 0.5rem;
+			margin-top: 1rem;
 		}
 
 		.info {

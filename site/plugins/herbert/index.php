@@ -18,6 +18,15 @@ function dateToSemester( int $time ): string {
   }
 }
 
+function isolateInitials( string $text ): string {
+  $words = explode(' ',$text);
+  $sequence = [];
+  foreach( $words as $word ){
+    $sequence[] = '<span class="i">'.substr( $word, 0, 1 ).'</span><span class="f">'.substr( $word, 1 ).' </span>';
+  }
+  return implode('', $sequence);
+}
+
 class HomePage extends Page
 {
   public function layout(): string {

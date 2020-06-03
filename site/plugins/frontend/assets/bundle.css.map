@@ -1,12 +1,8 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [
-    "../app/List.svelte"
-  ],
-  "sourcesContent": [
-    "<script>\n\n\timport Item from './Item.svelte';\n\texport let posts = [];\n\n</script>\n\n{#if posts.length > 0}\n\t<ol class=\"list\">\n\t\t{#each posts as post}\n\t\t\t<li><Item post={post} /></li>\n\t\t{/each}\n\t</ol>\n{/if}\n\n<style>\n\n\tol {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\n\tli {\n\t\twidth: 33%;\n\t}\n\n</style>\n"
-  ],
+  "sources": [],
+  "sourcesContent": [],
   "names": [],
-  "mappings": "AAiBC,EAAE,cAAC,CAAC,AACH,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,AAChB,CAAC,AAED,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,GAAG,AACX,CAAC"
+  "mappings": ""
 }

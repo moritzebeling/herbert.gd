@@ -1,6 +1,8 @@
 @import '../variables';
 
-
+p {
+	text-align: justify;
+}
 
 main {
 
@@ -28,15 +30,13 @@ main {
 		}
 
 		&.team {
-			margin-left: 0.5rem;
-			margin-right: 0.5rem;
+			margin: 1rem;
+			border-top: $border;
+			padding-top: 1rem;
 			ul {
-				display: flex;
-				flex-wrap: wrap;
-				li {
-					flex: 0 0 50%;
-					padding: 0.5rem;
-				}
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
 			}
 			.person {
 				figure {

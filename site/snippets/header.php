@@ -41,15 +41,17 @@
 <body class="<?= $page->intendedTemplate() ?>">
 
   <header class="site-header">
+    <div class="container">
 
-    <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
+      <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
 
-    <nav>
-      <ol class="channels">
-        <?php foreach( $kirby->collection('channels') as $channel ): ?>
-          <li><a href="<?= $channel->url() ?>" <?php e($channel->is( $page ),'class="active"') ?>><?= $channel->title() ?></a></li>
-        <?php endforeach; ?>
-      </ol>
-    </nav>
+      <nav>
+        <ol class="channels">
+          <?php foreach( $kirby->collection('channels') as $channel ): ?>
+            <li><a title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>" <?php e($channel->is( $page ),'class="active"') ?>><?= isolateInitials( $channel->title()->value() ) ?></a></li>
+          <?php endforeach; ?>
+        </ol>
+      </nav>
 
+    </div>
   </header>
