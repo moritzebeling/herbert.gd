@@ -1,9 +1,5 @@
 @import '../variables';
 
-p {
-	text-align: justify;
-}
-
 main {
 
 	header {
@@ -11,17 +7,17 @@ main {
 	}
 
 	.credits {
-		li {
-			border-top: 1px solid #000;
-			padding: 0.5rem 0;
-			display: flex;
-			> div {
-				flex: 1;
-			}
+		li + li {
+			padding-top: 0.5rem;
 		}
 	}
 
 	section {
+
+		+ section {
+			border-top: $border;
+			padding-top: 1rem;
+		}
 
 		margin: 1rem;
 
@@ -30,21 +26,42 @@ main {
 		}
 
 		&.team {
-			margin: 1rem;
+			border: none;
 			border-top: $border;
 			padding-top: 1rem;
 			ul {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				gap: 1rem;
 			}
 			.person {
+				&:nth-child(odd){
+					border-right: $border;
+					padding-right: 1rem;
+				}
+				&:nth-child(even){
+					padding-left: 1rem;
+				}
+
 				figure {
 					width: 50%;
+					padding-top: 37.5%;
+					position: relative;
+					background-color: #000;
+					img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+					}
 				}
 				.name {
-					font-size: 2rem;
-					margin: 1rem 0;
+					margin: 0.7rem 0 0.5rem;
+				}
+				.link {
+					margin-top: 0.5rem;
 				}
 			}
 		}

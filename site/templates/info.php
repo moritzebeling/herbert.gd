@@ -21,9 +21,11 @@
         <?php foreach( $team as $member ): ?>
           <li class="person">
 
-            <?php if( $image = $member->image()->toFile() ): ?>
-              <?= $image->figure(); ?>
-            <?php endif; ?>
+            <figure>
+              <?php if( $image = $member->image()->toFile() ): ?>
+                <?= $image->tag(); ?>
+              <?php endif; ?>
+            </figure>
 
             <h3 class="name"><?= $member->name()->html(); ?></h3>
 
@@ -32,7 +34,7 @@
             <?php if( $member->link()->isNotEmpty() ): ?>
               <div class="link"><?= $member->link()->toAnchor(); ?></div>
             <?php endif; ?>
-            
+
           </li>
         <?php endforeach; ?>
       </ul>
@@ -48,7 +50,7 @@
   <section class="credits">
     <ul>
       <li>
-        <div class="job">Webdesign & Programmierung</div>
+        <div class="job">Webdesign & Programming</div>
         <div class="name">
           <a href="https://moritzebeling.com">Moritz Ebeling</a>
         </div>
