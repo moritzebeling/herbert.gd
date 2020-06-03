@@ -12,3 +12,10 @@ Run Sass
 ```
 sass --watch --style=compressed assets/scss:assets/css
 ```
+
+Build Frontend
+```
+cd site/plugins/frontend/app
+npm run dev
+npm run build
+```
