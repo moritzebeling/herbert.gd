@@ -69,17 +69,31 @@ header.channel-header {
   display: none;
 }
 
-main {
-
-  margin-top: 1rem;
-
-  header {
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  > header {
+    flex: 0 0 auto;
   }
+  > main {
 
-  section {
+    flex: 1 0 auto;
+
+    margin-top: 1rem;
+
+    header {
+    }
+
+    section {
+    }
+
   }
-
+  > footer {
+    flex: 0 0 auto;
+  }
 }
+
 
 @import 'components/footer';
 
