@@ -29,4 +29,12 @@ Image:
 
 ----
 
+Layout: cards
+
+----
+
+Dateformat: none
+
+----
+
 Imprint: 
