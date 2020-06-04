@@ -1,6 +1,9 @@
 footer.site-footer {
-  padding: 1rem;
-  font-size: $font-small;
+  padding-top: 1rem;
+  margin: 1rem;
+  border-top: $border;
+
+  // font-size: $font-small;
 
   a, ul {
     display: inline-block;
