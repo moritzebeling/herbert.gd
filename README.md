@@ -1,18 +1,18 @@
 # [herbert.gd](https://herbert.gd)
-An archive website for the visual communication department at Bauhaus-University Weimar, Germany.
+An archive website for the graphic design and visual communication department at Bauhaus-University Weimar, Germany.
 
 ## Contributions welcome
-If you want to contribute to this project, feel free to get in touch, open an issue or create a pull request. Read more below at branching.
+If you want to contribute to the website design and functionality or fix problems, feel free to get in touch, open an issue or create a pull request. Read more below at branching.
 
-If you want to contribute to the page content, please get in touch to the editors. Read more at [herbert.gd/info](https://herbert.gd/info)
+If you want to contribute to the page content, please get in touch with the editors aka. the staff of the graphic design chair at Marienstraße 1, Weimar. Read more at [herbert.gd/info](https://herbert.gd/info).
 
 ## System requirements for development
-- PHP 7.4
+- php 7.4
 - sass
 - npm
 
 ## Development setup
-Clone repo
+Clone repo including submodules
 ```
 git clone --recursive https://github.com/moritzebeling/herbert.gd
 cd hebert.gd
@@ -29,8 +29,8 @@ Update submodules
 git submodule foreach git pull origin master
 ```
 
-## Run
-To run the page on a PHP server:
+## Run website locally
+To run php on localhost:8000
 ```
 php -S localhost:8000 kirby/router.php
 ```
@@ -38,20 +38,22 @@ Compile sass on save
 ```
 sass --watch --style=compressed assets/scss:assets/css
 ```
-Frontend
+Compile Svelte frontend
 ```
 cd site/plugins/frontend/app
 npm run dev
-# or
+```
+Build Svelte frontend before shipping it
+```
 npm run build
 ```
 
-## Branching and pulling
+## Branching and PRs
 `master` branch is only for the currently stable live version. Development happens within `develop`, which is the only branch ever to be pulled to `master`. If you are fixing an issue or working on a new feature, please start from `develop` and call your new branch `yymmdd-issue-name` or `yymmdd-feature-name`. Send pull requests only to `develop`.
 
-## Stack
-- PHP (v7.4)
-- Kirby (v3)
-- Svelte (v3)
-- Sass
-- Swiper.js
+## Stack and tools used
+- php (v7.4)
+- [Kirby](https://getkirby.com) (v3)
+- [Svelte](https://svelte.dev) (v3)
+- [sass](https://sass-lang.com)
+- [Swiper.js](https://swiperjs.com)
