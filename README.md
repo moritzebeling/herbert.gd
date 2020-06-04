@@ -8,7 +8,8 @@ If you want to contribute to the page content, please get in touch to the editor
 
 ## System requirements for development
 - PHP 7.4
-- Sass
+- sass
+- npm
 
 ## Development setup
 Clone repo
@@ -49,8 +50,8 @@ npm run build
 `master` branch is only for the currently stable live version. Development happens within `develop`, which is the only branch ever to be pulled to `master`. If you are fixing an issue or working on a new feature, please start from `develop` and call your new branch `yymmdd-issue-name` or `yymmdd-feature-name`. Send pull requests only to `develop`.
 
 ## Stack
-- PHP
-- Kirby
-- Svelte
+- PHP (v7.4)
+- Kirby (v3)
+- Svelte (v3)
 - Sass
 - Swiper.js
