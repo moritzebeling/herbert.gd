@@ -55,6 +55,9 @@
           <a href="https://moritzebeling.com">Moritz Ebeling</a>
         </div>
       </li>
+      <li>
+        <div class="job">Help improve this website on <a target="_blank" href="<?= option('repo') ?>">GitHub</a></div>
+      </li>
       <?php foreach( $page->credits()->toStructure() as $credit ): ?>
         <li>
           <div class="job"><?= $credit->job()->html() ?></div>

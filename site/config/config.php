@@ -49,4 +49,6 @@ return [
   	],
   ],
 
+  'repo' => 'https://github.com/moritzebeling/herbert.gd',
+
 ];
