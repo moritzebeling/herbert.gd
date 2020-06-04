@@ -52,7 +52,7 @@
       <li>
         <div class="job">Webdesign & Programming</div>
         <div class="name">
-          <a href="https://moritzebeling.com">Moritz Ebeling</a>
+          <a href="https://moritzebeling.com" target="_blank">Moritz Ebeling</a>
         </div>
       </li>
       <li>
