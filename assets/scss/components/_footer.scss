@@ -11,9 +11,13 @@ footer.site-footer {
   a + a {
     margin-left: 0.5em;
   }
+  a {
+    border-bottom: $border;
+    border-color: transparent;
+  }
   a:hover,
   a.active {
-    border-bottom: $border;
+    border-color: currentColor;
   }
 
 }

@@ -7,7 +7,7 @@ If you want to contribute to the website design and functionality or fix problem
 If you want to contribute to the page content, please get in touch with the editors aka. the staff of the graphic design chair at Marienstraße 1, Weimar. Read more at [herbert.gd/info](https://herbert.gd/info).
 
 ## System requirements for development
-- php 7.4
+- php 7.3
 - sass
 - npm
 

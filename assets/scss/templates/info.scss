@@ -7,6 +7,9 @@ main {
 	}
 
 	.credits {
+		.job {
+			@include allcaps;
+		}
 		li + li {
 			padding-top: 0.5rem;
 		}
@@ -14,21 +17,11 @@ main {
 
 	section {
 
-		+ section {
-			border-top: $border;
-			padding-top: 1rem;
-		}
-
-		margin: 1rem;
-
 		&.content {
 			font-size: 2rem;
 		}
 
 		&.team {
-			border: none;
-			border-top: $border;
-			padding-top: 1rem;
 			ul {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
@@ -59,6 +52,7 @@ main {
 				}
 				.name {
 					margin: 0.7rem 0 0.5rem;
+					@include allcaps;
 				}
 				.link {
 					margin-top: 0.5rem;
