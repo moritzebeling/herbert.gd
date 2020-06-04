@@ -66,7 +66,9 @@ figure {
 @import 'components/navigation';
 
 header.channel-header {
-  display: none;
+  h1 {
+    display: none;
+  }
 }
 
 body {
@@ -83,9 +85,28 @@ body {
     margin-top: 1rem;
 
     header {
+      font-size: $font-large;
     }
 
+    header,
     section {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: $border;
+      + section {
+        margin-top: 1rem;
+      }
+    }
+
+    section.posts {
+      border: none;
+      margin: 0;
+    }
+
+    section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
   }
@@ -141,7 +162,8 @@ a.keyword {
   }
 
   ol.preview {
-    @include preview;
+    // @include preview;
+    @include cards;
   }
   ol.cards {
     @include cards;
@@ -155,6 +177,7 @@ a.keyword {
   li > a {
     display: block;
   }
+
   .info {
     .title {
       .headline {
@@ -167,7 +190,7 @@ a.keyword {
       letter-spacing: 0.05em;
     }
   }
-}
 
+}
 
 @import 'components/specialCharacters';

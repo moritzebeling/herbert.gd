@@ -2,10 +2,6 @@
 
 <main>
 
-  <?php snippet('channel/header',[
-    'channel' => $site
-  ]); ?>
-
   <?php snippet('posts/api'); ?>
 
 </main>

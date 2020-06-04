@@ -50,16 +50,20 @@ tabs:
 
           layout: fields/layoutSelect
 
+          dateFormat: fields/dateFormatSelect
+
+          showDescription:
+            label: Show channel description
+            type: toggle
+
+      - width: 1/2
+        fields:
+
           categories:
             type: structure
             fields:
               name:
                 type: text
-
-      - width: 1/2
-        fields:
-
-          dateFormat: fields/dateFormatSelect
 
           attributes:
             type: structure

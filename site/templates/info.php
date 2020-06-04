@@ -2,10 +2,6 @@
 
 <main>
 
-  <header class="post-header">
-    <h1><?= $page->title()->html() ?></h1>
-  </header>
-
   <section class="content">
 
     <?php if( $page->body()->isNotEmpty() ): ?>
@@ -55,9 +51,6 @@
           <a href="https://moritzebeling.com" target="_blank">Moritz Ebeling</a>
         </div>
       </li>
-      <li>
-        <div class="job">Help improve this website on <a target="_blank" href="<?= option('repo') ?>">GitHub</a></div>
-      </li>
       <?php foreach( $page->credits()->toStructure() as $credit ): ?>
         <li>
           <div class="job"><?= $credit->job()->html() ?></div>
@@ -70,6 +63,9 @@
           </div>
         </li>
       <?php endforeach; ?>
+      <li>
+        Help improve this website on <a target="_blank" href="<?= option('repo') ?>">GitHub</a>
+      </li>
     </ul>
   </section>
 
