@@ -7,7 +7,7 @@ $dateFormat = $page->dateFormat();
 ?>
 <section class="posts <?= $page->layout() ?>">
 
-	<nav class="results-options">
+	<!-- <nav class="results-options">
 
 		<div class="left">
 			<label for="results-layout">Layout</label>
@@ -28,7 +28,7 @@ $dateFormat = $page->dateFormat();
 			</ul>
 		</div>
 
-	</nav>
+	</nav> -->
 
 	<ol>
 		<?php foreach( $posts as $post ): ?>
