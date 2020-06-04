@@ -47,3 +47,10 @@ npm run build
 
 ## Branching and pulling
 `master` branch is only for the currently stable live version. Development happens within `develop`, which is the only branch ever to be pulled to `master`. If you are fixing an issue or working on a new feature, please start from `develop` and call your new branch `yymmdd-issue-name` or `yymmdd-feature-name`. Send pull requests only to `develop`.
+
+## Stack
+- PHP
+- Kirby
+- Svelte
+- Sass
+- Swiper.js
