@@ -1,43 +1,50 @@
 // colors
-$white: #fff;
-$black: #000;
-$blue: #00f;
-$red: #f00;
-$green: #0f0;
-$yellow: #ff0;
+$background: #eee;
+$color: #000;
 
 // typography
-$font: Helvetica, Arial, sans-serif;
+
+$font-small: 0.8rem;
 $font-size: 1rem;
-$font-small: 1rem;
-$font-medium: 1rem;
 $font-large: 2rem;
+
+@mixin allcaps {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+@mixin fontsmall {
+	font-size: $font-small;
+	line-height: 1.2;
+}
+@mixin font {
+	font-size: $font-size;
+	line-height: 1.2;
+}
+@mixin fontlarge {
+	font-size: $font-large;
+	line-height: 1;
+}
+@mixin sans {
+	font-family: Helvetica, Arial, sans-serif;
+}
+@mixin hyphens {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+}
 
 // borders
 $border-style: solid;
 $border-width: 1px;
-$border: $border-width $border-style currentColor;
+$border: $border-width solid currentColor;
 
-$padding: 1rem;
-
-$gallery-bg: #000;
-$gallery-color: #fff;
-$gallery-inactive: #999;
+$gap: 0.5rem;
+$space-top: 1rem;
+$space-side: 1rem;
+$space: $space-top $space-side;
 
 @mixin tabularFigures {
 	font-variant-numeric: tabular-nums;
 	-moz-font-feature-settings: "tnum";
 	-webkit-font-feature-settings: "tnum";
 	font-feature-settings: "tnum";
-}
-
-@mixin boxShadow {
-	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
-	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
-	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
-}
-
-@mixin allcaps {
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
 }

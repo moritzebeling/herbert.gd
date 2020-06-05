@@ -20,33 +20,30 @@
 // typography
 //
 html {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 body {
-  background-color: #eee;
-  font-family: $font;
-  line-height: 1.15;
+  background-color: $background;
+  color: $color;
+  @include font;
+  @include sans;
 }
 h1, h2 {
-  font-size: $font-large;
-  line-height: 1.1;
+  @include fontlarge;
 }
 p {
-	hyphens: auto;
-	-webkit-hyphens: auto;
+	@include hyphens;
   + p {
     text-indent: 2em;
   }
 }
-li {
-  break-inside: avoid;
-}
 figure {
   img {
-    // @include boxShadow;
+    width: 100%;
+    height: auto;
   }
   figcaption {
-    font-size: $font-small;
+    @include fontsmall;
   }
   &.video {
     .player {
@@ -62,14 +59,7 @@ figure {
   }
 }
 
-
 @import 'components/navigation';
-
-header.channel-header {
-  h1 {
-    display: none;
-  }
-}
 
 body {
   min-height: 100vh;
@@ -81,8 +71,7 @@ body {
   > main {
 
     flex: 1 0 auto;
-
-    margin-top: 1rem;
+    margin-top: $space-top;
 
     header {
       font-size: $font-large;
@@ -90,12 +79,12 @@ body {
 
     header,
     section {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      padding-bottom: 1rem;
+      margin-left: $space-side;
+      margin-right: $space-side;
+      padding-bottom: $space-top;
       border-bottom: $border;
       + section {
-        margin-top: 1rem;
+        margin-top: $space-top;
       }
     }
 
@@ -115,9 +104,7 @@ body {
   }
 }
 
-
 @import 'components/footer';
-
 
 a.keyword {
   .count {
@@ -129,13 +116,14 @@ a.keyword {
   }
 }
 
-@import 'components/preview';
+// @import 'components/preview';
 @import 'components/cards';
 @import 'components/list';
 .posts {
 
   .results-options {
     display: none;
+    /*
     padding: 0.25rem 1rem;
     display: flex;
     .left {
@@ -159,6 +147,7 @@ a.keyword {
         display: inline-block;
       }
     }
+    */
   }
 
   ol.preview {
@@ -180,14 +169,14 @@ a.keyword {
 
   .info {
     .title {
+      @include fontsmall;
       .headline {
       }
       .subline {
       }
     }
     .meta {
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      @include fontsmall;
     }
   }
 

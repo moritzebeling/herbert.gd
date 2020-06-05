@@ -3,20 +3,11 @@
 
 main {
 
-  margin: 0;
-
-  header, section {
-    margin: 1rem;
-  }
-  section.images {
-    margin: 0;
-  }
-
   .meta {
     > div {
       display: flex;
-      padding: 0.5rem 0;
-      border-top: 1px solid #000;
+      padding: $space-top 0;
+      border-top: $border;
       > div {
         flex: 0 0 50%;
       }

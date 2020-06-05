@@ -11,14 +11,14 @@ main {
 			@include allcaps;
 		}
 		li + li {
-			padding-top: 0.5rem;
+			padding-top: $space-top;
 		}
 	}
 
 	section {
 
 		&.content {
-			font-size: 2rem;
+			@include fontlarge;
 		}
 
 		&.team {
@@ -29,17 +29,17 @@ main {
 			.person {
 				&:nth-child(odd){
 					border-right: $border;
-					padding-right: 1rem;
+					padding-right: $space-side;
 				}
 				&:nth-child(even){
-					padding-left: 1rem;
+					padding-left: $space-side;
 				}
 
 				figure {
 					width: 50%;
 					padding-top: 37.5%;
 					position: relative;
-					background-color: #000;
+					background-color: $color;
 					img {
 						position: absolute;
 						top: 0;
@@ -51,11 +51,11 @@ main {
 					}
 				}
 				.name {
-					margin: 0.7rem 0 0.5rem;
+					margin: $space-top 0;
 					@include allcaps;
 				}
 				.link {
-					margin-top: 0.5rem;
+					margin-top: $space-top;
 				}
 			}
 		}

@@ -2,18 +2,17 @@
 
 @mixin list {
 
-	padding: 0.5rem 1rem;
+	padding: 0 $space;
 
 	> li {
 
-		border-top: 1px solid currentColor;
+		border-top: $border;
 		&:first-child {
 			border-top: none;
 		}
 
 		> a {
-
-			padding: 0.5rem 0;
+			padding: $space-top / 2 0;
 
 		}
 
@@ -27,8 +26,8 @@
 
 			.title {
 				flex: 1 1 50%;
-				font-size: 2rem;
 				display: inline-block;
+				@include fontlarge
 			}
 			.meta {
 				text-align: right;

@@ -2,11 +2,13 @@
 @import 'cards';
 
 @mixin galleryHoverItem {
+  /*
   color: $gallery-color;
   transition: color 300ms ease;
   &:hover {
     color: $gallery-color;
   }
+  */
 }
 
 @mixin fadein {
@@ -17,26 +19,22 @@
         animation: fadein 1s;
 }
 
-/*
 .gallery {
 
-  background-color: $gallery-bg;
-  color: $gallery-color;
+  // padding: 0 $padding / 4 * 3;
 
-  padding: $padding / 4 * 3;
-
-  font-size: $font-small;
+  @include fontsmall;
 
   figure {
-    padding: $padding / 4;
+    padding: 0 $space-side;
     img {
       width: 100%;
       height: auto;
     }
     figcaption {
-      margin-top: 1em;
+      margin-top: $space-top;
       .credits {
-        color: $gallery-inactive;
+        opacity: 0.5;
       }
     }
   }
@@ -46,10 +44,12 @@
       display: none;
     }
     .swiper-wrapper {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+    	grid-auto-flow: row;
+    	grid-template-columns: 1fr 1fr 1fr 1fr;
       .swiper-slide {
-        @include carditem;
+        grid-column-end: span 1;
+        grid-row-end: span 1;
       }
     }
     figure {
@@ -72,7 +72,7 @@
     }
 
     figure {
-      height: 70vh;
+      // height: 70vh;
       display: flex;
       flex-direction: column;
       .image {
@@ -91,10 +91,9 @@
     .controls {
       position: static;
       display: flex;
-      padding: $padding / 4;
+      padding: $space;
       user-select: none;
-      color: $gallery-color;
-      margin-top: 0.5rem;
+      margin-top: $space-top;
 
       .left,
       .right {
@@ -132,15 +131,15 @@
         margin: 0 0.5em;
         cursor: pointer;
         .arrow {
-          border-top: 1px solid $gallery-color;
-          border-left: 1px solid $gallery-color;
+          border-top: $border;
+          border-left: $border;
           width: 0.7em;
           height: 0.7em;
           display: inline-block;
-          transition: border-color 300ms ease;
+          // transition: border-color 300ms ease;
         }
         &:hover .arrow {
-          border-color: $gallery-color;
+          // border-color: $gallery-color;
         }
 
       }
@@ -165,7 +164,6 @@
   }
 
 }
-*/
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -193,6 +191,7 @@
 }
 
 
+/*
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -228,3 +227,4 @@
     }
   }
 }
+*/
