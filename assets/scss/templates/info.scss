@@ -51,7 +51,7 @@ main {
 					}
 				}
 				.name {
-					margin: $space-top 0;
+					margin: $space-top 0 0.5em;
 					@include allcaps;
 				}
 				.link {

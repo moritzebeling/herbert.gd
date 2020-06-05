@@ -82,7 +82,7 @@
       flex-direction: column;
       .image {
         height: 75vh;
-        flex: 1;
+        flex: 0 0 auto;
         display: flex;
         align-items: flex-start;
         img {
