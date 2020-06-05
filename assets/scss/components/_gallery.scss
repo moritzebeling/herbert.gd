@@ -23,8 +23,6 @@
 
   // padding: 0 $padding / 4 * 3;
 
-  @include fontsmall;
-
   figure {
     padding: 0 $space-side;
     img {
@@ -40,6 +38,8 @@
   }
 
   &.index {
+    margin-left: $space-side;
+    margin-right: $space-side;
     .controls {
       display: none;
     }
@@ -47,12 +47,14 @@
       display: grid;
     	grid-auto-flow: row;
     	grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: $space;
       .swiper-slide {
         grid-column-end: span 1;
         grid-row-end: span 1;
       }
     }
     figure {
+      padding: 0;
       cursor: zoom-in;
       figcaption {
         margin-top: 0.7em;
@@ -72,19 +74,18 @@
     }
 
     figure {
-      // height: 70vh;
       display: flex;
       flex-direction: column;
       .image {
+        height: 75vh;
         flex: 1;
         display: flex;
         align-items: flex-start;
         img {
-          max-width: 100%;
-          max-height: 100%;
           width: 100%;
-          height: unset;
+          height: 100%;
           object-fit: contain;
+          object-position: top center;
         }
       }
     }
