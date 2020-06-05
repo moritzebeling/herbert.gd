@@ -3,14 +3,16 @@
 
 main {
 
-  .meta {
-    > div {
-      display: flex;
-      padding: $space-top 0;
-      border-top: $border;
-      > div {
-        flex: 0 0 50%;
-      }
+  section.content {
+    // @include fontlarge;
+
+  }
+
+  section.meta {
+    @include fontlarge;
+    li {
+      display: inline-block;
+      margin-right: 0.3em;
     }
   }
 

@@ -11,52 +11,13 @@
 
   <?php snippet('post/gallery') ?>
 
-  <section class="content">
-
-    <?php if( $page->body()->isNotEmpty() ): ?>
+  <?php if( $page->body()->isNotEmpty() ): ?>
+    <section class="content">
       <?= $page->body()->kirbytext(); ?>
-    <?php endif ?>
+    </section>
+  <?php endif ?>
 
-  </section>
-
-  <section class="meta">
-
-    <div>
-      <div><?= ucwords( $page->parent()->dateFormat() ); ?></div>
-      <div>
-        <?php snippet('post/date') ?>
-      </div>
-    </div>
-
-    <?php if( $page->categories()->isNotEmpty() ): ?>
-      <div>
-        <div>Categories</div>
-        <div>
-          <ul class="categories">
-            <?php foreach( $page->categories()->split() as $category ): ?>
-              <li><?= SiteSearch::link( $category ); ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php snippet('post/attributes') ?>
-
-    <?php if( $page->keywords()->isNotEmpty() ): ?>
-      <div>
-        <div>Keywords</div>
-        <div>
-          <ul class="keywords">
-            <?php foreach( $page->keywords()->split() as $keyword ): ?>
-              <li><?= SiteSearch::link( $keyword ); ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-      </div>
-    <?php endif; ?>
-
-  </section>
+  <?php snippet('post/meta') ?>
 
 </main>
 
