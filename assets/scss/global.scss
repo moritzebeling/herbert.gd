@@ -37,13 +37,15 @@ p {
     text-indent: 2em;
   }
 }
+::selection {
+  background-color: #ff0;
+}
 figure {
   img {
     width: 100%;
     height: auto;
   }
   figcaption {
-    @include fontsmall;
   }
   &.video {
     .player {
@@ -81,27 +83,43 @@ body {
     section {
       margin-left: $space-side;
       margin-right: $space-side;
-      padding-bottom: $space-top;
-      border-bottom: $border;
-      + section {
-        margin-top: $space-top;
+    }
+
+    section {
+      margin-top: $space-top;
+      padding-top: $space-top;
+      border-top: $border;
+      &:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+      }
+      &.posts,
+      &.gallery {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &.gallery {
+        + section {
+          border-top: none;
+          padding-top: 0;
+        }
       }
     }
 
     section.posts {
-      border: none;
-      margin: 0;
+      // border: none;
+      // margin: 0;
     }
     section.gallery {
-      border: none;
-      margin-left: 0;
-      margin-right: 0;
-      padding: 0;
+      // border: none;
+      // margin-left: 0;
+      // margin-right: 0;
+      // padding: 0;
     }
-
     section:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
+      // border-bottom: none;
+      // padding-bottom: 0;
     }
 
   }

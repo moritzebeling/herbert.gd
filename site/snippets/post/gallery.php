@@ -29,7 +29,7 @@ if( $count < 1 ){
           <?php if( $image->description()->isNotEmpty() || $image->credits()->isNotEmpty() ): ?>
             <figcaption>
               <?php if( $image->description()->isNotEmpty() ): ?>
-                <?= $image->description()->kirbytextinline(); ?>
+                <?= $image->description()->html(); ?>
               <?php endif; ?>
               <?php if( $image->credits()->isNotEmpty() ): ?>
                 <span class="credits">&copy; <?= $image->credits()->html(); ?></span>
