@@ -50,7 +50,19 @@
       <nav>
         <ol class="channels">
           <?php foreach( $kirby->collection('channels') as $channel ): ?>
-            <li><a title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>" <?php e($channel->is( $page ),'class="active"') ?>><?= isolateInitials( $channel->title()->value() ) ?></a></li>
+            <li>
+              <?php if( $channel->is( $page ) ): ?>
+                <a class="active" title="<?= $channel->title()->value() ?>"><?= $channel->title()->value() ?></a>
+              <?php else:
+                $words = explode(" ", $channel->title()->value());
+                $acronym = "";
+                foreach ($words as $w) {
+                  $acronym .= $w[0];
+                }
+                ?>
+                <a class="condensed" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>" onmouseenter="expandTitle(event)" onmouseleave="condenseTitle(event)"><?= $acronym ?></a>
+              <?php endif; ?>
+            </li>
           <?php endforeach; ?>
         </ol>
       </nav>
