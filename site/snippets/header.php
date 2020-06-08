@@ -55,7 +55,7 @@
           <?php foreach( $kirby->collection('channels') as $channel ): ?>
             <li>
               <?php if( $page->is( $channel ) || $page->channel()->is( $channel ) ): ?>
-                <a class="active" title="<?= $channel->title()->value() ?>"><?= $channel->title()->value() ?></a>
+                <a class="active" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>"><?= $channel->title()->value() ?></a>
               <?php else:
                 $words = explode(" ", $channel->title()->value());
                 $acronym = "";
