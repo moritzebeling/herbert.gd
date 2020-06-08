@@ -25,7 +25,6 @@
 
 	</footer>
 
-	<?= js('assets/js/morutilities.js') ?>
 	<script>
 		let hasScrolled = false;
 		onScroll(( scrollPos )=>{

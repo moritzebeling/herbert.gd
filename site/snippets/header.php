@@ -16,7 +16,10 @@
     '@auto'
   ]) ?>
 
-  <?= js('assets/js/default.js') ?>
+  <?= js([
+    'assets/js/morutilities.js',
+    'assets/js/default.js'
+  ]) ?>
 
   <?php
   /*
@@ -60,7 +63,7 @@
                   $acronym .= $w[0];
                 }
                 ?>
-                <a class="condensed" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>" onmouseenter="expandTitle(event)" onmouseleave="condenseTitle(event)"><?= $acronym ?></a>
+                <a class="condense-animation" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>"><?= $acronym ?></a>
               <?php endif; ?>
             </li>
           <?php endforeach; ?>

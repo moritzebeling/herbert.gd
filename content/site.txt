@@ -10,6 +10,8 @@ Featured:
 - space-for-visual-research/2nd-book
 - activities/robin-weissenborn
 - grafik-design/the-five-obstructions
+- >
+  space-for-visual-research/sfvr-workshop-2019
 
 ----
 
@@ -21,7 +23,7 @@ Links:
 
 ----
 
-Keywords: Herbert, Weimar, Grafik, Design, VK, M1, Bauhaus, Universität, Kunst, Gestaltung
+Keywords: Herbert, Weimar, VK, Gestaltung, Bauhaus, Universität, Space.for.Visual.Research, Markus Weisbeck, Grafik Design, Adrian Palko
 
 ----
 
