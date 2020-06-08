@@ -52,19 +52,29 @@
 
       <nav>
         <ol class="channels">
-          <?php foreach( $kirby->collection('channels') as $channel ): ?>
+          <?php foreach( $kirby->collection('channels') as $channel ):
+
+            $words = explode(" ", $channel->title()->value());
+            $acronym = "";
+            foreach ($words as $w) {
+              $acronym .= $w[0];
+            }
+
+            $class = '';
+            if( $page->is( $channel) ){
+              $class = 'active';
+            } else if ( $parent = $page->parent() ){
+              if( $parent->is( $channel) ){
+                $class = 'active';
+              }
+            }
+
+            ?>
             <li>
-              <?php if( $page->is( $channel ) || $page->channel()->is( $channel ) ): ?>
-                <a class="active" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>"><?= $channel->title()->value() ?></a>
-              <?php else:
-                $words = explode(" ", $channel->title()->value());
-                $acronym = "";
-                foreach ($words as $w) {
-                  $acronym .= $w[0];
-                }
-                ?>
-                <a class="condense-animation" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>"><?= $acronym ?></a>
-              <?php endif; ?>
+              <a class="<?= $class ?>" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>">
+                <span class="full"><?= $channel->title()->value() ?></span>
+                <abbr title="<?= $channel->title()->value() ?>"><?= $acronym ?></span>
+              </a>
             </li>
           <?php endforeach; ?>
         </ol>

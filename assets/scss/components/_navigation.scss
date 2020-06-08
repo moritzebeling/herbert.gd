@@ -34,8 +34,32 @@ header.site-header {
   nav {
     .channels {
       li {
-        display: inline-block;
-        margin-right: 0.5em;
+        display: inline;
+        margin-right: 0.2em;
+      }
+    }
+    a {
+      span {
+        display: none;
+      }
+      abbr {
+        display: inline;
+      }
+      @media only screen and (min-width: 800px) {
+        span {
+          display: inline;
+        }
+        abbr {
+          display: none;
+        }
+      }
+      &.active {
+        span {
+          display: inline !important;
+        }
+        abbr {
+          display: none !important;
+        }
       }
     }
   }
