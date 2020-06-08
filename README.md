@@ -57,3 +57,19 @@ npm run build
 - [Svelte](https://svelte.dev) (v3)
 - [sass](https://sass-lang.com)
 - [Swiper.js](https://swiperjs.com)
+
+## When deploying to a FTP server
+When deploying this website to the target host, please exclude the following from upload to prevent yourself from overriding critical files and avoid cluttering:
+- `.lock`
+- `*.sess`
+- `.git`
+- `.license`
+- `.gitignore`
+- `.gitmodules`
+- `.editorconfig`
+- `node_modules`
+- `.DS_Store`
+- `media`
+- `content`
+- `site/accounts`
+- `site/sessions`
