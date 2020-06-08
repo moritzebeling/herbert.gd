@@ -132,8 +132,8 @@ body {
 
 .keywords {
   @include fontlarge;
+  display: flex;
   li {
-    display: inline-block;
     margin-right: 0.5em;
     .count {
       font-size: 0.7em;
