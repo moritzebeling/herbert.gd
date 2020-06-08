@@ -56,15 +56,16 @@
 		figure {
 			flex: 1;
 			img {
-				-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  			filter: grayscale(100%);
-				transition: filter 300ms ease;
+				// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  			// filter: grayscale(100%);
+				transition: opacity 300ms ease;
 			}
 		}
 		> a:hover {
 			figure img {
-				-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
-  			filter: grayscale(0);
+				// -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  			// filter: grayscale(0);
+				opacity: 1;
 			}
 		}
 

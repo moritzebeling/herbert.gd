@@ -1,6 +1,7 @@
 <script>
 
 	import Item from './Item.svelte';
+	import Count from './Count.svelte';
 	export let posts = [];
 
 	export let layout = 'list';
@@ -11,42 +12,40 @@
 	};
 
 	let filter = '';
-	export let categories = [];
+
+	let categories = {};
+	for( let post of posts ){
+		for( let cat of post.categories ){
+			if(!(cat in categories)){
+				categories[cat]	= 0;
+			}
+			categories[cat]++;
+		}
+	}
 
 </script>
 
 {#if posts.length > 0}
 
-	<!--
-	<nav class="results-options">
+	<div class="result-options">
 
-		<div class="left">
-			<label for="results-layout">Layout</label>
-			<select name="results-layout" bind:value={layout}>
-				{#each Object.keys(layoutOptions) as option }
-					<option value="{option}">{layoutOptions[option]}</option>
-				{/each}
-			</select>
-		</div>
+		<ul class="keywords filters">
+			<li class="keyword" on:click={()=> filter = '' }>
+				<button>All<Count count={posts.length} /></button>
+			</li>
+			{#each Object.keys(categories) as category}
+				<li class="keyword" on:click={()=> filter = category } >
+					<button>{category}<Count count={categories[category]} /></button>
+				</li>
+			{/each}
+		</ul>
 
-		<div class="right">
-			<label for="results-filter">Category</label>
-			<select name="results-filter" bind:value={filter}>
-				<option value="">All</option>
-				{#each categories as category}
-					<option value="{category}">{category}</option>
-				{/each}
-			</select>
-		</div>
-
-	</nav>
-	-->
+	</div>
 
 	<ol class="{layout}">
 		{#each posts as post}
-			{#if filter === '' || post.categories.includes(filter) }
-				<Item post={post} />
-			{/if}
+			<Item post={post} show={filter === '' || post.categories.includes(filter)} />
 		{/each}
 	</ol>
+
 {/if}

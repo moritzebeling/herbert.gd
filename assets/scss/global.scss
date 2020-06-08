@@ -130,13 +130,18 @@ body {
 
 @import 'components/footer';
 
-a.keyword {
-  .count {
-    font-size: 0.7em;
+.keywords {
+  @include fontlarge;
+  li {
     display: inline-block;
-    vertical-align: 0.33em;
-    border-bottom: $border;
-    margin-left: 0.2em;
+    margin-right: 0.5em;
+    .count {
+      font-size: 0.7em;
+      display: inline-block;
+      vertical-align: 0.33em;
+      border-bottom: $border;
+      margin-left: 0.2em;
+    }
   }
 }
 
@@ -144,35 +149,6 @@ a.keyword {
 @import 'components/cards';
 @import 'components/list';
 .posts {
-
-  .results-options {
-    display: none;
-    /*
-    padding: 0.25rem 1rem;
-    display: flex;
-    .left {
-      flex: 1 1 auto;
-      li {
-        margin-right: 0.25em;
-      }
-    }
-    .right {
-      flex: 1 1 auto;
-      text-align: right;
-      li {
-        margin-left: 0.25em;
-      }
-    }
-    label {
-      display: none;
-    }
-    ul {
-      li {
-        display: inline-block;
-      }
-    }
-    */
-  }
 
   ol.preview {
     // @include preview;
@@ -184,8 +160,10 @@ a.keyword {
   ol.list {
     @include list;
   }
-  li.hidden {
-    display: none;
+  li.hide {
+    img {
+      opacity: 0;
+    }
   }
   li > a {
     display: block;
@@ -202,6 +180,19 @@ a.keyword {
     .meta {
       @include fontsmall;
     }
+  }
+
+}
+
+.result-options {
+  margin: 0 $space-side $space-top;
+  padding-bottom: $space-top;
+  border-bottom: $border;
+
+  button {
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
   }
 
 }

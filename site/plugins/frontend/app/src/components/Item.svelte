@@ -1,6 +1,7 @@
 <script>
 
 	export let post = {};
+	export let show = true;
 
 	let orientation = '';
 	if('image' in post){
@@ -11,7 +12,7 @@
 
 </script>
 
-<li class="{orientation}">
+<li class="{orientation}" class:hide={!show}>
 	<a href="{post.href}">
 
 		{#if 'image' in post}
@@ -60,6 +61,6 @@
 
 <style>
 
-
+	
 
 </style>
