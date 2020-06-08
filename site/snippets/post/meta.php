@@ -40,7 +40,7 @@ if( count($entries) < 1 ){
 
 ?>
 <section class="meta">
-	<ul>
+	<ul class="keywords">
 		<?php foreach( $entries as $html ): ?>
 			<?= $html ?>
 		<?php endforeach; ?>

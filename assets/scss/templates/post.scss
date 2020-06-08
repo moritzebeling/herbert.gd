@@ -1,19 +1,2 @@
 @import '../variables';
 @import '../components/gallery';
-
-main {
-
-  section.content {
-    // @include fontlarge;
-
-  }
-
-  section.meta {
-    @include fontlarge;
-    li {
-      display: inline-block;
-      margin-right: 0.3em;
-    }
-  }
-
-}
