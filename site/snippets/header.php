@@ -48,7 +48,7 @@
   <header class="site-header">
     <div class="container">
 
-      <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert.svg') ?></a>
+      <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert-logo.svg') ?></a>
 
       <nav>
         <ol class="channels">

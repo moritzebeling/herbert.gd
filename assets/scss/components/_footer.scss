@@ -3,7 +3,16 @@ footer.site-footer {
   margin: $space;
   border-top: $border;
 
-  // font-size: $font-small;
+  font-size: $font-small;
+
+  display: flex;
+  div {
+    flex: 1 0 auto;
+    &.right {
+      text-align: right;
+      flex: 0 0 auto;
+    }
+  }
 
   a, ul {
     display: inline-block;
@@ -18,6 +27,15 @@ footer.site-footer {
   a:hover,
   a.active {
     border-color: currentColor;
+  }
+
+  a.logo {
+    border: none !important;
+    svg {
+      height: 1.3em;
+      width: 11.4em;
+      transform: translateY(0.1em);
+    }
   }
 
 }

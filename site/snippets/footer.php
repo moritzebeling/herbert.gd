@@ -1,27 +1,35 @@
 	<footer class="site-footer">
+		<div>
 
-		&copy; <?= date('Y') ?>
+			&copy; <?= date('Y') ?>
 
-		<a href="<?= $site->url() ?>"><?= $site->title() ?></a>
+			<a href="<?= $site->url() ?>"><?= $site->title() ?></a>
 
-		<?php foreach( $site->children()->unlisted() as $item ):
-			switch ( $item->intendedTemplate()->name() ) {
-				case 'error':
-				case 'start':
-				case 'index':
-					continue 2;
-			}
-			?>
-			<a href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
-		<?php endforeach; ?>
+			<?php foreach( $site->children()->unlisted() as $item ):
+				switch ( $item->intendedTemplate()->name() ) {
+					case 'error':
+					case 'start':
+					case 'index':
+						continue 2;
+				}
+				?>
+				<a href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
+			<?php endforeach; ?>
 
-		<?php snippet('fields/links',[
-			'links' => $site->links()
-		]); ?>
+			<?php snippet('fields/links',[
+				'links' => $site->links()
+			]); ?>
+
+		</div>
 
 		<?php if( $info = page('info') ): ?>
-			<?= $info->imprint()->toAnchor('Imprint') ?>
+			<div class="right">
+				<a class="link logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
+					<?= svg('assets/image/bauhaus-university-logo.svg') ?>
+				</a>
+			</div>
 		<?php endif; ?>
+
 
 	</footer>
 
