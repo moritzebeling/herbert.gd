@@ -6,12 +6,16 @@ Featured:
 
 - grafik-design/learning-from-hans-hofmann
 - grafik-design/la-strada
-- grafik-design/natur-elektronatur
 - space-for-visual-research/2nd-book
 - activities/robin-weissenborn
 - grafik-design/the-five-obstructions
 - >
   space-for-visual-research/sfvr-workshop-2019
+- >
+  space-for-visual-research/sfvr-workshop-paju-korea
+- >
+  activities/grafik-design-workshop-taiwan-tech
+- activities/bauhaus-masters-2019-copy
 
 ----
 
@@ -27,7 +31,9 @@ Keywords: Herbert, Weimar, VK, Gestaltung, Bauhaus, Universität, Space.for.Visu
 
 ----
 
-Image: 
+Image:
+
+- vk.jpg
 
 ----
 

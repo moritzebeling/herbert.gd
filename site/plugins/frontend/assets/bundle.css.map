@@ -1,12 +1,8 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [
-    "../app/Item.svelte"
-  ],
-  "sourcesContent": [
-    "<script>\n\n\texport let post = {};\n\texport let show = true;\n\n\tlet orientation = '';\n\tif('image' in post){\n\t\tif('orientation' in post.image){\n\t\t\torientation = post.image.orientation;\n\t\t}\n\t}\n\n</script>\n\n<li class=\"{orientation}\" class:hide={!show}>\n\t<a href=\"{post.href}\">\n\n\t\t{#if 'image' in post}\n\t\t\t{#if post.image.type === 'video'}\n\t\t\t\t<figure class=\"video\">\n\t\t\t\t\t{@html post.image.html}\n\t\t\t\t</figure>\n\t\t\t{:else}\n\t\t\t\t<figure class=\"{post.image.orientation}\">\n\t\t\t\t\t<div class=\"image\">\n\t\t\t\t\t{@html post.image.html}\n\t\t\t\t\t</div>\n\t\t\t\t</figure>\n\t\t\t{/if}\n\t\t{/if}\n\n\t\t<div class=\"info\">\n\n\t\t\t<div class=\"title\">\n\t\t\t\t<h3 class=\"headline\">{post.title}</h3>\n\t\t\t\t{#if post.subtitle}\n\t\t\t\t\t<h4 class=\"subline\">{post.subtitle}</h4>\n\t\t\t\t{/if}\n\t\t\t</div>\n\n\t\t\t<div class=\"meta\">\n\n\t\t\t\t<div class=\"categories\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t{#each post.categories as category}\n\t\t\t\t\t\t\t<li>{category}</li>\n\t\t\t\t\t\t{/each}\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"date\">\n\t\t\t\t\t{post.date}\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</a>\n</li>\n\n<style>\n\n\tli.hide {\n\t\tfilter: blur(10);\n\t}\n\n</style>\n"
-  ],
+  "sources": [],
+  "sourcesContent": [],
   "names": [],
-  "mappings": "AA+DC,EAAE,KAAK,cAAC,CAAC,AACR,MAAM,CAAE,KAAK,EAAE,CAAC,AACjB,CAAC"
+  "mappings": ""
 }
