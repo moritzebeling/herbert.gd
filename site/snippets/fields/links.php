@@ -6,7 +6,9 @@ if( $links->count() < 1 ){
   return;
 }
 ?>
-<?php foreach ($links as $link): ?>
-  <?php $title = $link->title()->isNotEmpty() ? $link->title()->value() : null;
-  echo $link->url()->toAnchor( $title ) ?>
-<?php endforeach; ?>
+<div class="links">
+  <?php foreach ($links as $link): ?>
+    <?php $title = $link->title()->isNotEmpty() ? $link->title()->value() : null;
+    echo $link->url()->toAnchor( $title ) ?>
+  <?php endforeach; ?>
+</div>

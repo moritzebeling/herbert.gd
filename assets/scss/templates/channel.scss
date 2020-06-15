@@ -1,1 +1,14 @@
 @import '../variables';
+
+header.channel-header {
+  @include font;
+  display: flex;
+  div {
+    flex: 1 0 50%;
+    + div {
+      text-align: right;
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+  }
+}

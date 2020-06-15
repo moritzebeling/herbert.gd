@@ -252,7 +252,8 @@ Kirby::plugin('moritzebeling/herbert', [
       if( $external === true ){
         $attr = [
           'target' => '_blank',
-          'rel' => 'noopener'
+          'rel' => 'noopener',
+          'class' => 'external'
         ];
       }
       $text = str_replace('www.','',$text);

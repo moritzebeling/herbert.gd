@@ -108,7 +108,7 @@ body {
     }
 
     section.posts {
-      // border: none;
+      border: none;
       // margin: 0;
     }
     section.gallery {
@@ -129,21 +129,6 @@ body {
 }
 
 @import 'components/footer';
-
-.keywords {
-  @include fontlarge;
-  display: flex;
-  li {
-    margin-right: 0.5em;
-    .count {
-      font-size: 0.7em;
-      display: inline-block;
-      vertical-align: 0.33em;
-      border-bottom: $border;
-      margin-left: 0.2em;
-    }
-  }
-}
 
 // @import 'components/preview';
 @import 'components/cards';
@@ -184,6 +169,7 @@ body {
 
 }
 
+@import 'components/filter';
 .result-options {
   margin: 0 $space-side $space-top;
   padding-bottom: $space-top;
@@ -195,6 +181,26 @@ body {
     -webkit-appearance: none;
   }
 
+}
+
+.links {
+  @include font;
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    display: inline-block;
+    margin-right: 0.5em;
+    flex: 0 0 auto;
+    &.external:after {
+      content: '';
+      border-top: $border;
+      border-right: $border;
+      width: 0.5em;
+      height: 0.5em;
+      display: inline-block;
+      vertical-align: 0.33em;
+    }
+  }
 }
 
 @import 'components/specialCharacters';
