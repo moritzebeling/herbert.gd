@@ -133,17 +133,12 @@ body {
 
 @import 'components/footer';
 
-// @import 'components/preview';
-@import 'components/cards';
+@import 'components/grid';
 @import 'components/list';
 .posts {
 
-  ol.preview {
-    // @include preview;
-    @include cards;
-  }
-  ol.cards {
-    @include cards;
+  ol.grid {
+    @include grid;
   }
   ol.list {
     @include list;

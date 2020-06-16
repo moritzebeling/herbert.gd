@@ -7,9 +7,15 @@
 	export let layout = 'list';
 	let layoutOptions = {
 		list: 'List',
-		cards: 'Cards',
-		preview: 'Preview'
+		grid: 'Grid',
 	};
+
+	function setLayout( set ){
+		if( set in layoutOptions ){
+			return set;
+		}
+		return 'grid';
+	}
 
 	let filter = false;
 
@@ -38,11 +44,6 @@
 	<div class="result-options">
 
 		<ul class="keywords filters">
-			<!--
-			<li class="keyword" on:click={()=> filter = '' }>
-				<button>All<Count count={posts.length} /></button>
-			</li>
-			-->
 			{#each Object.keys(categories) as category}
 				<li class="keyword" on:click={()=> setFilter(category) } class:active={ filter === category } >
 					<button title="Filter by {category}">{category}<Count count={categories[category]} /></button>
@@ -52,7 +53,7 @@
 
 	</div>
 
-	<ol class="{layout}">
+	<ol class="{setLayout(layout)}">
 		{#each posts as post}
 			<Item post={post} show={filter === false || post.categories.includes(filter)} />
 		{/each}

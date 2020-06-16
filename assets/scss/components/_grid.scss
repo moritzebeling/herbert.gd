@@ -33,7 +33,7 @@
 
 }
 
-@mixin cards {
+@mixin grid {
 	display: grid;
 	grid-auto-flow: row;
 	max-width: 100%;

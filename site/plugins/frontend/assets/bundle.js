@@ -1081,22 +1081,23 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[8] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[11] = list[i];
     	return child_ctx;
     }
 
-    // (36:0) {#if posts.length > 0}
+    // (42:0) {#if posts.length > 0}
     function create_if_block$2(ctx) {
     	let div;
     	let ul;
     	let t;
     	let ol;
+    	let ol_class_value;
     	let current;
     	let each_value_1 = Object.keys(/*categories*/ ctx[3]);
     	validate_each_argument(each_value_1);
@@ -1139,11 +1140,11 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "keywords filters");
-    			add_location(ul, file$2, 39, 2, 591);
+    			add_location(ul, file$2, 45, 2, 666);
     			attr_dev(div, "class", "result-options");
-    			add_location(div, file$2, 37, 1, 559);
-    			attr_dev(ol, "class", /*layout*/ ctx[1]);
-    			add_location(ol, file$2, 54, 1, 1040);
+    			add_location(div, file$2, 43, 1, 634);
+    			attr_dev(ol, "class", ol_class_value = /*setLayout*/ ctx[4](/*layout*/ ctx[1]));
+    			add_location(ol, file$2, 55, 1, 983);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1163,7 +1164,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*filter, Object, categories, setFilter*/ 28) {
+    			if (dirty & /*filter, Object, categories, setFilter*/ 44) {
     				each_value_1 = Object.keys(/*categories*/ ctx[3]);
     				validate_each_argument(each_value_1);
     				let i;
@@ -1219,8 +1220,8 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*layout*/ 2) {
-    				attr_dev(ol, "class", /*layout*/ ctx[1]);
+    			if (!current || dirty & /*layout*/ 2 && ol_class_value !== (ol_class_value = /*setLayout*/ ctx[4](/*layout*/ ctx[1]))) {
+    				attr_dev(ol, "class", ol_class_value);
     			}
     		},
     		i: function intro(local) {
@@ -1264,18 +1265,18 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(36:0) {#if posts.length > 0}",
+    		source: "(42:0) {#if posts.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:3) {#each Object.keys(categories) as category}
+    // (47:3) {#each Object.keys(categories) as category}
     function create_each_block_1(ctx) {
     	let li;
     	let button;
-    	let t0_value = /*category*/ ctx[10] + "";
+    	let t0_value = /*category*/ ctx[11] + "";
     	let t0;
     	let button_title_value;
     	let t1;
@@ -1285,13 +1286,13 @@ var app = (function () {
 
     	const count = new Count({
     			props: {
-    				count: /*categories*/ ctx[3][/*category*/ ctx[10]]
+    				count: /*categories*/ ctx[3][/*category*/ ctx[11]]
     			},
     			$$inline: true
     		});
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[6](/*category*/ ctx[10], ...args);
+    		return /*click_handler*/ ctx[7](/*category*/ ctx[11], ...args);
     	}
 
     	const block = {
@@ -1301,11 +1302,11 @@ var app = (function () {
     			t0 = text(t0_value);
     			create_component(count.$$.fragment);
     			t1 = space();
-    			attr_dev(button, "title", button_title_value = "Filter by " + /*category*/ ctx[10]);
-    			add_location(button, file$2, 47, 5, 905);
+    			attr_dev(button, "title", button_title_value = "Filter by " + /*category*/ ctx[11]);
+    			add_location(button, file$2, 48, 5, 848);
     			attr_dev(li, "class", "keyword");
-    			toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[10]);
-    			add_location(li, file$2, 46, 4, 804);
+    			toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[11]);
+    			add_location(li, file$2, 47, 4, 747);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1322,17 +1323,17 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*categories*/ 8) && t0_value !== (t0_value = /*category*/ ctx[10] + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*categories*/ 8) && t0_value !== (t0_value = /*category*/ ctx[11] + "")) set_data_dev(t0, t0_value);
     			const count_changes = {};
-    			if (dirty & /*categories*/ 8) count_changes.count = /*categories*/ ctx[3][/*category*/ ctx[10]];
+    			if (dirty & /*categories*/ 8) count_changes.count = /*categories*/ ctx[3][/*category*/ ctx[11]];
     			count.$set(count_changes);
 
-    			if (!current || dirty & /*categories*/ 8 && button_title_value !== (button_title_value = "Filter by " + /*category*/ ctx[10])) {
+    			if (!current || dirty & /*categories*/ 8 && button_title_value !== (button_title_value = "Filter by " + /*category*/ ctx[11])) {
     				attr_dev(button, "title", button_title_value);
     			}
 
     			if (dirty & /*filter, Object, categories*/ 12) {
-    				toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[10]);
+    				toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[11]);
     			}
     		},
     		i: function intro(local) {
@@ -1356,21 +1357,21 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(46:3) {#each Object.keys(categories) as category}",
+    		source: "(47:3) {#each Object.keys(categories) as category}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (56:2) {#each posts as post}
+    // (57:2) {#each posts as post}
     function create_each_block$1(ctx) {
     	let current;
 
     	const item = new Item({
     			props: {
-    				post: /*post*/ ctx[7],
-    				show: /*filter*/ ctx[2] === false || /*post*/ ctx[7].categories.includes(/*filter*/ ctx[2])
+    				post: /*post*/ ctx[8],
+    				show: /*filter*/ ctx[2] === false || /*post*/ ctx[8].categories.includes(/*filter*/ ctx[2])
     			},
     			$$inline: true
     		});
@@ -1385,8 +1386,8 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const item_changes = {};
-    			if (dirty & /*posts*/ 1) item_changes.post = /*post*/ ctx[7];
-    			if (dirty & /*filter, posts*/ 5) item_changes.show = /*filter*/ ctx[2] === false || /*post*/ ctx[7].categories.includes(/*filter*/ ctx[2]);
+    			if (dirty & /*posts*/ 1) item_changes.post = /*post*/ ctx[8];
+    			if (dirty & /*filter, posts*/ 5) item_changes.show = /*filter*/ ctx[2] === false || /*post*/ ctx[8].categories.includes(/*filter*/ ctx[2]);
     			item.$set(item_changes);
     		},
     		i: function intro(local) {
@@ -1407,7 +1408,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(56:2) {#each posts as post}",
+    		source: "(57:2) {#each posts as post}",
     		ctx
     	});
 
@@ -1485,12 +1486,15 @@ var app = (function () {
     function instance$2($$self, $$props, $$invalidate) {
     	let { posts = [] } = $$props;
     	let { layout = "list" } = $$props;
+    	let layoutOptions = { list: "List", grid: "Grid" };
 
-    	let layoutOptions = {
-    		list: "List",
-    		cards: "Cards",
-    		preview: "Preview"
-    	};
+    	function setLayout(set) {
+    		if (set in layoutOptions) {
+    			return set;
+    		}
+
+    		return "grid";
+    	}
 
     	let filter = false;
     	let categories = {};
@@ -1534,6 +1538,7 @@ var app = (function () {
     		posts,
     		layout,
     		layoutOptions,
+    		setLayout,
     		filter,
     		categories,
     		setFilter
@@ -1551,7 +1556,16 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [posts, layout, filter, categories, setFilter, layoutOptions, click_handler];
+    	return [
+    		posts,
+    		layout,
+    		filter,
+    		categories,
+    		setLayout,
+    		setFilter,
+    		layoutOptions,
+    		click_handler
+    	];
     }
 
     class List extends SvelteComponentDev {
