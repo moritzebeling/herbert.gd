@@ -73,9 +73,10 @@ body {
   > main {
 
     flex: 1 0 auto;
-    margin-top: $space-top;
+    //margin-top: $space-top;
 
     header {
+      margin-top: $space-top;
       font-size: $font-large;
     }
 
