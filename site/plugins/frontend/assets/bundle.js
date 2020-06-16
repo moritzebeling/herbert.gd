@@ -1143,7 +1143,7 @@ var app = (function () {
     			attr_dev(div, "class", "result-options");
     			add_location(div, file$2, 37, 1, 559);
     			attr_dev(ol, "class", /*layout*/ ctx[1]);
-    			add_location(ol, file$2, 54, 1, 1011);
+    			add_location(ol, file$2, 54, 1, 1040);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1277,6 +1277,7 @@ var app = (function () {
     	let button;
     	let t0_value = /*category*/ ctx[10] + "";
     	let t0;
+    	let button_title_value;
     	let t1;
     	let current;
     	let mounted;
@@ -1300,6 +1301,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			create_component(count.$$.fragment);
     			t1 = space();
+    			attr_dev(button, "title", button_title_value = "Filter by " + /*category*/ ctx[10]);
     			add_location(button, file$2, 47, 5, 905);
     			attr_dev(li, "class", "keyword");
     			toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[10]);
@@ -1324,6 +1326,10 @@ var app = (function () {
     			const count_changes = {};
     			if (dirty & /*categories*/ 8) count_changes.count = /*categories*/ ctx[3][/*category*/ ctx[10]];
     			count.$set(count_changes);
+
+    			if (!current || dirty & /*categories*/ 8 && button_title_value !== (button_title_value = "Filter by " + /*category*/ ctx[10])) {
+    				attr_dev(button, "title", button_title_value);
+    			}
 
     			if (dirty & /*filter, Object, categories*/ 12) {
     				toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[10]);

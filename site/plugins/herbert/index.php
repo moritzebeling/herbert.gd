@@ -249,11 +249,13 @@ Kirby::plugin('moritzebeling/herbert', [
         $text = str_replace('http://','',$text);
         $text = str_replace('https://','',$text);
       }
+      $text = trim( $text );
       if( $external === true ){
         $attr = [
           'target' => '_blank',
           'rel' => 'noopener',
-          'class' => 'external'
+          'class' => 'external',
+          'title' => 'Open '.$text.' in a new tab',
         ];
       }
       $text = str_replace('www.','',$text);
