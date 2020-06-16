@@ -1,11 +1,12 @@
 @import '../variables';
 
 header.channel-header {
-  @include font;
+  @include fontlarge;
   display: flex;
   div {
-    flex: 1 0 50%;
+    flex: 1 1 50%;
     + div {
+      flex: 1 1 50%;
       text-align: right;
       justify-content: flex-end;
       margin-top: 0;

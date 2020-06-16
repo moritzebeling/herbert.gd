@@ -8,7 +8,7 @@ $grey: #ccc;
 
 $font-small: 0.75rem;
 $font-size: 1rem;
-$font-large: 2rem;
+$font-large: 1.8rem;
 
 @mixin allcaps {
 	text-transform: uppercase;
@@ -24,7 +24,7 @@ $font-large: 2rem;
 }
 @mixin fontlarge {
 	font-size: $font-large;
-	line-height: 1;
+	line-height: 1.1;
 }
 @mixin sans {
 	font-family: Helvetica, Arial, sans-serif;
