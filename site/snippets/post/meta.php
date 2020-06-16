@@ -29,7 +29,7 @@ foreach( $page->attributes()->toStructure() as $attribute ){
 foreach( $page->keywords()->split() as $keyword ){
 
 	$entries[] = '<li class="tag">'.
-		SiteSearch::link( $category ).
+		SiteSearch::link( $keyword ).
 		'</li>';
 
 }

@@ -24,6 +24,7 @@ columns:
     label: Category
     text: '{{ page.categories.toCategoryLabel }}'
     width: 1/6
+    class: small
   date:
     label: Date
     type: text
