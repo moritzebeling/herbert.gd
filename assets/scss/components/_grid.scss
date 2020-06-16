@@ -5,8 +5,8 @@
 	grid-row-end: span 1;
 
 	// border-bottom: 1px solid currentColor;
-	border-right: $border;
-	padding: 0 1rem;
+	// border-right: $border;
+	// padding: 0 1rem;
 
 	min-height: 8em;
 
@@ -33,28 +33,36 @@
 
 }
 
+
+
 @mixin grid {
 	display: grid;
 	grid-auto-flow: row;
 	max-width: 100%;
 
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: $gap;
+	padding: 0 $space-side;
+
+	align-items: start;
 
 	> li {
 		@include carditem;
+		margin-bottom: 1rem;
+		// background-color: #fff;
 
-		display: flex;
+		// display: flex;
 		> a {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			border-top: $border;
-			padding-top: 1rem;
-			margin-top: 1rem;
+			// flex: 1;
+			// display: flex;
+			// flex-direction: column;
+			// border-top: $border;
+			// padding-top: 1rem;
+			// margin-top: 1rem;
 		}
 
 		figure {
-			flex: 1;
+			// flex: 1;
 			img {
 				// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   			// filter: grayscale(100%);
@@ -70,14 +78,15 @@
 		}
 
 		figure + .info {
-			margin-top: 1rem;
+			margin-top: 0.5em;
 		}
 
 		.info {
+			// padding: 0.5em;
 			// display: flex;
 			// flex-direction: column;
 			.title {
-				flex: 1;
+				// flex: 1;
 			}
 	    .meta {
 				display: none;
