@@ -62,11 +62,12 @@
 		}
 
 		figure {
+			background-color: #fff;
 			// flex: 1;
 			img {
 				// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   			// filter: grayscale(100%);
-				transition: opacity 300ms ease;
+				transition: opacity 1000ms ease;
 			}
 		}
 		> a:hover {
