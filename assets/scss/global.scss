@@ -105,6 +105,9 @@ body {
           padding-top: 0;
         }
       }
+      &.meta {
+        border-top: none;
+      }
     }
 
     section.posts {
