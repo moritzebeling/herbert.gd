@@ -6,6 +6,7 @@ footer.site-footer {
   font-size: $font-small;
 
   display: flex;
+  align-items: center;
   div {
     flex: 1 0 auto;
     &.right {
@@ -32,8 +33,9 @@ footer.site-footer {
   a.logo {
     border: none !important;
     svg {
-      height: 1.3em;
-      width: 11.4em;
+      // ratio: 1:8.8
+      height: 1.4em;
+      width: 12.32em;
       transform: translateY(0.1em);
     }
   }
