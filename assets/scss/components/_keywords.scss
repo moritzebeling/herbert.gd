@@ -1,5 +1,12 @@
 .result-options {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  z-index: 8;
+  background-color: $background;
+
   margin: 0 $space-side $space-top;
+  padding-top: $space-top;
   padding-bottom: $space-top;
   border-bottom: $border;
 
