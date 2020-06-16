@@ -172,38 +172,5 @@ body {
 
 }
 
-@import 'components/filter';
-.result-options {
-  margin: 0 $space-side $space-top;
-  padding-bottom: $space-top;
-  border-bottom: $border;
-
-  button {
-    padding: 0;
-    margin: 0;
-    -webkit-appearance: none;
-  }
-
-}
-
-.links {
-  @include font;
-  display: flex;
-  flex-wrap: wrap;
-  a {
-    display: inline-block;
-    margin-right: 0.5em;
-    flex: 0 0 auto;
-    &.external:after {
-      content: '';
-      border-top: $border;
-      border-right: $border;
-      width: 0.5em;
-      height: 0.5em;
-      display: inline-block;
-      vertical-align: 0.33em;
-    }
-  }
-}
-
+@import 'components/keywords';
 @import 'components/specialCharacters';

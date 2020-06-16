@@ -11,7 +11,7 @@
 		preview: 'Preview'
 	};
 
-	let filter = '';
+	let filter = false;
 
 	let categories = {};
 	for( let post of posts ){
@@ -23,6 +23,14 @@
 		}
 	}
 
+	function setFilter( set ){
+		if( filter === set ){
+			filter = false;
+		} else {
+			filter = set;
+		}
+	}
+
 </script>
 
 {#if posts.length > 0}
@@ -30,11 +38,13 @@
 	<div class="result-options">
 
 		<ul class="keywords filters">
+			<!--
 			<li class="keyword" on:click={()=> filter = '' }>
 				<button>All<Count count={posts.length} /></button>
 			</li>
+			-->
 			{#each Object.keys(categories) as category}
-				<li class="keyword" on:click={()=> filter = category } >
+				<li class="keyword" on:click={()=> setFilter(category) } class:active={ filter === category } >
 					<button>{category}<Count count={categories[category]} /></button>
 				</li>
 			{/each}
@@ -44,7 +54,7 @@
 
 	<ol class="{layout}">
 		{#each posts as post}
-			<Item post={post} show={filter === '' || post.categories.includes(filter)} />
+			<Item post={post} show={filter === false || post.categories.includes(filter)} />
 		{/each}
 	</ol>
 

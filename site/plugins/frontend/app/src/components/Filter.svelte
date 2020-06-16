@@ -1,11 +1,6 @@
 <script>
 
-
-
-
-
 </script>
-
 
 <div class="result-options">
 
@@ -25,7 +20,7 @@
 		<div class="right">
 			<label for="results-filter">Category</label>
 			<select name="results-filter" bind:value={filter}>
-				<option value="">All</option>
+				<!-- <option value="">All</option> -->
 				{#each categories as category}
 					<option value="{category}">{category}</option>
 				{/each}

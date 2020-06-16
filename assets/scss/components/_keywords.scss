@@ -1,0 +1,32 @@
+.result-options {
+  margin: 0 $space-side $space-top;
+  padding-bottom: $space-top;
+  border-bottom: $border;
+
+  button {
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+}
+
+.keywords {
+  @include inlineList;
+  li {
+    @include button;
+    .count {
+      @include keywordCount;
+    }
+  }
+}
+
+.links {
+  @include font;
+  @include inlineList;
+  a {
+    &.external {
+      @include linkArrow;
+    }
+  }
+}
