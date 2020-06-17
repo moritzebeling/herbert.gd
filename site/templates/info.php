@@ -8,6 +8,10 @@
       <?= $page->body()->kirbytext(); ?>
     <?php endif ?>
 
+    <?php snippet('fields/links',[
+      'links' => $site->links()
+    ]); ?>
+
   </section>
 
   <?php $team = $page->team()->toStructure();

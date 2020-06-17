@@ -5,21 +5,6 @@
 
 			<a href="<?= $site->url() ?>"><?= $site->title() ?></a>
 
-			<?php foreach( $site->children()->unlisted() as $item ):
-				switch ( $item->intendedTemplate()->name() ) {
-					case 'error':
-					case 'start':
-					case 'index':
-						continue 2;
-				}
-				?>
-				<a href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
-			<?php endforeach; ?>
-
-			<?php snippet('fields/links',[
-				'links' => $site->links()
-			]); ?>
-
 		</div>
 
 		<?php if( $info = page('info') ): ?>

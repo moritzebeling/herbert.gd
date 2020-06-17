@@ -1,5 +1,9 @@
 @import '../variables';
 
+footer.site-footer {
+  display: flex;
+}
+
 main {
 
 	header {
@@ -19,6 +23,7 @@ main {
 
 		&.content {
 			@include fontlarge;
+			margin-top: 1rem !important;
 		}
 
 		&.team {

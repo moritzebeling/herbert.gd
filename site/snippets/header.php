@@ -52,7 +52,7 @@
 
       <nav>
         <ol class="channels">
-          <?php foreach( $kirby->collection('channels') as $channel ):
+          <?php foreach( $kirby->collection('channels')->add( page('info') ) as $channel ):
 
             $words = explode(" ", $channel->title()->value());
             $acronym = "";
