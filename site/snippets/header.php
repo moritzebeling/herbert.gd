@@ -72,8 +72,7 @@
             ?>
             <li>
               <a class="<?= $class ?>" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>">
-                <span class="full"><?= $channel->title()->value() ?></span>
-                <abbr title="<?= $channel->title()->value() ?>"><?= $acronym ?></span>
+                <span class="full"><?= $channel->title()->value() ?></span><abbr title="<?= $channel->title()->value() ?>"><?= $acronym ?></abbr><span class="count"><?= $channel->posts()->count() ?></span>
               </a>
             </li>
           <?php endforeach; ?>

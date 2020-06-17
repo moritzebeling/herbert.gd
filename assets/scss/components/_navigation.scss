@@ -35,7 +35,6 @@ header.site-header {
     .channels {
       li {
         display: inline;
-        margin-right: 0.2em;
       }
     }
     a {
@@ -45,6 +44,12 @@ header.site-header {
       abbr {
         display: inline;
       }
+      .count {
+        @include keywordCount;
+        font-size: .6em;
+        vertical-align: .45em;
+        padding-bottom: 0.2em;
+      }
       @media only screen and (min-width: 800px) {
         span {
           display: inline;
@@ -52,6 +57,16 @@ header.site-header {
         abbr {
           display: none;
         }
+      }
+      margin-right: 0.2em;
+      transition: padding 300ms ease, margin 300ms ease;
+      padding: 0.1em 0;
+      &.active,
+      &:hover {
+        margin-right: 0;
+        padding: 0.1em 0.5em;
+        background: #fff;
+        border-radius: 1em;
       }
       &.active {
         span {
