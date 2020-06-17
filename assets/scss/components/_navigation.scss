@@ -69,6 +69,8 @@ header.site-header {
         border-radius: 1em;
       }
       &.active {
+        background-color: #000;
+        color: #fff;
         span {
           display: inline !important;
         }
