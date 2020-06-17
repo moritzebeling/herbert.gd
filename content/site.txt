@@ -4,18 +4,20 @@ Title: Herbert.gd
 
 Featured:
 
-- grafik-design/learning-from-hans-hofmann
 - grafik-design/la-strada
-- space-for-visual-research/2nd-book
-- activities/robin-weissenborn
-- grafik-design/the-five-obstructions
-- >
-  space-for-visual-research/sfvr-workshop-2019
-- >
-  space-for-visual-research/sfvr-workshop-paju-korea
 - >
   activities/grafik-design-workshop-taiwan-tech
+- >
+  space-for-visual-research/manifest-of-practice-taipeh-taiwan
+- grafik-design/learning-from-hans-hofmann
+- >
+  space-for-visual-research/sfvr-workshop-2019
+- space-for-visual-research/2nd-book
+- activities/robin-weissenborn
+- >
+  space-for-visual-research/sfvr-workshop-paju-korea
 - activities/bauhaus-masters-2019-copy
+- space-for-visual-research
 
 ----
 

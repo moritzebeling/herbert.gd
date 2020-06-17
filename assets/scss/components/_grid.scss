@@ -5,8 +5,8 @@
 	grid-row-end: span 1;
 
 	// border-bottom: 1px solid currentColor;
-	// border-right: $border;
-	// padding: 0 1rem;
+	border-right: $border;
+	padding: 0 1rem 3rem;
 
 	min-height: 8em;
 
@@ -41,14 +41,14 @@
 	max-width: 100%;
 
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: $gap;
-	padding: 0 $space-side;
+	// gap: $gap;
+	// padding: 0 $space-side;
 
-	align-items: start;
+	// align-items: start;
 
 	> li {
 		@include carditem;
-		margin-bottom: 1rem;
+		// margin-bottom: 1rem;
 		// background-color: #fff;
 
 		// display: flex;
