@@ -3,7 +3,10 @@ header.site-header {
   position: sticky;
   top: 0;
   width: 100%;
-  padding: $space-top $space-side 0;
+  padding-top: $space-top - 0.2rem;
+  padding-bottom: 0;
+  padding-left: $space-side;
+  padding-right: $space-side;
   z-index: 100;
   background-color: $background;
 
@@ -38,6 +41,7 @@ header.site-header {
       }
     }
     a {
+      margin: 0.1rem 0.2em 0.1rem 0;
       span {
         display: none;
       }
@@ -58,7 +62,6 @@ header.site-header {
           display: none;
         }
       }
-      margin-right: 0.2em;
       transition: padding 300ms ease, margin 300ms ease;
       padding: 0.1em 0;
       &.active,

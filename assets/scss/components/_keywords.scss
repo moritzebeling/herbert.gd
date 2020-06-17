@@ -6,8 +6,8 @@
   background-color: $background;
 
   margin: 0 $space-side $space-top;
-  padding-top: $space-top;
-  padding-bottom: $space-top;
+  padding-top: $space-top - 0.2rem;
+  padding-bottom: $space-top - 0.2rem;
   border-bottom: $border;
 
   button {
