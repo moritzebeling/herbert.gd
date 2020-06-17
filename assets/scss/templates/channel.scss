@@ -2,14 +2,22 @@
 
 header.channel-header {
   @include fontlarge;
-  display: flex;
-  div {
-    flex: 1 1 50%;
-    + div {
-      flex: 1 1 50%;
-      text-align: right;
-      justify-content: flex-end;
-      margin-top: 0;
+
+  div + div {
+    margin-top: 1rem;
+  }
+
+  @media only screen and (min-width: 800px) {
+    display: flex;
+    align-items: flex-start;
+    div {
+      flex: 1 1 70%;
+      + div {
+        flex: 1 1 30%;
+        text-align: right;
+        justify-content: flex-end;
+        margin-top: 0;
+      }
     }
   }
 }
