@@ -5,6 +5,18 @@
  *
  */
 
+function flushCache( $id = false ){
+
+  $cache = kirby()->cache('herbert.frontend');
+
+	if( $id === false ){
+    $cache->flush();
+	} else {
+    $cache->remove( $id . '.json' );
+  }
+
+}
+
 Kirby::plugin('herbert/frontend', [
 
   'options' => [
@@ -25,13 +37,14 @@ Kirby::plugin('herbert/frontend', [
           $page = kirby()->site()->homePage();
         }
 
+        $id = $page->id();
         $result = null;
         $cached = false;
 
         if( option('herbert.frontend.cache',false) ){
 
           $cache = $kirby->cache('herbert.frontend');
-          $result = $cache->get( $page->id() );
+          $result = $cache->get( $id );
 
           if( $result !== null ){
             $cached = true;
@@ -43,7 +56,7 @@ Kirby::plugin('herbert/frontend', [
           $result = $page->json();
 
           if( option('herbert.frontend.cache',false) ){
-            $cache->set( $page->id(), $result, option('herbert.frontend.expires',1440) );
+            $cache->set( $id, $result, option('herbert.frontend.expires',1440) );
           }
 
         }
@@ -57,6 +70,55 @@ Kirby::plugin('herbert/frontend', [
 
       }
     ]
+  ],
+  'hooks' => [
+		// files
+		'file.changeName:after' => function ( $file, $old ) {
+			flushCache( $file->parentId() );
+		},
+		'file.changeSort:after' => function ( $file, $old ) {
+      flushCache( $file->parentId() );
+		},
+		'file.create:after' => function ( $file ) {
+      flushCache( $file->parentId() );
+		},
+		'file.delte:after' => function ( $status, $file ) {
+      flushCache( $file->parentId() );
+		},
+		'file.replace:after' => function ( $file, $old ) {
+      flushCache( $file->parentId() );
+		},
+		'file.update:after' => function ( $file, $old ) {
+      flushCache( $file->parentId() );
+		},
+		// pages
+		'page.changeSlug:after' => function ($page, $old) {
+			flushCache( $page->id() );
+		},
+		'page.changeStatus:after' => function ($page, $old) {
+			flushCache( $page->id() );
+		},
+		'page.changeTitle:after' => function ($page, $old) {
+			flushCache( $page->id() );
+		},
+		'page.create:after' => function ($page) {
+			flushCache( $page->id() );
+		},
+		'page.delete:after' => function ($status, $page) {
+			flushCache( $page->id() );
+		},
+		'page.duplicate:after' => function ($page) {
+			flushCache( $page->id() );
+		},
+		'page.update:after' => function ($page, $old) {
+			flushCache( $page->id() );
+		},
+		// site
+    /*
+		'site.update:after' => function () {
+			flushCache();
+		},
+    */
   ]
 
 ]);
