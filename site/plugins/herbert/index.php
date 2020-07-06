@@ -157,8 +157,8 @@ Kirby::plugin('moritzebeling/herbert', [
   ],
 
   'pageMethods' => [
-    'info' => function (): string {
-      return 'legacyyyyy';
+    'layout' => function (): string {
+      return 'grid';
   	},
     'panelinfo' => function (): string {
       if( $this->hasChildren() ){
