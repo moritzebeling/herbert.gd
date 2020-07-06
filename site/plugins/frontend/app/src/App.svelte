@@ -8,8 +8,12 @@
 		if( location === '/' ){
 			location = 'start';
 		}
-		console.log( location );
-		return location + '.json';
+		let endpoint = location + '.json';
+		if( window.location.search !== '' ){
+			endpoint += window.location.search;
+		}
+		console.log( 'API endpoint: '+endpoint );
+		return endpoint;
 	}
 
 	fetch( requestUrl(), {

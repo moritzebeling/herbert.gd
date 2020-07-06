@@ -4,11 +4,7 @@
 
   <?php snippet('channel/header'); ?>
 
-  <?= $posts->count() ?> Posts found
-
-  <?php
-  $layout = isset($layout) ? $layout : 'list';
-  snippet('posts/'.$layout); ?>
+  <?php snippet('posts/api'); ?>
 
 </main>
 

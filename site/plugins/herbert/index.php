@@ -38,17 +38,19 @@ class HomePage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->site()->content()->featured()->toPages();
   }
+  /*
   public function json(): array {
-    $posts = $this->posts();
+    // $posts = $this->posts();
     return [
       'title' => $this->site()->title()->value(),
       'href' => $this->site()->url(),
       'template' => 'channel',
       'layout' => $this->layout(),
-      'categories' => $posts->pluck('categories', ',', true),
-      'posts' => $posts->json(),
+      // 'categories' => $posts->pluck('categories', ',', true),
+      // 'posts' => $posts->json(),
     ];
   }
+  */
 }
 class ChannelPage extends Page
 {
@@ -75,17 +77,19 @@ class ChannelPage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
   }
+  /*
   public function json(): array {
-    $posts = $this->posts();
+    // $posts = $this->posts();
     return [
       'title' => $this->title()->value(),
       'href' => $this->url(),
       'template' => 'channel',
       'layout' => $this->layout(),
-      'categories' => $posts->pluck('categories', ',', true),
-      'posts' => $posts->json(),
+      // 'categories' => $posts->pluck('categories', ',', true),
+      // 'posts' => $posts->json(),
     ];
   }
+  */
 }
 class PostPage extends Page
 {
@@ -193,9 +197,10 @@ Kirby::plugin('moritzebeling/herbert', [
       return [
         'title' => $this->title()->value(),
         'href' => $this->url(),
-        'template' => $this->intendedTemplate()
+        'template' => $this->intendedTemplate()->name(),
+        'layout' => $this->layout(),
       ];
-  	},
+  	}
   ],
 
   'pagesMethods' => [

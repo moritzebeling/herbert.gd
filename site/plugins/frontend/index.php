@@ -20,7 +20,7 @@ function flushCache( $id = false ){
 Kirby::plugin('herbert/frontend', [
 
   'options' => [
-    'cache' => true,
+    'cache' => false,
     'expires' => 1440
   ],
 
@@ -31,45 +31,69 @@ Kirby::plugin('herbert/frontend', [
 
         $kirby = kirby();
 
-        if( $page = kirby()->page( $path ) ){
-
-        } else {
-          $page = kirby()->site()->homePage();
+        $request = $kirby->request()->path()->toString();
+        if( $kirby->request()->url()->hasQuery() ){
+          $request .= '?' . $kirby->request()->query()->toString();
         }
 
-        $id = $page->id();
+        $requestId = str_replace('?','/',$request);
+
         $result = null;
         $cached = false;
 
         if( option('herbert.frontend.cache',false) ){
 
           $cache = $kirby->cache('herbert.frontend');
-          $result = $cache->get( $id );
+          $result = $cache->get( $requestId );
 
           if( $result !== null ){
             $cached = true;
+            // ready for return
           }
 
         }
 
         if( $result === null ){
+          // create result
+
+          // find the right page
+          $page = $kirby->page( $path );
+          if( $page === null ){
+            $page = $kirby->site()->homePage();
+          }
+
+          // get json data about page
           $result = $page->json();
 
+          // check if page carries posts
+          if( method_exists( $page, 'posts' ) ) {
+
+            // check if children were queried
+            $query = $kirby->request()->get();
+            if( !empty( $query ) ){
+              // $result['posts'] = $page->posts()->query( $query );
+              $result['posts'] = $page->posts()->json();
+            } else {
+              $result['posts'] = $page->posts()->json();
+            }
+
+          }
+
           if( option('herbert.frontend.cache',false) ){
-            $cache->set( $id, $result, option('herbert.frontend.expires',1440) );
+            $cache->set( $requestId, $result, option('herbert.frontend.expires',1440) );
           }
 
         }
 
         return [
           'status' => 200,
-          'request' => $kirby->request()->url()->toString(),
+          'request' => $request,
           'cached' => $cached,
           'data' => $result
         ];
 
       }
-    ]
+    ],
   ],
   'hooks' => [
 		// files

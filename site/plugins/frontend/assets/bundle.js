@@ -1602,7 +1602,7 @@ var app = (function () {
 
     const { console: console_1 } = globals;
 
-    // (33:0) {#if 'posts' in data}
+    // (37:0) {#if 'posts' in data}
     function create_if_block$3(ctx) {
     	let current;
     	const list_spread_levels = [/*data*/ ctx[0]];
@@ -1647,7 +1647,7 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(33:0) {#if 'posts' in data}",
+    		source: "(37:0) {#if 'posts' in data}",
     		ctx
     	});
 
@@ -1729,8 +1729,14 @@ var app = (function () {
     		location = "start";
     	}
 
-    	console.log(location);
-    	return location + ".json";
+    	let endpoint = location + ".json";
+
+    	if (window.location.search !== "") {
+    		endpoint += window.location.search;
+    	}
+
+    	console.log("API endpoint: " + endpoint);
+    	return endpoint;
     }
 
     function instance$3($$self, $$props, $$invalidate) {
