@@ -39,6 +39,20 @@ class HomePage extends Page
     return $this->site()->content()->featured()->toPages();
   }
 }
+
+class IndexPage extends Page
+{
+  public function layout(): string {
+    return $this->site()->layout();
+  }
+  public function dateFormat(): string {
+    return $this->site()->dateFormat();
+  }
+  public function posts(): Kirby\Cms\Pages {
+    return $this->kirby()->collection('posts');
+  }
+}
+
 class ChannelPage extends Page
 {
   public function image( string $filename = null ) {
@@ -65,6 +79,7 @@ class ChannelPage extends Page
     return $this->children()->listed()->flip();
   }
 }
+
 class PostPage extends Page
 {
   public function images() {
@@ -139,6 +154,7 @@ Kirby::plugin('moritzebeling/herbert', [
     'channel' => 'ChannelPage',
     'post' => 'PostPage',
     'start' => 'HomePage',
+    'index' => 'IndexPage',
   ],
 
   'siteMethods' => [
@@ -153,7 +169,7 @@ Kirby::plugin('moritzebeling/herbert', [
         return $this->content()->layout()->value();
       }
       return 'cards';
-  	}
+  	},
   ],
 
   'pageMethods' => [
