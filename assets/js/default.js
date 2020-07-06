@@ -156,7 +156,7 @@ onLoad(()=>{
   for (let link of links) {
     animationElements.push( new animationElement( link ) );
   }
-  console.log( animationElements );
+  // console.log( animationElements );
 });
 
 /*
