@@ -38,19 +38,6 @@ class HomePage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->site()->content()->featured()->toPages();
   }
-  /*
-  public function json(): array {
-    // $posts = $this->posts();
-    return [
-      'title' => $this->site()->title()->value(),
-      'href' => $this->site()->url(),
-      'template' => 'channel',
-      'layout' => $this->layout(),
-      // 'categories' => $posts->pluck('categories', ',', true),
-      // 'posts' => $posts->json(),
-    ];
-  }
-  */
 }
 class ChannelPage extends Page
 {
@@ -77,19 +64,6 @@ class ChannelPage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
   }
-  /*
-  public function json(): array {
-    // $posts = $this->posts();
-    return [
-      'title' => $this->title()->value(),
-      'href' => $this->url(),
-      'template' => 'channel',
-      'layout' => $this->layout(),
-      // 'categories' => $posts->pluck('categories', ',', true),
-      // 'posts' => $posts->json(),
-    ];
-  }
-  */
 }
 class PostPage extends Page
 {
@@ -141,14 +115,15 @@ class PostPage extends Page
   }
   public function json(): array {
 
-    $return = [
-      'href' => $this->url(),
-      'title' => $this->title()->value(),
+    $return = array_merge( parent::json(), [
       'subtitle' => $this->subtitle()->value(),
       'categories' => $this->categories()->split(),
       'date' => $this->displayDate(),
-      'keywords' => $this->keywords()->split(),
-    ];
+      'keywords' => $this->keywords()->split()
+    ]);
+
+    unset( $return['layout'] );
+    unset( $return['template'] );
 
     if( $image = $this->image() ){
       $return['image'] = $image->json();
