@@ -4,3 +4,16 @@
 main {
 	padding-bottom: 1rem;
 }
+
+@media (min-width: 700px) {
+	section.content {
+		display: flex;
+		gap: $space;
+		.title {
+			padding-right: $space-side;
+		}
+		> div {
+			flex: 0 0 50%;
+		}
+	}
+}

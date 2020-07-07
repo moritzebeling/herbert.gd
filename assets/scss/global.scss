@@ -129,6 +129,12 @@ body {
       // padding-bottom: 0;
     }
 
+    section.content {
+      .keywords {
+        margin-top: 3rem;
+      }
+    }
+
   }
   > footer {
     flex: 0 0 auto;

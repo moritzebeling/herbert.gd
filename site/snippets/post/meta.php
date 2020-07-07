@@ -39,10 +39,8 @@ if( count($entries) < 1 ){
 }
 
 ?>
-<section class="meta">
-	<ul class="keywords">
-		<?php foreach( $entries as $html ): ?>
-			<?= $html ?>
-		<?php endforeach; ?>
-	</ul>
-</section>
+<ul class="keywords">
+	<?php foreach( $entries as $html ): ?>
+		<?= $html ?>
+	<?php endforeach; ?>
+</ul>

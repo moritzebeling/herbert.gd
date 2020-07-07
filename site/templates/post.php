@@ -11,13 +11,23 @@
 
   <?php snippet('post/gallery') ?>
 
-  <?php if( $page->body()->isNotEmpty() ): ?>
-    <section class="content">
-      <?= $page->body()->kirbytext(); ?>
-    </section>
-  <?php endif ?>
+  <section class="content">
+    <div class="title">
 
-  <?php snippet('post/meta') ?>
+      <h1 class="title"><?= $page->title()->html() ?></h1>
+      <?php if( $page->subtitle()->isNotEmpty() ): ?>
+        <h2 class="subtitle"><?= $page->subtitle() ?></h2>
+      <?php endif; ?>
+
+      <?php snippet('post/meta') ?>
+
+    </div>
+    <div class="body">
+
+      <?= $page->body()->kirbytext(); ?>
+      
+    </div>
+  </section>
 
 </main>
 
