@@ -80,9 +80,9 @@ $space: $space-top $space-side;
 @mixin keywordCount {
 	font-size: 0.7em;
 	display: inline-block;
-	vertical-align: 0.33em;
+	vertical-align: 0.45em;
 	border-bottom: $border;
-	margin-left: 0.2em;
+	margin-left: 0.3em;
 }
 
 @mixin linkArrow {

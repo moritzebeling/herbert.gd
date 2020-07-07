@@ -22,6 +22,8 @@
   @include inlineList;
   li {
     @include button;
+    -webkit-user-select: none;
+    user-select: none;
     .count {
       @include keywordCount;
     }

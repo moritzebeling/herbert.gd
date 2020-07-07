@@ -42,8 +42,8 @@ header.site-header {
       .count {
         @include keywordCount;
         font-size: .6em;
-        vertical-align: .45em;
-        padding-bottom: 0.2em;
+        vertical-align: .38em;
+        padding-bottom: 0.1em;
       }
       /*
       span {
@@ -66,7 +66,7 @@ header.site-header {
       padding: 0.1em 0;
       &.active,
       &:hover {
-        margin-right: 0;
+        margin-right: 0.2em;
         padding: 0.1em 0.5em;
         background: #fff;
         border-radius: 1em;
