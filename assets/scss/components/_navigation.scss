@@ -1,7 +1,5 @@
 header.site-header {
 
-  position: sticky;
-  top: 0;
   width: 100%;
   padding-top: $space-top - 0.2rem;
   padding-bottom: 0;
@@ -13,55 +11,57 @@ header.site-header {
   @include fontlarge;
 
   .container {
-    display: flex;
     border-bottom: $border;
-    padding-bottom: $space-top;
+    padding-bottom: 0.7rem;
     margin-bottom: -$border-width;
-    #logo {
-      order: 2;
-    }
     nav {
-      order: 1;
       flex: 1;
     }
   }
 
   #logo {
-    width: 4.3em;
-    height: 1em;
+    width: 7em;
+    height: 1.9em;
     transform: translateY(0.1rem);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
     svg polyline {
-      stroke-width: 3px;
+      stroke-width: 2.2px;
     }
   }
   nav {
     .channels {
       li {
         display: inline;
+        -webkit-user-select: none;
+        user-select: none;
       }
     }
     a {
-      margin: 0.1rem 0.2em 0.1rem 0;
-      span {
-        display: none;
-      }
-      abbr {
-        display: inline;
-      }
+      margin: 0.1rem 0.3em 0.1rem 0;
       .count {
         @include keywordCount;
         font-size: .6em;
         vertical-align: .45em;
         padding-bottom: 0.2em;
       }
+      /*
+      span {
+        display: none;
+      }
+      abbr {
+        display: inline;
+      }
       @media only screen and (min-width: 800px) {
+      */
         span {
           display: inline;
         }
         abbr {
           display: none;
         }
-      }
+
+      // }
       transition: padding 300ms ease, margin 300ms ease;
       padding: 0.1em 0;
       &.active,
