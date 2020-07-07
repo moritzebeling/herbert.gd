@@ -45,6 +45,7 @@ header.site-header {
         vertical-align: .38em;
         padding-bottom: 0.1em;
       }
+      
       /*
       span {
         display: none;
@@ -60,8 +61,8 @@ header.site-header {
         abbr {
           display: none;
         }
-
       // }
+
       transition: padding 300ms ease, margin 300ms ease;
       padding: 0.1em 0;
       &.active,

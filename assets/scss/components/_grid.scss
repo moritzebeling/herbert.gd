@@ -80,18 +80,16 @@
 
 		figure {
 			background-color: #000;
-			// flex: 1;
-			img {
-				// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  			// filter: grayscale(100%);
+			img, iframe {
 				transition: opacity 600ms ease;
 			}
 		}
+
 		> a:hover {
-			figure img {
-				// -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
-  			// filter: grayscale(0);
-				opacity: 1;
+			figure {
+				img, iframe {
+					opacity: 1;
+				}
 			}
 		}
 

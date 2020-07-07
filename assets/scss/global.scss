@@ -148,7 +148,7 @@ body {
     @include list;
   }
   li.hide {
-    img {
+    img, iframe {
       opacity: 0;
     }
   }
