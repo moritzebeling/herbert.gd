@@ -71,8 +71,7 @@ Kirby::plugin('herbert/frontend', [
             // check if children were queried
             $query = $kirby->request()->get();
             if( !empty( $query ) ){
-              // $result['posts'] = $page->posts()->query( $query );
-              $result['posts'] = $page->posts()->json();
+              $result['posts'] = SiteSearch::query( $query )->json();
             } else {
               $result['posts'] = $page->posts()->json();
             }
