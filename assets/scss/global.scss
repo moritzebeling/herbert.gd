@@ -36,6 +36,9 @@ p {
   + p {
     text-indent: 2em;
   }
+  a {
+    border-bottom: $border;
+  }
 }
 ::selection {
   background-color: #ff0;
