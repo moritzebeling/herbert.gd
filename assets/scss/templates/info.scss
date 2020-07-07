@@ -29,35 +29,52 @@ main {
 		&.team {
 			ul {
 				display: grid;
-				grid-template-columns: 1fr 1fr;
+				grid-template-columns: 1fr;
+        gap: $space-top 0;
+        @media (min-width: 700px) {
+      		grid-template-columns: 1fr 1fr;
+      	}
 			}
 			.person {
-				&:nth-child(odd){
-					border-right: $border;
-					padding-right: $space-side;
-				}
-				&:nth-child(even){
-					padding-left: $space-side;
-				}
+        padding-top: 1rem;
+        border-top: $border;
+        &:nth-child(1){
+          border-top: none;
+          padding-top: 0;
+        }
+        @media (min-width: 700px) {
+          &:nth-child(2){
+            border-top: none;
+            padding-top: 0;
+          }
+      	}
+        @media (min-width: 700px) {
+          &:nth-child(odd){
+  					border-right: $border;
+  					padding-right: $space-side;
+  				}
+  				&:nth-child(even){
+  					padding-left: $space-side;
+  				}
+      	}
 
 				figure {
-					width: 50%;
-					padding-top: 37.5%;
 					position: relative;
-					background-color: $color;
-					img {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						object-position: center;
-					}
+          figcaption {
+            @include fontsmall;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0.5em 1em;
+            width: 100%;
+            text-align: right;
+            color: #fff;
+            opacity: 0.5;
+          }
 				}
 				.name {
 					margin: $space-top 0 0.5em;
-					@include allcaps;
+					@include fontlarge;
 				}
 				.link {
 					margin-top: $space-top;

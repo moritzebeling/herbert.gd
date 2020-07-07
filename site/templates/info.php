@@ -24,6 +24,7 @@
             <figure>
               <?php if( $image = $member->image()->toFile() ): ?>
                 <?= $image->tag(); ?>
+                <figcaption>&copy; <?= $image->credits(); ?></figcaption>
               <?php endif; ?>
             </figure>
 
