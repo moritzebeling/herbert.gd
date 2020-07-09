@@ -27,134 +27,20 @@ function isolateInitials( string $text ): string {
   return implode('', $sequence);
 }
 
-class HomePage extends Page
-{
-  public function layout(): string {
-    return $this->site()->layout();
-  }
-  public function dateFormat(): string {
-    return $this->site()->dateFormat();
-  }
-  public function posts(): Kirby\Cms\Pages {
-    return $this->site()->content()->featured()->toPages();
-  }
-}
-
-class IndexPage extends Page
-{
-  public function layout(): string {
-    return $this->site()->layout();
-  }
-  public function dateFormat(): string {
-    return $this->site()->dateFormat();
-  }
-  public function posts(): Kirby\Cms\Pages {
-    return $this->kirby()->collection('posts');
-  }
-}
-
-class ChannelPage extends Page
-{
-  public function image( string $filename = null ) {
-    if( $filename !== null ){
-      return parent::image( $filename );
-    } else if( $image = $this->content()->image()->toFile() ){
-      return $image;
-    }
-    return $this->images()->first();
-  }
-  public function dateFormat(): string {
-    if( $this->content()->dateFormat()->isNotEmpty() ) {
-      return $this->content()->dateFormat()->value();
-    }
-    return $this->site()->dateFormat();
-  }
-  public function layout(): string {
-    if( $this->content()->layout()->isNotEmpty() ) {
-      return $this->content()->layout()->value();
-    }
-    return $this->site()->layout();
-  }
-  public function posts(): Kirby\Cms\Pages {
-    return $this->children()->listed()->flip();
-  }
-}
-
-class PostPage extends Page
-{
-  public function images() {
-    return parent::images()->sortBy('sort', 'ASC', 'filename', 'ASC');
-  }
-  public function image( string $filename = null ) {
-    if( $filename !== null ){
-      return parent::image( $filename );
-    } else if( $image = $this->content()->image()->toFile() ){
-      return $image;
-    }
-    return $this->images()->first();
-  }
-  public function gallery( bool $filter = true ) {
-    if( $filter === true ){
-      return $this->images()->filter(function($image) {
-        return !$image->exclude()->isTrue();
-      });
-    }
-    return $this->images();
-  }
-  public function channel(): ChannelPage {
-    return $this->parent();
-  }
-  public function dateFormat(): string {
-    return $this->channel()->dateFormat();
-  }
-  public function displayDate( string $format = null ): string {
-
-    $format = $format !== null ? $format : $this->dateFormat();
-
-    switch ($format) {
-      case 'none':
-        return '';
-      case 'semester':
-        return $this->date()->toSemester();
-      case 'day':
-        $dateFormat = 'd/m/Y';
-        break;
-      case 'month':
-        $dateFormat = 'm/Y';
-        break;
-      default:
-        $dateFormat = 'Y';
-    }
-
-    return $this->date()->toDate( $dateFormat );
-  }
-  public function json(): array {
-
-    $return = array_merge( parent::json(), [
-      'subtitle' => $this->subtitle()->value(),
-      'categories' => $this->categories()->split(),
-      'date' => $this->displayDate(),
-      'keywords' => $this->keywords()->split()
-    ]);
-
-    unset( $return['layout'] );
-    unset( $return['template'] );
-
-    if( $image = $this->image() ){
-      $return['image'] = $image->json();
-    }
-
-    return $return;
-  }
-}
+require_once __DIR__.'/models/ChannelPage.php';
+require_once __DIR__.'/models/HomePage.php';
+require_once __DIR__.'/models/IndexPage.php';
+require_once __DIR__.'/models/InfoPage.php';
+require_once __DIR__.'/models/PostPage.php';
 
 Kirby::plugin('moritzebeling/herbert', [
 
   'pageModels' => [
     'channel' => 'ChannelPage',
-    'post' => 'PostPage',
     'start' => 'HomePage',
     'index' => 'IndexPage',
+    'info' => 'InfoPage',
+    'post' => 'PostPage',
   ],
 
   'siteMethods' => [
