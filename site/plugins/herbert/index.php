@@ -27,6 +27,22 @@ function isolateInitials( string $text ): string {
   return implode('', $sequence);
 }
 
+function linkText( Kirby\Cms\Field $text, string $url ): string {
+
+  if( $text->isNotEmpty() ){
+    $text = $text->html()->value();
+  } else {
+    $text = parse_url( $url, PHP_URL_HOST );
+  }
+
+  $text = str_replace('http://','',$text);
+  $text = str_replace('https://','',$text);
+  $text = str_replace('www.','',$text);
+
+  return $text;
+
+}
+
 require_once __DIR__.'/models/ChannelPage.php';
 require_once __DIR__.'/models/HomePage.php';
 require_once __DIR__.'/models/IndexPage.php';

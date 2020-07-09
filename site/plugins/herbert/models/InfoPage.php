@@ -11,8 +11,6 @@ class InfoPage extends Page
       'email' => $this->contact()->value(),
     ]) );
 
-    unset( $return['layout'] );
-
     /* team members */
     foreach( $this->team()->toStructure() as $item ){
       $member = array_filter([
@@ -33,16 +31,16 @@ class InfoPage extends Page
     /* credits */
     $return['credits'] = [
       [
-        'job' => 'Webdesign & Programming',
-        'name' => 'Moritz Ebeling',
-        'link' => 'https://moritzebeling.com',
+        'headline' => 'Webdesign & Programming',
+        'text' => 'Moritz Ebeling',
+        'url' => 'https://moritzebeling.com',
       ]
     ];
     foreach( $this->credits()->toStructure() as $item ){
       $return['credits'][] = array_filter([
-        'job' => $item->job()->html()->value(),
-        'name' => $item->name()->html()->value(),
-        'link' => $item->link()->value(),
+        'headline' => $item->job()->html()->value(),
+        'text' => $item->name()->html()->value(),
+        'url' => $item->link()->value(),
       ]);
     }
 

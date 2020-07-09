@@ -25,4 +25,29 @@ class ChannelPage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
   }
+  public function json(): array {
+
+    $return = parent::json();
+
+    if( $this->showDescription()->isTrue() ){
+      
+      $return['description'] = $this->description()->kirbytextinline()->value();
+
+      /* links */
+      foreach( $this->links()->toStructure() as $item ){
+        $link = [
+          'text' => linkText( $item->title(), $item->url()->value() ),
+          'url' => $item->url()->value()
+        ];
+
+        if( !isset($return['links']) ){
+          $return['links'] = [];
+        }
+        $return['links'][] = $link;
+      }
+
+    }
+
+    return $return;
+  }
 }

@@ -66,8 +66,8 @@ Kirby::plugin('herbert/frontend', [
           $result = $page->json();
 
           // check if page carries posts
+          /*
           if( method_exists( $page, 'posts' ) ) {
-
             // check if children were queried
             $query = $kirby->request()->get();
             if( !empty( $query ) ){
@@ -75,8 +75,8 @@ Kirby::plugin('herbert/frontend', [
             } else {
               $result['posts'] = $page->posts()->json();
             }
-
           }
+          */
 
           if( option('herbert.frontend.cache',false) ){
             $cache->set( $requestId, $result, option('herbert.frontend.expires',1440) );
