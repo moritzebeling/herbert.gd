@@ -95,48 +95,31 @@ Kirby::plugin('herbert/frontend', [
     ],
   ],
   'hooks' => [
-		// files
-		'file.changeName:after' => function ( $file, $old ) {
-			flushCache( $file->parentId() );
-		},
-		'file.changeSort:after' => function ( $file, $old ) {
-      flushCache( $file->parentId() );
-		},
-		'file.create:after' => function ( $file ) {
-      flushCache( $file->parentId() );
-		},
-		'file.delte:after' => function ( $status, $file ) {
-      flushCache( $file->parentId() );
-		},
-		'file.replace:after' => function ( $file, $old ) {
-      flushCache( $file->parentId() );
-		},
-		'file.update:after' => function ( $file, $old ) {
-      flushCache( $file->parentId() );
-		},
-		// pages
-		'page.changeSlug:after' => function ($page, $old) {
-			flushCache( $page->id() );
-		},
-		'page.changeStatus:after' => function ($page, $old) {
-			flushCache( $page->id() );
-		},
-		'page.changeTitle:after' => function ($page, $old) {
-			flushCache( $page->id() );
-		},
-		'page.create:after' => function ($page) {
-			flushCache( $page->id() );
-		},
-		'page.delete:after' => function ($status, $page) {
-			flushCache( $page->id() );
-		},
-		'page.duplicate:after' => function ($page) {
-			flushCache( $page->id() );
-		},
-		'page.update:after' => function ($page, $old) {
-			flushCache( $page->id() );
-		},
-		// site
+    'page.*:after' => function ( $event ) {
+      $page = $event->page() ? $event->page() : $event->newPage();
+      switch ( $event->action() ) {
+        case 'create':
+        case 'delete':
+        case 'changeSlug':
+        case 'changeStatus':
+        case 'changeTitle':
+        case 'duplicate':
+        case 'update':
+          flushCache( $page->id() );
+      }
+    },
+    'file.*:after' => function ( $event ) {
+      $file = $event->file() ? $event->file() : $event->newFile();
+      switch ( $event->action() ) {
+        case 'create':
+        case 'delete':
+        case 'changeName':
+        case 'changeSort':
+        case 'replace':
+        case 'update':
+          flushCache( $file->parentId() );
+      }
+    },
     /*
 		'site.update:after' => function () {
 			flushCache();
