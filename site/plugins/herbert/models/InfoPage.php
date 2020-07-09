@@ -4,25 +4,22 @@ class InfoPage extends Page
 {
   public function json(): array {
 
-    $return = parent::json();
+    $return = array_merge( parent::json(), array_filter([
+      'description' => $this->body()->kirbytextinline()->value(),
+      'collaboration' => option('repo'),
+      'imprint' => $this->imprint()->value(),
+      'email' => $this->contact()->value(),
+    ]) );
+
     unset( $return['layout'] );
 
-    $return['description'] = $this->body()->kirbytextinline()->value();
-    $return['collaboration'] = option('repo');
-    $return['imprint'] = $this->imprint()->value();
-
-    if( $this->contact()->isNotEmpty() ){
-      $return['email'] = $this->contact()->value();
-    }
-
+    /* team members */
     foreach( $this->team()->toStructure() as $item ){
-      $member = [
+      $member = array_filter([
         'name' => $item->name()->html()->value(),
-        'description' => $item->text()->kirbytextinline()->value()
-      ];
-      if( $item->link()->isNotEmpty() ){
-        $member['link'] = $item->link()->value();
-      }
+        'description' => $item->text()->kirbytextinline()->value(),
+        'link' => $item->link()->value()
+      ]);
       if( $image = $item->image()->toFile() ){
         $member['image'] = $image->json();
       }
@@ -33,6 +30,7 @@ class InfoPage extends Page
       $return['team'][] = $member;
     }
 
+    /* credits */
     $return['credits'] = [
       [
         'job' => 'Webdesign & Programming',
@@ -41,14 +39,11 @@ class InfoPage extends Page
       ]
     ];
     foreach( $this->credits()->toStructure() as $item ){
-      $credit = [
+      $return['credits'][] = array_filter([
         'job' => $item->job()->html()->value(),
-        'name' => $item->name()->html()->value()
-      ];
-      if( $item->link()->isNotEmpty() ){
-        $credit['link'] = $item->link()->value();
-      }
-      $return['credits'][] = $credit;
+        'name' => $item->name()->html()->value(),
+        'link' => $item->link()->value(),
+      ]);
     }
 
     return $return;
