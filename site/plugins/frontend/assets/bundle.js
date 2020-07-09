@@ -1093,9 +1093,10 @@ var app = (function () {
 
     // (42:0) {#if posts.length > 0}
     function create_if_block$2(ctx) {
-    	let div;
+    	let div0;
     	let ul;
     	let t;
+    	let div1;
     	let ol;
     	let ol_class_value;
     	let current;
@@ -1125,7 +1126,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div0 = element("div");
     			ul = element("ul");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
@@ -1133,6 +1134,7 @@ var app = (function () {
     			}
 
     			t = space();
+    			div1 = element("div");
     			ol = element("ol");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -1141,21 +1143,24 @@ var app = (function () {
 
     			attr_dev(ul, "class", "keywords filters");
     			add_location(ul, file$2, 45, 2, 666);
-    			attr_dev(div, "class", "result-options");
-    			add_location(div, file$2, 43, 1, 634);
+    			attr_dev(div0, "class", "result-options");
+    			add_location(div0, file$2, 43, 1, 634);
     			attr_dev(ol, "class", ol_class_value = /*setLayout*/ ctx[4](/*layout*/ ctx[1]));
-    			add_location(ol, file$2, 55, 1, 983);
+    			add_location(ol, file$2, 56, 2, 1012);
+    			attr_dev(div1, "class", "list-wrapper");
+    			add_location(div1, file$2, 55, 1, 983);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, ul);
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, ul);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(ul, null);
     			}
 
     			insert_dev(target, t, anchor);
-    			insert_dev(target, ol, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, ol);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(ol, null);
@@ -1253,10 +1258,10 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div0);
     			destroy_each(each_blocks_1, detaching);
     			if (detaching) detach_dev(t);
-    			if (detaching) detach_dev(ol);
+    			if (detaching) detach_dev(div1);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -1364,7 +1369,7 @@ var app = (function () {
     	return block;
     }
 
-    // (57:2) {#each posts as post}
+    // (58:3) {#each posts as post}
     function create_each_block$1(ctx) {
     	let current;
 
@@ -1408,7 +1413,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(57:2) {#each posts as post}",
+    		source: "(58:3) {#each posts as post}",
     		ctx
     	});
 

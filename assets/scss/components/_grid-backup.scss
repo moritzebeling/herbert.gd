@@ -1,8 +1,6 @@
 @import '../variables';
 
 @mixin carditem {
-
-	/*
 	grid-column-end: span 1;
 	grid-row-end: span 1;
 
@@ -12,13 +10,12 @@
 	margin-bottom: 3rem;
 
 	min-height: 8em;
-	*/
 
 	&.portrait {
-		// grid-row-end: span 2;
+		grid-row-end: span 2;
 	}
 	&.landscape {
-		// grid-column-end: span 1;
+		grid-column-end: span 1;
 	}
 
 	/*
@@ -39,19 +36,16 @@
 
 }
 
-main .list-wrapper {
-	padding: 0 $space-side*0.5;
-}
+
 
 @mixin grid {
 	display: grid;
 	grid-auto-flow: row;
+	max-width: 100%;
 
 	grid-template-columns: 1fr 1fr;
 	gap: $gap;
-	// margin: 0 $space-side;
-	// padding: 0;
-
+	padding: 0 $space-side;
 
 	@media only screen and (min-width: 700px) {
 		grid-template-columns: 1fr 1fr 1fr;
@@ -71,14 +65,10 @@ main .list-wrapper {
 
 	> li {
 		@include carditem;
-
-		// width: 25%;
-
 		// margin-bottom: 1rem;
 		// background-color: #fff;
 
 		// display: flex;
-		// padding: 0 $space-side*0.5 2rem $space-side*0.5;
 		> a {
 			// flex: 1;
 			// display: flex;

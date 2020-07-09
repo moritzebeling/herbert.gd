@@ -38,6 +38,21 @@
 		// stickybits('.sticky', { useStickyClasses: true });
 	</script>
 
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script>
+		/*
+		setTimeout(function(){
+			var elem = document.querySelector('.grid');
+			var iso = new Isotope( elem, {
+			  // options packery
+			  itemSelector: 'li',
+			  layoutMode: 'masonry',
+				percentPosition: true,
+			});
+		}, 3000);
+		*/
+	</script>
+
 	<?php if( $page->IntendedTemplate()->name() === 'post' ){
 		snippet('post/footerScripts');
 	} ?>

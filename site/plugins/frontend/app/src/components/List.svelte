@@ -53,10 +53,12 @@
 
 	</div>
 
-	<ol class="{setLayout(layout)}">
-		{#each posts as post}
-			<Item post={post} show={filter === false || post.categories.includes(filter)} />
-		{/each}
-	</ol>
+	<div class="list-wrapper">
+		<ol class="{setLayout(layout)}">
+			{#each posts as post}
+				<Item post={post} show={filter === false || post.categories.includes(filter)} />
+			{/each}
+		</ol>
+	</div>
 
 {/if}
