@@ -39,8 +39,8 @@
 
     <div id="frontend"></div>
 
-    <?= js('media/plugins/herbert/frontend/bundle.js'); ?>
-    <?php echo css('media/plugins/herbert/frontend/bundle.css'); ?>
+    <?= js('assets/frontend/bundle.js'); ?>
+    <?php echo css('assets/frontend/bundle.css'); ?>
 
 </body>
 </html>

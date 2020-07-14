@@ -27,19 +27,16 @@
 
 <Router url="{url}">
 
-	<Header {site} />
 
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="channel">Channel</Link>
-  </nav>
-
-  <main>
-    <Route path="/" component="{Channel}" />
-    <Route path=":channel" component="{Channel}" />
-    <Route path=":channel/:post" component="{Post}" />
-    <Route path="info" component="{Info}" />
-  </main>
+  {#if site.data}
+	  <Header site={site.data} />
+    <main>
+      <Route site={site.data} path="/" component="{Channel}" />
+      <Route site={site.data} path=":channel" component="{Channel}" />
+      <Route site={site.data} path=":channel/:post" component="{Post}" />
+      <Route site={site.data} path="info" component="{Info}" />
+    </main>
+  {/if}
 
 	<Footer />
 

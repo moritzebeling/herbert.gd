@@ -13,20 +13,20 @@
 
     <nav>
       <ol class="channels">
-        {#if site.data}
-          {#each site.data.channels as channel}
-
-            <li>
-              <Link to="{channel.href}">
-                {channel.title}<span class="count">15</span>
-              </Link>
-            </li>
-
-          {/each}
+        {#each site.channels as channel}
 
           <li>
-            <Link to="{site.data.info.href}">
-              {site.data.info.title}
+            <Link to="{channel.href}">
+              {channel.title}<span class="count">15</span>
+            </Link>
+          </li>
+
+        {/each}
+        {#if site.info }
+
+          <li>
+            <Link to="{site.info.href}">
+              {site.info.title}
             </Link>
           </li>
 
