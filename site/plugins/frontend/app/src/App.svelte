@@ -1,42 +1,25 @@
 <script>
+  import { Router, Link, Route } from "svelte-routing";
 
-	import { writable } from 'svelte/store';
-	let data = {};
+  import Home from "./routes/Home.svelte";
+  import Channel from "./routes/Channel.svelte";
+  import Info from "./routes/Info.svelte";
 
-	function requestUrl(){
-		let location = window.location.pathname;
-		if( location === '/' ){
-			location = 'start';
-		}
-		let endpoint = location + '.json';
-		if( window.location.search !== '' ){
-			endpoint += window.location.search;
-		}
-		console.log( 'API endpoint: '+endpoint );
-		return endpoint;
-	}
+  import Header from "./components/Header.svelte";
 
-	fetch( requestUrl(), {
-		method: "GET"
-	})
-	.then(response => response.json())
-	.then(response => {
-
-		console.log( response.data );
-		data = response.data;
-
-	})
-	.catch(error => {
-		console.log(error);
-	});
-
-	import List from './components/List.svelte';
-
+  export let url = "";
 </script>
 
-{#if 'posts' in data}
-	<List {...data} />
-{/if}
-
-<style>
-</style>
+<Router url="{url}">
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="channel">Channel</Link>
+    
+	<Header />
+  </nav>
+  <div>
+    <Route path="/" component="{Home}" />
+    <Route path="channel" component="{Channel}" />
+    <Route path="info" component="{Info}" />
+  </div>
+</Router>
