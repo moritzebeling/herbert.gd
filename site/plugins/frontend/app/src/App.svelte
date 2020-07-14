@@ -1,49 +1,33 @@
 <script>
   import { Router, Link, Route } from "svelte-routing";
+  import { onDestroy } from 'svelte';
 
-  import Home from "./routes/Home.svelte";
   import Channel from "./routes/Channel.svelte";
   import Info from "./routes/Info.svelte";
+  import Post from "./routes/Post.svelte";
+
+  export let url = "";
 
   import Header from "./components/Header.svelte";
   import Footer from "./components/Footer.svelte";
 
-  export let url = "";
+  import { loadData } from './data/fetch.js';
+  let siteStore = loadData('index.json');
 
-
-  import { onDestroy } from 'svelte';
-  import { initialValue, makeSiteStore } from './stores/site.js';
-
-  let store = makeSiteStore();
-	let site = initialValue();
-  let unsubscribe;
-
-  onDestroy(() => {
-    if(unsubscribe) {
-      unsubscribe();
-      unsubscribe = null;
-    }
+  let site;
+  let unsubscribe = siteStore.subscribe(data => {
+    site = data;
   });
 
-  function updateSite(data) {
-    site = data;
-  }
-
-  if(!unsubscribe) {
-    unsubscribe = store.subscribe(updateSite);
-  }
+  onDestroy(() => {
+    unsubscribe = null;
+  });
 
 </script>
 
 <Router url="{url}">
 
-  {#if site.data}
-    {#each site.data.channels as channel}
-      {channel.title}
-    {/each}
-  {/if}
-
-	<Header />
+	<Header {site} />
 
   <nav>
     <Link to="/">Home</Link>
@@ -51,8 +35,9 @@
   </nav>
 
   <main>
-    <Route path="/" component="{Home}" />
-    <Route path="channel" component="{Channel}" />
+    <Route path="/" component="{Channel}" />
+    <Route path=":channel" component="{Channel}" />
+    <Route path=":channel/:post" component="{Post}" />
     <Route path="info" component="{Info}" />
   </main>
 

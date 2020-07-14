@@ -103,7 +103,7 @@ Kirby::plugin('moritzebeling/herbert', [
     'json' => function ( bool $full = true ): array {
       return [
         'title' => $this->title()->value(),
-        'href' => $this->url(),
+        'href' => $this->id(),
         'template' => $this->intendedTemplate()->name(),
         'layout' => $this->layout(),
       ];
