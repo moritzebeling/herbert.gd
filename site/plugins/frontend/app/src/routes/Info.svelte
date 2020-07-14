@@ -3,14 +3,14 @@
     import Person from './../components/Person.svelte';
     import Text from './../components/Text.svelte';
 
-    export let site;
+    export let info;
 
 </script>
 
 <section class="content">
 
-    {#if site.info.description}
-        <Text large={true}>{@html site.info.description}</Text>
+    {#if info.description}
+        <Text large={true}>{@html info.description}</Text>
     {/if}
 
     <!-- links -->
@@ -21,10 +21,10 @@
 
 </section>
 
-{#if 'team' in site.info}
+{#if 'team' in info}
     <section class="team">
         <ul>
-            {#each site.info.team as person}
+            {#each info.team as person}
                 <Person {person} />
             {/each}
         </ul>

@@ -82,7 +82,7 @@ Kirby::plugin('moritzebeling/herbert', [
         $json['info'] = $info->json();
       }
       if( $channels = $this->kirby()->collection('channels') ){
-        $json['channels'] = $channels->json();
+        $json['channels'] = $channels->json( true );
       }
       return $json;
   	}

@@ -20,7 +20,7 @@ function flushCache( $id = false ){
 Kirby::plugin('herbert/frontend', [
 
   'options' => [
-    'cache' => true,
+    'cache' => false,
     'expires' => 1440
   ],
 
@@ -51,11 +51,11 @@ Kirby::plugin('herbert/frontend', [
           // find the right page
           if( $path === 'index' ){
 
-            $data = $kirby->site()->json();
+            $data = $kirby->site()->json( true );
 
           } else if( $path === 'posts' ){
 
-            $data = $kirby->collection('posts')->json();
+            $data = $kirby->collection('posts')->json( false );
 
           } else if( $page = $kirby->page( $path ) ){
 

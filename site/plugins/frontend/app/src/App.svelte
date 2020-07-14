@@ -12,29 +12,47 @@
   import Footer from "./components/Footer.svelte";
 
   import { loadData } from './data/fetch.js';
+
+  /* site */
   let siteStore = loadData('index.json');
 
   let site;
-  let unsubscribe = siteStore.subscribe(data => {
+  let unsubscribeSiteStore = siteStore.subscribe(data => {
     site = data;
   });
 
+  /* posts */
+  let postsStore = loadData('posts.json');
+
+  let posts;
+  let unsubscribePostsStore = postsStore.subscribe(data => {
+    posts = data;
+  });
+
   onDestroy(() => {
-    unsubscribe = null;
+    unsubscribeSiteStore = null;
+    unsubscribePostsStore = null;
   });
 
 </script>
 
 <Router url="{url}">
 
-
   {#if site.data}
 	  <Header site={site.data} />
+
     <main>
+
       <Route site={site.data} path="/" component="{Channel}" />
-      <Route site={site.data} path=":channel" component="{Channel}" />
-      <Route site={site.data} path=":channel/:post" component="{Post}" />
-      <Route site={site.data} path="info" component="{Info}" />
+
+      <Route info={site.data.info} path="info" component="{Info}" />
+
+      <Route path=":channel" let:params>
+        <Channel posts={posts.data} channels={site.data.channels} slug="{params.channel}" />
+      </Route>
+
+      <Route post={site.data} path=":channel/:post" component="{Post}" />
+
     </main>
   {/if}
 
