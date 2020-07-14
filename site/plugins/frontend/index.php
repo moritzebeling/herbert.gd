@@ -20,7 +20,7 @@ function flushCache( $id = false ){
 Kirby::plugin('herbert/frontend', [
 
   'options' => [
-    'cache' => false,
+    'cache' => true,
     'expires' => 1440
   ],
 
@@ -30,65 +30,57 @@ Kirby::plugin('herbert/frontend', [
       'action'  => function ( $path ) {
 
         $kirby = kirby();
-
-        $request = $kirby->request()->path()->toString();
-        if( $kirby->request()->url()->hasQuery() ){
-          $request .= '?' . $kirby->request()->query()->toString();
-        }
-
-        $requestId = str_replace('?','/',$request);
-
-        $result = null;
         $cached = false;
+        $data = null;
 
         if( option('herbert.frontend.cache',false) ){
 
           $cache = $kirby->cache('herbert.frontend');
-          $result = $cache->get( $requestId );
+          $data = $cache->get( $path );
 
-          if( $result !== null ){
+          if( $data !== null ){
             $cached = true;
             // ready for return
           }
 
         }
 
-        if( $result === null ){
-          // create result
+        if( $data === null ){
+          // create data
 
           // find the right page
-          $page = $kirby->page( $path );
-          if( $page === null ){
-            $page = $kirby->site()->homePage();
-          }
+          if( $path === 'index' ){
 
-          // get json data about page
-          $result = $page->json();
+            $data = $kirby->site()->json();
 
-          // check if page carries posts
-          /*
-          if( method_exists( $page, 'posts' ) ) {
-            // check if children were queried
-            $query = $kirby->request()->get();
-            if( !empty( $query ) ){
-              $result['posts'] = SiteSearch::query( $query )->json();
-            } else {
-              $result['posts'] = $page->posts()->json();
-            }
+          } else if( $path === 'posts' ){
+
+            $data = $kirby->collection('posts')->json();
+
+          } else if( $page = $kirby->page( $path ) ){
+
+            $data = $page->json( true );
+
+          } else {
+
+            return [
+              'status' => 404,
+              'route' => $path,
+            ];
+
           }
-          */
 
           if( option('herbert.frontend.cache',false) ){
-            $cache->set( $requestId, $result, option('herbert.frontend.expires',1440) );
+            $cache->set( $path, $data, option('herbert.frontend.expires',1440) );
           }
 
         }
 
         return [
           'status' => 200,
-          'request' => $request,
+          'route' => $path,
           'cached' => $cached,
-          'data' => $result
+          'data' => $data
         ];
 
       }
