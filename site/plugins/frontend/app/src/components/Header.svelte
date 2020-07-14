@@ -1,6 +1,7 @@
 <script>
-    import { Router, Link, Route } from "svelte-routing";
-    import Logo from './Logo.svelte';
+  import { Router, Link, Route } from "svelte-routing";
+  import Logo from './Logo.svelte';
+
 </script>
 
 <header class="site-header">
@@ -10,6 +11,13 @@
 
       <nav>
         <ol class="channels">
+
+          <!-- {#if site.data}
+            {#each site.data.channels as channel}
+              {channel.title}
+            {/each}
+          {/if} -->
+
             <li>
               <a class="" title="Activities" href="http://localhost:8000/activities">
                 <span class="full">Activities</span><abbr title="Activities">A</abbr><span class="count">15</span>

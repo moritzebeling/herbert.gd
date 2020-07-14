@@ -73,12 +73,18 @@ Kirby::plugin('moritzebeling/herbert', [
       return 'cards';
   	},
     'json' => function ( bool $full = true ): array {
-      return [
+      $json = [
         'title' => $this->title()->value(),
         'href' => $this->url(),
-        'template' => $this->intendedTemplate()->name(),
-        'layout' => $this->layout(),
+        'layout' => $this->layout()
       ];
+      if( $info = $this->page('info') ){
+        $json['info'] = $info->json();
+      }
+      if( $channels = $this->kirby()->collection('channels') ){
+        $json['channels'] = $channels->json();
+      }
+      return $json;
   	}
   ],
 
