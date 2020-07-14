@@ -2,9 +2,15 @@
 
 class InfoPage extends Page
 {
-  public function json(): array {
+  public function json( bool $full = true ): array {
 
-    $return = array_merge( parent::json(), array_filter([
+    $return = parent::json();
+
+    if( $full !== true ){
+      return $return;
+    }
+
+    $return = array_merge( $return, array_filter([
       'description' => $this->body()->kirbytextinline()->value(),
       'collaboration' => option('repo'),
       'imprint' => $this->imprint()->value(),

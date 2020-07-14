@@ -25,12 +25,13 @@ class ChannelPage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
   }
-  public function json(): array {
+  public function json( bool $full = true ): array {
 
     $return = parent::json();
+    $return['id'] = $this->num();
 
-    if( $this->showDescription()->isTrue() ){
-      
+    if( $full === true && $this->showDescription()->isTrue() ){
+
       $return['description'] = $this->description()->kirbytextinline()->value();
 
       /* links */

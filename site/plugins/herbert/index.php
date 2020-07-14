@@ -72,6 +72,14 @@ Kirby::plugin('moritzebeling/herbert', [
       }
       return 'cards';
   	},
+    'json' => function ( bool $full = true ): array {
+      return [
+        'title' => $this->title()->value(),
+        'href' => $this->url(),
+        'template' => $this->intendedTemplate()->name(),
+        'layout' => $this->layout(),
+      ];
+  	}
   ],
 
   'pageMethods' => [
@@ -86,7 +94,7 @@ Kirby::plugin('moritzebeling/herbert', [
       }
       return '';
   	},
-    'json' => function (): array {
+    'json' => function ( bool $full = true ): array {
       return [
         'title' => $this->title()->value(),
         'href' => $this->url(),
@@ -116,10 +124,10 @@ Kirby::plugin('moritzebeling/herbert', [
   		}
   		return array_unique($return);
   	},
-    'json' => function(): array {
+    'json' => function( bool $full = false ): array {
       $json = [];
       foreach($this as $page) {
-        $json[] = $page->json();
+        $json[] = $page->json( $full );
       }
       return $json;
     }
@@ -159,6 +167,16 @@ Kirby::plugin('moritzebeling/herbert', [
       $text = str_replace('www.','',$text);
       return Html::a($field->value, $text, $attr ?? []);
     },
+  ],
+
+  'filesMethods' => [
+    'json' => function( bool $full = false ): array {
+      $json = [];
+      foreach($this as $page) {
+        $json[] = $page->json( $full );
+      }
+      return $json;
+    }
   ],
 
   'fileMethods' => [
@@ -215,19 +233,18 @@ Kirby::plugin('moritzebeling/herbert', [
       return $help;
 
   	},
-    'json' => function(): array {
+    'json' => function( bool $full = true ): array {
+
+      $return = [
+        'orientation' => $this->orientation(),
+        'image' => $this->tag()
+      ];
 
       if( $this->videoUrl()->isNotEmpty() ){
-        return [
-          'type' => 'video',
-          'html' => video( $this->videoUrl()->value(), option('video') )
-        ];
+        $return['video'] = video( $this->videoUrl()->value(), option('video') );
       }
-      return [
-        'type' => 'image',
-        'orientation' => $this->orientation(),
-        'html' => $this->tag()
-      ];
+
+      return $return;
 
     }
   ]
