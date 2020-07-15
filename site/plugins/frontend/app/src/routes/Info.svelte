@@ -7,7 +7,7 @@
 
 </script>
 
-<section class="content">
+<header class="content">
 
     {#if info.description}
         <Text large={true}>{@html info.description}</Text>
@@ -19,7 +19,7 @@
         <li>Keywords</li>
     </ul>
 
-</section>
+</header>
 
 {#if 'team' in info}
     <section class="team">

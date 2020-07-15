@@ -1,5 +1,5 @@
 // colors
-$background: #ddd;
+$background: #ccc;
 $color: #000;
 $yellow: #ff0;
 $grey: #ccc;
@@ -27,7 +27,9 @@ $font-large: 1.8rem;
 	line-height: 1.2;
 }
 @mixin sans {
-	font-family: Helvetica, Arial, sans-serif;
+	// font-family: Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
 @mixin hyphens {
 	hyphens: auto;

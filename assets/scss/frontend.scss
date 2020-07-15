@@ -1,0 +1,168 @@
+// https://sass-lang.com/documentation
+// sass --watch --style=compressed assets/scss:assets/css
+
+@import 'variables';
+
+//
+// typography
+//
+html {
+  font-size: 1em;
+}
+body {
+  background-color: $background;
+  color: $color;
+  @include font;
+  @include sans;
+}
+h1, h2 {
+  @include fontlarge;
+}
+p {
+	@include hyphens;
+  + p {
+    text-indent: 2em;
+  }
+  a {
+    border-bottom: $border;
+  }
+}
+::selection {
+  background-color: #ff0;
+}
+figure {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  figcaption {
+  }
+  &.video {
+    .player {
+      position: relative;
+      padding-top: 56.25%;
+      iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+}
+
+@import 'components/navigation';
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  > header {
+    flex: 0 0 auto;
+  }
+  > main {
+
+    flex: 1 0 auto;
+    //margin-top: $space-top;
+
+    header {
+      margin-top: $space-top;
+      font-size: $font-large;
+    }
+
+    header,
+    section {
+      margin-left: $space-side;
+      margin-right: $space-side;
+    }
+
+    section {
+      margin-top: $space-top;
+      padding-top: $space-top;
+      border-top: $border;
+      &:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+      }
+      &.posts,
+      &.gallery {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &.gallery {
+        + section {
+          border-top: none;
+          padding-top: 0;
+        }
+      }
+      &.meta {
+        border-top: none;
+      }
+    }
+
+    section.posts {
+      border: none;
+      // margin: 0;
+    }
+    section.gallery {
+      border: none;
+      // margin-left: 0;
+      // margin-right: 0;
+      // padding: 0;
+    }
+    section:last-child {
+      // border-bottom: none;
+      // padding-bottom: 0;
+    }
+
+    section.content {
+      .keywords {
+        margin-top: 3rem;
+      }
+    }
+
+  }
+  > footer {
+    flex: 0 0 auto;
+  }
+}
+
+@import 'components/footer';
+
+@import 'components/grid';
+@import 'components/list';
+.posts {
+
+  ol.grid {
+    @include grid;
+  }
+  ol.list {
+    @include list;
+  }
+  li.hide {
+    img, iframe {
+      opacity: 0;
+    }
+  }
+  li > a {
+    display: block;
+  }
+
+  .info {
+    .title {
+      // @include fontsmall;
+      .headline {
+      }
+      .subline {
+      }
+    }
+    .meta {
+      @include fontsmall;
+    }
+  }
+
+}
+
+@import 'components/keywords';
+@import 'components/specialCharacters';

@@ -14,7 +14,7 @@
 
 </script>
 
-<section class="content">
+<header class="content">
 
     {#if channel.description}
         <Text large={true}>{@html channel.description}</Text>
@@ -22,7 +22,7 @@
 
     <!-- links -->
 
-</section>
+</header>
 
 <section class="posts">
     <List {posts} />

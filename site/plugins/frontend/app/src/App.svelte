@@ -51,7 +51,9 @@
         <Channel posts={posts.data} channels={site.data.channels} slug="{params.channel}" />
       </Route>
 
-      <Route post={site.data} path=":channel/:post" component="{Post}" />
+      <Route path=":channel/:post" let:params>
+        <Post slug={`${params.channel}/${params.post}`} />
+      </Route>
 
     </main>
   {/if}

@@ -53,7 +53,7 @@ class PostPage extends Page
     $return = parent::json();
 
     $return = array_merge( $return, [
-      'channelId' => $this->channel()->num(),
+      'channelId' => $this->channel()->uid(),
       'date' => $this->date()->toDate(),
       'subtitle' => $this->subtitle()->value(),
       'categories' => $this->categories()->split(),
@@ -73,7 +73,7 @@ class PostPage extends Page
     if( $this->body()->isNotEmpty() ){
       $return['content'] = $this->body()->kirbytextinline()->value();
     }
-    
+
     if( $this->hasImages() ){
       $return['gallery'] = $this->gallery()->json();
     }

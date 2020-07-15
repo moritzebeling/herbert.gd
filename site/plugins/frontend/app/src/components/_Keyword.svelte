@@ -17,7 +17,7 @@
 	<a href="{href}">
 		<slot></slot>
 		<Count {count} />
-	</li>
+	</a>
 {:else}
 	<li class="keyword">
 		<slot></slot>
