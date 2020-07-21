@@ -13,7 +13,7 @@
         <Figure figure={person.image} />
     {/if}
 
-    <Headline><h3>{@html person.name}</h3></Headline>
+    <Headline><h2>{@html person.name}</h2></Headline>
 
     <Text>{@html person.description}</Text>
 

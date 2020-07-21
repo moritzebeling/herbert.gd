@@ -3652,7 +3652,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr_dev(div, "class", "headline svelte-1nezda3");
+    			attr_dev(div, "class", "headline");
     			add_location(div, file$6, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -3881,22 +3881,22 @@ var app = (function () {
 
     // (16:4) <Headline>
     function create_default_slot_1(ctx) {
-    	let h3;
+    	let h2;
     	let raw_value = /*person*/ ctx[0].name + "";
 
     	const block = {
     		c: function create() {
-    			h3 = element("h3");
-    			add_location(h3, file$8, 15, 14, 286);
+    			h2 = element("h2");
+    			add_location(h2, file$8, 15, 14, 286);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h3, anchor);
-    			h3.innerHTML = raw_value;
+    			insert_dev(target, h2, anchor);
+    			h2.innerHTML = raw_value;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*person*/ 1 && raw_value !== (raw_value = /*person*/ ctx[0].name + "")) h3.innerHTML = raw_value;		},
+    			if (dirty & /*person*/ 1 && raw_value !== (raw_value = /*person*/ ctx[0].name + "")) h2.innerHTML = raw_value;		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(h2);
     		}
     	};
 
