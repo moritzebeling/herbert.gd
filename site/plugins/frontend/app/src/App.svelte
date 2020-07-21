@@ -2,6 +2,7 @@
   import { Router, Link, Route } from "svelte-routing";
   import { onDestroy } from 'svelte';
 
+  import Home from "./routes/Home.svelte";
   import Channel from "./routes/Channel.svelte";
   import Info from "./routes/Info.svelte";
   import Post from "./routes/Post.svelte";
@@ -43,7 +44,7 @@
 
     <main>
 
-      <Route site={site.data} path="/" component="{Channel}" />
+      <Route posts={posts.data} site={site.data} path="/" component="{Home}" />
 
       <Route info={site.data.info} path="info" component="{Info}" />
 

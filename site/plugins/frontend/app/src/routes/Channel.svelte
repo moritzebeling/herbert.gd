@@ -6,6 +6,7 @@
 
     export let channels;
     export let slug;
+    export let channel = [];
 
     $: channel = channels.find( c => c.href === slug );
 
