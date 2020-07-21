@@ -1860,7 +1860,7 @@ var app = (function () {
     			a = element("a");
     			if (default_slot) default_slot.c();
     			set_attributes(a, a_data);
-    			add_location(a, file, 40, 0, 1249);
+    			add_location(a, file, 40, 0, 1185);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2173,9 +2173,9 @@ var app = (function () {
     			figure = element("figure");
     			div = element("div");
     			attr_dev(div, "class", "image");
-    			add_location(div, file$1, 24, 5, 463);
+    			add_location(div, file$1, 24, 5, 455);
     			attr_dev(figure, "class", figure_class_value = /*post*/ ctx[0].image.orientation);
-    			add_location(figure, file$1, 23, 4, 416);
+    			add_location(figure, file$1, 23, 4, 408);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, figure, anchor);
@@ -2213,7 +2213,7 @@ var app = (function () {
     		c: function create() {
     			figure = element("figure");
     			attr_dev(figure, "class", "video");
-    			add_location(figure, file$1, 19, 4, 335);
+    			add_location(figure, file$1, 19, 4, 327);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, figure, anchor);
@@ -2248,7 +2248,7 @@ var app = (function () {
     			h4 = element("h4");
     			t = text(t_value);
     			attr_dev(h4, "class", "subline");
-    			add_location(h4, file$1, 36, 5, 673);
+    			add_location(h4, file$1, 36, 5, 665);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -2283,7 +2283,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$1, 45, 7, 846);
+    			add_location(li, file$1, 45, 7, 838);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2362,23 +2362,23 @@ var app = (function () {
     			div2 = element("div");
     			t5 = text(t5_value);
     			attr_dev(h3, "class", "headline");
-    			add_location(h3, file$1, 34, 4, 605);
+    			add_location(h3, file$1, 34, 4, 597);
     			attr_dev(div0, "class", "title");
-    			add_location(div0, file$1, 33, 3, 581);
-    			add_location(ul, file$1, 43, 5, 792);
+    			add_location(div0, file$1, 33, 3, 573);
+    			add_location(ul, file$1, 43, 5, 784);
     			attr_dev(div1, "class", "categories");
-    			add_location(div1, file$1, 42, 4, 762);
+    			add_location(div1, file$1, 42, 4, 754);
     			attr_dev(div2, "class", "date");
-    			add_location(div2, file$1, 50, 4, 907);
+    			add_location(div2, file$1, 50, 4, 899);
     			attr_dev(div3, "class", "meta");
-    			add_location(div3, file$1, 40, 3, 738);
+    			add_location(div3, file$1, 40, 3, 730);
     			attr_dev(div4, "class", "info");
-    			add_location(div4, file$1, 31, 2, 558);
+    			add_location(div4, file$1, 31, 2, 550);
     			attr_dev(a, "href", a_href_value = /*post*/ ctx[0].href);
-    			add_location(a, file$1, 15, 1, 246);
+    			add_location(a, file$1, 15, 1, 238);
     			attr_dev(li, "class", /*orientation*/ ctx[2]);
     			toggle_class(li, "hide", !/*show*/ ctx[1]);
-    			add_location(li, file$1, 14, 0, 199);
+    			add_location(li, file$1, 14, 0, 191);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2579,7 +2579,7 @@ var app = (function () {
     			span = element("span");
     			t = text(/*count*/ ctx[0]);
     			attr_dev(span, "class", "count");
-    			add_location(span, file$2, 7, 1, 63);
+    			add_location(span, file$2, 7, 1, 62);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2771,13 +2771,13 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "keywords filters");
-    			add_location(ul, file$3, 45, 2, 666);
+    			add_location(ul, file$3, 45, 2, 635);
     			attr_dev(div0, "class", "result-options");
-    			add_location(div0, file$3, 43, 1, 634);
+    			add_location(div0, file$3, 43, 1, 603);
     			attr_dev(ol, "class", ol_class_value = /*setLayout*/ ctx[4](/*layout*/ ctx[1]));
-    			add_location(ol, file$3, 56, 2, 1012);
+    			add_location(ol, file$3, 56, 2, 981);
     			attr_dev(div1, "class", "list-wrapper");
-    			add_location(div1, file$3, 55, 1, 983);
+    			add_location(div1, file$3, 55, 1, 952);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -2938,10 +2938,10 @@ var app = (function () {
     			create_component(count.$$.fragment);
     			t1 = space();
     			attr_dev(button, "title", button_title_value = "Filter by " + /*category*/ ctx[11]);
-    			add_location(button, file$3, 48, 5, 848);
+    			add_location(button, file$3, 48, 5, 817);
     			attr_dev(li, "class", "keyword");
     			toggle_class(li, "active", /*filter*/ ctx[2] === /*category*/ ctx[11]);
-    			add_location(li, file$3, 47, 4, 747);
+    			add_location(li, file$3, 47, 4, 716);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3460,9 +3460,9 @@ var app = (function () {
     			section = element("section");
     			create_component(list.$$.fragment);
     			attr_dev(header, "class", "content");
-    			add_location(header, file$5, 16, 0, 280);
+    			add_location(header, file$5, 16, 0, 252);
     			attr_dev(section, "class", "posts");
-    			add_location(section, file$5, 26, 0, 440);
+    			add_location(section, file$5, 26, 0, 412);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3742,7 +3742,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			figure_1 = element("figure");
-    			add_location(figure_1, file$7, 6, 0, 45);
+    			add_location(figure_1, file$7, 4, 0, 39);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3887,7 +3887,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			h2 = element("h2");
-    			add_location(h2, file$8, 15, 14, 286);
+    			add_location(h2, file$8, 15, 14, 270);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -3975,8 +3975,8 @@ var app = (function () {
     			create_component(headline.$$.fragment);
     			t1 = space();
     			create_component(text_1.$$.fragment);
-    			attr_dev(li, "class", "person svelte-9lelj5");
-    			add_location(li, file$8, 9, 0, 171);
+    			attr_dev(li, "class", "person svelte-1d6vfk1");
+    			add_location(li, file$8, 9, 0, 155);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4240,10 +4240,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", "svelte-519twp");
-    			add_location(ul, file$9, 25, 8, 425);
-    			attr_dev(section, "class", "team svelte-519twp");
-    			add_location(section, file$9, 24, 4, 394);
+    			attr_dev(ul, "class", "svelte-1qicvxl");
+    			add_location(ul, file$9, 25, 8, 413);
+    			attr_dev(section, "class", "team svelte-1qicvxl");
+    			add_location(section, file$9, 24, 4, 382);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -4389,11 +4389,11 @@ var app = (function () {
     			t2 = space();
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
-    			add_location(li, file$9, 18, 8, 329);
+    			add_location(li, file$9, 18, 8, 317);
     			attr_dev(ul, "class", "keywords");
-    			add_location(ul, file$9, 17, 4, 299);
+    			add_location(ul, file$9, 17, 4, 287);
     			attr_dev(header, "class", "content");
-    			add_location(header, file$9, 9, 0, 152);
+    			add_location(header, file$9, 9, 0, 140);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4568,8 +4568,8 @@ var app = (function () {
     			button = element("button");
     			t0 = text(t0_value);
     			t1 = space();
-    			add_location(button, file$a, 10, 3, 111);
-    			add_location(li, file$a, 9, 2, 103);
+    			add_location(button, file$a, 10, 3, 110);
+    			add_location(li, file$a, 9, 2, 102);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -4615,7 +4615,7 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "keywords");
-    			add_location(ul, file$a, 6, 0, 49);
+    			add_location(ul, file$a, 6, 0, 48);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4808,13 +4808,13 @@ var app = (function () {
     			t2 = space();
     			div1 = element("div");
     			create_component(text_1.$$.fragment);
-    			add_location(header, file$b, 28, 4, 592);
+    			add_location(header, file$b, 28, 4, 528);
     			attr_dev(div0, "class", "left");
-    			add_location(div0, file$b, 40, 8, 851);
+    			add_location(div0, file$b, 40, 8, 787);
     			attr_dev(div1, "class", "right");
-    			add_location(div1, file$b, 54, 8, 1222);
+    			add_location(div1, file$b, 54, 8, 1158);
     			attr_dev(section, "class", "content");
-    			add_location(section, file$b, 39, 4, 817);
+    			add_location(section, file$b, 39, 4, 753);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -4924,7 +4924,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			t = text(t_value);
-    			add_location(h2, file$b, 32, 16, 717);
+    			add_location(h2, file$b, 32, 16, 653);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -4965,7 +4965,7 @@ var app = (function () {
     			t1 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			add_location(h1, file$b, 30, 12, 632);
+    			add_location(h1, file$b, 30, 12, 568);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -5019,7 +5019,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			t = text(t_value);
-    			add_location(h2, file$b, 45, 20, 1003);
+    			add_location(h2, file$b, 45, 20, 939);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -5060,7 +5060,7 @@ var app = (function () {
     			t1 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			add_location(h1, file$b, 43, 16, 910);
+    			add_location(h1, file$b, 43, 16, 846);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -5352,16 +5352,16 @@ var app = (function () {
     		c: function create() {
     			svg = svg_element("svg");
     			style = svg_element("style");
-    			t0 = text(".stroke{\n\t\t\tfill:none;\n\t\t\tstroke:#000000;\n\t\t\tstroke-width:1;\n\t\t}\n\t");
+    			t0 = text(".stroke{\n\tfill:none;\n\tstroke:#000000;\n\tstroke-width:1;\n}\n\t");
     			title = svg_element("title");
     			t1 = text("Herbert.gd");
     			polyline = svg_element("polyline");
     			attr_dev(style, "type", "text/css");
     			add_location(style, file$c, 1, 1, 227);
-    			add_location(title, file$c, 8, 1, 329);
+    			add_location(title, file$c, 8, 1, 319);
     			attr_dev(polyline, "class", "stroke");
     			attr_dev(polyline, "points", "0,37.8 165,36.8 179,1.3 27,100.3 112,64.3 133.5,98.3 165.5,53.8 134.5,67.3 188,67.3 160,99.8 292.5,5.3 248.5,15.8 223,100.3 282.5,49.3 247.5,63.8 306,64.3 278.5,103.8 403.5,3.3 358,126.3 360,62.8 471.5,63.3 ");
-    			add_location(polyline, file$c, 9, 1, 356);
+    			add_location(polyline, file$c, 9, 1, 346);
     			attr_dev(svg, "version", "1.1");
     			attr_dev(svg, "id", "Herbert Logo");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
@@ -5489,7 +5489,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "15";
     			attr_dev(span, "class", "count");
-    			add_location(span, file$d, 19, 29, 386);
+    			add_location(span, file$d, 19, 29, 380);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -5534,7 +5534,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			create_component(link.$$.fragment);
-    			add_location(li, file$d, 17, 10, 313);
+    			add_location(li, file$d, 17, 10, 307);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5596,7 +5596,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			create_component(link.$$.fragment);
-    			add_location(li, file$d, 26, 10, 505);
+    			add_location(li, file$d, 26, 10, 499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5719,12 +5719,13 @@ var app = (function () {
     			t1 = space();
     			if (if_block) if_block.c();
     			attr_dev(ol, "class", "channels");
-    			add_location(ol, file$d, 14, 6, 239);
-    			add_location(nav, file$d, 13, 4, 227);
+    			add_location(ol, file$d, 14, 6, 233);
+    			attr_dev(nav, "class", "svelte-1pijd69");
+    			add_location(nav, file$d, 13, 4, 221);
     			attr_dev(div, "class", "container");
-    			add_location(div, file$d, 9, 2, 164);
+    			add_location(div, file$d, 9, 2, 158);
     			attr_dev(header, "class", "site-header");
-    			add_location(header, file$d, 8, 0, 133);
+    			add_location(header, file$d, 8, 0, 127);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6243,18 +6244,18 @@ var app = (function () {
     			div1 = element("div");
     			a = element("a");
     			create_component(bauhausuniversitylogo.$$.fragment);
-    			attr_dev(div0, "class", "svelte-10swqlv");
-    			add_location(div0, file$f, 7, 4, 149);
+    			attr_dev(div0, "class", "svelte-12z2n3q");
+    			add_location(div0, file$f, 7, 4, 141);
     			attr_dev(a, "class", "link logo");
     			attr_dev(a, "title", "Imprint");
     			attr_dev(a, "href", "https://www.uni-weimar.de/de/fs/impressum/");
     			attr_dev(a, "rel", "noopener");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$f, 12, 8, 245);
-    			attr_dev(div1, "class", "right svelte-10swqlv");
-    			add_location(div1, file$f, 11, 4, 217);
-    			attr_dev(footer, "class", "svelte-10swqlv");
-    			add_location(footer, file$f, 5, 0, 135);
+    			add_location(a, file$f, 12, 8, 237);
+    			attr_dev(div1, "class", "right svelte-12z2n3q");
+    			add_location(div1, file$f, 11, 4, 209);
+    			attr_dev(footer, "class", "svelte-12z2n3q");
+    			add_location(footer, file$f, 5, 0, 127);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6417,7 +6418,7 @@ var app = (function () {
     			create_component(route2.$$.fragment);
     			t3 = space();
     			create_component(route3.$$.fragment);
-    			add_location(main, file$g, 43, 4, 903);
+    			add_location(main, file$g, 43, 4, 853);
     		},
     		m: function mount(target, anchor) {
     			mount_component(header, target, anchor);

@@ -27,6 +27,9 @@ p {
     border-bottom: $border;
   }
 }
+header p {
+  @include fontlarge;
+}
 ::selection {
   background-color: #ff0;
 }
@@ -63,14 +66,13 @@ body {
   > main {
 
     flex: 1 0 auto;
-    //margin-top: $space-top;
 
     header {
       margin-top: $space-top;
-      font-size: $font-large;
+      // font-size: $font-large;
     }
 
-    header,
+    /* header,
     section {
       margin-left: $space-side;
       margin-right: $space-side;
@@ -122,14 +124,17 @@ body {
       }
     }
 
+    */
+
   }
   > footer {
     flex: 0 0 auto;
   }
 }
 
-@import 'components/footer';
+// @import 'components/footer';
 
+/*
 @import 'components/grid';
 @import 'components/list';
 .posts {
@@ -163,6 +168,7 @@ body {
   }
 
 }
+*/
 
-@import 'components/keywords';
-@import 'components/specialCharacters';
+// @import 'components/keywords';
+// @import 'components/specialCharacters';

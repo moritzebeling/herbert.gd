@@ -76,7 +76,8 @@ Kirby::plugin('moritzebeling/herbert', [
       $json = [
         'title' => $this->title()->value(),
         'href' => $this->url(),
-        'layout' => $this->layout()
+        'layout' => $this->layout(),
+        'logo' => asset('assets/image/herbert-logo.svg')->url()
       ];
       if( $info = $this->page('info') ){
         $json['info'] = $info->json();

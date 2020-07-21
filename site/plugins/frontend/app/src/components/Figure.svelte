@@ -1,7 +1,5 @@
 <script>
-
     export let figure;
-
 </script>
 
 <figure>

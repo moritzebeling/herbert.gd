@@ -11,10 +11,8 @@
 
   <?= css([
     'assets/css/reset.css',
-    'assets/css/swiper.css',
-    'assets/css/global.css',
-    '@auto'
-  ]) ?>
+    'assets/css/frontend.css',
+    'assets/css/swiper.css']); ?>
 
   <?= js([
     'assets/js/morutilities.js',

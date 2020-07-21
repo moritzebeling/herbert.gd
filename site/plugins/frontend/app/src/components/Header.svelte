@@ -36,3 +36,13 @@
 
   </div>
 </header>
+
+<style type="text/scss">
+
+  @import '../scss/mixins';
+
+  nav {
+    color: $color;
+  }
+
+</style>

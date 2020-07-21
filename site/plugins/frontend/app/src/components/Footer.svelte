@@ -22,6 +22,7 @@
 footer {
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 footer div {
     flex: 1 0 auto;
