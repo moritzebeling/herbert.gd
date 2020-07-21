@@ -1,7 +1,11 @@
 <script>
-  import { Router, Link, Route } from "svelte-routing";
+
+  import { Link } from "svelte-routing";
+  import Navigation from "./Navigation.svelte";
 
   export let site;
+  let navigationItems = site.channels;
+  navigationItems.push(site.info);
 
 </script>
 
@@ -12,28 +16,7 @@
       <img src="{site.logo}" alt="Herbert.gd Logo" />
     </Link>
 
-    <nav>
-      <ol class="channels">
-        {#each site.channels as channel}
-
-          <li>
-            <Link to="{channel.href}">
-              {channel.title}<span class="count">15</span>
-            </Link>
-          </li>
-
-        {/each}
-        {#if site.info }
-
-          <li>
-            <Link to="{site.info.href}">
-              {site.info.title}
-            </Link>
-          </li>
-
-        {/if}
-      </ol>
-    </nav>
+    <Navigation items={navigationItems} />
 
   </div>
 </header>
