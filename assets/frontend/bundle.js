@@ -3231,7 +3231,6 @@ var app = (function () {
 
     function create_fragment$6(ctx) {
     	let div;
-    	let p;
     	let current;
     	const default_slot_template = /*$$slots*/ ctx[1].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[0], null);
@@ -3239,9 +3238,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			p = element("p");
     			if (default_slot) default_slot.c();
-    			add_location(p, file$4, 1, 4, 23);
     			attr_dev(div, "class", "text");
     			add_location(div, file$4, 0, 0, 0);
     		},
@@ -3250,10 +3247,9 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, p);
 
     			if (default_slot) {
-    				default_slot.m(p, null);
+    				default_slot.m(div, null);
     			}
 
     			current = true;

@@ -11,7 +11,7 @@ class InfoPage extends Page
     }
 
     $return = array_merge( $return, array_filter([
-      'description' => $this->body()->kirbytextinline()->value(),
+      'description' => $this->body()->kirbytext()->value(),
       'collaboration' => option('repo'),
       'imprint' => $this->imprint()->value(),
       'email' => $this->contact()->value(),
@@ -21,7 +21,7 @@ class InfoPage extends Page
     foreach( $this->team()->toStructure() as $item ){
       $member = array_filter([
         'name' => $item->name()->html()->value(),
-        'description' => $item->text()->kirbytextinline()->value(),
+        'description' => $item->text()->kirbytext()->value(),
         'link' => $item->link()->value()
       ]);
       if( $image = $item->image()->toFile() ){

@@ -32,7 +32,7 @@ class ChannelPage extends Page
 
     if( $full === true && $this->showDescription()->isTrue() ){
 
-      $return['description'] = $this->description()->kirbytextinline()->value();
+      $return['description'] = $this->description()->kirbytext()->value();
 
       /* links */
       foreach( $this->links()->toStructure() as $item ){

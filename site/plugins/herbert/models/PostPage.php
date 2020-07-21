@@ -71,7 +71,7 @@ class PostPage extends Page
     }
 
     if( $this->body()->isNotEmpty() ){
-      $return['content'] = $this->body()->kirbytextinline()->value();
+      $return['content'] = $this->body()->kirbytext()->value();
     }
 
     if( $this->hasImages() ){
