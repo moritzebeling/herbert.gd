@@ -1,5 +1,6 @@
 <script>
 
+    import Links from './../components/Links.svelte';
     import List from './../components/List.svelte';
     import Text from './../components/Text.svelte';
 
@@ -14,13 +15,15 @@
 
 </script>
 
-<header class="content">
+<header>
 
     {#if channel.description}
-        <Text large={true}>{@html channel.description}</Text>
+        <Text>{@html channel.description}</Text>
     {/if}
 
-    <!-- links -->
+    {#if channel.links}
+        <Links links={channel.links} />
+    {/if}
 
 </header>
 
@@ -33,6 +36,11 @@
     header,
     section {
         margin: 1rem;
+    }
+
+    header {
+        border-bottom: 1px solid #000;
+        padding-bottom: 4rem;
     }
 
 </style>

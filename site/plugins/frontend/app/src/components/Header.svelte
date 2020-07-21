@@ -47,6 +47,7 @@
 
   .container {
     border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
   }
 
 </style>
