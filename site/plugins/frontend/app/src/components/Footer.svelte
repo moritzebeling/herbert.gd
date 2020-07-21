@@ -23,6 +23,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 1rem;
+  margin-top: 4rem;
 }
 footer div {
     flex: 1 0 auto;

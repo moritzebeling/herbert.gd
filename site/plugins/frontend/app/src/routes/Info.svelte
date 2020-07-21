@@ -32,9 +32,13 @@
 {/if}
 
 <style>
+    header,
+    section {
+        margin: 1rem;
+    }
     .team ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 0.5rem;
+        gap: 1rem;
     }
 </style>

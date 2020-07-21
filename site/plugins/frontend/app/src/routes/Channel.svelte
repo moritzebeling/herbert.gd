@@ -27,3 +27,12 @@
 <section class="posts">
     <List {posts} />
 </section>
+
+<style>
+
+    header,
+    section {
+        margin: 1rem;
+    }
+
+</style>

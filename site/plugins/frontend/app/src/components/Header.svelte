@@ -1,6 +1,5 @@
 <script>
   import { Router, Link, Route } from "svelte-routing";
-  import Logo from './Logo.svelte';
 
   export let site;
 
@@ -9,7 +8,9 @@
 <header class="site-header">
   <div class="container">
 
-    <Link to="/"><Logo /></Link>
+    <Link to="/">
+      <img src="{site.logo}" alt="Herbert.gd Logo" />
+    </Link>
 
     <nav>
       <ol class="channels">
@@ -39,10 +40,13 @@
 
 <style type="text/scss">
 
-  @import '../scss/mixins';
+  header {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
 
-  nav {
-    color: $color;
+  .container {
+    border-bottom: 1px solid #000;
   }
 
 </style>

@@ -23,8 +23,4 @@
 
 <style>
 
-    .person {
-        padding: 0.5rem;
-    }
-
 </style>

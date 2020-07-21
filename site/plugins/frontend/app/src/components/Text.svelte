@@ -1,3 +1,3 @@
 <div class="text">
-    <slot><p></p></slot>
+    <p><slot></slot></p>
 </div>
