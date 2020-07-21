@@ -6,20 +6,19 @@
 
 </script>
 
-<nav>
-    <ol>
-        {#each items as item}
-            <li>
-                <Link to="{item.href}">
-                    {item.title}
-                    {#if item.count}
-                        <span class="count">15</span>
-                    {/if}
-                </Link>
-            </li>
-        {/each}
-    </ol>
-</nav>
+
+<ol>
+    {#each items as item}
+        <li>
+            <Link to="{item.href}">
+                {item.title}
+                {#if item.count}
+                    <span class="count">15</span>
+                {/if}
+            </Link>
+        </li>
+    {/each}
+</ol>
 
 <style>
 
