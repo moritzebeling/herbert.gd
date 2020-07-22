@@ -72,7 +72,8 @@ section {
 	margin-bottom: 1rem;
 }
 
-.filters {
+.filters,
+.display {
 	display: none;
 }
 

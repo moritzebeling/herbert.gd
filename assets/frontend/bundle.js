@@ -3152,12 +3152,12 @@ var app = (function () {
     			t1 = space();
     			div1 = element("div");
     			if (switch_instance) create_component(switch_instance.$$.fragment);
-    			attr_dev(ul, "class", "keywords filters svelte-30vtx5");
+    			attr_dev(ul, "class", "keywords filters svelte-1fz6p7v");
     			add_location(ul, file$6, 41, 3, 633);
-    			attr_dev(select, "class", "display");
+    			attr_dev(select, "class", "display svelte-1fz6p7v");
     			if (/*layoutComponent*/ ctx[1] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[8].call(select));
     			add_location(select, file$6, 49, 3, 949);
-    			attr_dev(div0, "class", "result-options svelte-30vtx5");
+    			attr_dev(div0, "class", "result-options svelte-1fz6p7v");
     			add_location(div0, file$6, 39, 2, 600);
     			attr_dev(div1, "class", "post-wrapper");
     			add_location(div1, file$6, 57, 2, 1129);
@@ -3457,7 +3457,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			if (if_block) if_block.c();
-    			attr_dev(section, "class", "posts svelte-30vtx5");
+    			attr_dev(section, "class", "posts svelte-1fz6p7v");
     			add_location(section, file$6, 36, 0, 549);
     		},
     		l: function claim(nodes) {
