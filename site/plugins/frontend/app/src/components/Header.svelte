@@ -2,6 +2,7 @@
 
   import { Link } from "svelte-routing";
   import Navigation from "./Navigation.svelte";
+  import Logo from "./Logo.svelte";
 
   export let site;
   let navigationItems = site.channels;
@@ -13,9 +14,7 @@
   <div class="container">
 
     <div class="logo">
-      <Link to="/">
-        <img src="{site.logo}" alt="Herbert.gd Logo" />
-      </Link>
+      <Logo />
     </div>
 
     <nav>
@@ -33,7 +32,7 @@
   }
 
   .container {
-    border-bottom: 1px solid #000;
+    border-bottom: 1.5px solid #000;
     padding-bottom: 1rem;
     display: flex;
   }
@@ -46,6 +45,10 @@
   .logo {
     flex: 0 0 auto;
     order: 2;
+  }
+  .logo :global(img){
+    height: 2em;
+    width: auto;
   }
 
 </style>
