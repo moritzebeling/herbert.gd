@@ -54,7 +54,8 @@ class PostPage extends Page
 
     $return = array_merge( $return, [
       'channelId' => $this->channel()->uid(),
-      'date' => $this->date()->toDate(),
+      'date' => $this->displayDate(),
+      'year' => $this->date()->toDate('Y'),
       'subtitle' => $this->subtitle()->value(),
       'categories' => $this->categories()->split(),
       'keywords' => $this->keywords()->split(),

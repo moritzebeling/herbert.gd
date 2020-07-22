@@ -28,7 +28,9 @@ p {
   }
 }
 header,
-header p {
+header p,
+.headline,
+.text-large {
   @include fontlarge;
 }
 ::selection {

@@ -1,7 +1,7 @@
 <script>
 
+    import Posts from './../components/Posts.svelte';
     import Links from './../components/Links.svelte';
-    import List from './../components/List.svelte';
     import Text from './../components/Text.svelte';
 
     export let channels;
@@ -28,14 +28,11 @@
 
 </header>
 
-<section class="posts">
-    <List {posts} />
-</section>
+<Posts {posts} />
 
 <style>
 
-    header,
-    section {
+    header {
         margin: 1rem;
     }
 

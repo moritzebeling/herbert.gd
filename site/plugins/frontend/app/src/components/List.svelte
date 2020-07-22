@@ -1,64 +1,65 @@
 <script>
 
-	import Item from './Item.svelte';
-	import Count from './Count.svelte';
+	// import Item from './Item.svelte';
+	import Headline from './Headline.svelte';
 	export let posts = [];
-
-	export let layout = 'list';
-	let layoutOptions = {
-		list: 'List',
-		grid: 'Grid',
-	};
-
-	function setLayout( set ){
-		if( set in layoutOptions ){
-			return set;
-		}
-		return 'grid';
-	}
-
-	let filter = false;
-
-	let categories = {};
-	for( let post of posts ){
-		for( let cat of post.categories ){
-			if(!(cat in categories)){
-				categories[cat]	= 0;
-			}
-			categories[cat]++;
-		}
-	}
-
-	function setFilter( set ){
-		if( filter === set ){
-			filter = false;
-		} else {
-			filter = set;
-		}
-	}
 
 </script>
 
-{#if posts.length > 0}
+<ol>
+	{#each posts as post}
+		<li class="item text-large">
+			<a href="{post.href}">
 
-	<div class="result-options">
+				<div class="l">
 
-		<ul class="keywords filters">
-			{#each Object.keys(categories) as category}
-				<li class="keyword" on:click={()=> setFilter(category) } class:active={ filter === category } >
-					<button title="Filter by {category}">{category}<Count count={categories[category]} /></button>
-				</li>
-			{/each}
-		</ul>
+					<Headline>
+						<h2>{post.title}</h2>
+						{#if post.subtitle}
+							<h3>{post.subtitle}</h3>
+						{/if}
+					</Headline>
 
-	</div>
+				</div>
 
-	<div class="list-wrapper">
-		<ol class="{setLayout(layout)}">
-			{#each posts as post}
-				<Item post={post} show={filter === false || post.categories.includes(filter)} />
-			{/each}
-		</ol>
-	</div>
+				<div class="m">
+					<ul>
+						{#each post.categories as category}
+							<li>{category}</li>
+						{/each}
+					</ul>
+				</div>
 
-{/if}
+				<div class="s last">
+					{post.year}
+				</div>
+
+			</a>
+		</li>
+	{/each}
+</ol>
+
+<style type="text/scss">
+
+	.item {
+		border-top: 2px solid #000;
+		padding: 0.75rem 0;
+	}
+
+	.item > a {
+		display: flex;
+		.l {
+			flex: 1 0 60%
+		}
+		.m {
+			flex: 1 0 25%;
+		}
+		.s {
+			flex: 1 0 15%;
+		}
+		.last {
+			text-align: right;
+		}
+	}
+
+</style>
