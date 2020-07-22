@@ -11,7 +11,7 @@
 		grid: Grid,
 	};
 	export let layout = 'list';
-	layout = layouts['list'];
+	layout = layouts[layout];
 
 	let categories = {};
 	for( let post of posts ){

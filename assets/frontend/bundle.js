@@ -3874,7 +3874,7 @@ var app = (function () {
     	let { posts = [] } = $$props;
     	let layouts = { list: List, grid: Grid };
     	let { layout = "list" } = $$props;
-    	layout = layouts["list"];
+    	layout = layouts[layout];
     	let categories = {};
 
     	for (let post of posts) {
@@ -4782,7 +4782,10 @@ var app = (function () {
     	let if_block1 = /*channel*/ ctx[0].links && create_if_block$7(ctx);
 
     	posts_1 = new Posts({
-    			props: { posts: /*posts*/ ctx[1] },
+    			props: {
+    				posts: /*posts*/ ctx[1],
+    				layout: /*channel*/ ctx[0].layout
+    			},
     			$$inline: true
     		});
 
@@ -4858,6 +4861,7 @@ var app = (function () {
 
     			const posts_1_changes = {};
     			if (dirty & /*posts*/ 2) posts_1_changes.posts = /*posts*/ ctx[1];
+    			if (dirty & /*channel*/ 1) posts_1_changes.layout = /*channel*/ ctx[0].layout;
     			posts_1.$set(posts_1_changes);
     		},
     		i: function intro(local) {

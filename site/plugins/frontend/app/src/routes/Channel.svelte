@@ -28,7 +28,7 @@
 
 </header>
 
-<Posts {posts} />
+<Posts {posts} layout={channel.layout} />
 
 <style>
 
