@@ -10,7 +10,7 @@
 
 </script>
 
-<header class="site-header">
+<header>
   <div class="container">
 
     <div class="logo">
@@ -32,7 +32,7 @@
   }
 
   .container {
-    border-bottom: 1.5px solid #000;
+    border-bottom: 1.5px solid currentColor;
     padding-bottom: 1rem;
     display: flex;
   }

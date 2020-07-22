@@ -193,7 +193,9 @@ Kirby::plugin('moritzebeling/herbert', [
   			'src' => $this->url(),
   			'title' => $this->title()->value(),
   			'alt' => $this->description()->value(),
-        'srcset' => $this->srcset( $size )
+        'srcset' => $this->srcset( $size ),
+        'width' => $this->width(),
+        'height' => $this->height(),
   		]);
 
   	},
@@ -244,7 +246,10 @@ Kirby::plugin('moritzebeling/herbert', [
 
       $return = [
         'orientation' => $this->orientation(),
-        'image' => $this->tag()
+        'image' => $this->tag(),
+        'width' => $this->width(),
+        'height' => $this->height(),
+        'ratio' =>  $this->height() / $this->width()
       ];
 
       if( $this->videoUrl()->isNotEmpty() ){

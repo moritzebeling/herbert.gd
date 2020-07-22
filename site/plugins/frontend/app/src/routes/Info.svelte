@@ -1,10 +1,19 @@
 <script>
+    import { onMount } from 'svelte';
+    import { onDestroy } from 'svelte';
 
     import Person from './../components/Person.svelte';
     import Text from './../components/Text.svelte';
     import Link from './../components/Link.svelte';
 
     export let info;
+
+	onMount(() => {
+		document.body.classList.add('info');
+    });
+	onDestroy(() => {
+		document.body.classList.remove('info');
+	});
 
 </script>
 
@@ -65,7 +74,7 @@
         margin-bottom: 8rem;
     }
     section {
-        border-top: 1px solid #000;
+        border-top: 1.5px solid #000;
         padding-top: 1rem;
     }
     .team ul {

@@ -23,4 +23,8 @@
 
 <style>
 
+    .person :global(.headline) {
+        margin: 0.5rem 0;
+    }
+
 </style>

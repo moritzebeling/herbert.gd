@@ -1,5 +1,5 @@
 // colors
-$background: #999;
+$background: #eee;
 $color: #000;
 $yellow: #ff0;
 $grey: #ccc;
@@ -24,7 +24,7 @@ $font-large: 1.8rem;
 }
 @mixin fontlarge {
 	font-size: $font-large;
-	line-height: 1.2;
+	line-height: 1.1;
 }
 @mixin sans {
 	// font-family: Helvetica, Arial, sans-serif;

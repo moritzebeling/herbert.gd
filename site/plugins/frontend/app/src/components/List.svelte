@@ -33,7 +33,7 @@
 <style type="text/scss">
 
 	.item {
-		border-top: 1.5px solid #000;
+		border-top: 1.5px solid currentColor;
 		padding: 0.75rem 0;
 	}
 
@@ -57,9 +57,6 @@
 	.categories {
 		display: flex;
 		flex-wrap: wrap;
-		li {
-
-		}
 	}
 
 </style>

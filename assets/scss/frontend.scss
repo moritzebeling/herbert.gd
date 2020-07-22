@@ -14,6 +14,9 @@ body {
   color: $color;
   @include font;
   @include sans;
+  transition-property: background-color;
+  transition-timing-function: ease;
+  transition-duration: 500ms;
 }
 h1, h2 {
   @include fontlarge;
@@ -55,6 +58,10 @@ figure {
       }
     }
   }
+}
+
+body.info {
+  background-color: #999;
 }
 
 // @import 'components/navigation';
