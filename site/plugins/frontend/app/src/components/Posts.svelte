@@ -11,7 +11,7 @@
 		grid: Grid,
 	};
 	export let layout = 'list';
-	layout = layouts[layout];
+	let layoutComponent = layouts[layout];
 
 	let categories = {};
 	for( let post of posts ){
@@ -47,7 +47,7 @@
 				{/each}
 			</ul>
 
-			<select class="display" bind:value={layout}>
+			<select class="display" bind:value={layoutComponent}>
 				{#each Object.keys( layouts ) as lc}
 					<option value={layouts[lc]}>{lc}</option>
 				{/each}
@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="post-wrapper">
-			<svelte:component this={layout} {posts}/>
+			<svelte:component this={layoutComponent} {posts}/>
 		</div>
 
 	{/if}

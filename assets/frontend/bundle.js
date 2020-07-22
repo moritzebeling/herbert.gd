@@ -3430,13 +3430,13 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[11] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
@@ -3472,11 +3472,11 @@ var app = (function () {
     		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
     	}
 
-    	var switch_value = /*layout*/ ctx[0];
+    	var switch_value = /*layoutComponent*/ ctx[1];
 
     	function switch_props(ctx) {
     		return {
-    			props: { posts: /*posts*/ ctx[1] },
+    			props: { posts: /*posts*/ ctx[0] },
     			$$inline: true
     		};
     	}
@@ -3505,14 +3505,14 @@ var app = (function () {
     			div1 = element("div");
     			if (switch_instance) create_component(switch_instance.$$.fragment);
     			attr_dev(ul, "class", "keywords filters svelte-30vtx5");
-    			add_location(ul, file$6, 41, 3, 620);
+    			add_location(ul, file$6, 41, 3, 633);
     			attr_dev(select, "class", "display");
-    			if (/*layout*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[7].call(select));
-    			add_location(select, file$6, 49, 3, 936);
+    			if (/*layoutComponent*/ ctx[1] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[8].call(select));
+    			add_location(select, file$6, 49, 3, 949);
     			attr_dev(div0, "class", "result-options svelte-30vtx5");
-    			add_location(div0, file$6, 39, 2, 587);
+    			add_location(div0, file$6, 39, 2, 600);
     			attr_dev(div1, "class", "post-wrapper");
-    			add_location(div1, file$6, 57, 2, 1107);
+    			add_location(div1, file$6, 57, 2, 1129);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -3529,7 +3529,7 @@ var app = (function () {
     				each_blocks[i].m(select, null);
     			}
 
-    			select_option(select, /*layout*/ ctx[0]);
+    			select_option(select, /*layoutComponent*/ ctx[1]);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div1, anchor);
 
@@ -3540,7 +3540,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(select, "change", /*select_change_handler*/ ctx[7]);
+    				dispose = listen_dev(select, "change", /*select_change_handler*/ ctx[8]);
     				mounted = true;
     			}
     		},
@@ -3597,14 +3597,14 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty & /*layout, layouts, Object*/ 17) {
-    				select_option(select, /*layout*/ ctx[0]);
+    			if (dirty & /*layoutComponent, layouts, Object*/ 18) {
+    				select_option(select, /*layoutComponent*/ ctx[1]);
     			}
 
     			const switch_instance_changes = {};
-    			if (dirty & /*posts*/ 2) switch_instance_changes.posts = /*posts*/ ctx[1];
+    			if (dirty & /*posts*/ 1) switch_instance_changes.posts = /*posts*/ ctx[0];
 
-    			if (switch_value !== (switch_value = /*layout*/ ctx[0])) {
+    			if (switch_value !== (switch_value = /*layoutComponent*/ ctx[1])) {
     				if (switch_instance) {
     					group_outros();
     					const old_component = switch_instance;
@@ -3675,7 +3675,7 @@ var app = (function () {
     function create_each_block_1(ctx) {
     	let li;
     	let button;
-    	let t0_value = /*category*/ ctx[11] + "";
+    	let t0_value = /*category*/ ctx[12] + "";
     	let t0;
     	let count;
     	let button_title_value;
@@ -3686,13 +3686,13 @@ var app = (function () {
 
     	count = new Count({
     			props: {
-    				count: /*categories*/ ctx[2][/*category*/ ctx[11]]
+    				count: /*categories*/ ctx[2][/*category*/ ctx[12]]
     			},
     			$$inline: true
     		});
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[6](/*category*/ ctx[11], ...args);
+    		return /*click_handler*/ ctx[7](/*category*/ ctx[12], ...args);
     	}
 
     	const block = {
@@ -3702,11 +3702,11 @@ var app = (function () {
     			t0 = text(t0_value);
     			create_component(count.$$.fragment);
     			t1 = space();
-    			attr_dev(button, "title", button_title_value = "Filter by " + /*category*/ ctx[11]);
-    			add_location(button, file$6, 44, 6, 805);
+    			attr_dev(button, "title", button_title_value = "Filter by " + /*category*/ ctx[12]);
+    			add_location(button, file$6, 44, 6, 818);
     			attr_dev(li, "class", "keyword");
-    			toggle_class(li, "active", /*filter*/ ctx[3] === /*category*/ ctx[11]);
-    			add_location(li, file$6, 43, 5, 703);
+    			toggle_class(li, "active", /*filter*/ ctx[3] === /*category*/ ctx[12]);
+    			add_location(li, file$6, 43, 5, 716);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3723,17 +3723,17 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*categories*/ 4) && t0_value !== (t0_value = /*category*/ ctx[11] + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*categories*/ 4) && t0_value !== (t0_value = /*category*/ ctx[12] + "")) set_data_dev(t0, t0_value);
     			const count_changes = {};
-    			if (dirty & /*categories*/ 4) count_changes.count = /*categories*/ ctx[2][/*category*/ ctx[11]];
+    			if (dirty & /*categories*/ 4) count_changes.count = /*categories*/ ctx[2][/*category*/ ctx[12]];
     			count.$set(count_changes);
 
-    			if (!current || dirty & /*categories*/ 4 && button_title_value !== (button_title_value = "Filter by " + /*category*/ ctx[11])) {
+    			if (!current || dirty & /*categories*/ 4 && button_title_value !== (button_title_value = "Filter by " + /*category*/ ctx[12])) {
     				attr_dev(button, "title", button_title_value);
     			}
 
     			if (dirty & /*filter, Object, categories*/ 12) {
-    				toggle_class(li, "active", /*filter*/ ctx[3] === /*category*/ ctx[11]);
+    				toggle_class(li, "active", /*filter*/ ctx[3] === /*category*/ ctx[12]);
     			}
     		},
     		i: function intro(local) {
@@ -3767,7 +3767,7 @@ var app = (function () {
     // (51:4) {#each Object.keys( layouts ) as lc}
     function create_each_block$3(ctx) {
     	let option;
-    	let t_value = /*lc*/ ctx[8] + "";
+    	let t_value = /*lc*/ ctx[9] + "";
     	let t;
     	let option_value_value;
 
@@ -3775,9 +3775,9 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*layouts*/ ctx[4][/*lc*/ ctx[8]];
+    			option.__value = option_value_value = /*layouts*/ ctx[4][/*lc*/ ctx[9]];
     			option.value = option.__value;
-    			add_location(option, file$6, 51, 5, 1027);
+    			add_location(option, file$6, 51, 5, 1049);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -3803,14 +3803,14 @@ var app = (function () {
     function create_fragment$8(ctx) {
     	let section;
     	let current;
-    	let if_block = /*posts*/ ctx[1].length > 0 && create_if_block$5(ctx);
+    	let if_block = /*posts*/ ctx[0].length > 0 && create_if_block$5(ctx);
 
     	const block = {
     		c: function create() {
     			section = element("section");
     			if (if_block) if_block.c();
     			attr_dev(section, "class", "posts svelte-30vtx5");
-    			add_location(section, file$6, 36, 0, 536);
+    			add_location(section, file$6, 36, 0, 549);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3821,11 +3821,11 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (/*posts*/ ctx[1].length > 0) {
+    			if (/*posts*/ ctx[0].length > 0) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty & /*posts*/ 2) {
+    					if (dirty & /*posts*/ 1) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -3874,7 +3874,7 @@ var app = (function () {
     	let { posts = [] } = $$props;
     	let layouts = { list: List, grid: Grid };
     	let { layout = "list" } = $$props;
-    	layout = layouts[layout];
+    	let layoutComponent = layouts[layout];
     	let categories = {};
 
     	for (let post of posts) {
@@ -3908,14 +3908,14 @@ var app = (function () {
     	const click_handler = category => setFilter(category);
 
     	function select_change_handler() {
-    		layout = select_value(this);
-    		$$invalidate(0, layout);
+    		layoutComponent = select_value(this);
+    		$$invalidate(1, layoutComponent);
     		$$invalidate(4, layouts);
     	}
 
     	$$self.$set = $$props => {
-    		if ("posts" in $$props) $$invalidate(1, posts = $$props.posts);
-    		if ("layout" in $$props) $$invalidate(0, layout = $$props.layout);
+    		if ("posts" in $$props) $$invalidate(0, posts = $$props.posts);
+    		if ("layout" in $$props) $$invalidate(6, layout = $$props.layout);
     	};
 
     	$$self.$capture_state = () => ({
@@ -3925,15 +3925,17 @@ var app = (function () {
     		posts,
     		layouts,
     		layout,
+    		layoutComponent,
     		categories,
     		filter,
     		setFilter
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("posts" in $$props) $$invalidate(1, posts = $$props.posts);
+    		if ("posts" in $$props) $$invalidate(0, posts = $$props.posts);
     		if ("layouts" in $$props) $$invalidate(4, layouts = $$props.layouts);
-    		if ("layout" in $$props) $$invalidate(0, layout = $$props.layout);
+    		if ("layout" in $$props) $$invalidate(6, layout = $$props.layout);
+    		if ("layoutComponent" in $$props) $$invalidate(1, layoutComponent = $$props.layoutComponent);
     		if ("categories" in $$props) $$invalidate(2, categories = $$props.categories);
     		if ("filter" in $$props) $$invalidate(3, filter = $$props.filter);
     	};
@@ -3943,12 +3945,13 @@ var app = (function () {
     	}
 
     	return [
-    		layout,
     		posts,
+    		layoutComponent,
     		categories,
     		filter,
     		layouts,
     		setFilter,
+    		layout,
     		click_handler,
     		select_change_handler
     	];
@@ -3957,7 +3960,7 @@ var app = (function () {
     class Posts extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, { posts: 1, layout: 0 });
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, { posts: 0, layout: 6 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7481,16 +7484,63 @@ var app = (function () {
     /* src/components/Header.svelte generated by Svelte v3.23.2 */
     const file$i = "src/components/Header.svelte";
 
+    // (17:6) <Link to="/">
+    function create_default_slot$6(ctx) {
+    	let logo;
+    	let current;
+    	logo = new Logo({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(logo.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(logo, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(logo.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(logo.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(logo, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$6.name,
+    		type: "slot",
+    		source: "(17:6) <Link to=\\\"/\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     function create_fragment$l(ctx) {
     	let header;
     	let div1;
     	let div0;
-    	let logo;
+    	let link;
     	let t;
     	let nav;
     	let navigation;
     	let current;
-    	logo = new Logo({ $$inline: true });
+
+    	link = new Link({
+    			props: {
+    				to: "/",
+    				$$slots: { default: [create_default_slot$6] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
 
     	navigation = new Navigation({
     			props: { items: /*navigationItems*/ ctx[0] },
@@ -7502,14 +7552,14 @@ var app = (function () {
     			header = element("header");
     			div1 = element("div");
     			div0 = element("div");
-    			create_component(logo.$$.fragment);
+    			create_component(link.$$.fragment);
     			t = space();
     			nav = element("nav");
     			create_component(navigation.$$.fragment);
     			attr_dev(div0, "class", "logo svelte-zhnfos");
     			add_location(div0, file$i, 15, 4, 289);
     			attr_dev(nav, "class", "svelte-zhnfos");
-    			add_location(nav, file$i, 19, 4, 339);
+    			add_location(nav, file$i, 19, 4, 359);
     			attr_dev(div1, "class", "container svelte-zhnfos");
     			add_location(div1, file$i, 13, 2, 260);
     			attr_dev(header, "class", "site-header svelte-zhnfos");
@@ -7522,27 +7572,35 @@ var app = (function () {
     			insert_dev(target, header, anchor);
     			append_dev(header, div1);
     			append_dev(div1, div0);
-    			mount_component(logo, div0, null);
+    			mount_component(link, div0, null);
     			append_dev(div1, t);
     			append_dev(div1, nav);
     			mount_component(navigation, nav, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			const link_changes = {};
+
+    			if (dirty & /*$$scope*/ 4) {
+    				link_changes.$$scope = { dirty, ctx };
+    			}
+
+    			link.$set(link_changes);
+    		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(logo.$$.fragment, local);
+    			transition_in(link.$$.fragment, local);
     			transition_in(navigation.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(logo.$$.fragment, local);
+    			transition_out(link.$$.fragment, local);
     			transition_out(navigation.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(header);
-    			destroy_component(logo);
+    			destroy_component(link);
     			destroy_component(navigation);
     		}
     	};
@@ -7906,7 +7964,7 @@ var app = (function () {
     const file$k = "src/components/Footer.svelte";
 
     // (9:15) <Link to="/">
-    function create_default_slot$6(ctx) {
+    function create_default_slot$7(ctx) {
     	let t;
 
     	const block = {
@@ -7923,7 +7981,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$6.name,
+    		id: create_default_slot$7.name,
     		type: "slot",
     		source: "(9:15) <Link to=\\\"/\\\">",
     		ctx
@@ -7946,7 +8004,7 @@ var app = (function () {
     	link = new Link({
     			props: {
     				to: "/",
-    				$$slots: { default: [create_default_slot$6] },
+    				$$slots: { default: [create_default_slot$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8324,7 +8382,7 @@ var app = (function () {
     }
 
     // (40:0) <Router url="{url}">
-    function create_default_slot$7(ctx) {
+    function create_default_slot$8(ctx) {
     	let t;
     	let footer;
     	let current;
@@ -8387,7 +8445,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$7.name,
+    		id: create_default_slot$8.name,
     		type: "slot",
     		source: "(40:0) <Router url=\\\"{url}\\\">",
     		ctx
@@ -8403,7 +8461,7 @@ var app = (function () {
     	router = new Router({
     			props: {
     				url: /*url*/ ctx[0],
-    				$$slots: { default: [create_default_slot$7] },
+    				$$slots: { default: [create_default_slot$8] },
     				$$scope: { ctx }
     			},
     			$$inline: true

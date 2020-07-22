@@ -14,7 +14,7 @@
   <div class="container">
 
     <div class="logo">
-      <Logo />
+      <Link to="/"><Logo /></Link>
     </div>
 
     <nav>
