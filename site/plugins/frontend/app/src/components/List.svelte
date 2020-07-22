@@ -11,27 +11,18 @@
 		<li class="item text-large">
 			<a href="{post.href}">
 
-				<div class="l">
-
-					<Headline>
-						<h2>{post.title}</h2>
-						{#if post.subtitle}
-							<h3>{post.subtitle}</h3>
-						{/if}
-					</Headline>
-
+				<div class="w3">
+					<h2>{post.title}</h2>
 				</div>
 
-				<div class="m">
-					<ul>
-						{#each post.categories as category}
-							<li>{category}</li>
-						{/each}
-					</ul>
-				</div>
-
-				<div class="s last">
+				<div class="w1 last">
 					{post.year}
+				</div>
+
+				<div class="w4">
+					{#if post.subtitle}
+						<h3>{post.subtitle}</h3>
+					{/if}
 				</div>
 
 			</a>
@@ -42,23 +33,32 @@
 <style type="text/scss">
 
 	.item {
-		border-top: 2px solid #000;
+		border-top: 1.5px solid #000;
 		padding: 0.75rem 0;
 	}
 
 	.item > a {
 		display: flex;
-		.l {
-			flex: 1 0 60%
+		flex-wrap: wrap;
+		.w4 {
+			flex: 1 0 100%;
 		}
-		.m {
+		.w3 {
+			flex: 1 0 75%;
+		}
+		.w1 {
 			flex: 1 0 25%;
-		}
-		.s {
-			flex: 1 0 15%;
 		}
 		.last {
 			text-align: right;
+		}
+	}
+
+	.categories {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+
 		}
 	}
 
