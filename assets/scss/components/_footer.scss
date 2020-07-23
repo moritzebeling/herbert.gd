@@ -1,42 +1,21 @@
-footer.site-footer {
-  padding-top: $space-top;
-  margin: $space;
+body > footer {
+  .credits {
+		li + li {
+			padding-top: $space-top / 2;
+		}
+	}
+  .buw-logo-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
 
-  font-size: $font-small;
-
-  display: flex;
-  align-items: center;
-  div {
-    flex: 1 0 auto;
-    &.right {
-      text-align: right;
-      flex: 0 0 auto;
-    }
+.buw-logo {
+  svg {
+    // ratio: 1:8.8
+    height: 1.4em;
+    width: 12.32em;
+    transform: translateY(0.1em);
   }
-
-  a, ul {
-    display: inline-block;
-  }
-  a + a {
-    margin-left: 0.5em;
-  }
-  a {
-    border-bottom: $border;
-    border-color: transparent;
-  }
-  a:hover,
-  a.active {
-    border-color: currentColor;
-  }
-
-  a.logo {
-    border: none !important;
-    svg {
-      // ratio: 1:8.8
-      height: 1.4em;
-      width: 12.32em;
-      transform: translateY(0.1em);
-    }
-  }
-
 }

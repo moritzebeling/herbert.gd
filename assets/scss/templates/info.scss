@@ -1,106 +1,40 @@
 @import '../variables';
 
-footer.site-footer {
-  display: flex;
+body,
+body > header {
+	background-color: #999;
 }
 
-main {
+main > header {
+	margin: 0 2rem;
+}
 
-	header {
-		display: none;
-	}
-
-	.credits {
-		.job {
-			@include allcaps;
-		}
-		li + li {
-			padding-top: $space-top;
-		}
-	}
-
-	section {
-
-		&.content {
+section.team {
+	@include borderBefore;
+	figure {
+		img {
 			@include fontlarge;
-			margin-top: 1rem !important;
-      .keywords {
-        @include font;
-      }
+			max-height: 6em;
+			width: auto;
 		}
-
-		&.team {
-			ul {
-				display: grid;
-				grid-template-columns: 1fr;
-        gap: $space-top 0;
-        @media (min-width: 700px) {
-      		grid-template-columns: 1fr 1fr;
-      	}
-			}
-			.person {
-        padding-top: 1rem;
-        border-top: $border;
-        &:nth-child(1){
-          border-top: none;
-          padding-top: 0;
-        }
-        @media (min-width: 700px) {
-          &:nth-child(2){
-            border-top: none;
-            padding-top: 0;
-          }
-      	}
-        @media (min-width: 700px) {
-          &:nth-child(odd){
-  					border-right: $border;
-  					padding-right: $space-side;
-  				}
-  				&:nth-child(even){
-  					padding-left: $space-side;
-  				}
-      	}
-
-				figure {
-					position: relative;
-          figcaption {
-            @include fontsmall;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 0.5em 1em;
-            width: 100%;
-            text-align: right;
-            color: #fff;
-            opacity: 0.5;
-          }
-				}
-				.name {
-					margin: $space-top 0 0.3em;
-					@include fontlarge;
-				}
-				.link {
-					margin-top: $space-top;
-				}
-			}
-		}
-
-		&.imprint {
-			text-align: center;
-			.button {
-				display: flex;
-				margin: 10rem auto;
-				width: 10rem;
-				height: 10rem;
-				border-radius: 200%;
-				border: 1px solid #000;
-				align-items: center;
-				a {
-					flex: 1;
-				}
-			}
+		figcaption {
+			margin-top: 0.5em;
+			@include fontsmall;
 		}
 	}
+	.name {
+		margin: $space-top 0 0.5em;
+		@include fontlarge;
+	}
+	.about {
+		@include fontlarge;
+	}
+	.link {
+		margin-top: $space-top;
+	}
+}
 
-
+body > footer {
+	@include borderBefore;
+	@include fontlarge;
 }

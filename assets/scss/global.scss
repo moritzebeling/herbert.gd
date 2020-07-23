@@ -16,6 +16,7 @@
 }
 */
 
+
 //
 // typography
 //
@@ -37,7 +38,7 @@ p {
     text-indent: 2em;
   }
   a {
-    border-bottom: $border;
+    border-bottom: $border-thin;
   }
 }
 ::selection {
@@ -47,8 +48,6 @@ figure {
   img {
     width: 100%;
     height: auto;
-  }
-  figcaption {
   }
   &.video {
     .player {
@@ -74,21 +73,32 @@ body {
     flex: 0 0 auto;
   }
   > main {
-
     flex: 1 0 auto;
-    //margin-top: $space-top;
+  }
+  > footer {
+    flex: 0 0 auto;
+  }
+}
 
+main {
+  > header {
+    @include fontlarge;
+    margin-top: $space-top;
+    padding-bottom: $space-top * 4;
+  }
+}
+
+  /*
+  > main {
     header {
       margin-top: $space-top;
       font-size: $font-large;
     }
-
     header,
     section {
       margin-left: $space-side;
       margin-right: $space-side;
     }
-
     section {
       margin-top: $space-top;
       padding-top: $space-top;
@@ -113,10 +123,8 @@ body {
         border-top: none;
       }
     }
-
     section.posts {
       border: none;
-      // margin: 0;
     }
     section.gallery {
       border: none;
@@ -134,15 +142,11 @@ body {
         margin-top: 3rem;
       }
     }
-
-  }
-  > footer {
-    flex: 0 0 auto;
   }
 }
+*/
 
 @import 'components/footer';
-
 @import 'components/grid';
 @import 'components/list';
 .posts {
@@ -179,3 +183,39 @@ body {
 
 @import 'components/keywords';
 @import 'components/specialCharacters';
+
+@function columnWidth( $c, $w ) {
+	@return ( $c / $w ) * 100%;
+}
+.flex {
+	display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+	@for $i from 1 through 12 {
+		> .col-#{$i}{
+			flex-shrink: 0;
+			flex-grow: 1;
+			flex-basis: columnWidth($i,12);
+			width: columnWidth($i,12);
+		}
+  }
+  &.spaced,
+  &.rulers {
+    padding: $space-top 0;
+    > *[class^="col-"] {
+      padding: 0 $space-side;
+    }
+  }
+  &.rulers {
+    > *[class^="col-"] {
+      border-right: $border;
+      &:last-child {
+       	border-right: none;
+      }
+    }
+  }
+}

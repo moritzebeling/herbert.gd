@@ -1,21 +1,21 @@
-	<footer class="site-footer">
-		<div>
+	<footer>
+		<div class="flex spaced">
 
-			&copy; <?= date('Y') ?>
+			<ul class="col-6 credits">
+				<?php if( $page->intendedTemplate()->name() === 'info' ){
+					snippet('info/credits');
+				} ?>
+			</ul>
 
-			<a href="<?= $site->url() ?>"><?= $site->title() ?></a>
+			<div class="col-6 buw-logo-container">
+				<?php if( $info = page('info') ): ?>
+					<a class="link buw-logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
+						<?= svg('assets/image/bauhaus-university-logo.svg') ?>
+					</a>
+				<?php endif; ?>
+			</div>
 
 		</div>
-
-		<?php if( $info = page('info') ): ?>
-			<div class="right">
-				<a class="link logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
-					<?= svg('assets/image/bauhaus-university-logo.svg') ?>
-				</a>
-			</div>
-		<?php endif; ?>
-
-
 	</footer>
 
 	<script>

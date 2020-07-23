@@ -36,13 +36,24 @@ $font-large: 1.8rem;
 
 // borders
 $border-style: solid;
-$border-width: 1px;
+$border-width: 2px;
 $border: $border-width solid currentColor;
+$border-thin: 1px solid currentColor;
 
-$gap: 0.5rem;
-$space-top: 1rem;
-$space-side: 1rem;
+$gap: 1rem;
+$space-top: 2rem;
+$space-side: 2rem;
 $space: $space-top $space-side;
+
+@mixin borderBefore {
+	&:before {
+		content: '';
+		border-top: $border;
+		display: block;
+		margin: 0 2rem;
+		width: 100%;
+	}
+}
 
 @mixin tabularFigures {
 	font-variant-numeric: tabular-nums;
@@ -81,7 +92,7 @@ $space: $space-top $space-side;
 	font-size: 0.7em;
 	display: inline-block;
 	vertical-align: 0.45em;
-	border-bottom: $border;
+	border-bottom: $border-thin;
 	margin-left: 0.3em;
 }
 

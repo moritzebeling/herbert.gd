@@ -45,7 +45,7 @@
 <!-- If you want to contribute to this website, go to https://github.com/moritzebeling/herbert.gd -->
 <body class="<?= $page->intendedTemplate() ?>">
 
-  <header class="site-header">
+  <header>
     <div class="container">
 
       <a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert-logo.svg') ?></a>

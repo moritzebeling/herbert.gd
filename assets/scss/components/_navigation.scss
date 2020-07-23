@@ -1,4 +1,4 @@
-header.site-header {
+body > header {
 
   width: 100%;
   padding-top: $space-top - 0.2rem;
@@ -12,21 +12,26 @@ header.site-header {
 
   .container {
     border-bottom: $border;
-    padding-bottom: 0.7rem;
+    padding-bottom: 4rem;
     margin-bottom: -$border-width;
+    display: flex;
     nav {
       flex: 1;
+      order: 1;
+    }
+    #logo {
+      order: 2;
     }
   }
 
   #logo {
-    width: 7em;
-    height: 1.9em;
+    width: 8.4em;
+    height: 2.28em;
     transform: translateY(0.1rem);
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.2em;
+    margin-left: 2rem;
     svg polyline {
-      stroke-width: 2.5px;
+      stroke-width: 3px;
     }
   }
   nav {
@@ -45,7 +50,7 @@ header.site-header {
         vertical-align: .38em;
         padding-bottom: 0.1em;
       }
-      
+
       /*
       span {
         display: none;
