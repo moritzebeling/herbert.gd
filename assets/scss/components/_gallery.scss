@@ -1,15 +1,11 @@
 @import '../variables';
-@import 'grid';
+// @import 'grid';
 
 .gallery {
 
-  // background-color: #000;
-  // color: #eee;
-
-  padding: $space;
+  margin: 0 $space-side;
 
   figure {
-    // padding: 0 $space-side;
     img {
       width: 100%;
       height: auto;
@@ -23,8 +19,6 @@
   }
 
   &.index {
-    // margin-left: $space-side;
-    // margin-right: $space-side;
     .controls {
       display: none;
     }
@@ -49,6 +43,7 @@
       }
 
       @include fadein;
+
     }
   }
 
@@ -145,7 +140,6 @@
       .swiper-button-index {
         cursor: pointer;
         margin-right: 0.5em;
-        @include galleryHoverItem;
       }
 
     }

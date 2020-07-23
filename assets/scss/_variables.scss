@@ -6,9 +6,9 @@ $grey: #ccc;
 
 // typography
 
-$font-small: 0.75rem;
-$font-size: 1rem;
-$font-large: 1.8rem;
+$font-small: 0.7rem;
+$font-size: 1.15rem;
+$font-large: 2.7rem;
 
 @mixin allcaps {
 	text-transform: uppercase;
@@ -24,10 +24,10 @@ $font-large: 1.8rem;
 }
 @mixin fontlarge {
 	font-size: $font-large;
-	line-height: 1.2;
+	line-height: 1.1;
 }
 @mixin sans {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @mixin hyphens {
 	hyphens: auto;
@@ -111,4 +111,14 @@ $space: $space-top $space-side;
 
 @mixin linkUnderline {
 	border-bottom: $border-thin;
+}
+
+
+@mixin fadein {
+	animation: fadein 1s;
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
 }

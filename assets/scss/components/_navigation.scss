@@ -6,9 +6,7 @@ body > header {
   padding-left: $space-side;
   padding-right: $space-side;
   z-index: 100;
-  background-color: $background;
-
-  @include fontlarge;
+  background-color: inherit;
 
   .container {
     border-bottom: $border;
@@ -50,23 +48,6 @@ body > header {
         vertical-align: .38em;
         padding-bottom: 0.1em;
       }
-
-      /*
-      span {
-        display: none;
-      }
-      abbr {
-        display: inline;
-      }
-      @media only screen and (min-width: 800px) {
-      */
-        span {
-          display: inline;
-        }
-        abbr {
-          display: none;
-        }
-      // }
 
       transition: padding 300ms ease, margin 300ms ease;
       padding: 0.1em 0;

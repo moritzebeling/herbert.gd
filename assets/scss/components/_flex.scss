@@ -1,0 +1,35 @@
+@function columnWidth( $c, $w ) {
+	@return ( $c / $w ) * 100%;
+}
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	> * {
+		flex-shrink: 1;
+		flex-grow: 1;
+		flex-basis: auto;
+	}
+	@for $i from 1 through 12 {
+		> .col-#{$i}{
+			flex-shrink: 0;
+			flex-grow: 1;
+			flex-basis: columnWidth($i,12);
+			width: columnWidth($i,12);
+		}
+	}
+	&.spaced,
+	&.rulers {
+		padding: $space-top 0;
+		> *[class*="col-"] {
+			padding: 0 $space-side;
+		}
+	}
+	&.rulers {
+		> *[class*="col-"] {
+			border-right: $border;
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}

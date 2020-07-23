@@ -9,8 +9,7 @@ section.team {
 	@include borderBefore;
 	figure {
 		img {
-			@include fontlarge;
-			max-height: 6em;
+			max-height: 8em;
 			width: auto;
 		}
 		figcaption {
@@ -23,7 +22,6 @@ section.team {
 		@include fontlarge;
 	}
 	.about {
-		@include fontlarge;
 	}
 	.link {
 		margin-top: $space-top;
@@ -32,5 +30,5 @@ section.team {
 
 body > footer {
 	@include borderBefore;
-	@include fontlarge;
+	// @include fontlarge;
 }
