@@ -5,10 +5,6 @@ body > header {
 	background-color: #999;
 }
 
-main > header {
-	margin: 0 2rem;
-}
-
 section.team {
 	@include borderBefore;
 	figure {

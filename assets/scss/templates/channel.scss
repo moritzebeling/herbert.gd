@@ -1,7 +1,6 @@
 @import '../variables';
 
 header.channel-header {
-  @include fontlarge;
 
   div + div {
     margin-top: 1rem;

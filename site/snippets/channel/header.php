@@ -7,9 +7,9 @@ if( ! $channel->showDescription()->isTrue() || $channel->description()->isEmpty(
 }
 
 ?>
-<header class="channel-header">
+<header>
 
-	<div class="description"><?= $channel->description()->kirbytext(); ?></div>
+	<div class="about"><?= $channel->description()->kirbytext(); ?></div>
 
 	<?php snippet('fields/links'); ?>
 

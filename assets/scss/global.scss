@@ -83,7 +83,7 @@ body {
 main {
   > header {
     @include fontlarge;
-    padding: $space-top 0;
+    padding: $space;
     .about {
       padding-bottom: $space-top * 4;
     }
