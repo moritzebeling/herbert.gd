@@ -25,13 +25,20 @@ class ChannelPage extends Page
   public function posts(): Kirby\Cms\Pages {
     return $this->children()->listed()->flip();
   }
-  public function json(): array {
+  public function json( bool $full = true ): array {
 
-    $return = parent::json();
+    $data = parent::json();
+    $data['id'] = $this->num();
 
-    if( $this->showDescription()->isTrue() ){
-      
-      $return['description'] = $this->description()->kirbytextinline()->value();
+    if( $full === true ){
+      $data['posts'] = $this->posts()->json();
+    }
+
+    return $data;
+
+    if( $full === true && $this->showDescription()->isTrue() ){
+
+      $data['description'] = $this->description()->kirbytext()->value();
 
       /* links */
       foreach( $this->links()->toStructure() as $item ){
@@ -40,14 +47,13 @@ class ChannelPage extends Page
           'url' => $item->url()->value()
         ];
 
-        if( !isset($return['links']) ){
-          $return['links'] = [];
+        if( !isset($data['links']) ){
+          $data['links'] = [];
         }
-        $return['links'][] = $link;
+        $data['links'][] = $link;
       }
 
     }
 
-    return $return;
   }
 }

@@ -72,6 +72,21 @@ Kirby::plugin('moritzebeling/herbert', [
       }
       return 'cards';
   	},
+    'json' => function ( bool $full = true ): array {
+      $json = [
+        'title' => $this->title()->value(),
+        'href' => $this->url(),
+        'layout' => $this->layout(),
+        'logo' => asset('assets/image/herbert-logo.svg')->url()
+      ];
+      if( $info = $this->page('info') ){
+        $json['info'] = $info->json();
+      }
+      if( $channels = $this->kirby()->collection('channels') ){
+        $json['channels'] = $channels->json( true );
+      }
+      return $json;
+  	}
   ],
 
   'pageMethods' => [
@@ -86,10 +101,10 @@ Kirby::plugin('moritzebeling/herbert', [
       }
       return '';
   	},
-    'json' => function (): array {
+    'json' => function ( bool $full = true ): array {
       return [
         'title' => $this->title()->value(),
-        'href' => $this->url(),
+        'href' => $this->id(),
         'template' => $this->intendedTemplate()->name(),
         'layout' => $this->layout(),
       ];
@@ -116,10 +131,10 @@ Kirby::plugin('moritzebeling/herbert', [
   		}
   		return array_unique($return);
   	},
-    'json' => function(): array {
+    'json' => function( bool $full = false ): array {
       $json = [];
       foreach($this as $page) {
-        $json[] = $page->json();
+        $json[] = $page->json( $full );
       }
       return $json;
     }
@@ -161,6 +176,16 @@ Kirby::plugin('moritzebeling/herbert', [
     },
   ],
 
+  'filesMethods' => [
+    'json' => function( bool $full = false ): array {
+      $json = [];
+      foreach($this as $page) {
+        $json[] = $page->json( $full );
+      }
+      return $json;
+    }
+  ],
+
   'fileMethods' => [
     'tag' => function ( string $size = 'large' ) {
 
@@ -168,7 +193,9 @@ Kirby::plugin('moritzebeling/herbert', [
   			'src' => $this->url(),
   			'title' => $this->title()->value(),
   			'alt' => $this->description()->value(),
-        'srcset' => $this->srcset( $size )
+        'srcset' => $this->srcset( $size ),
+        'width' => $this->width(),
+        'height' => $this->height(),
   		]);
 
   	},
@@ -215,19 +242,21 @@ Kirby::plugin('moritzebeling/herbert', [
       return $help;
 
   	},
-    'json' => function(): array {
+    'json' => function( bool $full = true ): array {
+
+      $return = [
+        'orientation' => $this->orientation(),
+        'image' => $this->tag(),
+        'width' => $this->width(),
+        'height' => $this->height(),
+        'ratio' =>  $this->height() / $this->width()
+      ];
 
       if( $this->videoUrl()->isNotEmpty() ){
-        return [
-          'type' => 'video',
-          'html' => video( $this->videoUrl()->value(), option('video') )
-        ];
+        $return['video'] = video( $this->videoUrl()->value(), option('video') );
       }
-      return [
-        'type' => 'image',
-        'orientation' => $this->orientation(),
-        'html' => $this->tag()
-      ];
+
+      return $return;
 
     }
   ]

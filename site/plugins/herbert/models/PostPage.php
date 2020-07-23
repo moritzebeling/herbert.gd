@@ -13,7 +13,7 @@ class PostPage extends Page
     }
     return $this->images()->first();
   }
-  public function gallery( bool $filter = true ) {
+  public function gallery( bool $filter = true ): Kirby\Cms\Files {
     if( $filter === true ){
       return $this->images()->filter(function($image) {
         return !$image->exclude()->isTrue();
@@ -48,20 +48,35 @@ class PostPage extends Page
 
     return $this->date()->toDate( $dateFormat );
   }
-  public function json(): array {
+  public function json( bool $full = true ): array {
 
-    $return = array_merge( parent::json(), [
+    $return = parent::json();
+
+    $return = array_merge( $return, [
+      'channelId' => $this->channel()->uid(),
+      'date' => $this->displayDate(),
+      'year' => $this->date()->toDate('Y'),
       'subtitle' => $this->subtitle()->value(),
       'categories' => $this->categories()->split(),
-      'date' => $this->displayDate(),
-      'keywords' => $this->keywords()->split()
+      'keywords' => $this->keywords()->split(),
     ]);
 
-    unset( $return['layout'] );
-    unset( $return['template'] );
+    // attributes
 
     if( $image = $this->image() ){
       $return['image'] = $image->json();
+    }
+
+    if( $full !== true ){
+      return $return;
+    }
+
+    if( $this->body()->isNotEmpty() ){
+      $return['content'] = $this->body()->kirbytext()->value();
+    }
+
+    if( $this->hasImages() ){
+      $return['gallery'] = $this->gallery()->json();
     }
 
     return $return;
