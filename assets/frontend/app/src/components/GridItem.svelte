@@ -12,7 +12,7 @@
 
 </script>
 
-<li class="{orientation}" class:hide={!show}>
+<li class="item {orientation}" class:hide={!show}>
 	<a href="{item.href}">
 
 		{#if 'image' in item}

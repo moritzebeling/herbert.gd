@@ -1,13 +1,13 @@
 <script>
 
-	import ListItem from './ListItem.svelte';
 	import GridItem from './GridItem.svelte';
+	// import ListItem from './ListItem.svelte';
 
 	let layouts = {
-		list: ListItem,
 		grid: GridItem,
+		// list: ListItem,
 	};
-	export let layout = 'list';
+	export let layout = 'grid';
 	let layoutComponent = layouts[layout];
 
 	export let posts = [];
@@ -32,8 +32,6 @@
 <section class="posts">
 	{#if posts.length > 0}
 
-		{posts.length} Posts found
-
 		<!-- <div class="result-options">
 
 			<ul class="keywords filters">
@@ -52,13 +50,13 @@
 
 		</div> -->
 
-		<div class="container {layout}">
+		<ol class="container {layout}">
 			{#each posts as item}
 				<svelte:component this={layoutComponent} {item}/>
 			{/each}
-		</div>
+		</ol>
 
 	{:else}
-		No posts found
+		<h3 class="error">No posts found</h3>
 	{/if}
 </section>

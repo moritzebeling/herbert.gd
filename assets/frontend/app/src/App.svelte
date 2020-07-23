@@ -8,8 +8,10 @@
 	let dataStore = loadData();
 	let data = {};
 	let unsubscribeDataStore = dataStore.subscribe(update => {
-		data = update;
-		console.log( data );
+		if( update.data ){
+			data = update.data;
+			console.log( data );
+		}
 	});
 	onDestroy(() => {
 		unsubscribeDataStore = null;
@@ -17,10 +19,8 @@
 
 </script>
 
-App
-{#if data.data}
-	Posts
-	<Posts posts={data.data.posts} />
+{#if data.posts}
+	<Posts posts={data.posts} />
 {/if}
 
 <style>

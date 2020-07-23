@@ -148,6 +148,7 @@ main {
 }
 */
 
+/*
 @import 'components/footer';
 @import 'components/grid';
 @import 'components/list';
@@ -181,6 +182,27 @@ main {
     }
   }
 
+}
+*/
+
+.posts {
+  @include borderBefore;
+  .item {
+    break-inside: avoid;
+    > a {
+      display: block;
+    }
+  }
+  .grid {
+    margin: $space-top 0;
+    padding: 0 $space-side;
+    column-count: 3;
+    column-gap: $space-side * 2;
+    column-rule: $border;
+    .item {
+      padding-bottom: $space-top;
+    }
+  }
 }
 
 @import 'components/keywords';

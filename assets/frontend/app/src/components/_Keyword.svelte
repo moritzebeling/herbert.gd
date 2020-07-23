@@ -13,14 +13,14 @@
 
 </script>
 
-{#if element === 'a' }
-	<a href="{href}">
+<li class="keyword">
+	{#if element === 'a' }
+		<a href="{href}">
+			<slot></slot>
+			<Count {count} />
+		</a>
+	{:else}
 		<slot></slot>
 		<Count {count} />
-	</li>
-{:else}
-	<li class="keyword">
-		<slot></slot>
-		<Count {count} />
-	</li>
-{/if}
+	{/if}
+</li>

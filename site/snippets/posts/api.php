@@ -1,4 +1,4 @@
-<section id="frontend" class="posts"></section>
+<div id="frontend"></div>
 
 <?= js('assets/frontend/bundle.js'); ?>
 <?= css('assets/frontend/bundle.css'); ?>
