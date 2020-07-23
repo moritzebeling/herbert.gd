@@ -21,7 +21,7 @@
 			</figure>
 		{/if}
 
-		<h2>{item.title}</h2>
+		<h3>{item.title}</h3>
 
 	</a>
 </li>

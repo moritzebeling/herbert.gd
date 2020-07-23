@@ -185,6 +185,7 @@ main {
 }
 */
 
+@import 'components/grid';
 .posts {
   @include borderBefore;
   .item {
@@ -194,19 +195,11 @@ main {
     }
   }
   .grid {
-    margin: $space-top 0;
-    padding: 0 $space-side;
-    column-count: 3;
-    column-gap: $space-side * 2;
-    column-rule: $border;
-    .item {
-      padding-bottom: $space-top;
-    }
+    @include columns;
   }
 }
 
 @import 'components/keywords';
-@import 'components/specialCharacters';
 
 @function columnWidth( $c, $w ) {
 	@return ( $c / $w ) * 100%;

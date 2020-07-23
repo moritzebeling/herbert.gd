@@ -512,7 +512,7 @@ var app = (function () {
     	let li;
     	let a;
     	let t0;
-    	let h2;
+    	let h3;
     	let t1_value = /*item*/ ctx[0].title + "";
     	let t1;
     	let a_href_value;
@@ -525,9 +525,9 @@ var app = (function () {
     			a = element("a");
     			if (if_block) if_block.c();
     			t0 = space();
-    			h2 = element("h2");
+    			h3 = element("h3");
     			t1 = text(t1_value);
-    			add_location(h2, file, 23, 2, 378);
+    			add_location(h3, file, 23, 2, 378);
     			attr_dev(a, "href", a_href_value = /*item*/ ctx[0].href);
     			add_location(a, file, 15, 1, 251);
     			attr_dev(li, "class", li_class_value = "item " + /*orientation*/ ctx[2]);
@@ -542,8 +542,8 @@ var app = (function () {
     			append_dev(li, a);
     			if (if_block) if_block.m(a, null);
     			append_dev(a, t0);
-    			append_dev(a, h2);
-    			append_dev(h2, t1);
+    			append_dev(a, h3);
+    			append_dev(h3, t1);
     		},
     		p: function update(ctx, [dirty]) {
     			if ("image" in /*item*/ ctx[0]) {

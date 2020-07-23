@@ -36,12 +36,12 @@ $font-large: 1.8rem;
 
 // borders
 $border-style: solid;
-$border-width: 2px;
+$border-width: 1px;
 $border: $border-width solid currentColor;
 $border-thin: 1px solid currentColor;
 
 $gap: 1rem;
-$space-top: 2rem;
+$space-top: 1rem;
 $space-side: 2rem;
 $space: $space-top $space-side;
 
@@ -50,8 +50,7 @@ $space: $space-top $space-side;
 		content: '';
 		border-top: $border;
 		display: block;
-		margin: 0 2rem;
-		width: 100%;
+		margin: 0 $space-side;
 	}
 }
 
@@ -68,9 +67,9 @@ $space: $space-top $space-side;
 	> li,
 	> a {
 		display: inline-block;
-    // margin-right: 0.5em;
+    	// margin-right: 0.5em;
 		margin: 0.2em 0.5em 0.2em 0;
-    flex: 0 0 auto;
+    	flex: 0 0 auto;
 	}
 }
 
