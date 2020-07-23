@@ -97,6 +97,8 @@ $space: $space-top $space-side;
 }
 
 @mixin linkArrow {
+	text-decoration: none;
+	border: none;
 	&:after {
 		content: '';
 		border-top: $border;
@@ -106,4 +108,8 @@ $space: $space-top $space-side;
 		display: inline-block;
 		vertical-align: 0.33em;
 	}
+}
+
+@mixin linkUnderline {
+	border-bottom: $border-thin;
 }

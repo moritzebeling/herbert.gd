@@ -38,7 +38,7 @@ p {
     text-indent: 2em;
   }
   a {
-    border-bottom: $border-thin;
+    @include linkUnderline;
   }
 }
 ::selection {
@@ -64,6 +64,7 @@ figure {
 }
 
 @import 'components/navigation';
+@import 'components/footer';
 
 body {
   min-height: 100vh;
@@ -149,7 +150,6 @@ main {
 */
 
 /*
-@import 'components/footer';
 @import 'components/grid';
 @import 'components/list';
 .posts {

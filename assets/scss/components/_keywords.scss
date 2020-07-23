@@ -31,11 +31,9 @@
 }
 
 .links {
-  @include font;
+  // @include font;
   @include inlineList;
   a {
-    &.external {
-      @include linkArrow;
-    }
+    @include linkUnderline;
   }
 }
