@@ -3,4 +3,14 @@
 
 section.content {
 	@include borderBefore;
+	margin-top: $space-top;
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		.title {
+			flex: 1;
+		}
+	}
+
 }

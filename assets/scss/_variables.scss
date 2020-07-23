@@ -24,7 +24,7 @@ $font-large: 2.7rem;
 }
 @mixin fontlarge {
 	font-size: $font-large;
-	line-height: 1.1;
+	line-height: 1.05;
 }
 @mixin sans {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

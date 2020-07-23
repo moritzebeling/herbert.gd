@@ -5,14 +5,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	> * {
-		flex-shrink: 1;
-		flex-grow: 1;
+		flex-shrink: 0;
+		flex-grow: 0;
 		flex-basis: auto;
 	}
 	@for $i from 1 through 12 {
 		> .col-#{$i}{
-			flex-shrink: 0;
-			flex-grow: 1;
 			flex-basis: columnWidth($i,12);
 			width: columnWidth($i,12);
 		}
