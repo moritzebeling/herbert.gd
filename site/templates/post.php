@@ -2,32 +2,38 @@
 
 <main>
 
-  <header class="post-header">
-    <h1 class="title"><?= $page->title()->html() ?></h1>
-    <?php if( $page->subtitle()->isNotEmpty() ): ?>
-      <h2 class="subtitle"><?= $page->subtitle() ?></h2>
-    <?php endif; ?>
-  </header>
+	<header>
+		<div class="title">
+			<h1><?= $page->title()->html() ?></h1>
+			<?php if( $page->subtitle()->isNotEmpty() ): ?>
+				<h2><?= $page->subtitle() ?></h2>
+			<?php endif; ?>
+		</div>
+	</header>
 
-  <?php snippet('post/gallery') ?>
+	<?php snippet('post/gallery') ?>
 
-  <section class="content">
-    <div class="title">
+	<section class="content">
+		<div class="flex rulers">
+			<div class="info col-6">
 
-      <h1 class="title"><?= $page->title()->html() ?></h1>
-      <?php if( $page->subtitle()->isNotEmpty() ): ?>
-        <h2 class="subtitle"><?= $page->subtitle() ?></h2>
-      <?php endif; ?>
+				<div class="title">
+					<h1><?= $page->title()->html() ?></h1>
+					<?php if( $page->subtitle()->isNotEmpty() ): ?>
+						<h2><?= $page->subtitle() ?></h2>
+					<?php endif; ?>
+				</div>
 
-      <?php snippet('post/meta') ?>
+				<?php snippet('post/meta') ?>
 
-    </div>
-    <div class="body">
+			</div>
+			<div class="about col-6">
 
-      <?= $page->body()->kirbytext(); ?>
-      
-    </div>
-  </section>
+				<?= $page->body()->kirbytext(); ?>
+
+			</div>
+		</div>
+	</section>
 
 </main>
 
