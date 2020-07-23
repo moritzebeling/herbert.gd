@@ -29,7 +29,6 @@
 		grid-auto-flow: row;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 0.5rem;
-		// align-items: center;
 		.swiper-slide {
 			grid-column-end: span 1;
 			grid-row-end: span 1;
@@ -84,6 +83,9 @@
 		user-select: none;
 		margin: $space;
 		margin-bottom: 0;
+		@include fontsmall;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 
 		.left,
 		.right {
@@ -121,10 +123,10 @@
 			margin: 0 0.5em;
 			cursor: pointer;
 			.arrow {
-				border-top: $border;
-				border-left: $border;
-				width: 0.7em;
-				height: 0.7em;
+				border-top: $border-thin;
+				border-left: $border-thin;
+				width: 1em;
+				height: 1em;
 				display: inline-block;
 			}
 
