@@ -1,21 +1,30 @@
 body > footer {
-  .credits {
+
+	margin: 0 $space-side;
+	border-top: $border;
+	padding: $space-top 0;
+
+	.credits {
 		li + li {
 			padding-top: $space-top / 2;
 		}
 	}
-  .buw-logo-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
+
+	.buw-logo-container {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+
 }
 
 .buw-logo {
-  svg {
-    // ratio: 1:8.8
-    height: 1.4em;
-    width: 12.32em;
-    transform: translateY(0.1em);
-  }
+
+	svg {
+		// ratio: 1:8.8
+		height: 1.4em;
+		width: 12.32em;
+		transform: translateY(0.1em);
+	}
+
 }

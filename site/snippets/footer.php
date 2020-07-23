@@ -1,5 +1,5 @@
 	<footer>
-		<div class="flex spaced">
+		<div class="flex">
 
 			<ul class="col-6 credits">
 				<?php if( $page->intendedTemplate()->name() === 'info' ){

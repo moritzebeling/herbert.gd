@@ -27,8 +27,3 @@ section.team {
 		margin-top: $space-top;
 	}
 }
-
-body > footer {
-	@include borderBefore;
-	// @include fontlarge;
-}
