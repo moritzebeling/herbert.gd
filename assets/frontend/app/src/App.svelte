@@ -1,41 +1,26 @@
 <script>
 
-	import { writable } from 'svelte/store';
+	import { onDestroy } from 'svelte';
+	import { loadData } from './data/fetch.js';
+	import Posts from './components/Posts.svelte';
+
+	/* store */
+	let dataStore = loadData();
 	let data = {};
-
-	function requestUrl(){
-		let location = window.location.pathname;
-		if( location === '/' ){
-			location = 'start';
-		}
-		let endpoint = location + '.json';
-		if( window.location.search !== '' ){
-			endpoint += window.location.search;
-		}
-		console.log( 'API endpoint: '+endpoint );
-		return endpoint;
-	}
-
-	fetch( requestUrl(), {
-		method: "GET"
-	})
-	.then(response => response.json())
-	.then(response => {
-
-		console.log( response.data );
-		data = response.data;
-
-	})
-	.catch(error => {
-		console.log(error);
+	let unsubscribeDataStore = dataStore.subscribe(update => {
+		data = update;
+		console.log( data );
 	});
-
-	import List from './components/List.svelte';
+	onDestroy(() => {
+		unsubscribeDataStore = null;
+	});
 
 </script>
 
-{#if 'posts' in data}
-	<List {...data} />
+App
+{#if data.data}
+	Posts
+	<Posts posts={data.data.posts} />
 {/if}
 
 <style>
