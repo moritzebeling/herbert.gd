@@ -3,7 +3,7 @@
 
 	const swiperOptions = {
 		speed: 700,
-		spaceBetween: 200,
+		spaceBetween: 0,
 		loop: true,
 		lazy: true,
 		grabCursor: true,

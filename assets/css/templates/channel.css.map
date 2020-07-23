@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/_variables.scss"],"names":[],"mappings":"AAwHA,kBACC,eACA","file":"channel.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/_variables.scss","../../scss/templates/channel.scss"],"names":[],"mappings":"AAwHA,kBACC,eACA,cCxHD,YACI","file":"channel.css"}
