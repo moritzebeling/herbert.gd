@@ -40,7 +40,7 @@ sass --watch --style=compressed assets/scss:assets/css
 ```
 Compile Svelte frontend
 ```
-cd site/plugins/frontend/app
+cd assets/frontend/app
 npm run dev
 ```
 Build Svelte frontend before shipping it
