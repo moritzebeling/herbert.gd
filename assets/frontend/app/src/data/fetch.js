@@ -3,7 +3,7 @@ import { readable } from 'svelte/store';
 function requestPath(){
     let location = window.location.pathname;
     if( location === '/' ){
-        location = 'index';
+        location = 'home';
     }
     let endpoint = location + '.json';
     if( window.location.search !== '' ){

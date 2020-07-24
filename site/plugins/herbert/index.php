@@ -53,7 +53,7 @@ Kirby::plugin('moritzebeling/herbert', [
 
   'pageModels' => [
     'channel' => 'ChannelPage',
-    'start' => 'HomePage',
+    'home' => 'HomePage',
     'index' => 'IndexPage',
     'info' => 'InfoPage',
     'post' => 'PostPage',

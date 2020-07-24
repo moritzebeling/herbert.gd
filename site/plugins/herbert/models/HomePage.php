@@ -20,7 +20,7 @@ class HomePage extends Page
 		$data = parent::json();
 
 		if( $full === true ){
-			$data['posts'] = $this->posts()->json();
+			$data['posts'] = $this->kirby()->collection('featured')->json();
 		}
 
 		return $data;

@@ -432,7 +432,7 @@ var app = (function () {
     function requestPath(){
         let location = window.location.pathname;
         if( location === '/' ){
-            location = 'index';
+            location = 'home';
         }
         let endpoint = location + '.json';
         if( window.location.search !== '' ){

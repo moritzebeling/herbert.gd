@@ -9,8 +9,6 @@ date_default_timezone_set('Europe/Berlin');
 
 return [
 
-  'home' => 'start',
-
   'debug' => false,
   'whoops' => false,
 
