@@ -2,17 +2,15 @@
 
 <main>
 
-  <header class="post-header">
-    <h1><?= $page->title()->html() ?></h1>
-  </header>
+	<header>
+		<div class="title">
+			<h1><?= $page->title()->html() ?></h1>
+		</div>
+	</header>
 
-  <section class="content">
-
-    <?php if( $page->body()->isNotEmpty() ): ?>
-      <?= $page->body()->kirbytext(); ?>
-    <?php endif ?>
-
-  </section>
+	<section class="content">
+		<?= $page->body()->kirbytext(); ?>
+	</section>
 
 </main>
 

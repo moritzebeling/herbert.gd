@@ -3,12 +3,7 @@
 <main>
 
 	<header>
-		<div class="title">
-			<h1><?= $page->title()->html() ?></h1>
-			<?php if( $page->subtitle()->isNotEmpty() ): ?>
-				<h2><?= $page->subtitle() ?></h2>
-			<?php endif; ?>
-		</div>
+		<?php snippet('post/title'); ?>
 	</header>
 
 	<?php snippet('post/gallery') ?>
@@ -17,12 +12,7 @@
 		<div class="flex rulers">
 			<div class="info col-6">
 
-				<div class="title">
-					<h1><?= $page->title()->html() ?></h1>
-					<?php if( $page->subtitle()->isNotEmpty() ): ?>
-						<h2><?= $page->subtitle() ?></h2>
-					<?php endif; ?>
-				</div>
+				<?php snippet('post/title'); ?>
 
 				<?php snippet('post/meta') ?>
 

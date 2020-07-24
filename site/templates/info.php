@@ -22,23 +22,12 @@
 	if( $team->count() > 0 ): ?>
 		<section class="team">
 			<ul class="flex rulers">
-				<?php foreach( $team as $member ): ?>
+				<?php foreach( $team as $person ): ?>
 					<li class="col-6">
 
-						<figure>
-							<?php if( $image = $member->image()->toFile() ): ?>
-								<?= $image->tag(); ?>
-								<figcaption><span>&copy; <?= $image->credits(); ?></span></figcaption>
-							<?php endif; ?>
-						</figure>
-
-						<h3 class="name"><?= $member->name()->html(); ?></h3>
-
-						<div class="about"><?= $member->text()->kirbytext(); ?></div>
-
-						<?php if( $member->link()->isNotEmpty() ): ?>
-							<div class="link"><?= $member->link()->toAnchor(); ?></div>
-						<?php endif; ?>
+						<?php snippet('info/person',[
+							'person' => $person
+						]); ?>
 
 					</li>
 				<?php endforeach; ?>

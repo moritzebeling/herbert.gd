@@ -2,7 +2,7 @@
 
 <main>
 
-	<?php snippet('posts/api'); ?>
+	<?php snippet('frontend'); ?>
 
 </main>
 
