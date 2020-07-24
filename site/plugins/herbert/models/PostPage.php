@@ -61,8 +61,6 @@ class PostPage extends Page
       'keywords' => $this->keywords()->split(),
     ]);
 
-    // attributes
-
     if( $image = $this->image() ){
       $return['image'] = $image->json();
     }

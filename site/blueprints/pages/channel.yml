@@ -64,9 +64,3 @@ tabs:
             fields:
               name:
                 type: text
-
-          attributes:
-            type: structure
-            fields:
-              name:
-                type: text

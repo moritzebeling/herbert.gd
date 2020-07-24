@@ -12,14 +12,6 @@
 
     }
 
-    foreach( $page->attributes()->toStructure() as $attribute ){
-
-        $entries[] = '<li class="attribute">'.
-            SiteSearch::link( $attribute->value()->value() ).
-            '</li>';
-
-    }
-
     foreach( $posts->pluck('keywords',',',true) as $keyword ){
 
         $entries[] = '<li class="tag">'.

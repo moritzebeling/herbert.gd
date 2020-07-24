@@ -51,8 +51,6 @@ columns:
 
           body: fields/content
 
-          attributes: fields/post/attributes
-
   - width: 1/3
     sections:
 

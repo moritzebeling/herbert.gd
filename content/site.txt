@@ -18,10 +18,11 @@ Featured:
 - activities/robin-weissenborn
 - >
   activities/bauhaus-masters-2019-copy-copy
+- activities/port
 
 ----
 
-Description: This publications represents the Graphic Design Class of the Visual Communication Department at the Bauhaus Universität Weimar.
+Description: This platform represents the Graphic Design Class of the Visual Communication Department at the Bauhaus-Universität Weimar.
 
 ----
 
@@ -29,7 +30,7 @@ Links:
 
 ----
 
-Keywords: Herbert, Weimar, VK, Gestaltung, Bauhaus, Universität, Markus Weisbeck, Grafik Design, Adrian Palko
+Keywords: Herbert, Weimar, VK, Gestaltung, Bauhaus, Universität, Space.for.Visual.Research, Markus Weisbeck, Grafik Design, Adrian Palko
 
 ----
 

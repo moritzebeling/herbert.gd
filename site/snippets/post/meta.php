@@ -18,14 +18,6 @@ foreach( $page->categories()->split() as $category ){
 
 }
 
-foreach( $page->attributes()->toStructure() as $attribute ){
-
-	$entries[] = '<li class="attribute">'.
-		SiteSearch::link( $attribute->value()->value() ).
-		'</li>';
-
-}
-
 foreach( $page->keywords()->split() as $keyword ){
 
 	$entries[] = '<li class="tag">'.

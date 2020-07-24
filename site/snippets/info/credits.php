@@ -1,5 +1,6 @@
 <?php if( $page->contact()->isNotEmpty() ): ?>
     <li>
+        <h4>Contact:</h4>
         <?= Html::email( $page->contact() ) ?>
     </li>
 <?php endif ?>
