@@ -6,7 +6,7 @@
 @font-face {
 	font-family: "Graphik";
 		src: url("../fonts/Graphik-Medium.woff2") format("woff2"),
-				 url("../fonts/Graphik-Medium.woff2") format("woff");
+		     url("../fonts/Graphik-Medium.woff2") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -70,9 +70,6 @@ img {
 	}
 }
 
-@import 'components/navigation';
-@import 'components/footer';
-
 body {
 	min-height: 100vh;
 	display: flex;
@@ -90,6 +87,7 @@ body {
 
 main {
 	> header {
+		@include fadein;
 		padding: $space;
 		.about {
 			@include fontlarge;
@@ -98,101 +96,10 @@ main {
 	}
 }
 
-	/*
-	> main {
-		header {
-			margin-top: $space-top;
-			font-size: $font-large;
-		}
-		header,
-		section {
-			margin-left: $space-side;
-			margin-right: $space-side;
-		}
-		section {
-			margin-top: $space-top;
-			padding-top: $space-top;
-			border-top: $border;
-			&:first-child {
-				border-top: none;
-				margin-top: 0;
-				padding-top: 0;
-			}
-			&.posts,
-			&.gallery {
-				margin-left: 0;
-				margin-right: 0;
-			}
-			&.gallery {
-				+ section {
-					border-top: none;
-					padding-top: 0;
-				}
-			}
-			&.meta {
-				border-top: none;
-			}
-		}
-		section.posts {
-			border: none;
-		}
-		section.gallery {
-			border: none;
-			// margin-left: 0;
-			// margin-right: 0;
-			// padding: 0;
-		}
-		section:last-child {
-			// border-bottom: none;
-			// padding-bottom: 0;
-		}
-
-		section.content {
-			.keywords {
-				margin-top: 3rem;
-			}
-		}
-	}
-}
-*/
-
-/*
-@import 'components/grid';
-@import 'components/list';
-.posts {
-
-	ol.grid {
-		@include grid;
-	}
-	ol.list {
-		@include list;
-	}
-	li.hide {
-		img, iframe {
-			opacity: 0;
-		}
-	}
-	li > a {
-		display: block;
-	}
-
-	.info {
-		.title {
-			// @include fontsmall;
-			.headline {
-			}
-			.subline {
-			}
-		}
-		.meta {
-			@include fontsmall;
-		}
-	}
-
-}
-*/
-
+@import 'components/navigation';
+@import 'components/footer';
 @import 'components/flex';
+@import 'components/keywords';
 
 @import 'components/grid';
 .posts {
@@ -204,31 +111,5 @@ main {
 	}
 	.grid {
 		@include sameHeight;
-	}
-}
-main {
-	header + #frontend {
-		.posts {
-			// @include borderBefore;
-		}
-	}
-}
-
-@import 'components/keywords';
-
-@keyframes hover-bob {
-	0% {
-		transform: translateY(-4px);
-	}
-	50% {
-		transform: translateY(-2px);
-	}
-	100% {
-		transform: translateY(-4px);
-	}
-}
-@keyframes hover-bob-float {
-	100% {
-		transform: translateY(-4px);
 	}
 }
