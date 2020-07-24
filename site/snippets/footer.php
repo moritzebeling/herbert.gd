@@ -31,10 +31,11 @@
 		});
 	</script>
 
-
 	<?php if( $page->IntendedTemplate()->name() === 'post' ){
 		snippet('post/footerScripts');
 	} ?>
+
+	<?= js('assets/js/lazysizes.min.js') ?>
 
 </body>
 </html>

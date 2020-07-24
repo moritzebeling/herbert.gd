@@ -1,12 +1,15 @@
 <script>
 
+	import { onMount } from 'svelte';
+	import Image from './Image.svelte';
+
 	export let item = {};
 	export let show = true;
 
 	let orientation = '';
 	if('image' in item){
-		if('orientation' in item.image){
-			orientation = item.image.orientation;
+		if('ratio' in item.image){
+			orientation = item.image.ratio < 1 ? 'landscape' : 'portrait';
 		}
 	}
 
@@ -17,7 +20,7 @@
 
 		{#if 'image' in item}
 			<figure class="video">
-				{@html item.image.image}
+				<Image {...item.image}/>
 			</figure>
 		{/if}
 

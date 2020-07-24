@@ -20,7 +20,7 @@ function flushCache( $id = false ){
 Kirby::plugin('herbert/frontend', [
 
 	'options' => [
-		'cache' => false,
+		'cache' => true,
 		'expires' => 1440
 	],
 

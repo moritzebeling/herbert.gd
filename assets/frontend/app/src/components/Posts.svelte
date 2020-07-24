@@ -43,9 +43,9 @@
 						<button title="Filter by {category}">{category}<Count count={categories[category]} /></button>
 					</li>
 				{/each}
-			</ul>
+			</ul> -->
 
-			<select class="display" bind:value={layoutComponent}>
+			<!-- <select class="display" bind:value={layoutComponent}>
 				{#each Object.keys( layouts ) as lc}
 					<option value={layouts[lc]}>{lc}</option>
 				{/each}

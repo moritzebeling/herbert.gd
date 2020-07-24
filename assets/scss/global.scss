@@ -57,6 +57,17 @@ figure {
 		}
 	}
 }
+img {
+	&.lazyload,
+	&.lazyloading {
+		opacity: 0;
+		min-height: 10vw;
+	}
+	&.lazyloaded {
+		opacity: 1;
+		transition: opacity 500ms;
+	}
+}
 
 @import 'components/navigation';
 @import 'components/footer';

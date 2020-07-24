@@ -1,7 +1,11 @@
 <script>
 
+	import { onMount } from 'svelte';
+
 	export let item = {};
 	export let show = true;
+
+	let element;
 
 	let orientation = '';
 	if('image' in item){
@@ -10,9 +14,18 @@
 		}
 	}
 
+	let height = 10;
+	onMount(() => {
+		if(!('image' in item)) return;
+
+		let width = element.offsetWidth;
+		height = width * item.ratio;
+
+	});
+
 </script>
 
-<li class="{orientation}" class:hide={!show}>
+<li bind:this={element} class="{orientation}" class:hide={!show}>
 	<a href="{item.href}">
 
 		{#if 'image' in item}

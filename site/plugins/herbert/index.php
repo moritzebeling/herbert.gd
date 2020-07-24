@@ -187,12 +187,15 @@ Kirby::plugin('moritzebeling/herbert', [
     'tag' => function ( string $size = 'large' ) {
 
   		return Html::tag( 'img', null, [
-  			'src' => $this->url(),
   			'title' => $this->title()->value(),
   			'alt' => $this->description()->value(),
-        'srcset' => $this->srcset( $size ),
         'width' => $this->width(),
         'height' => $this->height(),
+        'class' => 'lazyload',
+        // 'data-sizes' => 'auto',
+  			'src' => $this->resize( 2000, null, 80 )->url(),
+  			'data-src' => $this->thumb( $size )->url(),
+        'data-srcset' => $this->srcset( $size ),
   		]);
 
   	},
@@ -242,11 +245,12 @@ Kirby::plugin('moritzebeling/herbert', [
     'json' => function( bool $full = true ): array {
 
       $return = [
-        'orientation' => $this->orientation(),
-        'image' => $this->tag(),
-        'width' => $this->width(),
-        'height' => $this->height(),
-        'ratio' => round( $this->height() / $this->width(), 4 )
+        'ratio' => round( $this->height() / $this->width(), 4 ),
+        'title' => $this->title()->value(),
+  			'alt' => $this->description()->value(),
+  			'placeholder' => $this->resize( 64, null, 80 )->url(),
+  			'src' => $this->resize( 2000, null, 80 )->url(),
+        'srcset' => $this->srcset('large'),
       ];
 
       if( $this->videoUrl()->isNotEmpty() ){
