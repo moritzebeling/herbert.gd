@@ -6,18 +6,23 @@ body > footer {
 		li + li {
 			padding-top: $space-top / 2;
 		}
+		a {
+			@include linkUnderline;
+		}
 	}
 
 	.buw-logo-container {
 		display: flex;
 		align-items: flex-end;
-		justify-content: flex-end;
+		// justify-content: flex-end;
+		padding-top: 6rem;
 	}
 
 }
 
 .buw-logo {
 	font-size: 1.3rem;
+
 	svg {
 		height: 1em;
 		width: 8.8em;

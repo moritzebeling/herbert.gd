@@ -1,15 +1,15 @@
 	<footer>
-		<div class="flex">
+		<div class="">
 
-			<ul class="col-6 credits">
+			<ul class="credits">
 				<?php if( $page->intendedTemplate()->name() === 'info' ){
 					snippet('info/credits');
 				} ?>
 			</ul>
 
-			<div class="col-6 buw-logo-container">
+			<div class="buw-logo-container">
 				<?php if( $info = page('info') ): ?>
-					<a class="link buw-logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
+					<a class="buw-logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
 						<?= svg('assets/image/bauhaus-university-logo.svg') ?>
 					</a>
 				<?php endif; ?>

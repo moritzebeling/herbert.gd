@@ -63,7 +63,7 @@ $space: $space-top $space-side;
 
 @mixin inlineList {
 	display: flex;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 	> li,
 	> a {
 		display: inline-block;
