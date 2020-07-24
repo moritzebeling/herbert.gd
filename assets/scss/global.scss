@@ -203,3 +203,25 @@ main {
 }
 
 @import 'components/keywords';
+
+
+@keyframes hover-bob {
+	0% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+	}
+	50% {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+	}
+	100% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+	}
+}
+@keyframes hover-bob-float {
+	100% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+	}
+}

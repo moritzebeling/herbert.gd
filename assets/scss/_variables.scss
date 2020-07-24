@@ -112,8 +112,50 @@ $space: $space-top $space-side;
 
 @mixin linkUnderline {
 	border-bottom: $border-thin;
+	display: inline-block;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	&:hover {
+		animation-name: hover-bob-float, hover-bob;
+		animation-duration: .3s, 1.5s;
+		animation-delay: 0s, .3s;
+		animation-timing-function: ease-out, ease-in-out;
+		animation-iteration-count: 1, infinite;
+		animation-fill-mode: forwards;
+		animation-direction: normal, alternate;
+	}
 }
 
+@mixin yellowBubble {
+	border-bottom: $border-thin;
+	position: relative;
+	&:after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		background-color: #ff0;
+		border: #ff0 solid 2px;
+		border-radius: 4rem;
+		opacity: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transition-duration: 0.3s;
+		transition-property: top, right, bottom, left;
+		transition-timing-function: ease;
+	}
+	&:hover {
+		border-color: transparent;
+		&:after {
+			opacity: 1;
+			top: -4px;
+			right: -8px;
+			bottom: -4px;
+			left: -8px;
+		}
+	}
+}
 
 @mixin fadein {
 	animation: fadein 1s;
