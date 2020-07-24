@@ -88,11 +88,12 @@ $space: $space-top $space-side;
 }
 
 @mixin keywordCount {
-	font-size: 0.7em;
+	font-size: .65em;
 	display: inline-block;
-	vertical-align: 0.45em;
-	border-bottom: $border-thin;
-	margin-left: 0.3em;
+	vertical-align: .4em;
+	border-bottom: 1px solid currentColor;
+	margin-left: .33em;
+	margin-right: 0.1em;
 }
 
 @mixin linkArrow {

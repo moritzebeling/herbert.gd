@@ -66,9 +66,7 @@
 						?>
 						<li>
 							<a class="<?= $class ?>" title="<?= $channel->title()->value() ?>" href="<?= $channel->url() ?>">
-								<span class="full"><?= $channel->title()->value() ?></span>
-
-								<span class="count"><?= $channel->posts()->count() ?></span>
+								<span class="full"><?= $channel->title()->value() ?></span><?php if( $channel->intendedTemplate()->name() === 'channel' ): ?><span class="count"><?= $channel->posts()->count() ?></span><?php endif; ?>
 							</a>
 						</li>
 					<?php endforeach; ?>

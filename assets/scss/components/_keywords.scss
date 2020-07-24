@@ -31,7 +31,6 @@
 }
 
 .links {
-  // @include font;
   @include inlineList;
   a {
     @include linkUnderline;

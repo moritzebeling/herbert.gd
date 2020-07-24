@@ -1,74 +1,49 @@
 body > header {
 
-  width: 100%;
-  padding-top: $space-top - 0.2rem;
-  padding-bottom: 0;
-  padding-left: $space-side;
-  padding-right: $space-side;
-  z-index: 100;
-  background-color: inherit;
+	width: 100%;
+	padding-top: $space-top - 0.2rem;
+	padding-bottom: 0;
+	padding-left: $space-side;
+	padding-right: $space-side;
+	z-index: 100;
+	background-color: inherit;
 
-  .container {
-    // border-bottom: $border;
-    padding-bottom: 4rem;
-    margin-bottom: -$border-width;
-    display: flex;
-    nav {
-      flex: 1;
-      order: 1;
-    }
-    #logo {
-      order: 2;
-    }
-  }
+	.container {
+		padding-bottom: 4rem;
+		margin-bottom: -$border-width;
+		display: flex;
+		nav {
+			flex: 1;
+			order: 1;
+		}
+		#logo {
+			order: 2;
+		}
+	}
 
-  #logo {
-    font-size: 2.6em;
-    width: 3.68em;
-    height: 1em;
-    transform: translateY(0.1rem);
-    margin-top: 0.2em;
-    margin-left: 2rem;
-    svg polyline {
-      stroke-width: 3px;
-    }
-  }
-  nav {
-    .channels {
-      li {
-        display: inline;
-        -webkit-user-select: none;
-        user-select: none;
-      }
-    }
-    a {
-      margin: 0.1rem 0.3em 0.1rem 0;
-      .count {
-        @include keywordCount;
-        font-size: .6em;
-        vertical-align: .38em;
-        padding-bottom: 0.1em;
-      }
+	#logo {
+		font-size: 2.6em;
+		width: 3.68em;
+		height: 1em;
+		transform: translateX(0.1rem);
+		margin-top: 0.1em;
+		margin-left: 2rem;
+		svg polyline {
+			stroke-width: 3px;
+		}
+	}
 
-      transition: padding 300ms ease, margin 300ms ease;
-      padding: 0.1em 0;
-      &.active,
-      &:hover {
-        margin-right: 0.2em;
-        padding: 0.1em 0.5em;
-        background: #fff;
-        border-radius: 1em;
-      }
-      &.active {
-        background-color: #000;
-        color: #fff;
-        span {
-          display: inline !important;
-        }
-        abbr {
-          display: none !important;
-        }
-      }
-    }
-  }
+	nav {
+		-webkit-user-select: none;
+		user-select: none;
+		.channels {
+			@include inlineList;
+		}
+		a {
+			@include button;
+			.count {
+				@include keywordCount;
+			}
+		}
+	}
 }
