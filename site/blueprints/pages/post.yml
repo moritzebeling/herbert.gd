@@ -71,5 +71,6 @@ columns:
           searchwords:
             extends: fields/keywords
             label: Invisible keywords
-            help: E.g. persons involved
+            help: E.g. persons involved, colors
             icon: search
+            query: site.index.pluck("searchwords", ",", true)
