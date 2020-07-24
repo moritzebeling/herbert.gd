@@ -15,7 +15,6 @@ table {
         text-align: left;
         vertical-align: middle;
         &.l {
-            vertical-align: top;
             @include font;
             width: 20%;
             white-space: unset;
@@ -30,14 +29,19 @@ table {
             padding-left: 0.5rem;
             a {
                 text-transform: uppercase;
-                letter-spacing: 0.05em;
+                letter-spacing: 0.03em;
+                background-color: #fff;
+                border-radius: 2em;
+                padding: 0.3em 0.5em 0.2em 0.6em;
                 display: inline-block;
-                margin-left: 0.5em;
-                border-bottom: 1px solid #000;
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
             }
         }
         &.img {
-            padding: 0.2rem 0.4rem 0.2rem 0;
+            padding: 0.3rem 0.4rem 0.2rem 0;
             img {
                 width: 40px;
                 height: 40px;
