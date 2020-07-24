@@ -44,7 +44,8 @@ class ChannelPage extends Page
       foreach( $this->links()->toStructure() as $item ){
         $link = [
           'text' => linkText( $item->title(), $item->url()->value() ),
-          'url' => $item->url()->value()
+          'url' => $item->url()->value(),
+          'layout' => $this->layout(),
         ];
 
         if( !isset($data['links']) ){

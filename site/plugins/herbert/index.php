@@ -76,7 +76,6 @@ Kirby::plugin('moritzebeling/herbert', [
       $json = [
         'title' => $this->title()->value(),
         'href' => $this->url(),
-        'layout' => $this->layout(),
         'logo' => asset('assets/image/herbert-logo.svg')->url()
       ];
       if( $info = $this->page('info') ){
@@ -104,9 +103,7 @@ Kirby::plugin('moritzebeling/herbert', [
     'json' => function ( bool $full = true ): array {
       return [
         'title' => $this->title()->value(),
-        'href' => $this->id(),
-        'template' => $this->intendedTemplate()->name(),
-        'layout' => $this->layout(),
+        'href' => $this->url()
       ];
   	}
   ],

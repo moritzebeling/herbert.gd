@@ -53,7 +53,7 @@ class PostPage extends Page
     $return = parent::json();
 
     $return = array_merge( $return, [
-      'channelId' => $this->channel()->uid(),
+      'channel' => $this->channel()->uid(),
       'date' => $this->displayDate(),
       'year' => $this->date()->toDate('Y'),
       'subtitle' => $this->subtitle()->value(),
