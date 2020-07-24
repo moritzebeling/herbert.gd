@@ -64,4 +64,12 @@ columns:
 
           categories: fields/post/categories
 
-          keywords: fields/keywords
+          keywords:
+            extends: fields/keywords
+            help: E.g. locations, disciplines, materials, media
+
+          searchwords:
+            extends: fields/keywords
+            label: Invisible keywords
+            help: E.g. persons involved
+            icon: search
