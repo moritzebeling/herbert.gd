@@ -11,11 +11,6 @@
 
 	<?= css([ 'assets/css/global.css', '@auto' ]) ?>
 
-	<?= js([
-		'assets/js/morutilities.js',
-		'assets/js/default.js'
-	]) ?>
-
 	<?php
 	/*
 	insert here:
