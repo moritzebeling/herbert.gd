@@ -166,7 +166,7 @@ class SiteSearch {
 Kirby::plugin('herbert/site-search', [
 
   'options' => [
-    'search.path' => 'index',
+    'search.path' => 'search',
     'cache' => true,
     'expires' => 1440
   ],

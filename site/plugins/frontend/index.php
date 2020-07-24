@@ -49,7 +49,7 @@ Kirby::plugin('herbert/frontend', [
           // create data
 
           // find the right page
-          if( $path === 'index' ){
+          if( $path === '/' ){
 
             $data = $kirby->site()->homePage()->json( true );
 

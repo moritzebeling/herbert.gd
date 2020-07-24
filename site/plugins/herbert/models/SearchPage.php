@@ -1,6 +1,6 @@
 <?php
 
-class IndexPage extends Page
+class SearchPage extends Page
 {
   public function layout(): string {
     return $this->site()->layout();

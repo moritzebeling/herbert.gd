@@ -45,7 +45,7 @@ function linkText( Kirby\Cms\Field $text, string $url ): string {
 
 require_once __DIR__.'/models/ChannelPage.php';
 require_once __DIR__.'/models/HomePage.php';
-require_once __DIR__.'/models/IndexPage.php';
+require_once __DIR__.'/models/SearchPage.php';
 require_once __DIR__.'/models/InfoPage.php';
 require_once __DIR__.'/models/PostPage.php';
 
@@ -54,7 +54,7 @@ Kirby::plugin('moritzebeling/herbert', [
   'pageModels' => [
     'channel' => 'ChannelPage',
     'home' => 'HomePage',
-    'index' => 'IndexPage',
+    'search' => 'SearchPage',
     'info' => 'InfoPage',
     'post' => 'PostPage',
   ],
