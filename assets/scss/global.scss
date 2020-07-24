@@ -1,20 +1,15 @@
 // https://sass-lang.com/documentation
 // sass --watch --style=compressed assets/scss:assets/css
 
-@import 'variables';
-
-//
-// fonts
-//
-/*
 @font-face {
-	font-family: "Fontname";
-		src: url("../fonts/Fontname.woff2") format("woff2"),
-				 url("../fonts/Fontname.woff") format("woff");
+	font-family: "Graphik";
+		src: url("../fonts/Graphik-Medium.woff2") format("woff2"),
+				 url("../fonts/Graphik-Medium.woff2") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
-*/
+
+@import 'variables';
 
 
 //
