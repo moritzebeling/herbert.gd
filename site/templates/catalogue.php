@@ -2,9 +2,6 @@
 
 <main>
 
-    <header>
-        <h1><?= $page->title() ?></h1>
-
 	<?php foreach( $kirby->collection('channels') as $channel ): ?>
         <section>
             <h2><a target="_blank" href="<?= $channel->url() ?>"><?= $channel->title(); ?></a></h2>

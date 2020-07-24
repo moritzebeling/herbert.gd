@@ -1,7 +1,10 @@
 @import '../variables';
 
 section {
-    margin-top: 4rem;
+    margin: $space;
+    + section {
+        margin-top: 4rem;
+    }
 }
 
 table {
