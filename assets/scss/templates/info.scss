@@ -1,7 +1,6 @@
 @import '../variables';
 
-body,
-body > header {
+body {
 	background-color: #999;
 }
 
@@ -26,4 +25,9 @@ section.team {
 	.link {
 		margin-top: $space-top;
 	}
+}
+
+body > footer {
+	border-top: $border;
+	padding-top: $space-top;
 }

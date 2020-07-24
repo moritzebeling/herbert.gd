@@ -1,8 +1,6 @@
 body > footer {
 
-	margin: 0 $space-side;
-	border-top: $border;
-	padding: $space-top 0;
+	margin: $space;
 
 	.credits {
 		li + li {
@@ -19,11 +17,10 @@ body > footer {
 }
 
 .buw-logo {
-
+	font-size: 1.3rem;
 	svg {
-		// ratio: 1:8.8
-		height: 1.4em;
-		width: 12.32em;
+		height: 1em;
+		width: 8.8em;
 		transform: translateY(0.1em);
 	}
 
