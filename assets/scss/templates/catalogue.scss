@@ -1,0 +1,48 @@
+@import '../variables';
+
+section {
+    margin-top: 4rem;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    @include fontsmall;
+    th,
+    td {
+        padding: 0.4rem 0.5rem 0.3rem 0;
+        text-align: left;
+        vertical-align: middle;
+        &:nth-child(1),
+        &:nth-child(2) {
+            vertical-align: top;
+            @include font;
+            width: 20%;
+            white-space: unset;
+        }
+        &.s {
+            width: 5%;
+            white-space: nowrap;
+        }
+        &:last-child {
+            text-align: right;
+            padding-right: 0;
+            padding-left: 0.5rem;
+            a {
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                display: inline-block;
+                margin-left: 0.5em;
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+    th {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+    td {
+        border-bottom: 1px solid #000;
+    }
+}
