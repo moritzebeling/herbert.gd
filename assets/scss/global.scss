@@ -196,7 +196,7 @@ main {
 		}
 	}
 	.grid {
-		@include columns;
+		@include sameHeight;
 	}
 }
 main {

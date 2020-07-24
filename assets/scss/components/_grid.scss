@@ -1,12 +1,41 @@
 @mixin columns {
-    margin: $space-top 0;
-    padding: 0 $space-side;
-    column-count: 2;
-    column-gap: $space-top;
-    .item {
-      padding-bottom: $space-top;
-      figure {
-        margin-bottom: 0.2em;
-      }
-    }
+	margin: $space-top 0;
+	padding: 0 $space-side;
+	column-count: 2;
+	column-gap: $space-top;
+	.item {
+		padding-bottom: $space-top;
+		figure {
+			margin-bottom: 0.2em;
+		}
+	}
+}
+
+@mixin sameHeight {
+	margin: $space-top 0;
+	padding: 0 ($space-side / 2);
+	display: flex;
+	flex-wrap: wrap;
+	.item {
+		padding: ($space-top / 2) ($space-side / 2);
+		flex: 0 0 66.6%;
+		figure {
+			margin-bottom: 0.2em;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&.landscape {
+			+ .item.landscape {
+				flex-basis: 33.3%;
+				+ .item.landscape {
+					flex-basis: 66.6%;
+				}
+			}
+		}
+		&.portrait {
+			flex-basis: 33.3%;
+		}
+	}
 }
