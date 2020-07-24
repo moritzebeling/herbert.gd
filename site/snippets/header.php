@@ -9,7 +9,7 @@
 
 	<link rel="canonical" href="<?= $page->url() ?>" />
 
-	<?= css([ 'assets/css/global.css', '@auto' ]) ?>
+	<?= css('assets/css/global.css') ?>
 
 	<?php
 	/*

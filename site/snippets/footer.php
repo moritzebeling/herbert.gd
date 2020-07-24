@@ -22,6 +22,8 @@
 		snippet('post/footerScripts');
 	} ?>
 
+	<?= css('@auto') ?>
+
 	<?= js('assets/js/herbert.js') ?>
 	<?= js('assets/js/lazysizes.min.js') ?>
 
