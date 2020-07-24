@@ -14,6 +14,9 @@
 
 	let categories = {};
 	for( let post of posts ){
+		if(!('categories' in post)){
+			continue;
+		}
 		for( let cat of post.categories ){
 			if(!(cat in categories)){
 				categories[cat]	= 0;

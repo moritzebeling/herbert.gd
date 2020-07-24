@@ -671,7 +671,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (59:1) {:else}
+    // (62:1) {:else}
     function create_else_block(ctx) {
     	let h3;
 
@@ -680,7 +680,7 @@ var app = (function () {
     			h3 = element("h3");
     			h3.textContent = "No posts found";
     			attr_dev(h3, "class", "error");
-    			add_location(h3, file$1, 59, 2, 1266);
+    			add_location(h3, file$1, 62, 2, 1314);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -697,14 +697,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(59:1) {:else}",
+    		source: "(62:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:1) {#if posts.length > 0}
+    // (36:1) {#if posts.length > 0}
     function create_if_block$1(ctx) {
     	let ol;
     	let ol_class_value;
@@ -730,7 +730,7 @@ var app = (function () {
     			}
 
     			attr_dev(ol, "class", ol_class_value = "container " + /*layout*/ ctx[0]);
-    			add_location(ol, file$1, 52, 2, 1124);
+    			add_location(ol, file$1, 55, 2, 1172);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ol, anchor);
@@ -802,14 +802,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(33:1) {#if posts.length > 0}",
+    		source: "(36:1) {#if posts.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:3) {#each posts as item}
+    // (57:3) {#each posts as item}
     function create_each_block(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
@@ -887,7 +887,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(54:3) {#each posts as item}",
+    		source: "(57:3) {#each posts as item}",
     		ctx
     	});
 
@@ -915,7 +915,7 @@ var app = (function () {
     			section = element("section");
     			if_block.c();
     			attr_dev(section, "class", "posts");
-    			add_location(section, file$1, 31, 0, 535);
+    			add_location(section, file$1, 34, 0, 583);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -984,6 +984,10 @@ var app = (function () {
     	let categories = {};
 
     	for (let post of posts) {
+    		if (!("categories" in post)) {
+    			continue;
+    		}
+
     		for (let cat of post.categories) {
     			if (!(cat in categories)) {
     				categories[cat] = 0;
