@@ -249,7 +249,7 @@ Kirby::plugin('moritzebeling/herbert', [
         'image' => $this->tag(),
         'width' => $this->width(),
         'height' => $this->height(),
-        'ratio' =>  $this->height() / $this->width()
+        'ratio' => round( $this->height() / $this->width(), 4 )
       ];
 
       if( $this->videoUrl()->isNotEmpty() ){
