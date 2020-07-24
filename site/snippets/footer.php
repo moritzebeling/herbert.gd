@@ -24,8 +24,8 @@
 
 	<?= css('@auto') ?>
 
-	<?= js('assets/js/herbert.js') ?>
-	<?= js('assets/js/lazysizes.min.js') ?>
+	<?= js('assets/js/herbert.js', true) ?>
+	<?= js('assets/js/lazysizes.min.js', true) ?>
 
 </body>
 </html>
