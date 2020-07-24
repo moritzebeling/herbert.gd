@@ -7,116 +7,124 @@
 
 function flushCache( $id = false ){
 
-  $cache = kirby()->cache('herbert.frontend');
+	$cache = kirby()->cache('herbert.frontend');
 
 	if( $id === false ){
-    $cache->flush();
+		$cache->flush();
 	} else {
-    $cache->remove( $id . '.json' );
-  }
+		$cache->remove( $id . '.json' );
+	}
 
 }
 
 Kirby::plugin('herbert/frontend', [
 
-  'options' => [
-    'cache' => false,
-    'expires' => 1440
-  ],
+	'options' => [
+		'cache' => false,
+		'expires' => 1440
+	],
 
-  'routes' => [
-    [
-      'pattern' => '(:all).json',
-      'action'  => function ( $path ) {
+	'routes' => [
+		[
+			'pattern' => '(:all).json',
+			'action'  => function ( $path ) {
 
-        $kirby = kirby();
-        $cached = false;
-        $data = null;
+				$kirby = kirby();
+				$cached = false;
+				$data = null;
 
-        if( option('herbert.frontend.cache',false) ){
+				if( option('herbert.frontend.cache',false) ){
 
-          $cache = $kirby->cache('herbert.frontend');
-          $data = $cache->get( $path );
+					$cache = $kirby->cache('herbert.frontend');
+					$data = $cache->get( $path );
 
-          if( $data !== null ){
-            $cached = true;
-            // ready for return
-          }
+					if( $data !== null ){
+						$cached = true;
+						// ready for return
+					}
 
-        }
+				}
 
-        if( $data === null ){
-          // create data
+				if( $data === null ){
+					// create data
 
-          // find the right page
-          if( $path === '/' ){
+					// find the right page
+					if( $path === '/' ){
 
-            $data = $kirby->site()->homePage()->json( true );
+						$data = $kirby->site()->homePage()->json( true );
 
-          } else if( $path === 'posts' ){
+					} else if( $path === 'search' ){
 
-            $data = $kirby->collection('posts')->json( false );
+						$data = $kirby->page('search')->json( true );
 
-          } else if( $page = $kirby->page( $path ) ){
+						$query = kirby()->request()->get();
+						if( !empty( $query ) ){
+							$posts = SiteSearch::query( $query );
+						} else {
+							$posts = kirby()->collection('posts');
+						}
 
-            $data = $page->json( true );
+						$data['posts'] = $posts->json();
 
-          } else {
+					} else if( $path === 'posts' ){
 
-            return [
-              'status' => 404,
-              'route' => $path,
-            ];
+						$data = $kirby->collection('posts')->json( false );
 
-          }
+					} else if( $page = $kirby->page( $path ) ){
 
-          if( option('herbert.frontend.cache',false) ){
-            $cache->set( $path, $data, option('herbert.frontend.expires',1440) );
-          }
+						$data = $page->json( true );
 
-        }
+					} else {
 
-        return [
-          'status' => 200,
-          'route' => $path,
-          'cached' => $cached,
-          'data' => $data
-        ];
+						return [
+							'status' => 404,
+							'route' => $path,
+						];
 
-      }
-    ],
-  ],
-  'hooks' => [
-    'page.*:after' => function ( $event ) {
-      $page = $event->page() ? $event->page() : $event->newPage();
-      switch ( $event->action() ) {
-        case 'create':
-        case 'delete':
-        case 'changeSlug':
-        case 'changeStatus':
-        case 'changeTitle':
-        case 'duplicate':
-        case 'update':
-          flushCache( $page->id() );
-      }
-    },
-    'file.*:after' => function ( $event ) {
-      $file = $event->file() ? $event->file() : $event->newFile();
-      switch ( $event->action() ) {
-        case 'create':
-        case 'delete':
-        case 'changeName':
-        case 'changeSort':
-        case 'replace':
-        case 'update':
-          flushCache( $file->parentId() );
-      }
-    },
-    /*
-		'site.update:after' => function () {
-			flushCache();
+					}
+
+					if( option('herbert.frontend.cache',false) ){
+						$cache->set( $path, $data, option('herbert.frontend.expires',1440) );
+					}
+
+				}
+
+				return [
+					'status' => 200,
+					'route' => $path,
+					'cached' => $cached,
+					'data' => $data
+				];
+
+			}
+		],
+	],
+	'hooks' => [
+		'page.*:after' => function ( $event ) {
+			$page = $event->page() ? $event->page() : $event->newPage();
+			switch ( $event->action() ) {
+				case 'create':
+				case 'delete':
+				case 'changeSlug':
+				case 'changeStatus':
+				case 'changeTitle':
+				case 'duplicate':
+				case 'update':
+					flushCache( $page->id() );
+			}
 		},
-    */
-  ]
+		'file.*:after' => function ( $event ) {
+			$file = $event->file() ? $event->file() : $event->newFile();
+			switch ( $event->action() ) {
+				case 'create':
+				case 'delete':
+				case 'changeName':
+				case 'changeSort':
+				case 'replace':
+				case 'update':
+					flushCache( $file->parentId() );
+			}
+		},
+	]
 
 ]);
