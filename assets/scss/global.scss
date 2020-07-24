@@ -1,6 +1,8 @@
 // https://sass-lang.com/documentation
 // sass --watch --style=compressed assets/scss:assets/css
 
+@import 'reset';
+
 @font-face {
 	font-family: "Graphik";
 		src: url("../fonts/Graphik-Medium.woff2") format("woff2"),

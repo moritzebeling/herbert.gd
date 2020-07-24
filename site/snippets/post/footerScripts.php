@@ -1,3 +1,4 @@
+<?= css('assets/css/swiper.css') ?>
 <?= js('assets/js/swiper.min.js') ?>
 <script>
 

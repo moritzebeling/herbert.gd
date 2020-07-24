@@ -9,12 +9,7 @@
 
 	<link rel="canonical" href="<?= $page->url() ?>" />
 
-	<?= css([
-		'assets/css/reset.css',
-		'assets/css/swiper.css',
-		'assets/css/global.css',
-		'@auto'
-	]) ?>
+	<?= css([ 'assets/css/global.css', '@auto' ]) ?>
 
 	<?= js([
 		'assets/js/morutilities.js',
