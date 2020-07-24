@@ -1,0 +1,6 @@
+// make image background a little grey to distinguish from white list or card element
+
+.k-image[data-back=white] span,
+.k-list-item-image .k-icon {
+  background-color: #fafafa;
+}

@@ -1,0 +1,24 @@
+// sass --watch --style=compressed --no-source-map site/plugins/kirby-panelmodifications:site/plugins/kirby-panelmodifications
+
+@import 'components/_dialog';
+@import 'components/_disabled';
+@import 'components/_image';
+@import 'components/_layout';
+@import 'components/_pageSettings';
+@import 'components/_pageStatus';
+@import 'components/_pagetable';
+@import 'components/_preformatted';
+
+.k-card-info {
+	.k-icon {
+		position: static;
+		display: inline-block;
+		margin-top: 0.2em;
+		margin-right: 0.4em;
+		&.k-icon-protected {
+			svg * {
+				fill: #c82829;
+			}
+		}
+	}
+}

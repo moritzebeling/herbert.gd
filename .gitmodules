@@ -7,6 +7,3 @@
 [submodule "site/plugins/sitemapper"]
 	path = site/plugins/sitemapper
 	url = https://gitlab.com/cre8ivclick/sitemapper.git
-[submodule "site/plugins/kirby-panelmodifications"]
-	path = site/plugins/kirby-panelmodifications
-	url = https://github.com/moritzebeling/kirby-panelmodifications.git
