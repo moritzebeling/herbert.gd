@@ -68,21 +68,10 @@ $space: $space-top $space-side;
 	> a {
 		display: inline-block;
 		margin: 0.25em 0.6em 0.25em 0;
-    	flex: 0 0 auto;
+		flex: 0 0 auto;
 	}
-}
-
-@mixin button {
-	background-color: #fff;
-	padding: 0.2em 0.5em 0.1em;
-	border-radius: 1em;
-	transition-property: color, background-color;
-	transition-timing-function: ease;
-	transition-duration: 150ms;
-	&.active,
-	&:hover {
-		color: #fff;
-		background-color: $color;
+	button {
+		margin: 0;
 	}
 }
 
@@ -93,6 +82,25 @@ $space: $space-top $space-side;
 	border-bottom: 1px solid currentColor;
 	margin-left: .33em;
 	margin-right: 0.1em;
+}
+
+@mixin bubble {
+	background-color: #fff;
+	padding: 0.2em 0.5em 0.1em;
+	border-radius: 1em;
+	transition-property: color, background-color;
+	transition-timing-function: ease;
+	transition-duration: 150ms;
+	-webkit-user-select: none;
+    user-select: none;
+	&.active,
+	&:hover {
+		color: #fff;
+		background-color: $color;
+	}
+	.count {
+		@include keywordCount;
+	}
 }
 
 @mixin linkArrow {

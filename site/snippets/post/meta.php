@@ -1,38 +1,26 @@
 <?php
 
-$entries = [];
+$keywords = [];
 
 if( $page->date()->isNotEmpty() ){
-
-	$entries[] = '<li class="date">'.
-		SiteSearch::date( $page->dateFormat(), $page->date()->toDate('Y-m-d'), $page->displayDate() ).
-		'</li>';
-
+	$keywords[] = SiteSearch::date( $page->dateFormat(), $page->date()->toDate('Y-m-d'), $page->displayDate() );
 }
 
 foreach( $page->categories()->split() as $category ){
-
-	$entries[] = '<li class="category">'.
-		SiteSearch::link( $category ).
-		'</li>';
-
+	$keywords[] = SiteSearch::link( $category );
 }
 
 foreach( $page->keywords()->split() as $keyword ){
-
-	$entries[] = '<li class="tag">'.
-		SiteSearch::link( $keyword ).
-		'</li>';
-
+	$keywords[] = SiteSearch::link( $keyword );
 }
 
-if( count($entries) < 1 ){
+if( count($keywords) < 1 ){
 	return;
 }
 
 ?>
 <ul class="keywords">
-	<?php foreach( $entries as $html ): ?>
-		<?= $html ?>
+	<?php foreach( $keywords as $keyword ): ?>
+		<li><?= $keyword ?></li>
 	<?php endforeach; ?>
 </ul>

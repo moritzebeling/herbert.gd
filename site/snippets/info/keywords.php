@@ -1,28 +1,19 @@
 <ul class="keywords">
     <?php
 
-    $entries = [];
-    $posts = kirby()->collection('posts');
+    $posts = $page->kirby()->collection('posts');
+
+    $keywords = [];
 
     foreach( $posts->pluck('categories',',',true) as $category ){
-
-        $entries[] = '<li class="category">'.
-            SiteSearch::link( $category ).
-            '</li>';
-
+        $keywords[] = SiteSearch::link( $category );
     }
-
     foreach( $posts->pluck('keywords',',',true) as $keyword ){
-
-        $entries[] = '<li class="tag">'.
-            SiteSearch::link( $keyword ).
-            '</li>';
-
+        $keywords[] = SiteSearch::link( $keyword );
     }
 
     ?>
-    <?php foreach( $entries as $html ): ?>
-        <?= $html ?>
+    <?php foreach( $keywords as $keyword ): ?>
+        <li><?= $keyword ?></li>
     <?php endforeach; ?>
-
 </ul>

@@ -8,6 +8,8 @@ body > header {
 	padding-right: $space-side;
 	z-index: 100;
 	background-color: inherit;
+	-webkit-user-select: none;
+	user-select: none;
 
 	.container {
 		padding-bottom: 4rem;
@@ -37,19 +39,14 @@ body > header {
 	}
 
 	nav {
-		-webkit-user-select: none;
-		user-select: none;
-		.channels {
+		ol {
 			@include inlineList;
 			li {
 				margin-top: 0.15em;
 				margin-bottom: 0.15em;
-			}
-		}
-		a {
-			@include button;
-			.count {
-				@include keywordCount;
+				a {
+					@include bubble;
+				}
 			}
 		}
 	}

@@ -1,31 +1,19 @@
 .result-options {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 8;
-  background-color: $background;
+  // position: -webkit-sticky;
+  // position: sticky;
+  // top: 0;
+  // z-index: 8;
+  // background-color: $background;
 
-  margin: 0 $space-side $space-top;
-  padding-top: $space-top - 0.2rem;
-  padding-bottom: $space-top - 0.2rem;
-  border-bottom: $border;
-
-  button {
-    padding: 0;
-    margin: 0;
-    -webkit-appearance: none;
-  }
-
+  margin: 0 $space-side;
 }
 
 .keywords {
   @include inlineList;
   li {
-    @include button;
-    -webkit-user-select: none;
-    user-select: none;
-    .count {
-      @include keywordCount;
+    > a,
+    > button {
+      @include bubble;
     }
   }
 }
