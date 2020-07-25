@@ -12,7 +12,7 @@
 }
 
 @mixin sameHeight {
-	margin: $space-top 0;
+	margin: ($space-top / 2) 0;
 	padding: 0 ($space-side * 0.75);
 	display: flex;
 	flex-wrap: wrap;
@@ -36,6 +36,14 @@
 		}
 		&.portrait {
 			flex-basis: 33.3%;
+		}
+		&.hide {
+			figure {
+				background-color: #000;
+				img {
+					opacity: 0;
+				}
+			}
 		}
 	}
 }

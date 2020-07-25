@@ -1,6 +1,7 @@
 body > footer {
 
-	margin: $space;
+	margin: 0 $space-side;
+	padding-bottom: $space-top;
 
 	.credits {
 		li + li {
