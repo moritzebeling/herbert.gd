@@ -6,6 +6,11 @@ If you want to contribute to the website design and functionality or fix problem
 
 If you want to contribute to the page content, please get in touch with the editors aka. the staff of the graphic design chair at Marienstraße 1, Weimar. Read more at [herbert.gd/info](https://herbert.gd/info).
 
+## Setup
+The website runs on PHP and uses Kirby as CMS, framework and templating engine. On top of that, there is a Svelte frontend JS framework to dynamically render and manipulate lists of posts on client side. It fetches json data from a public api that can be accessed by appending `.json` at the end of any page url.
+CSS is not bundled by Svelte, but compiled with Sass.
+All content is lives on the live server. Get in touch to get a copy of that.
+
 ## System requirements for development
 - php 7.3
 - sass
@@ -19,7 +24,7 @@ cd hebert.gd
 ```
 Install svelte
 ```
-cd site/plugins/frontend/app
+cd assets/frontend/app
 npm install
 ```
 
@@ -30,7 +35,7 @@ git submodule foreach git pull origin master
 ```
 
 ## Run website locally
-To run php on localhost:8000
+To run a php server on localhost:8000
 ```
 php -S localhost:8000 kirby/router.php
 ```
