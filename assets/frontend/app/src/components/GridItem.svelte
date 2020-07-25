@@ -1,10 +1,19 @@
 <script>
 
-	import { onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
 	import Image from './Image.svelte';
 
 	export let item = {};
-	export let show = true;
+	export let filter = false;
+
+	let show = true;
+	afterUpdate(() => {
+		if( filter === false ){
+			show = true;
+		} else {
+			show = item.categories.includes( filter );
+		}
+	});
 
 	let orientation = '';
 	if('image' in item){

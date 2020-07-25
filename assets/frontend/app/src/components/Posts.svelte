@@ -17,11 +17,11 @@
 		if(!('categories' in post)){
 			continue;
 		}
-		for( let cat of post.categories ){
-			if(!(cat in categories)){
-				categories[cat]	= 0;
+		for( let category of post.categories ){
+			if(!(category in categories)){
+				categories[category] = 0;
 			}
-			categories[cat]++;
+			categories[category]++;
 		}
 	}
 
@@ -35,27 +35,27 @@
 <section class="posts">
 	{#if posts.length > 0}
 
-		<!-- <div class="result-options">
+		<div class="result-options">
 
 			<ul class="keywords filters">
-				{#each Object.keys(categories) as category}
-					<li class="keyword" on:click={()=> setFilter(category) } class:active={ filter === category } >
-						<button title="Filter by {category}">{category}<Count count={categories[category]} /></button>
+				{#each Object.entries(categories) as [category, count]}
+					<li on:click={()=> setFilter(category) } class:active={ filter === category } >
+						<button title="Filter by {category}">{category}<span class="count">{count}</span></button>
 					</li>
 				{/each}
-			</ul> -->
+			</ul>
 
 			<!-- <select class="display" bind:value={layoutComponent}>
 				{#each Object.keys( layouts ) as lc}
 					<option value={layouts[lc]}>{lc}</option>
 				{/each}
-			</select>
+			</select> -->
 
-		</div> -->
+		</div>
 
 		<ol class="container {layout}">
 			{#each posts as item}
-				<svelte:component this={layoutComponent} {item}/>
+				<svelte:component this={layoutComponent} {item} {filter}/>
 			{/each}
 		</ol>
 
