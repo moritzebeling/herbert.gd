@@ -1,6 +1,7 @@
 body > header {
 
 	width: 100%;
+	margin-top: $space-top;
 	padding-top: $space-top - 0.2rem;
 	padding-bottom: 0;
 	padding-left: $space-side;
@@ -12,6 +13,8 @@ body > header {
 		padding-bottom: 4rem;
 		margin-bottom: -$border-width;
 		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
 		nav {
 			flex: 1;
 			order: 1;
@@ -38,11 +41,37 @@ body > header {
 		user-select: none;
 		.channels {
 			@include inlineList;
+			li {
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
 		}
 		a {
 			@include button;
 			.count {
 				@include keywordCount;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+	body > header {
+		nav {
+			position: fixed;
+			left: $space-side;
+			top: $space-side;
+			transition-property: top, left;
+			transition-duration: 300ms;
+			transition-timing-function: ease;
+		}
+	}
+	body.has-scrolled > header {
+		nav {
+			left: $space-top;
+			top: $space-top;
+			li a {
+				box-shadow: 0 0 10px rgba(0,0,0,0.2);
 			}
 		}
 	}
