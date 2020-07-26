@@ -30,6 +30,8 @@
 		<meta property="og:image" content="<?= $image->thumb()->url(['width' => 1000]) ?>" />
 	<?php endif ?>
 
+	<?php snippet('header/favicon') ?>
+
 </head>
 <!-- This website was made by Moritz Ebeling https://moritzebeling.com -->
 <!-- If you want to contribute to this website, go to <?= option('repo') ?> -->
