@@ -119,19 +119,10 @@ $space: $space-top $space-side;
 
 @mixin linkUnderline {
 	border-bottom: $border-thin;
-	/*
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	transition: background-color 300ms ease;
 	&:hover {
-		animation-name: hover-bob-float, hover-bob;
-		animation-duration: .3s, 1.5s;
-		animation-delay: 0s, .3s;
-		animation-timing-function: ease-out, ease-in-out;
-		animation-iteration-count: 1, infinite;
-		animation-fill-mode: forwards;
-		animation-direction: normal, alternate;
+		background-color: #ff0;
 	}
-	*/
 }
 
 @mixin yellowBubble {
@@ -172,21 +163,4 @@ $space: $space-top $space-side;
 @keyframes fadein {
 	from { opacity: 0; }
 	to   { opacity: 1; }
-}
-
-@keyframes hover-bob {
-	0% {
-		transform: translateY(-4px);
-	}
-	50% {
-		transform: translateY(-2px);
-	}
-	100% {
-		transform: translateY(-4px);
-	}
-}
-@keyframes hover-bob-float {
-	100% {
-		transform: translateY(-4px);
-	}
 }
