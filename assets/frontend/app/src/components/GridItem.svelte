@@ -33,7 +33,10 @@
 			</figure>
 		{/if}
 
-		<h3>{item.title}</h3>
+		<div class="title">
+			<h3>{item.title}</h3>
+			<h4>{item.subtitle}</h4>
+		</div>
 
 	</a>
 </li>
