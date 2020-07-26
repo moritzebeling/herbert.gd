@@ -52,6 +52,7 @@ if( $image = $metaParent->image() ){
 	<meta property="og:image" content="<?= $image->resize(1000,null,80)->url() ?>" />
 
 	<?php snippet('header/favicon') ?>
+	<?php snippet('header/jsonld') ?>
 
 </head>
 <!-- This website was made by Moritz Ebeling https://moritzebeling.com -->
