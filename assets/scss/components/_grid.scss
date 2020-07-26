@@ -1,4 +1,4 @@
-@mixin gridItem {
+.posts .grid .item {
 	break-inside: avoid;
 	> a {
 		display: block;
@@ -53,7 +53,21 @@
 	.item {
 		padding: $space-top ($space-side / 4);
 		@include itemLayoutOnPosition;
-		@include gridItem;
+	}
+}
+
+@mixin grid {
+	margin: $space-top 0;
+	padding: 0 $space-side;
+	display: grid;
+	gap: ($space-top * 4) ($space-side / 2);
+	grid-template-columns: 1fr 1fr 1fr;
+	.item {
+		grid-column-end: span 1;
+		&:nth-child(4n-3),
+		&:nth-child(4n-4) {
+			grid-column-end: span 2;
+		}
 	}
 }
 
@@ -62,7 +76,4 @@
 	padding: 0 $space-side;
 	column-count: 2;
 	column-gap: $space-top;
-	.item {
-		@include gridItem;
-	}
 }

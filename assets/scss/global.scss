@@ -104,6 +104,6 @@ main {
 @import 'components/grid';
 .posts {
 	.grid {
-		@include flexGrid;
+		@include grid;
 	}
 }
