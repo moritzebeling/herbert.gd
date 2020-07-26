@@ -39,8 +39,8 @@
 
 			<ul class="keywords filters">
 				{#each Object.entries(categories) as [category, count]}
-					<li on:click={()=> setFilter(category) } class:active={ filter === category } >
-						<button title="Filter by {category}">{category}<span class="count">{count}</span></button>
+					<li on:click={()=> setFilter(category) }>
+						<button class:active={ filter === category } title="Filter by {category}">{category}<span class="count">{count}</span></button>
 					</li>
 				{/each}
 			</ul>

@@ -1,26 +1,26 @@
 .result-options {
-  // position: -webkit-sticky;
-  // position: sticky;
-  // top: 0;
-  // z-index: 8;
-  // background-color: $background;
+	// position: -webkit-sticky;
+	// position: sticky;
+	// top: 0;
+	// z-index: 8;
+	// background-color: $background;
 
-  margin: 0 $space-side;
+	margin: 0 $space-side;
 }
 
 .keywords {
-  @include inlineList;
-  li {
-    > a,
-    > button {
-      @include bubble;
-    }
-  }
+	@include inlineList;
+	li {
+		> a,
+		> button {
+			@include bubble;
+		}
+	}
 }
 
 .links {
-  @include inlineList;
-  a {
-    @include linkUnderline;
-  }
+	@include inlineList;
+	a {
+		@include linkUnderline;
+	}
 }
