@@ -27,9 +27,9 @@ fields:
 
   exclude:
     type: toggle
-    label: Exclude from gallery
+    label: Show in gallery
     text:
-      - Include in gallery
+      - Show in gallery
       - Hidden in gallery
 
   videoUrl:
