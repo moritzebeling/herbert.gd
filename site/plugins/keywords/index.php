@@ -142,7 +142,7 @@ class SiteSearch {
           });
           break;
         case 'search':
-          $result = $result->search( $value );
+          $result = $result->bettersearch( $value );
           break;
         default:
           $result = $result->filterBy( $key, $value );
