@@ -7,17 +7,28 @@ body {
 section.team {
 	@include borderBefore;
 	figure {
+		display: flex;
 		img {
-			max-height: 8em;
+			height: 8rem;
+			max-height: 8rem;
 			width: auto;
 		}
 		figcaption {
-			margin-top: 0.5em;
 			@include fontsmall;
+			flex: 1;
+			position: relative;
+			span {
+				position: absolute;
+				display: block;
+				transform: rotate(-90deg);
+				transform-origin: top left;
+				margin-top: 8rem;
+				margin-left: 0.5em;
+			}
 		}
 	}
 	.name {
-		margin: $space-top 0 0.5em;
+		margin: 1rem 0 0.5rem;
 		@include fontlarge;
 	}
 	.link {
