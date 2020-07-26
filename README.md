@@ -57,11 +57,15 @@ npm run build
 `master` branch is only for the currently stable live version. Development happens within `develop`, which is the only branch ever to be pulled to `master`. If you are fixing an issue or working on a new feature, please start from `develop` and call your new branch `yymmdd-issue-name` or `yymmdd-feature-name`. Send pull requests only to `develop`.
 
 ## Stack and tools used
-- php (v7.4)
-- [Kirby](https://getkirby.com) (v3)
-- [Svelte](https://svelte.dev) (v3)
-- [sass](https://sass-lang.com)
-- [Swiper.js](https://swiperjs.com)
+- php (v7.4) Server
+- [Kirby](https://getkirby.com) (v3) CMS
+- [Bettersearch](https://github.com/bvdputte/kirby-bettersearch) Kirby plugin for an enhanced search algorithm
+- [Sitemapper](https://gitlab.com/kirbyzone/sitemapper) Kirby plugin to create a sitemap.xml for searchengines
+- [Pagetable](https://github.com/sylvainjule/kirby-pagetable) Kirby plugin for table-like display of posts in panel
+- [sass](https://sass-lang.com) CSS Preprocessor
+- [Svelte](https://svelte.dev) (v3) JS framework
+- [Swiper.js](https://swiperjs.com) Image slider gallery
+- [Lazysizes](https://github.com/aFarkas/lazysizes) Image lazyloading
 
 ## When deploying to a FTP server
 When deploying this website to the target host, please exclude the following from upload to prevent yourself from overriding critical files and avoid cluttering:
