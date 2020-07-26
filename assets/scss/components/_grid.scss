@@ -1,49 +1,68 @@
-@mixin columns {
-	margin: $space-top 0;
-	padding: 0 $space-side;
-	column-count: 2;
-	column-gap: $space-top;
-	.item {
-		padding-bottom: $space-top;
+@mixin gridItem {
+	break-inside: avoid;
+	> a {
+		display: block;
+	}
+	figure {
+		margin-bottom: 0.5em;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.title {
+		line-height: 1.1;
+	}
+	&.hide {
 		figure {
-			margin-bottom: 0.4em;
+			background-color: #000;
+			img {
+				opacity: 0;
+			}
 		}
 	}
 }
 
-@mixin sameHeight {
+@mixin itemLayoutOnRatio {
+	flex: 0 0 66.6%;
+	&.landscape {
+		+ .item.landscape {
+			flex-basis: 33.3%;
+			+ .item.landscape {
+				flex-basis: 66.6%;
+			}
+		}
+	}
+	&.portrait {
+		flex-basis: 33.3%;
+	}
+}
+@mixin itemLayoutOnPosition {
+	flex: 0 0 33.3%;
+	&:nth-child(4n-3),
+	&:nth-child(4n-4) {
+		flex-basis: 66.6%;
+	}
+}
+
+@mixin flexGrid {
 	margin: ($space-top / 2) 0;
 	padding: 0 ($space-side * 0.75);
 	display: flex;
 	flex-wrap: wrap;
 	.item {
 		padding: $space-top ($space-side / 4);
-		flex: 0 0 66.6%;
-		figure {
-			margin-bottom: 0.4em;
-		}
-		img {
-			width: 100%;
-			height: auto;
-		}
-		&.landscape {
-			+ .item.landscape {
-				flex-basis: 33.3%;
-				+ .item.landscape {
-					flex-basis: 66.6%;
-				}
-			}
-		}
-		&.portrait {
-			flex-basis: 33.3%;
-		}
-		&.hide {
-			figure {
-				background-color: #000;
-				img {
-					opacity: 0;
-				}
-			}
-		}
+		@include itemLayoutOnPosition;
+		@include gridItem;
+	}
+}
+
+@mixin columns {
+	margin: $space-top 0;
+	padding: 0 $space-side;
+	column-count: 2;
+	column-gap: $space-top;
+	.item {
+		@include gridItem;
 	}
 }

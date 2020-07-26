@@ -103,13 +103,7 @@ main {
 
 @import 'components/grid';
 .posts {
-	.item {
-		break-inside: avoid;
-		> a {
-			display: block;
-		}
-	}
 	.grid {
-		@include sameHeight;
+		@include flexGrid;
 	}
 }
