@@ -105,5 +105,13 @@ main {
 .posts {
 	.grid {
 		@include grid;
+
+	}
+}
+body.home {
+	.posts {
+		.grid {
+			@include gridGallery;
+		}
 	}
 }
