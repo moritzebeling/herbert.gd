@@ -76,29 +76,36 @@ body {
 	flex-direction: column;
 	> header {
 		flex: 0 0 auto;
-		padding: 0 $space-side;
-		margin: $space-top 0;
 	}
 	> main {
 		flex: 1 0 auto;
-		padding-top: $space-top-l;
-		> header {
-			@include fadein;
-			padding: 0 $space-side;
-			margin-bottom: $space-top-l;
-			.about {
-				@include fontlarge;
-				margin-bottom: 1rem;
-			}
-		}
-		section {
-			margin: $space-top 0;
-		}
 	}
 	> footer {
 		flex: 0 0 auto;
 	}
 }
+header {
+	padding: 0 $space-side;
+	margin: $space-top 0;
+}
+section {
+	margin: $space-top 0;
+}
+main {
+	padding-top: $space-top-l;
+	> header {
+		@include fadein;
+		margin-bottom: $space-top-l;
+		.about {
+			@include fontlarge;
+			margin-bottom: 1rem;
+		}
+	}
+	section:first-child {
+		margin-top: $space-top;
+	}
+}
+
 
 @import 'components/header';
 @import 'components/footer';
@@ -106,7 +113,7 @@ body {
 @import 'components/keywords';
 @import 'components/grid';
 
-@import 'templates/home';
 @import 'templates/channel';
-@import 'templates/post';
+@import 'templates/home';
 @import 'templates/info';
+@import 'templates/post';
