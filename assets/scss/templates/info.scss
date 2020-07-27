@@ -5,27 +5,19 @@ body {
 }
 
 section.team {
+	margin-top: $space-top * 3;
 	@include borderBefore;
 	figure {
 		display: flex;
 		img {
-			height: 8rem;
-			max-height: 8rem;
+			height: $space-side * 4;
 			width: auto;
 		}
 		figcaption {
 			@include fontsmall;
 			flex: 1;
-			position: relative;
-			span {
-				position: absolute;
-				display: block;
-				transform: rotate(-90deg);
-				transform-origin: top left;
-				margin-top: 8rem;
-				margin-left: 0.5em;
-				white-space: nowrap;
-			}
+			flex-wrap: wrap;
+			margin-left: 0.5em;
 		}
 	}
 	.name {
@@ -34,6 +26,24 @@ section.team {
 	}
 	.link {
 		margin-top: $space-top;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	section.team {
+		figure {
+			figcaption {
+				position: relative;
+				span {
+					position: absolute;
+					display: block;
+					transform: rotate(-90deg);
+					transform-origin: top left;
+					margin-top: $space-side * 4;
+					white-space: nowrap;
+				}
+			}
+		}
 	}
 }
 

@@ -3,7 +3,7 @@
 section {
     margin: $space;
     + section {
-        margin-top: 4rem;
+        margin-top: $space-top * 3;
     }
 }
 

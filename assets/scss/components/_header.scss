@@ -1,7 +1,7 @@
 body > header {
 
 	width: 100%;
-	margin-top: $space-top;
+	// margin-top: $space-top;
 	// padding-top: $space-top - 0.2rem;
 	padding-top: $space-top;
 	padding-bottom: 0;
@@ -13,7 +13,7 @@ body > header {
 	user-select: none;
 
 	.container {
-		padding-bottom: 4rem;
+		padding-bottom: $space-top * 3;
 		margin-bottom: -$border-width;
 		display: flex;
 		justify-content: flex-end;
@@ -32,7 +32,7 @@ body > header {
 		width: 3.68em;
 		height: 1em;
 		transform: translateX(0.1rem);
-		margin-top: 0.1em;
+		// margin-top: 0.1em;
 		margin-left: 2rem;
 		svg polyline {
 			stroke-width: 3px;
@@ -58,7 +58,7 @@ body > header {
 		nav {
 			position: fixed;
 			left: $space-side;
-			top: $space-side;
+			top: $space-top;
 			transition-property: top, left;
 			transition-duration: 300ms;
 			transition-timing-function: ease;
@@ -66,8 +66,7 @@ body > header {
 	}
 	body.has-scrolled > header {
 		nav {
-			left: $space-top;
-			top: $space-top;
+			left: $space-side / 2;
 			li a {
 				box-shadow: 0 0 10px rgba(0,0,0,0.2);
 			}
