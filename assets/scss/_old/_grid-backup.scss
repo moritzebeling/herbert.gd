@@ -1,4 +1,5 @@
 @import '../variables';
+$gap: 1rem;
 
 @mixin carditem {
 	grid-column-end: span 1;

@@ -40,9 +40,8 @@ $border-width: 2px;
 $border: $border-width solid currentColor;
 $border-thin: 1px solid currentColor;
 
-$gap: 1rem;
-$space-top: 1rem;
-$space-side: 2rem;
+$space-top: 2vh;
+$space-side: 3vw;
 $space: $space-top $space-side;
 
 @mixin borderBefore {
@@ -90,7 +89,7 @@ $space: $space-top $space-side;
 	border-radius: 1em;
 	transition-property: color, background-color;
 	transition-timing-function: ease;
-	transition-duration: 150ms;
+	transition-duration: 300ms;
 	-webkit-user-select: none;
     user-select: none;
 	&.active,
