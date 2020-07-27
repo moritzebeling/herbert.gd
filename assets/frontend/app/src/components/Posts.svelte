@@ -7,7 +7,7 @@
 		grid: GridItem,
 		list: ListItem,
 	};
-	export let layout = 'list';
+	export let layout = 'grid';
 
 	export let posts = [];
 

@@ -1760,7 +1760,7 @@ var app = (function () {
 
     function instance$3($$self, $$props, $$invalidate) {
     	let layouts = { grid: GridItem, list: ListItem };
-    	let { layout = "list" } = $$props;
+    	let { layout = "grid" } = $$props;
     	let { posts = [] } = $$props;
     	let categories = {};
 
