@@ -12,7 +12,7 @@ function flushCache( $id = false ){
 	if( $id === false ){
 		$cache->flush();
 	} else {
-		$cache->remove( $id . '.json' );
+		$cache->remove( $id );
 	}
 
 }
@@ -124,6 +124,9 @@ Kirby::plugin('herbert/frontend', [
 				case 'update':
 					flushCache( $file->parentId() );
 			}
+		},
+		'site.update:after' => function ( $newSite ) {
+			flushCache( $newSite->homePageId() );
 		},
 	]
 
