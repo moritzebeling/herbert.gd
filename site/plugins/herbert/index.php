@@ -10,11 +10,11 @@ function dateToSemester( int $time ): string {
 	$year = date('y', $time);
 
 	if( $month <= 3 ){
-		return 'Winter '.($year+1999).'/'.$year;
+		return 'Winter Semester '.($year+1999).'/'.$year;
 	} else if( $month <= 9 ){
-		return 'Sommer '.($year+2000);
+		return 'Summer Semester '.($year+2000);
 	} else {
-		return 'Winter '.($year+2000).'/'.($year+1);
+		return 'Winter Semester '.($year+2000).'/'.($year+1);
 	}
 }
 
