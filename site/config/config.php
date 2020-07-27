@@ -22,8 +22,9 @@ return [
 
   'thumbs' => [
 	'quality' => 80,
+	'driver' => 'im',
 	'presets' => [
-		'layload' => ['width' => 64, 'quality' => 70],
+		'layload' => ['width' => 32, 'quality' => 50],
 		'small' => ['width' => 640],
 		'medium' => ['width' => 1200],
 		'large' => ['width' => 2000],

@@ -13,6 +13,7 @@ All content is lives on the live server. Get in touch to get a copy of that.
 
 ## System requirements for development
 - php 7.3
+- imagemagick
 - sass
 - npm
 
@@ -58,6 +59,7 @@ npm run build
 
 ## Stack and tools used
 - php (v7.4) Server
+- [imagemagick](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-install-imagemagick-for-php-on-ubuntu-18-04/)
 - [Kirby](https://getkirby.com) (v3) CMS
 - [Bettersearch](https://github.com/bvdputte/kirby-bettersearch) Kirby plugin for an enhanced search algorithm
 - [Sitemapper](https://gitlab.com/kirbyzone/sitemapper) Kirby plugin to create a sitemap.xml for searchengines
