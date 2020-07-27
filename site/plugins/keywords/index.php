@@ -143,7 +143,9 @@ class SiteSearch {
           });
           break;
         case 'search':
-          $result = $result->bettersearch( $value );
+          $result = $result->bettersearch( $value,[
+            'fields' => ['title','subtitle','categories','keywords','searchwords'],
+          ]);
           break;
         default:
           $result = $result->filterBy( $key, $value );
