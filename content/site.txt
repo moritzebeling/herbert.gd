@@ -7,18 +7,18 @@ Featured:
 - grafik-design/la-strada
 - >
   activities/grafik-design-workshop-taiwan-tech
-- activities/somehow-there
 - grafik-design/learning-from-hans-hofmann
-- grafik-design/the-five-obstructions
+- activities/somehow-there
 - >
   space-for-visual-research/sfvr-workshop-2019
+- grafik-design/the-five-obstructions
+- space-for-visual-research/2nd-book
 - >
   activities/manifest-of-practice-exhibition-in-berlin
-- space-for-visual-research/2nd-book
+- activities/port
 - activities/robin-weissenborn
 - >
   activities/bauhaus-masters-2019-copy-copy
-- activities/port
 
 ----
 
