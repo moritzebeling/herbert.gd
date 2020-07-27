@@ -1,40 +1,43 @@
 <script>
 
-	import { onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
+	import Image from './Image.svelte';
 
 	export let item = {};
-	export let show = true;
+	export let filter = false;
 
-	let element;
+	let show = true;
+	afterUpdate(() => {
+		if( filter === false ){
+			show = true;
+		} else {
+			show = item.categories.includes( filter );
+		}
+	});
 
 	let orientation = '';
 	if('image' in item){
-		if('orientation' in item.image){
-			orientation = item.image.orientation;
+		if('ratio' in item.image){
+			orientation = item.image.ratio < 1 ? 'landscape' : 'portrait';
 		}
 	}
 
-	let height = 10;
-	onMount(() => {
-		if(!('image' in item)) return;
-
-		let width = element.offsetWidth;
-		height = width * item.ratio;
-
-	});
-
 </script>
 
-<li bind:this={element} class="{orientation}" class:hide={!show}>
+<li class="item {orientation}" class:hide={!show}>
 	<a href="{item.href}">
+
+
+		<div class="title">
+			<h3>{item.title}</h3>
+			<h4>{item.subtitle}</h4>
+		</div>
 
 		{#if 'image' in item}
 			<figure class="video">
-				{@html item.image.image}
+				<Image {...item.image}/>
 			</figure>
 		{/if}
-
-		<h2>{item.title}</h2>
 
 	</a>
 </li>

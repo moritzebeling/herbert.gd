@@ -1,14 +1,13 @@
 <script>
 
 	import GridItem from './GridItem.svelte';
-	// import ListItem from './ListItem.svelte';
+	import ListItem from './ListItem.svelte';
 
 	let layouts = {
 		grid: GridItem,
-		// list: ListItem,
+		list: ListItem,
 	};
-	export let layout = 'grid';
-	let layoutComponent = layouts[layout];
+	export let layout = 'list';
 
 	export let posts = [];
 
@@ -45,17 +44,17 @@
 				{/each}
 			</ul>
 
-			<!-- <select class="display" bind:value={layoutComponent}>
+			<!-- <div class="layout">
 				{#each Object.keys( layouts ) as lc}
-					<option value={layouts[lc]}>{lc}</option>
+					<button on:click={() => layout = lc}>{lc}</button>
 				{/each}
-			</select> -->
+			</div> -->
 
 		</div>
 
 		<ol class="container {layout}">
 			{#each posts as item}
-				<svelte:component this={layoutComponent} {item} {filter}/>
+				<svelte:component this={layouts[layout]} {item} {filter}/>
 			{/each}
 		</ol>
 

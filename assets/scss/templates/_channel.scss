@@ -1,5 +1,123 @@
+@import '../variables';
+
+@mixin item {
+	> a {
+		display: block;
+	}
+	.title {
+		line-height: 1.1;
+	}
+	&.hide {
+		figure {
+			background-color: #000;
+			img {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.posts .grid .item {
+	break-inside: avoid;
+	> a {
+		display: block;
+	}
+	figure {
+		margin-bottom: 0.5em;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.title {
+		line-height: 1.1;
+	}
+	&.hide {
+		figure {
+			background-color: #000;
+			img {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+@mixin gridGallery {
+	grid-template-columns: 1fr 1fr 1fr;
+	.item {
+		&:nth-child(4n-3),
+		&:nth-child(4n-4) {
+			grid-column-end: span 2;
+		}
+	}
+}
+
+@mixin grid {
+	margin: $space-top 0;
+	padding: 0 $space-side;
+	display: grid;
+	gap: ($space-top * 2) ($space-side / 2);
+    grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+    .item {
+        grid-column-end: span 1;
+        figure {
+            margin-bottom: 0.5em;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@mixin list {
+	margin: $space-top 0;
+	padding: 0 $space-side;
+	.item {
+		> a {
+			display: flex;
+			padding: 0.5rem 0;
+			border-top: 1px solid #000;
+		}
+		figure {
+			flex: 0 0 auto;
+			margin-left: 0.5em;
+			img {
+				height: 3em;
+				width: auto;
+			}
+		}
+		.title {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+.result-options {
+	margin: $space-top 0;
+	padding: 0 $space-side;
+
+	display: flex;
+	align-items: baseline;
+
+	.filters {
+		flex: 1 1 auto;
+		width: auto;
+	}
+	.layout {
+		padding-left: 1em;
+		flex: 0 0 auto;
+	}
+}
+
 .posts {
+    .item {
+        @include item;
+    }
     .grid {
         @include grid;
+    }
+    .list {
+        @include list;
     }
 }
