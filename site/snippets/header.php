@@ -49,7 +49,7 @@ if( $image = $metaParent->image() ){
 	<meta property="og:url" content="<?= $metaParent->url() ?>">
 	<meta property="og:locale" content="de_DE">
 	<meta property="og:description" content="<?= $desc ?>">
-	<meta property="og:image" content="<?= $image->resize(1000,null,80)->url() ?>" />
+	<meta property="og:image" content="<?= $image->resize( 1000 )->url() ?>" />
 
 	<?php snippet('header/favicon') ?>
 	<?php snippet('header/jsonld') ?>
