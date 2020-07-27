@@ -28,7 +28,9 @@ tabs:
       - width: 1/2
         fields:
 
-          featured: fields/featured
+          featured:
+            extends: fields/featured
+            help: Any even number of posts look best. Sizes are shown as large, [small, small, large, large]...
 
   meta:
     extends: tabs/meta
