@@ -89,9 +89,10 @@ main {
 	> header {
 		@include fadein;
 		padding: $space;
+		padding-bottom: $space-top * 4;
 		.about {
 			@include fontlarge;
-			padding-bottom: $space-top * 4;
+			margin-bottom: 1rem;
 		}
 	}
 }
