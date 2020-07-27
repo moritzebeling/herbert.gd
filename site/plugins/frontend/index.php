@@ -30,10 +30,15 @@ Kirby::plugin('herbert/frontend', [
 			'action'  => function ( $path ) {
 
 				$kirby = kirby();
-				$cached = false;
 				$data = null;
 
-				if( option('herbert.frontend.cache',false) ){
+				$allowCache = option('herbert.frontend.cache',false);
+				if( $path === 'search' ){
+					$allowCache = false;
+				}
+				$cached = false;
+
+				if( $allowCache ){
 
 					$cache = $kirby->cache('herbert.frontend');
 					$data = $cache->get( $path );
@@ -83,7 +88,7 @@ Kirby::plugin('herbert/frontend', [
 
 					}
 
-					if( option('herbert.frontend.cache',false) ){
+					if( $allowCache ){
 						$cache->set( $path, $data, option('herbert.frontend.expires',1440) );
 					}
 
