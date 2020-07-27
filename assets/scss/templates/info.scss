@@ -4,6 +4,10 @@ body {
 	background-color: #999;
 }
 
+section.keywords {
+	padding: $space;
+}
+
 section.team {
 	margin-top: $space-top * 3;
 	@include borderBefore;

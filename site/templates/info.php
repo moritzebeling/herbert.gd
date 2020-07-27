@@ -14,9 +14,11 @@
 			'links' => $site->links()
 		]); ?>
 
-		<?php snippet('info/keywords'); ?>
-
 	</header>
+
+	<section class="keywords">
+		<?php snippet('info/keywords'); ?>
+	</section>
 
 	<?php $team = $page->team()->toStructure();
 	if( $team->count() > 0 ): ?>
