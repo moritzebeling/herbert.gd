@@ -1,0 +1,26 @@
+@import '../variables';
+@import '../components/gallery';
+
+body.post {
+
+	section.content {
+		@include borderBefore;
+		margin-top: $space-top;
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			.title {
+				flex: 1;
+				margin-bottom: $space-top-l;
+			}
+		}
+
+	}
+
+	> footer {
+		border-top: $border;
+		padding-top: $space-top;
+	}
+
+}

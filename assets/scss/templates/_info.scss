@@ -1,0 +1,58 @@
+@import '../variables';
+
+body.info {
+
+	background-color: #999;
+
+	section.keywords {
+		padding: 0 $space-side;
+	}
+
+	section.team {
+		@include borderBefore;
+		figure {
+			display: flex;
+			img {
+				height: $space-side * 4;
+				width: auto;
+			}
+			figcaption {
+				@include fontsmall;
+				flex: 1;
+				flex-wrap: wrap;
+				margin-left: 0.5em;
+			}
+		}
+		.name {
+			margin: 1rem 0 0.5rem;
+			@include fontlarge;
+		}
+		.link {
+			margin-top: $space-top;
+		}
+	}
+
+	@media screen and (min-width: 600px) {
+		section.team {
+			figure {
+				figcaption {
+					position: relative;
+					span {
+						position: absolute;
+						display: block;
+						transform: rotate(-90deg);
+						transform-origin: top left;
+						margin-top: $space-side * 4;
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
+
+	> footer {
+		border-top: $border;
+		padding-top: $space-top;
+	}
+
+}
