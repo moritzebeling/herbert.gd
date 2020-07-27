@@ -6,31 +6,9 @@
 	}
 	.title {
 		line-height: 1.1;
-	}
-	&.hide {
-		figure {
-			background-color: #000;
-			img {
-				opacity: 0;
-			}
+		.date {
+			@include fontsmall;
 		}
-	}
-}
-
-.posts .grid .item {
-	break-inside: avoid;
-	> a {
-		display: block;
-	}
-	figure {
-		margin-bottom: 0.5em;
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-	.title {
-		line-height: 1.1;
 	}
 	&.hide {
 		figure {
@@ -66,7 +44,16 @@
                 width: 100%;
                 height: auto;
             }
-        }
+		}
+		.title {
+			.date {
+				// float: right;
+			}
+			&:after {
+				clear: both;
+				display: inline-table;
+			}
+		}
     }
 }
 
