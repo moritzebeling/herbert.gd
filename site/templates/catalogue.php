@@ -9,16 +9,16 @@
             <table width="100%">
 
                 <tr>
-                    <th class="s">&nbsp;</th>
-                    <th class="l">Title</th>
-                    <th class="l">Subtitle</th>
+                    <th class="img">Title</th>
+                    <th class="l">&nbsp;</th>
+                    <th class="m">Url</th>
                     <th>Date</th>
                     <th class="s">Words</th>
                     <th class="s">Images</th>
                     <th>Categories</th>
                     <th>Keywords</th>
                     <th>Invisible Keywords</th>
-                    <th>Link</th>
+                    <th class="s">Link</th>
                 </tr>
 
                 <?php foreach( $channel->posts() as $post ): ?>
@@ -41,21 +41,18 @@
                         </td>
                         <td class="l">
                             <a target="_blank" href="<?= $post->url() ?>">
-                                <?= $post->title() ?>
+                                <h3><?= $post->title() ?></h3>
+                                <h4><?= $post->subtitle() ?></h4>
                             </a>
                         </td>
-                        <td class="l">
-                            <a target="_blank" href="<?= $post->url() ?>">
-                                <?= $post->subtitle() ?>
-                            </a>
-                        </td>
+                        <td class="m"><?= $post->uid() ?></td>
                         <td><?= $post->displayDate() ?></td>
                         <td class="s"><?= $post->body()->words() ?></td>
                         <td class="s"><?= $post->images()->count() ?></td>
                         <td><?= $post->categories()->value() ?></td>
                         <td><?= $post->keywords()->value() ?></td>
                         <td><?= $post->searchwords()->value() ?></td>
-                        <td>
+                        <td class="s">
                             <a target="_blank" href="<?= $post->panelUrl() ?>">Edit</a>
                         </td>
                     </tr>
