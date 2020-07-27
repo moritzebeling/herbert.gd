@@ -192,8 +192,8 @@ Kirby::plugin('moritzebeling/herbert', [
 				'height' => $this->height(),
 				'class' => 'lazyload',
 				'data-sizes' => 'auto',
-				'src' => $this->resize( 2000, null, 80 )->url(),
-				'data-src' => $this->thumb( $size )->url(),
+				'src' => $this->resize( 2000 )->url(),
+				'data-src' => $this->resize( $size )->url(),
 				'data-srcset' => $this->srcset( $size ),
 			]);
 
@@ -265,7 +265,7 @@ Kirby::plugin('moritzebeling/herbert', [
 				'ratio' => round( $this->height() / $this->width(), 4 ),
 				'alt' => $this->alt(),
 				'placeholder' => $this->resize( 32, null, 50 )->url(),
-				'src' => $this->resize( 2000, null, 80 )->url(),
+				'src' => $this->resize( 2000 )->url(),
 				'srcset' => $this->srcset('large'),
 			];
 

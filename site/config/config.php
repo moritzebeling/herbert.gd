@@ -21,11 +21,12 @@ return [
   'smartypants' => true,
 
   'thumbs' => [
+	'quality' => 80,
 	'presets' => [
 		'layload' => ['width' => 64, 'quality' => 70],
-		'small' => ['width' => 640, 'quality' => 80],
-		'medium' => ['width' => 1200, 'quality' => 80],
-		'large' => ['width' => 2000, 'quality' => 80],
+		'small' => ['width' => 640],
+		'medium' => ['width' => 1200],
+		'large' => ['width' => 2000],
 	],
   	'srcsets' => [
   		'small' => [ 240, 360, 640 ],
