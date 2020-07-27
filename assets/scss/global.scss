@@ -76,24 +76,27 @@ body {
 	flex-direction: column;
 	> header {
 		flex: 0 0 auto;
+		padding: 0 $space-side;
+		margin: $space-top 0;
 	}
 	> main {
 		flex: 1 0 auto;
+		padding-top: $space-top-l;
+		> header {
+			@include fadein;
+			padding: 0 $space-side;
+			margin-bottom: $space-top-l;
+			.about {
+				@include fontlarge;
+				margin-bottom: 1rem;
+			}
+		}
+		section {
+			margin: $space-top 0;
+		}
 	}
 	> footer {
 		flex: 0 0 auto;
-	}
-}
-
-main {
-	> header {
-		@include fadein;
-		padding: $space;
-		padding-bottom: $space-top * 4;
-		.about {
-			@include fontlarge;
-			margin-bottom: 1rem;
-		}
 	}
 }
 
@@ -101,18 +104,9 @@ main {
 @import 'components/footer';
 @import 'components/flex';
 @import 'components/keywords';
-
 @import 'components/grid';
-.posts {
-	.grid {
-		@include grid;
 
-	}
-}
-body.home {
-	.posts {
-		.grid {
-			@include gridGallery;
-		}
-	}
-}
+@import 'templates/home';
+@import 'templates/channel';
+@import 'templates/post';
+@import 'templates/info';

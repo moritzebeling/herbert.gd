@@ -40,9 +40,15 @@ $border-width: 2px;
 $border: $border-width solid currentColor;
 $border-thin: 1px solid currentColor;
 
-$space-top: 2vh;
+$space-top: 1.5vw;
+$space-top-l: 8vh;
 $space-side: 3vw;
 $space: $space-top $space-side;
+
+@mixin sectionSpacing {
+	padding: 0 $space-side;
+	margin: $space-top-l 0;
+}
 
 @mixin borderBefore {
 	&:before {

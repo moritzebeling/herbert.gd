@@ -5,7 +5,7 @@ body > footer {
 
 	.credits {
 		li + li {
-			padding-top: $space-top / 2;
+			padding-top: 0.5em;
 		}
 		a {
 			@include linkUnderline;
@@ -15,8 +15,7 @@ body > footer {
 	.buw-logo-container {
 		display: flex;
 		align-items: flex-end;
-		// justify-content: flex-end;
-		padding-top: $space-top * 3;
+		margin-top: $space-top-l;
 	}
 
 }

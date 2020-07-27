@@ -2,9 +2,7 @@
 
 section {
     margin: $space;
-    + section {
-        margin-top: $space-top * 3;
-    }
+    margin-top: $space-top-l;
 }
 
 table {

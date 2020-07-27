@@ -17,7 +17,7 @@
 	}
 	&.spaced,
 	&.rulers {
-		padding: $space-top 0;
+		padding-top: $space-top;
 		> *[class*="col-"] {
 			padding: 0 $space-side;
 		}

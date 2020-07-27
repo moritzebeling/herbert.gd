@@ -1,19 +1,11 @@
 body > header {
 
-	width: 100%;
-	// margin-top: $space-top;
-	// padding-top: $space-top - 0.2rem;
-	padding-top: $space-top;
-	padding-bottom: 0;
-	padding-left: $space-side;
-	padding-right: $space-side;
 	z-index: 100;
 	background-color: inherit;
 	-webkit-user-select: none;
 	user-select: none;
 
 	.container {
-		padding-bottom: $space-top * 3;
 		margin-bottom: -$border-width;
 		display: flex;
 		justify-content: flex-end;

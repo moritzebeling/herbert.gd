@@ -1,1 +1,17 @@
-@keyframes fadein{from{opacity:0}to{opacity:1}}body{background-color:#999}section.keywords{padding:2vh 3vw}section.team{margin-top:6vh}section.team:before{content:"";border-top:2px solid currentColor;display:block;margin:0 3vw}section.team figure{display:flex}section.team figure img{height:12vw;width:auto}section.team figure figcaption{font-size:.7rem;line-height:1.2;flex:1;flex-wrap:wrap;margin-left:.5em}section.team .name{margin:1rem 0 .5rem;font-size:2.7rem;line-height:1.05}section.team .link{margin-top:2vh}@media screen and (min-width: 600px){section.team figure figcaption{position:relative}section.team figure figcaption span{position:absolute;display:block;transform:rotate(-90deg);transform-origin:top left;margin-top:12vw;white-space:nowrap}}body>footer{border-top:2px solid currentColor;padding-top:2vh}/*# sourceMappingURL=info.css.map */
+/* Error: expected "{".
+ *   ,
+ * 3 | background-color: #999;
+ *   |                       ^
+ *   '
+ *   assets/scss/templates/info.scss 3:23  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a   \2577 \a 3 \2502  background-color: #999;\a   \2502                        ^\a   \2575 \a   assets/scss/templates/info.scss 3:23  root stylesheet';
+}
