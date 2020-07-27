@@ -43,6 +43,15 @@ function linkText( Kirby\Cms\Field $text, string $url ): string {
 
 }
 
+Str::$language = [
+	'ß' => 'sz',
+	'ä' => 'ae',
+	'ö' => 'oe',
+	'ü' => 'ue',
+	'æ' => 'ae',
+	'€' => 'euro',
+];
+
 require_once __DIR__.'/models/ChannelPage.php';
 require_once __DIR__.'/models/HomePage.php';
 require_once __DIR__.'/models/SearchPage.php';
