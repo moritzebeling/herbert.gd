@@ -57,7 +57,8 @@ class SiteSearch {
       ];
     } else {
       $query = [
-        'date' => $date
+        'semester' => $date
+        // 'date' => $date
       ];
     }
 
