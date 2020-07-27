@@ -3,17 +3,15 @@
 
     $posts = $page->kirby()->collection('posts');
 
-    $keywords = [];
-
-    foreach( $posts->pluck('categories',',',true) as $category ){
-        $keywords[] = SiteSearch::link( $category );
-    }
-    foreach( $posts->pluck('keywords',',',true) as $keyword ){
-        $keywords[] = SiteSearch::link( $keyword );
-    }
+    $keywords = array_unique(
+        array_merge(
+            $posts->pluck('categories',',',true),
+            $posts->pluck('keywords',',',true)
+        )
+    );
 
     ?>
     <?php foreach( $keywords as $keyword ): ?>
-        <li><?= $keyword ?></li>
+        <li><?= SiteSearch::link( $keyword ) ?></li>
     <?php endforeach; ?>
 </ul>
