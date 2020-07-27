@@ -67,10 +67,12 @@ columns:
           keywords:
             extends: fields/keywords
             help: E.g. locations, disciplines, materials, media
+            min: 1
 
           searchwords:
             extends: fields/keywords
             label: Invisible keywords
-            help: E.g. persons involved, colors
+            help: E.g. persons involved, colors, search words
             icon: search
+            min: 3
             query: site.index.pluck("searchwords", ",", true)
