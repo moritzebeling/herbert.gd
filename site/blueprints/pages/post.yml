@@ -74,5 +74,5 @@ columns:
             label: Invisible keywords
             help: E.g. persons involved, colors, search words
             icon: search
-            min: 3
+            min: 2
             query: site.index.pluck("searchwords", ",", true)
