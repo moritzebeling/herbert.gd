@@ -3,36 +3,34 @@
 
 body.post {
 
+	> header {
+		position: fixed;
+	}
+
+	section.title {
+		flex: 1;
+		margin-bottom: $space-top;
+		position: sticky;
+		bottom: 0;
+		padding: $space;
+		transition: font-size 150ms ease;
+		h1 {
+			@include bold;
+		}
+		h2 {
+			@include regular;
+		}
+	}
+	&.has-scrolled {
+		section.title {
+			@include fontlarge;
+		}
+	}
+
 	section.content {
 		padding: $space;
-		.info {
-			display: flex;
-			flex-direction: column;
-			padding-right: $space-side;
-			.title {
-				@include fontlarge;
-				flex: 1;
-				margin-bottom: $space-top-l;
-				h1 {
-					@include bold;
-				}
-				h2 {
-					@include regular;
-				}
-			}
-		}
 		.keywords {
-			display: block;
-			li {
-				display: block;
-			}
-		}
-		@media screen and (min-width: 600px) {
-			display: flex;
-			.info,
-			.about {
-				flex: 1 0 50%;
-			}
+			margin-top: $space-top;
 		}
 	}
 
