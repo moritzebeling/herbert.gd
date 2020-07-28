@@ -2,7 +2,7 @@
 
 <main>
 
-	<?php snippet('post/image') ?>
+	<?php snippet('post/gallery') ?>
 
 	<section class="content">
 		<div class="info">

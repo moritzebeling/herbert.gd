@@ -2,12 +2,13 @@
 
 body.info {
 
-	background-color: #aaa;
+	background-color: #999;
 
 	.keywords {
 		display: block;
 		li {
 			display: block;
+			margin-right: 0;
 		}
 		text-align: right;
 	}

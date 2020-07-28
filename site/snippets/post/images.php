@@ -9,7 +9,7 @@ if( $count < 1 ){
 
 ?>
 <section class="images">
-	<?php foreach($images->offset(1) as $image): ?>
+	<?php foreach($images as $image): ?>
 
 		<figure class="<?php e($image->isPortrait(),'portrait','landscape') ?>">
 

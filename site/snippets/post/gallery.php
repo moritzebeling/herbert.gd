@@ -8,7 +8,7 @@ if( $count < 1 ){
 }
 
 ?>
-<section class="swiper-container gallery <?php e( $count > 1, 'multiple' ) ?>">
+<section class="swiper-container gallery">
 	<div class="swiper-wrapper">
 		<?php foreach($images as $image): ?>
 
@@ -42,24 +42,44 @@ if( $count < 1 ){
 			</div>
 
 		<?php endforeach ?>
+
 	</div>
 
-	<?php if( $count > 1 ): ?>
+	<div class="controls">
 
-		<div class="controls">
+		<div class="swiper-button-prev" title="Show previous image"></div>
+		<div class="swiper-button-next" title="Show next image"></div>
 
-			<div class="left">
-				<div class="swiper-pagination"></div>
-			</div>
-
-			<div class="right">
-				<div class="swiper-button-index">Index</div>
-				<div class="swiper-button-prev"><span class="arrow"></span></div>
-				<div class="swiper-button-next"><span class="arrow"></span></div>
-			</div>
-
-		</div>
-
-	<?php endif; ?>
+	</div>
 
 </section>
+
+<?php if( $count === 1 ){
+	return;
+} ?>
+
+<?= css('assets/css/swiper.css') ?>
+<?= js('assets/js/swiper.min.js') ?>
+<script>
+
+	let swpr = new Swiper( '.swiper-container',{
+		speed: 700,
+		spaceBetween: 20,
+		loop: true,
+		lazy: true,
+		grabCursor: true,
+		autoHeight: true,
+		initialSlide: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+		},
+	});
+
+	console.log( swpr );
+
+</script>
