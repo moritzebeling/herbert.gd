@@ -2,7 +2,7 @@
 
 body.info {
 
-	background-color: #999;
+	background-color: #aaa;
 
 	section.keywords {
 		padding: 0 $space-side;
@@ -53,6 +53,10 @@ body.info {
 	> footer {
 		border-top: $border;
 		padding-top: $space-top;
+
+		h4 {
+			@include bold;
+		}
 	}
 
 }

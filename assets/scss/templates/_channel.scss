@@ -21,11 +21,14 @@
 }
 
 @mixin gridGallery {
-	grid-template-columns: 1fr 1fr 1fr;
+	// grid-template-columns: 1fr 1fr 1fr;
 	.item {
 		&:nth-child(4n-3),
 		&:nth-child(4n-4) {
-			grid-column-end: span 2;
+			// grid-column-end: span 2;
+			img {
+				height: 60vw;
+			}
 		}
 	}
 }
@@ -33,19 +36,24 @@
 @mixin grid {
 	margin: $space-top 0;
 	padding: 0 $space-side;
-	display: grid;
-	gap: ($space-top * 2) ($space-side / 2);
-    grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+	// display: grid;
+	// gap: 1rem;
+	// grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
+	display: flex;
+	flex-wrap: wrap;
     .item {
-        grid-column-end: span 1;
+		grid-column-end: span 1;
+		padding-right: 1rem;
+		padding-bottom: 1rem;
         figure {
-            margin-bottom: 0.5em;
             img {
-                width: 100%;
-                height: auto;
+                width: auto;
+                height: 40vw;
             }
 		}
 		.title {
+			// padding: 0.5em;
+			margin-top: 0.5rem;
 			.date {
 				// float: right;
 			}

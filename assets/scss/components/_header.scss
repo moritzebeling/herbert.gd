@@ -58,9 +58,6 @@ body > header {
 	body.has-scrolled > header {
 		nav {
 			left: $space-side / 2;
-			li a {
-				box-shadow: 0 0 10px rgba(0,0,0,0.2);
-			}
 		}
 	}
 }

@@ -2,10 +2,6 @@
 
 <main>
 
-	<header>
-		<?php snippet('post/title'); ?>
-	</header>
-
 	<?php snippet('post/gallery') ?>
 
 	<section class="content">

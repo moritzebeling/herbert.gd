@@ -4,9 +4,14 @@
 @import 'reset';
 
 @font-face {
-	font-family: "Graphik";
-		src: url("../fonts/Graphik-Medium.woff2") format("woff2"),
-		     url("../fonts/Graphik-Medium.woff2") format("woff");
+	font-family: "Regular";
+	src: url("../fonts/untitled-sans-test-regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Bold";
+	src: url("../fonts/untitled-sans-test-bold.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,8 +30,9 @@ body {
 	@include font;
 	@include sans;
 }
-h1, h2 {
-	@include fontlarge;
+h1, h2, h3 {
+	@include bold;
+	// @include fontlarge;
 }
 p {
 	@include hyphens;
@@ -92,9 +98,10 @@ section {
 	margin: $space-top 0;
 }
 main {
-	padding-top: $space-top-l;
+	padding-top: $space-top * 2;
 	> header {
 		@include fadein;
+		margin-top: 0;
 		margin-bottom: $space-top-l;
 		.about {
 			@include fontlarge;

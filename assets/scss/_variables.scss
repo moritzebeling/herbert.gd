@@ -1,5 +1,5 @@
 // colors
-$background: #ddd;
+$background: #fff;
 $color: #000;
 $yellow: #ff0;
 $grey: #ccc;
@@ -7,8 +7,8 @@ $grey: #ccc;
 // typography
 
 $font-small: 0.7rem;
-$font-size: 1.15rem;
-$font-large: 2.7rem;
+$font-size: 1.2rem;
+$font-large: 2.2rem;
 
 @mixin allcaps {
 	text-transform: uppercase;
@@ -27,7 +27,12 @@ $font-large: 2.7rem;
 	line-height: 1.05;
 }
 @mixin sans {
-	font-family: "Graphik", Helvetica Neue, Helvetica, Arial, sans-serif;
+	// font-family: "Scto", Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: "Regular", serif;
+}
+@mixin bold {
+	// font-family: "Scto Bold", Helvetica Neue Bold, Helvetica Bold, Arial Black, sans-serif;
+	font-family: "Bold", serif;
 }
 @mixin hyphens {
 	hyphens: auto;
@@ -36,7 +41,7 @@ $font-large: 2.7rem;
 
 // borders
 $border-style: solid;
-$border-width: 2px;
+$border-width: 1px;
 $border: $border-width solid currentColor;
 $border-thin: 1px solid currentColor;
 
@@ -72,7 +77,7 @@ $space: $space-top $space-side;
 	> li,
 	> a {
 		display: inline-block;
-		margin: 0.15em 0.6em 0.15em 0;
+		margin: 0.15em 1em 0.15em 0;
 		flex: 0 0 auto;
 	}
 	button {
@@ -90,18 +95,18 @@ $space: $space-top $space-side;
 }
 
 @mixin bubble {
-	background-color: #fff;
-	padding: 0.2em 0.5em 0.1em;
-	border-radius: 1em;
-	transition-property: color, background-color;
-	transition-timing-function: ease;
-	transition-duration: 300ms;
+	// background-color: transparent;
+	// padding: 0.1em 0.4em;
+	// transition-property: color, background-color;
+	// transition-timing-function: ease;
+	// transition-duration: 300ms;
 	-webkit-user-select: none;
     user-select: none;
 	&.active,
 	&:hover {
-		color: #fff;
-		background-color: $color;
+		// color: #fff;
+		// background-color: $color;
+		@include bold;
 	}
 	.count {
 		@include keywordCount;

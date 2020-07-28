@@ -6,7 +6,7 @@
 <?php endif ?>
 
 <li>
-    <h4>Webdesign & Programming:</h4>
+    <h4>Webdesign & Programming</h4>
     <a href="https://moritzebeling.com" target="_blank">Moritz Ebeling</a>
 </li>
 
@@ -16,7 +16,7 @@
 
 <?php foreach( $page->credits()->toStructure() as $credit ): ?>
     <li>
-        <h4><?= $credit->job()->html() ?>:</h4>
+        <h4><?= $credit->job()->html() ?></h4>
         <?php if( $credit->link()->isNotEmpty() ): ?>
             <?= $credit->link()->toAnchor( $credit->name()->html() ) ?>
         <?php else: ?>
