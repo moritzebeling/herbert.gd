@@ -2,24 +2,24 @@
 
 <main>
 
-	<?php snippet('post/gallery') ?>
+	<?php snippet('post/image') ?>
 
 	<section class="content">
-		<div class="flex rulers">
-			<div class="info col-6">
+		<div class="info">
 
-				<?php snippet('post/title'); ?>
+			<?php snippet('post/title'); ?>
 
-				<?php snippet('post/meta') ?>
+			<?php snippet('post/meta') ?>
 
-			</div>
-			<div class="about col-6">
+		</div>
+		<div class="about">
 
-				<?= $page->body()->kirbytext(); ?>
+			<?= $page->body()->kirbytext(); ?>
 
-			</div>
 		</div>
 	</section>
+
+	<?php snippet('post/images') ?>
 
 </main>
 

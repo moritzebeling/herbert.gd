@@ -21,8 +21,8 @@ return [
   'smartypants' => true,
 
   'thumbs' => [
-	'quality' => 80,
-	'driver' => 'im',
+	'quality' => 70,
+	// 'driver' => 'im',
 	'presets' => [
 		'layload' => ['width' => 32, 'quality' => 50],
 		'small' => ['width' => 640],

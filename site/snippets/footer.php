@@ -19,7 +19,7 @@
 	</footer>
 
 	<?php if( $page->IntendedTemplate()->name() === 'post' ){
-		snippet('post/footerScripts');
+		// snippet('post/footerScripts');
 	} ?>
 
 	<?= css('@auto') ?>

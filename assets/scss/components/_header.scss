@@ -4,10 +4,10 @@ body > header {
 	background-color: inherit;
 	-webkit-user-select: none;
 	user-select: none;
-	margin-bottom: 0;
+	// margin-bottom: 0;
 
 	.container {
-		margin-bottom: -$border-width;
+		// margin-bottom: -$border-width;
 		display: flex;
 		justify-content: flex-end;
 		flex-wrap: wrap;
@@ -21,11 +21,12 @@ body > header {
 	}
 
 	#logo {
-		font-size: 2.6em;
-		width: 3.68em;
-		height: 1em;
-		transform: translateX(0.1rem);
+		// font-size: 2.6em;
+		// width: 3.68em;
+		// height: 1em;
+		// transform: translateX(0.1rem);
 		// margin-top: 0.1em;
+		margin: 0.15em 1em 0.15em 0;
 		margin-left: 2rem;
 		svg polyline {
 			stroke-width: 3px;

@@ -4,12 +4,45 @@ body.info {
 
 	background-color: #aaa;
 
-	section.keywords {
-		padding: 0 $space-side;
+	.keywords {
+		display: block;
+		li {
+			display: block;
+		}
+		text-align: right;
+	}
+
+	header {
+		.about {
+			@include fontlarge;
+			@include bold;
+			margin-bottom: $space-top * 6;
+		}
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 3rem;
+		padding: 0 2rem;
+		.main {
+			grid-column-end: span 3;
+		}
+		aside {
+			grid-column-end: span 1;
+		}
+		header,
+		section {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 	section.team {
-		@include borderBefore;
+		display: grid;
+		margin-top: 2rem;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
 		figure {
 			display: flex;
 			img {
@@ -51,8 +84,7 @@ body.info {
 	}
 
 	> footer {
-		border-top: $border;
-		padding-top: $space-top;
+		padding-top: $space-top * 6;
 
 		h4 {
 			@include bold;

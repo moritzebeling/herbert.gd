@@ -4,22 +4,52 @@
 body.post {
 
 	section.content {
-		@include borderBefore;
-		margin-top: $space-top;
-
+		padding: 1.5rem 2rem;
+		display: flex;
+		.info,
+		.about {
+			flex: 1 0 50%;
+		}
 		.info {
 			display: flex;
 			flex-direction: column;
+			padding-right: 2rem;
 			.title {
+				@include fontlarge;
 				flex: 1;
 				margin-bottom: $space-top-l;
+				h1 {
+					@include bold;
+				}
+				h2 {
+					@include regular;
+				}
 			}
 		}
+		.keywords {
+			display: block;
+			li {
+				display: block;
+			}
+		}
+	}
 
+	section.images {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #000;
+		color: #fff;
+		figure {
+			flex: 1 1 50%;
+			figcaption {
+				padding: 0.5rem;
+				@include fontsmall;
+			}
+		}
 	}
 
 	> footer {
-		border-top: $border;
+		// border-top: $border;
 		padding-top: $space-top;
 	}
 

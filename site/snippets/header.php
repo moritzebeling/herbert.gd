@@ -62,7 +62,10 @@ if( $image = $metaParent->image() ){
 	<header>
 		<div class="container">
 
-			<a id="logo" href="<?= $site->url() ?>"><?= svg('assets/image/herbert-logo.svg') ?></a>
+			<a id="logo" href="<?= $site->url() ?>">
+				<?= $site->title() ?>
+				<!-- <?= svg('assets/image/herbert-logo.svg') ?> -->
+			</a>
 
 			<nav>
 				<ol class="channels">
