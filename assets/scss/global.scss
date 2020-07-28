@@ -4,16 +4,28 @@
 @import 'reset';
 
 @font-face {
-	font-family: "Regular";
-	src: url("../fonts/untitled-sans-test-regular.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+	font-family: 'Inter';
+	font-style:  normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../fonts/inter/Inter-Medium.woff2?v=3.13") format("woff2"),
+		 url("../fonts/inter/Inter-Medium.woff?v=3.13") format("woff");
 }
 @font-face {
-	font-family: "Bold";
-	src: url("../fonts/untitled-sans-test-medium.woff") format("woff");
-	font-weight: normal;
+	font-family: 'Inter';
+	font-style:  normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url("../fonts/inter/Inter-ExtraBold.woff2?v=3.13") format("woff2"),
+		 url("../fonts/inter/Inter-ExtraBold.woff?v=3.13") format("woff");
+}
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-display: swap;
 	font-style: normal;
+	font-named-instance: 'Regular';
+	src: url("../fonts/inter/Inter-roman.var.woff2?v=3.13") format("woff2");
 }
 
 @import 'variables';
@@ -23,12 +35,12 @@
 //
 html {
 	font-size: 1em;
+	@include typeface;
 }
 body {
 	background-color: $background;
 	color: $color;
 	@include font;
-	@include sans;
 }
 h1, h2, h3 {
 	@include bold;
@@ -92,7 +104,6 @@ body {
 }
 header {
 	padding: 0 $space-side;
-	margin: $space-top 0;
 }
 section {
 	// margin: $space-top 0;
@@ -100,12 +111,12 @@ section {
 main {
 	// padding-top: $space-top * 2;
 	> header {
-		@include bold;
 		@include fadein;
 		margin-top: 0;
 		margin-bottom: $space-top * 6;
 		.about {
 			@include fontlarge;
+			@include bold;
 			margin-bottom: 1rem;
 		}
 	}

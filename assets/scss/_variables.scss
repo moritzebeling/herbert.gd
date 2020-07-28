@@ -1,10 +1,29 @@
 // colors
-$background: #fff;
+$background: #ccc;
 $color: #000;
 $yellow: #ff0;
 $grey: #ccc;
 
 // typography
+
+@mixin bold {
+	font-weight: 800;
+}
+@mixin regular {
+	font-weight: 500;
+	@supports (font-variation-settings: normal) {
+		font-weight: 450;
+	}
+	letter-spacing: -0.011em;
+}
+@mixin typeface {
+	font-family: 'Inter', sans-serif;
+	font-style:  normal;
+	@supports (font-variation-settings: normal) {
+		font-family: 'Inter var', sans-serif;
+	}
+	@include regular;
+}
 
 $font-small: 0.7rem;
 $font-size: 1.2rem;
@@ -26,17 +45,7 @@ $font-large: 2.2rem;
 	font-size: $font-large;
 	line-height: 1.05;
 }
-@mixin sans {
-	// font-family: "Scto", Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-family: "Regular", serif;
-}
-@mixin bold {
-	// font-family: "Scto Bold", Helvetica Neue Bold, Helvetica Bold, Arial Black, sans-serif;
-	font-family: "Bold", serif;
-}
-@mixin regular {
-	font-family: "Regular", serif;
-}
+
 @mixin hyphens {
 	hyphens: auto;
 	-webkit-hyphens: auto;
@@ -104,7 +113,8 @@ $space: $space-top $space-side;
 	// transition-timing-function: ease;
 	// transition-duration: 300ms;
 	-webkit-user-select: none;
-    user-select: none;
+	user-select: none;
+	transition: font-weight 150ms ease;
 	&.active,
 	&:hover {
 		// color: #fff;
