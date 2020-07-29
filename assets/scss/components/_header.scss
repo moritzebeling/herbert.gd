@@ -6,7 +6,7 @@ body > header {
 
 	background-color: transparent;
 
-	padding: $space;
+	padding: ( $space-top / 2 ) ( $space-side / 2 );
 	transition-property: padding, background-color;
 	transition-duration: 300ms;
 	transition-timing-function: ease;;
@@ -18,33 +18,46 @@ body > header {
 
 	.container {
 		display: flex;
-		justify-content: flex-end;
-		flex-wrap: wrap;
+		// justify-content: flex-end;
+		// flex-wrap: wrap;
+		align-items: stretch;
 		nav {
 			flex: 1;
 			order: 1;
 		}
 		#logo {
 			order: 2;
+			justify-self: flex-end;
 		}
 	}
 
 	#logo {
-		// font-size: 2.6em;
-		// width: 3.68em;
-		// height: 1em;
-		// transform: translateX(0.1rem);
-		// margin-top: 0.1em;
-		margin: 0.15em 0 0.15em 1em;
-		margin-left: 2rem;
+		padding: 0.2rem ( $space-side / 2 );
+		font-size: 3em;
+		flex-direction: column;
+		flex: 0 0 auto;
 		@include bold;
-		svg polyline {
-			stroke-width: 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+		svg {
+			width: 3.68em;
+			height: 1em;
+			polyline {
+				stroke-width: 3px;
+			}
 		}
 	}
 
 	nav {
 		ol {
+			padding: ( $space-top / 2 ) ( $space-side / 2 );
 			@include inlineList;
 			li {
 				a {
@@ -56,8 +69,14 @@ body > header {
 }
 
 body.has-scrolled > header {
-	padding: ( $space-top / 2 ) ( $space-side / 2 );
+	padding: 0;
 	&:hover {
 		background-color: inherit;
+	}
+	#logo {
+		font-size: 1.7em;
+		svg {
+			transform: translateY(0.05rem);
+		}
 	}
 }
