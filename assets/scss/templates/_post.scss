@@ -60,8 +60,10 @@ body.post {
 			height: 100vh;
 			display: flex;
 			position: relative;
-			.image {
-				padding: 5rem 1rem;
+			padding: 0 1rem;
+			.image,
+			.player {
+				padding: 5rem 0;
 				flex: 1 1 auto;
 				justify-content: center;
 				img {
@@ -74,6 +76,7 @@ body.post {
 				}
 			}
 			figcaption {
+				display: none;
 				position: absolute;
 				bottom: 0;
 				left: 0;

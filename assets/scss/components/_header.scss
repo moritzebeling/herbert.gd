@@ -73,6 +73,10 @@ body.has-scrolled > header {
 	&:hover {
 		background-color: inherit;
 	}
+}
+
+body.post > header,
+body.has-scrolled > header {
 	#logo {
 		font-size: 1.7em;
 		svg {

@@ -64,7 +64,7 @@ if( $count < 1 ){
 
 	let swpr = new Swiper( '.swiper-container',{
 		speed: 700,
-		spaceBetween: 20,
+		spaceBetween: 0,
 		loop: true,
 		lazy: true,
 		grabCursor: true,
@@ -78,6 +78,7 @@ if( $count < 1 ){
 			enabled: true,
 			onlyInViewport: true,
 		},
+		threshold: 10
 	});
 
 	console.log( swpr );
