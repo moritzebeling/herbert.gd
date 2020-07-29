@@ -1,10 +1,5 @@
 <?php
 
-/**
- * general site configuration
- *
- */
-
 date_default_timezone_set('Europe/Berlin');
 
 return [
@@ -13,16 +8,15 @@ return [
   'whoops' => false,
 
   'cache' => [
-    'pages' => [
-      'active' => true
-    ],
+	'pages' => [
+	  'active' => true
+	],
   ],
 
   'smartypants' => true,
 
   'thumbs' => [
 	'quality' => 70,
-	// 'driver' => 'im',
 	'presets' => [
 		'layload' => ['width' => 32, 'quality' => 50],
 		'small' => ['width' => 640],
@@ -37,7 +31,7 @@ return [
   ],
 
   'video' => [
-    'youtube' => [
+	'youtube' => [
   		'color' => 'ffffff',
   		'controls' => true,
   		'loop' => 1,
