@@ -32,11 +32,9 @@
 }
 
 @mixin grid {
-	margin: $space-top 0;
-	padding: 0 $space-side;
 	display: grid;
 	gap: 1rem;
-	grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
+	grid-template-columns: repeat( auto-fit, minmax(15rem, 1fr) );
 	// display: flex;
 	// flex-wrap: wrap;
     .item {
@@ -64,8 +62,6 @@
 }
 
 @mixin list {
-	margin: $space-top 0;
-	padding: 0 $space-side;
 	.item {
 		> a {
 			display: flex;
@@ -88,7 +84,6 @@
 
 .result-options {
 	margin: $space-top 0;
-	padding: 0 $space-side;
 
 	display: flex;
 	align-items: baseline;
@@ -104,6 +99,10 @@
 }
 
 .posts {
+	margin: $space-top 0;
+	margin-top: $space-top * 6;
+	padding: 0 $space-side;
+
     .item {
         @include item;
     }
@@ -112,5 +111,6 @@
     }
     .list {
         @include list;
-    }
+	}
+
 }

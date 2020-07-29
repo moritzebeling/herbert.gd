@@ -6,11 +6,12 @@ body.info {
 
 	.keywords {
 		display: block;
+		column-count: 4;
 		li {
 			display: block;
 			margin-right: 0;
 		}
-		text-align: right;
+
 	}
 
 	header {
@@ -22,15 +23,15 @@ body.info {
 	}
 
 	main {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap: 3rem;
+		// display: grid;
+		// grid-template-columns: 1fr 1fr 1fr 1fr;
+		// gap: 3rem;
 		padding: 0 2rem;
 		.main {
-			grid-column-end: span 3;
+			grid-column-end: span 4;
 		}
 		aside {
-			grid-column-end: span 1;
+			margin-bottom: 6rem;
 		}
 		header,
 		section {
@@ -86,6 +87,10 @@ body.info {
 
 	> footer {
 		padding-top: $space-top * 6;
+
+		.credits {
+			margin-bottom: 1rem;
+		}
 
 		h4 {
 			@include bold;

@@ -29,8 +29,20 @@ body.post {
 
 	section.content {
 		padding: $space;
-		.keywords {
-			margin-top: $space-top;
+		display: flex;
+		margin-bottom: 4rem;
+		.about {
+			flex: 1 1 75%;
+		}
+		.info {
+			flex: 1 1 25%;
+			.keywords {
+				display: block;
+				text-align: right;
+				li {
+					display: block;
+				}
+			}
 		}
 	}
 
@@ -40,6 +52,9 @@ body.post {
 		.swiper-slide {
 			height: 100vh;
 			width: 100%;
+			@include fadein;
+			-webkit-transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
 		}
 		figure {
 			height: 100vh;
@@ -98,17 +113,17 @@ body.post {
 		}
 		@media screen and (min-width: 600px) {
 			display: grid;
-			gap: 2px;
+			gap: 1rem;
 			grid-template-columns: 1fr 1fr;
 		}
-		@media screen and (min-width: 1200px) {
+		@media screen and (min-width: 1000px) {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
 
 	> footer {
 		// border-top: $border;
-		padding-top: $space-top;
+		// padding-top: $space-top;
 	}
 
 }

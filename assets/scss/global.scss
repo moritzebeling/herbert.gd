@@ -113,7 +113,6 @@ main {
 	> header {
 		@include fadein;
 		margin-top: 0;
-		margin-bottom: $space-top * 6;
 		.about {
 			@include fontlarge;
 			@include bold;

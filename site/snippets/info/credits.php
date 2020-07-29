@@ -23,7 +23,7 @@
 
 <li>
     <h4>Typeface</h4>
-    <a href="https://rsms.me/inter/" target="_blank">Inter</a>
+    <a href="https://github.com/rsms/inter" target="_blank">Inter</a>
 </li>
 
 <li>

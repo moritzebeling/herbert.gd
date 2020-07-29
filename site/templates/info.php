@@ -18,6 +18,10 @@
 
 		</header>
 
+		<aside>
+		<?php snippet('info/keywords'); ?>
+	</aside>
+
 		<section class="team">
 			<?php foreach( $page->team()->toStructure() as $person ): ?>
 				<div>
@@ -32,9 +36,7 @@
 
 	</div>
 
-	<aside>
-		<?php snippet('info/keywords'); ?>
-	</aside>
+
 
 </main>
 
