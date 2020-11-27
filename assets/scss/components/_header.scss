@@ -1,39 +1,63 @@
 body > header {
 
-	z-index: 100;
-	background-color: inherit;
+	z-index: 1000;
 	-webkit-user-select: none;
 	user-select: none;
-	margin-bottom: 0;
+
+	background-color: transparent;
+
+	padding: ( $space-top / 2 ) ( $space-side / 2 );
+	transition-property: padding, background-color;
+	transition-duration: 300ms;
+	transition-timing-function: ease;;
+
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
 
 	.container {
-		margin-bottom: -$border-width;
 		display: flex;
-		justify-content: flex-end;
-		flex-wrap: wrap;
+		// justify-content: flex-end;
+		// flex-wrap: wrap;
+		align-items: stretch;
 		nav {
 			flex: 1;
 			order: 1;
 		}
 		#logo {
 			order: 2;
+			justify-self: flex-end;
 		}
 	}
 
 	#logo {
-		font-size: 2.6em;
-		width: 3.68em;
-		height: 1em;
-		transform: translateX(0.1rem);
-		// margin-top: 0.1em;
-		margin-left: 2rem;
-		svg polyline {
-			stroke-width: 3px;
+		padding: 0.2rem ( $space-side / 2 );
+		font-size: 3em;
+		flex-direction: column;
+		flex: 0 0 auto;
+		@include bold;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+		svg {
+			width: 3.68em;
+			height: 1em;
+			polyline {
+				stroke-width: 3px;
+			}
 		}
 	}
 
 	nav {
 		ol {
+			padding: ( $space-top / 2 ) ( $space-side / 2 );
 			@include inlineList;
 			li {
 				a {
@@ -44,23 +68,19 @@ body > header {
 	}
 }
 
-@media screen and (min-width: 800px) {
-	body > header {
-		nav {
-			position: fixed;
-			left: $space-side;
-			top: $space-top;
-			transition-property: top, left;
-			transition-duration: 300ms;
-			transition-timing-function: ease;
-		}
+body.has-scrolled > header {
+	padding: 0;
+	&:hover {
+		background-color: inherit;
 	}
-	body.has-scrolled > header {
-		nav {
-			left: $space-side / 2;
-			li a {
-				box-shadow: 0 0 10px rgba(0,0,0,0.2);
-			}
+}
+
+body.post > header,
+body.has-scrolled > header {
+	#logo {
+		font-size: 1.7em;
+		svg {
+			transform: translateY(0.05rem);
 		}
 	}
 }

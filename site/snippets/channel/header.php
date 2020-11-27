@@ -2,15 +2,15 @@
 
 $channel = isset( $channel ) ? $channel : $page;
 
-if( ! $channel->showDescription()->isTrue() || $channel->description()->isEmpty() ){
-	return;
-}
-
 ?>
 <header>
+	<?php if( $channel->showDescription()->isTrue() || $channel->description()->isNotEmpty() ): ?>
 
-	<div class="about"><?= $channel->description()->kirbytext(); ?></div>
+		<div class="about">
+			<?= $channel->description()->kirbytext(); ?>
+		</div>
 
-	<?php snippet('fields/links'); ?>
+		<?php snippet('fields/links'); ?>
 
+	<?php endif; ?>
 </header>

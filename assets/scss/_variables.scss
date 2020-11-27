@@ -1,14 +1,33 @@
 // colors
-$background: #ddd;
+$background: #ccc;
 $color: #000;
 $yellow: #ff0;
 $grey: #ccc;
 
 // typography
 
+@mixin bold {
+	font-weight: 800;
+}
+@mixin regular {
+	font-weight: 500;
+	@supports (font-variation-settings: normal) {
+		font-weight: 450;
+	}
+	letter-spacing: -0.011em;
+}
+@mixin typeface {
+	font-family: 'Inter', sans-serif;
+	font-style:  normal;
+	@supports (font-variation-settings: normal) {
+		font-family: 'Inter var', sans-serif;
+	}
+	@include regular;
+}
+
 $font-small: 0.7rem;
-$font-size: 1.15rem;
-$font-large: 2.7rem;
+$font-size: 1.2rem;
+$font-large: 2.2rem;
 
 @mixin allcaps {
 	text-transform: uppercase;
@@ -26,9 +45,7 @@ $font-large: 2.7rem;
 	font-size: $font-large;
 	line-height: 1.05;
 }
-@mixin sans {
-	font-family: "Graphik", Helvetica Neue, Helvetica, Arial, sans-serif;
-}
+
 @mixin hyphens {
 	hyphens: auto;
 	-webkit-hyphens: auto;
@@ -36,7 +53,7 @@ $font-large: 2.7rem;
 
 // borders
 $border-style: solid;
-$border-width: 2px;
+$border-width: 1px;
 $border: $border-width solid currentColor;
 $border-thin: 1px solid currentColor;
 
@@ -72,7 +89,7 @@ $space: $space-top $space-side;
 	> li,
 	> a {
 		display: inline-block;
-		margin: 0.15em 0.6em 0.15em 0;
+		margin: 0.15em 1em 0.15em 0;
 		flex: 0 0 auto;
 	}
 	button {
@@ -90,18 +107,19 @@ $space: $space-top $space-side;
 }
 
 @mixin bubble {
-	background-color: #fff;
-	padding: 0.2em 0.5em 0.1em;
-	border-radius: 1em;
-	transition-property: color, background-color;
-	transition-timing-function: ease;
-	transition-duration: 300ms;
+	// background-color: transparent;
+	// padding: 0.1em 0.4em;
+	// transition-property: color, background-color;
+	// transition-timing-function: ease;
+	// transition-duration: 300ms;
 	-webkit-user-select: none;
-    user-select: none;
+	user-select: none;
+	transition: font-weight 150ms ease;
 	&.active,
 	&:hover {
-		color: #fff;
-		background-color: $color;
+		// color: #fff;
+		// background-color: $color;
+		@include bold;
 	}
 	.count {
 		@include keywordCount;

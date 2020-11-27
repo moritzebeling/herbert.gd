@@ -1,26 +1,132 @@
 @import '../variables';
-@import '../components/gallery';
+// @import '../components/gallery';
 
 body.post {
 
-	section.content {
-		@include borderBefore;
-		margin-top: $space-top;
+	> header {
+		position: fixed;
+	}
 
+	section.title {
+		flex: 1;
+		margin-bottom: $space-top;
+		position: sticky;
+		bottom: 0;
+		padding: $space;
+		transition: font-size 150ms ease;
+		h1 {
+			@include bold;
+		}
+		h2 {
+			@include regular;
+		}
+	}
+	&.has-scrolled {
+		section.title {
+			@include fontlarge;
+		}
+	}
+
+	section.content {
+		padding: $space;
+		display: flex;
+		margin-bottom: 4rem;
+		.about {
+			flex: 1 1 75%;
+		}
 		.info {
-			display: flex;
-			flex-direction: column;
-			.title {
-				flex: 1;
-				margin-bottom: $space-top-l;
+			flex: 1 1 25%;
+			.keywords {
+				display: block;
+				text-align: right;
+				li {
+					display: block;
+				}
 			}
 		}
+	}
 
+	section.gallery {
+		width: 100%;
+		height: 100vh;
+		.swiper-slide {
+			height: 100vh;
+			width: 100%;
+			@include fadein;
+			-webkit-transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
+		}
+		figure {
+			height: 100vh;
+			display: flex;
+			position: relative;
+			padding: 0 1rem;
+			.image,
+			.player {
+				padding: 5rem 0;
+				flex: 1 1 auto;
+				justify-content: center;
+				img {
+					width: 100%;
+					height: 100%;
+					max-height: 100vh;
+					max-width: 100vw;
+					object-fit: contain;
+					object-position: center;
+				}
+			}
+			figcaption {
+				display: none;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				@include fontsmall;
+				padding: 1rem;
+			}
+		}
+		position: relative;
+		.controls {
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			left: 0;
+			top: 0;
+			height: 100%;
+			.swiper-button-prev,
+			.swiper-button-next {
+				position: absolute;
+				width: 50%;
+				height: 100%;
+			}
+			.swiper-button-next {
+				left: 50%;
+			}
+		}
+	}
+
+	section.images {
+		padding: 0 1rem;
+		figure {
+			figcaption {
+				@include fontsmall;
+				padding: 0.5em 0;
+			}
+		}
+		@media screen and (min-width: 600px) {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: 1fr 1fr;
+		}
+		@media screen and (min-width: 1000px) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
 	}
 
 	> footer {
-		border-top: $border;
-		padding-top: $space-top;
+		// border-top: $border;
+		// padding-top: $space-top;
 	}
 
 }

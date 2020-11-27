@@ -202,7 +202,7 @@ Kirby::plugin('moritzebeling/herbert', [
 				'class' => 'lazyload',
 				'data-sizes' => 'auto',
 				'src' => $this->resize( 2000 )->url(),
-				'data-src' => $this->thumb( $size )->url(),
+				'data-src' => $this->resize( 2000 )->url(),
 				'data-srcset' => $this->srcset( $size ),
 			]);
 

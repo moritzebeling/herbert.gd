@@ -4,12 +4,47 @@ body.info {
 
 	background-color: #999;
 
-	section.keywords {
-		padding: 0 $space-side;
+	.keywords {
+		display: block;
+		column-count: 4;
+		li {
+			display: block;
+			margin-right: 0;
+		}
+
+	}
+
+	header {
+		.about {
+			@include fontlarge;
+			@include bold;
+			margin-bottom: $space-top * 6;
+		}
+	}
+
+	main {
+		// display: grid;
+		// grid-template-columns: 1fr 1fr 1fr 1fr;
+		// gap: 3rem;
+		padding: 0 2rem;
+		.main {
+			grid-column-end: span 4;
+		}
+		aside {
+			margin-bottom: 6rem;
+		}
+		header,
+		section {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 	section.team {
-		@include borderBefore;
+		display: grid;
+		margin-top: 2rem;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
 		figure {
 			display: flex;
 			img {
@@ -51,8 +86,15 @@ body.info {
 	}
 
 	> footer {
-		border-top: $border;
-		padding-top: $space-top;
+		padding-top: $space-top * 6;
+
+		.credits {
+			margin-bottom: 1rem;
+		}
+
+		h4 {
+			@include bold;
+		}
 	}
 
 }

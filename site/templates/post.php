@@ -2,28 +2,31 @@
 
 <main>
 
-	<header>
-		<?php snippet('post/title'); ?>
-	</header>
-
 	<?php snippet('post/gallery') ?>
 
+	<section class="title">
+
+		<h1><?= $page->title()->html() ?></h1>
+		<?php if( $page->subtitle()->isNotEmpty() ): ?>
+			<h2><?= $page->subtitle() ?></h2>
+		<?php endif; ?>
+
+	</section>
+
 	<section class="content">
-		<div class="flex rulers">
-			<div class="info col-6">
+		<div class="about">
 
-				<?php snippet('post/title'); ?>
+			<?= $page->body()->kirbytext(); ?>
 
-				<?php snippet('post/meta') ?>
+		</div>
+		<div class="info">
 
-			</div>
-			<div class="about col-6">
+			<?php snippet('post/meta'); ?>
 
-				<?= $page->body()->kirbytext(); ?>
-
-			</div>
 		</div>
 	</section>
+
+	<?php snippet('post/images') ?>
 
 </main>
 
