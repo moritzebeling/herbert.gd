@@ -13,6 +13,8 @@ return [
 	],
   ],
 
+  'analytics' => true,
+
   'smartypants' => true,
 
   'thumbs' => [

@@ -13,6 +13,8 @@ return [
 
 	'panel' =>[
 		'install' => true
-	]
+	],
+
+	'analytics' => false
 
 ];

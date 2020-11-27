@@ -43,6 +43,10 @@ if( $image = $metaParent->image() ){
 		<link rel="author" href="<?= $info->url() ?>">
 	<?php endif; ?>
 
+	<?php if( option('analytics') ){
+		snippet('header/analytics-1');
+	} ?>
+
 	<meta property="og:site_name" content="<?= $site->title() ?>">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="<?= $metaParent->title() ?>">
@@ -55,9 +59,14 @@ if( $image = $metaParent->image() ){
 	<?php snippet('header/jsonld') ?>
 
 </head>
-<!-- This website was made by Moritz Ebeling https://moritzebeling.com -->
+<!-- Website by Moritz Ebeling https://moritzebeling.com -->
 <!-- If you want to contribute to this website, go to <?= option('repo') ?> -->
 <body class="<?= $page->intendedTemplate() ?>">
+
+
+	<?php if( option('analytics') ){
+		snippet('header/analytics-2');
+	} ?>
 
 	<header>
 		<div class="container">
