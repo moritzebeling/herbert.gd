@@ -7,12 +7,16 @@
 
 function flushCache( $id = false ){
 
-	$cache = kirby()->cache('herbert.frontend');
+	$cache = kirby()->cache('moritzebeling.frontend');
 
 	if( $id === false ){
 		$cache->flush();
 	} else {
-		$cache->remove( $id );
+		$parts = explode( '/', $id );
+		foreach( $parts as $part ){
+			$cache->remove( implode( '/', $parts ) );
+			array_pop( $parts );
+		}
 	}
 
 }
