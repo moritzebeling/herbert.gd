@@ -1,9 +1,6 @@
 [submodule "kirby"]
 	path = kirby
 	url = https://github.com/getkirby/kirby.git
-[submodule "site/plugins/kirby-pagetable"]
-	path = site/plugins/kirby-pagetable
-	url = https://github.com/sylvainjule/kirby-pagetable.git
 [submodule "site/plugins/sitemapper"]
 	path = site/plugins/sitemapper
 	url = https://gitlab.com/cre8ivclick/sitemapper.git
