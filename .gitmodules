@@ -7,3 +7,6 @@
 [submodule "site/plugins/kirby-bettersearch"]
 	path = site/plugins/kirby-bettersearch
 	url = https://github.com/bvdputte/kirby-bettersearch.git
+[submodule "site/plugins/kirby-pagetable"]
+	path = site/plugins/kirby-pagetable
+	url = https://github.com/sylvainjule/kirby-pagetable.git
