@@ -29,17 +29,7 @@ tabs:
 
   posts: tabs/posts
 
-  meta:
-    extends: tabs/meta
-    columns:
-      main:
-        fields:
-
-          domain:
-            disabled: true
-            type: text
-            label: Dedicated Domain
-            placeholder: "{{ page.slug }}.com"
+  meta: tabs/meta
 
   settings:
     icon: cog
@@ -55,6 +45,9 @@ tabs:
           showDescription:
             label: Show channel description
             type: toggle
+            text:
+              - "No"
+              - "YShow channel description on top of page"
 
       - width: 1/2
         fields:
