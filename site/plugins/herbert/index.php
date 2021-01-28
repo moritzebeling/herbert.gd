@@ -52,11 +52,11 @@ Str::$language = [
 	'€' => 'euro',
 ];
 
-require_once __DIR__.'/models/ChannelPage.php';
-require_once __DIR__.'/models/HomePage.php';
-require_once __DIR__.'/models/SearchPage.php';
-require_once __DIR__.'/models/InfoPage.php';
-require_once __DIR__.'/models/PostPage.php';
+require_once __DIR__.'/models/Channel.php';
+require_once __DIR__.'/models/Home.php';
+require_once __DIR__.'/models/Search.php';
+require_once __DIR__.'/models/Info.php';
+require_once __DIR__.'/models/Post.php';
 
 Kirby::plugin('moritzebeling/herbert', [
 
