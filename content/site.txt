@@ -4,11 +4,14 @@ Title: Herbert.gd
 
 Featured:
 
+- activities/forms-of-the-formless
+- activities/der-raum-der-figur-d
+- activities/die-port
 - grafik-design/la-strada
+- activities/schoen-wider
 - >
   activities/grafik-design-workshop-taiwan-tech
 - grafik-design/learning-from-hans-hofmann
-- activities/somehow-there
 - >
   space-for-visual-research/sfvr-workshop-2019
 - grafik-design/the-five-obstructions
@@ -17,8 +20,7 @@ Featured:
   activities/manifest-of-practice-exhibition-in-berlin
 - activities/port
 - activities/robin-weissenborn
-- >
-  activities/bauhaus-masters-2019-copy-copy
+- activities
 
 ----
 
