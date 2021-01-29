@@ -63,7 +63,6 @@ if( $image = $metaParent->image() ){
 <!-- If you want to contribute to this website, go to <?= option('repo') ?> -->
 <body class="<?= $page->intendedTemplate() ?>">
 
-
 	<?php if( option('analytics') ){
 		snippet('header/analytics-2');
 	} ?>

@@ -107,18 +107,11 @@ $space: $space-top $space-side;
 }
 
 @mixin bubble {
-	// background-color: transparent;
-	// padding: 0.1em 0.4em;
-	// transition-property: color, background-color;
-	// transition-timing-function: ease;
-	// transition-duration: 300ms;
 	-webkit-user-select: none;
 	user-select: none;
 	transition: font-weight 150ms ease;
 	&.active,
 	&:hover {
-		// color: #fff;
-		// background-color: $color;
 		@include bold;
 	}
 	.count {

@@ -35,12 +35,9 @@
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat( auto-fit, minmax(15rem, 1fr) );
-	// display: flex;
-	// flex-wrap: wrap;
     .item {
 		grid-column-end: span 1;
-		// padding-right: 1rem;
-		// padding-bottom: 1rem;
+		margin-bottom: 2rem;
         figure {
             img {
                 width: 100%;
