@@ -7,7 +7,7 @@
 
 function flushCache( $id = false ){
 
-	$cache = kirby()->cache('moritzebeling.frontend');
+	$cache = kirby()->cache('herbert.frontend');
 
 	if( $id === false ){
 		$cache->flush();
