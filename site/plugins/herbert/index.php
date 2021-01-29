@@ -18,15 +18,6 @@ function dateToSemester( int $time ): string {
 	}
 }
 
-function isolateInitials( string $text ): string {
-	$words = explode(' ',$text);
-	$sequence = [];
-	foreach( $words as $word ){
-		$sequence[] = '<span class="i">'.substr( $word, 0, 1 ).'</span><span class="f">'.substr( $word, 1 ).' </span>';
-	}
-	return implode('', $sequence);
-}
-
 function linkText( Kirby\Cms\Field $text, string $url ): string {
 
 	if( $text->isNotEmpty() ){
@@ -52,11 +43,11 @@ Str::$language = [
 	'€' => 'euro',
 ];
 
-require_once __DIR__.'/models/ChannelPage.php';
-require_once __DIR__.'/models/HomePage.php';
-require_once __DIR__.'/models/SearchPage.php';
-require_once __DIR__.'/models/InfoPage.php';
-require_once __DIR__.'/models/PostPage.php';
+require_once __DIR__.'/models/Channel.php';
+require_once __DIR__.'/models/Home.php';
+require_once __DIR__.'/models/Search.php';
+require_once __DIR__.'/models/Info.php';
+require_once __DIR__.'/models/Post.php';
 
 Kirby::plugin('moritzebeling/herbert', [
 

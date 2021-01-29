@@ -27,10 +27,10 @@ fields:
 
   exclude:
     type: toggle
-    label: Show in gallery
+    label: Hide from gallery
     text:
       - Show in gallery
-      - Hidden in gallery
+      - Hide from gallery
 
   videoUrl:
     type: url

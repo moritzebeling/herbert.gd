@@ -37,7 +37,7 @@ columns:
 
           image:
             extends: fields/image
-            title:
+            title: Title image
             layout: list
 
       uploads:

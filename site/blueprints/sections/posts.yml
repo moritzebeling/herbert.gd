@@ -8,6 +8,7 @@ empty: No Posts created yet
 translations:
   empty: No Posts created yet
 template: post
+showStatus: true
 limit: 25
 limitOptions:
   - 10
