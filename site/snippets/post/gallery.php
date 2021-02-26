@@ -39,16 +39,14 @@ if( $count < 1 ){
 
 				</figure>
 
+				<div class="controls">
+					<div class="swiper-button-prev" title="Show previous image"></div>
+					<div class="swiper-button-next" title="Show next image"></div>
+				</div>
+
 			</div>
 
 		<?php endforeach ?>
-
-	</div>
-
-	<div class="controls">
-
-		<div class="swiper-button-prev" title="Show previous image"></div>
-		<div class="swiper-button-next" title="Show next image"></div>
 
 	</div>
 

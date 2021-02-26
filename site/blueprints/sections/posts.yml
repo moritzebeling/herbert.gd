@@ -1,6 +1,6 @@
 headline: Posts
 image:
-  back: white
+  cover: true
 headline: Posts
 sortBy: date desc
 type: pagetable

@@ -74,6 +74,19 @@ body.post {
 					object-position: center;
 				}
 			}
+			.player {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				iframe {
+					position: relative;
+					width: 80vw;
+					height: 45vw;
+					top: 0;
+					z-index: 30;
+				}
+			}
 			figcaption {
 				display: none;
 				position: absolute;
