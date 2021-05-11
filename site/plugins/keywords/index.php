@@ -7,7 +7,7 @@
 
 class SiteSearch {
 
-  public function url( array $query ): string
+  static public function url( array $query ): string
   {
 
     $string = '?' . http_build_query( $query );
@@ -16,14 +16,14 @@ class SiteSearch {
 
   }
 
-  public function slug( array $query ): string
+  static public function slug( array $query ): string
   {
 
     return strtolower( http_build_query( $query ) );
 
   }
 
-  public function link( $query, string $text = '' ): string
+  static public function link( $query, string $text = '' ): string
   {
 
     if( $text === '' && is_string( $query ) ){
@@ -48,7 +48,7 @@ class SiteSearch {
 
   }
 
-  public function date( string $format, string $date, string $text ): string
+  static public function date( string $format, string $date, string $text ): string
   {
 
     if( $format === 'semester' ){
@@ -65,7 +65,7 @@ class SiteSearch {
     return SiteSearch::link( $query, $text );
   }
 
-  public function validateQuery( array $query ): array {
+  static public function validateQuery( array $query ): array {
 
     if( isset($query['date']) ){
 
@@ -103,7 +103,7 @@ class SiteSearch {
     return $query;
   }
 
-  public function query( array $query ): Kirby\Cms\Pages
+  static public function query( array $query ): Kirby\Cms\Pages
   {
 
     $kirby = kirby();
