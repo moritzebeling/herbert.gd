@@ -1,26 +1,3 @@
-<?php
-
-$metaParent = $page;
-
-if( $page->isHome() ){
-	$metaParent = $site;
-}
-
-if( $metaParent->subtitle()->isNotEmpty() ){
-	$desc = $metaParent->subtitle()->value();
-} elseif ( $metaParent->description()->isNotEmpty() ){
-	$desc = $metaParent->description()->value();
-} else {
-	$desc = $site->description()->value();
-}
-
-$keywords = array_merge( $page->keywords()->split(), $site->keywords()->split() );
-
-if( $image = $metaParent->image() ){
-} elseif( $image = $parent->image() ) {
-}
-
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,28 +12,13 @@ if( $image = $metaParent->image() ){
 		<title><?= $page->title() ?> • <?= $site->title() ?></title>
 	<?php endif; ?>
 
-	<link rel="canonical" href="<?= $page->url() ?>" />
-	<meta name="description" content="<?= $desc ?>">
-	<meta name="keywords" content="<?= implode( ', ', $keywords ) ?>">
-	<meta name="Generator" content="Moritz Ebeling (https://moritzebeling.com)">
-	<?php if( $info = page('info') ): ?>
-		<link rel="author" href="<?= $info->url() ?>">
-	<?php endif; ?>
+	<?php snippet('header/meta') ?>
 
 	<?php if( option('analytics') ){
 		snippet('header/analytics-1');
 	} ?>
 
-	<meta property="og:site_name" content="<?= $site->title() ?>">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="<?= $metaParent->title() ?>">
-	<meta property="og:url" content="<?= $metaParent->url() ?>">
-	<meta property="og:locale" content="de_DE">
-	<meta property="og:description" content="<?= $desc ?>">
-	<meta property="og:image" content="<?= $image->resize( 1000 )->url() ?>" />
-
 	<?php snippet('header/favicon') ?>
-	<?php snippet('header/jsonld') ?>
 
 </head>
 <!-- Website by Moritz Ebeling https://moritzebeling.com -->

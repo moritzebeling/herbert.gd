@@ -4,11 +4,13 @@ Title: Herbert.gd
 
 Featured:
 
-- activities/forms-of-the-formless
+- activities/for-greater-empathy
+- grafik-design/utopie-d-ein-nicht-ort
 - activities/der-raum-der-figur-d
+- activities/forms-of-the-formless
+- activities/schoen-wider
 - activities/die-port
 - grafik-design/la-strada
-- activities/schoen-wider
 - >
   activities/grafik-design-workshop-taiwan-tech
 - grafik-design/learning-from-hans-hofmann
@@ -21,6 +23,7 @@ Featured:
 - activities/port
 - activities/robin-weissenborn
 - activities
+- grafik-design
 
 ----
 
