@@ -37,6 +37,10 @@ DefaultLanguage en
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+  # remove www and add https
+  RewriteCond %{HTTP_HOST} ^www.herbert.gd$ [NC]
+  RewriteRule ^(.*)$ https://herbert.gd/$1 [R=301,L]
+
   # favicon
   RewriteRule ^favicon\.ico$ /assets/favicon/favicon.ico [L]
 
