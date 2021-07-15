@@ -15,6 +15,10 @@
 				<?php endif; ?>
 			</div>
 
+			<?php if( $sitemap = page('sitemap') ): ?>
+				<a id="sitemap-footer-link" rel="sitemap" href="<?= $sitemap->url() ?>">Sitemap</a>
+			<?php endif; ?>
+
 		</div>
 	</footer>
 

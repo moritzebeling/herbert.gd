@@ -36,6 +36,12 @@
     </li>
 <?php endif; ?>
 
+<?php if( $sitemap = page('sitemap') ): ?>
+    <li>
+        <a href="<?= $sitemap->url() ?>" rel="sitemap">Sitemap</a>
+    </li>
+<?php endif; ?>
+
 <li>
     &copy; <?= date('Y') ?> <a href="<?= $site->url() ?>"><?= $site->title() ?></a>
 </li>

@@ -5,6 +5,7 @@ body > footer {
 	padding-bottom: $space-top;
 
 	.credits {
+		flex: 0;
 		li + li {
 			padding-top: 0.5em;
 		}
@@ -15,8 +16,17 @@ body > footer {
 
 	.buw-logo-container {
 		display: flex;
-		align-items: flex-end;
+		// align-items: flex-end;
 		// margin-top: $space-top-l;
+	}
+
+	> div {
+		display: flex;
+	}
+
+	#sitemap-footer-link {
+		opacity: 0;
+		margin-left: 1rem;
 	}
 
 }

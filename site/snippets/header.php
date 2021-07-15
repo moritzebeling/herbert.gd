@@ -20,6 +20,8 @@
 
 	<?php snippet('header/favicon') ?>
 
+	<link rel="sitemap" href="/sitemap.xml" />
+
 </head>
 <!-- Website by Moritz Ebeling https://moritzebeling.com -->
 <!-- If you want to contribute to this website, go to <?= option('repo') ?> -->
