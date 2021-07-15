@@ -42,8 +42,9 @@ columns:
 
       uploads:
         extends: sections/uploads
-        layout: cards
+        layout: list
         headline: Gallery
+        limit: 100
 
       fields2:
         type: fields
