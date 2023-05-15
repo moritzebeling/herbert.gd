@@ -1,5 +1,5 @@
 <?php
 
 return function ($site) {
-	return $site->content()->featured()->toPages();
+    return $site->content()->featured()->toPages();
 };

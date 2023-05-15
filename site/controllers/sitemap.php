@@ -1,7 +1,7 @@
 <?php
 
-return function ( $site ) {
-  return [
-    'pages' => $site->index()->listed()
-  ];
+return function ($site) {
+    return [
+        'pages' => $site->index()->listed()
+    ];
 };

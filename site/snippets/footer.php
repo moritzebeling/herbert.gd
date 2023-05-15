@@ -1,31 +1,31 @@
-	<footer>
-		<div>
+    <footer>
+        <div>
 
-			<ul class="credits">
-				<?php if( $page->intendedTemplate()->name() === 'info' ){
-					snippet('info/credits');
-				} ?>
-			</ul>
+            <ul class="credits">
+                <?php if ($page->intendedTemplate()->name() === 'info') {
+                    snippet('info/credits');
+                } ?>
+            </ul>
 
-			<div class="buw-logo-container">
-				<?php if( $info = page('info') ): ?>
-					<a class="buw-logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
-						<?= svg('assets/image/bauhaus-university-logo.svg') ?>
-					</a>
-				<?php endif; ?>
-			</div>
+            <div class="buw-logo-container">
+                <?php if ($info = page('info')) : ?>
+                    <a class="buw-logo" title="Imprint" href="<?= $info->imprint()->value() ?>" rel="noopener" target="_blank">
+                        <?= svg('assets/image/bauhaus-university-logo.svg') ?>
+                    </a>
+                <?php endif ?>
+            </div>
 
-			<?php if( $sitemap = page('sitemap') ): ?>
-				<a id="sitemap-footer-link" rel="sitemap" href="<?= $sitemap->url() ?>">Sitemap</a>
-			<?php endif; ?>
+            <?php if ($sitemap = page('sitemap')) : ?>
+                <a id="sitemap-footer-link" rel="sitemap" href="<?= $sitemap->url() ?>">Sitemap</a>
+            <?php endif ?>
 
-		</div>
-	</footer>
+        </div>
+    </footer>
 
-	<?= css('@auto') ?>
+    <?= css('@auto') ?>
 
-	<?= js('assets/js/herbert.js', true) ?>
-	<?= js('assets/js/lazysizes.min.js', true) ?>
+    <?= js('assets/js/herbert.js', true) ?>
+    <?= js('assets/js/lazysizes.min.js', true) ?>
 
 </body>
 </html>

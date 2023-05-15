@@ -2,9 +2,9 @@
 
 <main>
 
-	<?php foreach( $kirby->collection('channels') as $channel ): ?>
+    <?php foreach ($kirby->collection('channels') as $channel) : ?>
         <section>
-            <h2><a target="_blank" href="<?= $channel->url() ?>"><?= $channel->title(); ?></a></h2>
+            <h2><a target="_blank" href="<?= $channel->url() ?>"><?= $channel->title() ?></a></h2>
 
             <table width="100%">
 
@@ -21,22 +21,22 @@
                     <th class="s">Link</th>
                 </tr>
 
-                <?php foreach( $channel->posts() as $post ): ?>
+                <?php foreach ($channel->posts() as $post) : ?>
                     <tr>
                         <td class="img">
                             <a target="_blank" href="<?= $post->url() ?>">
                                 <img src="<?= $post->image()->url() ?>" srcset="<?= $post->image()->srcset([
-                                    '1x' => [
-                                        'width' => 40,
-                                        'height' => 40,
-                                        'crop' => 'center'
-                                    ],
-                                    '2x' => [
-                                        'width' => 80,
-                                        'height' => 80,
-                                        'crop' => 'center'
-                                    ]
-                                ]) ?>" />
+                                                                                    '1x' => [
+                                                                                        'width' => 40,
+                                                                                        'height' => 40,
+                                                                                        'crop' => 'center'
+                                                                                    ],
+                                                                                    '2x' => [
+                                                                                        'width' => 80,
+                                                                                        'height' => 80,
+                                                                                        'crop' => 'center'
+                                                                                    ]
+                                                                                ]) ?>" />
                             </a>
                         </td>
                         <td class="l">
@@ -56,12 +56,12 @@
                             <a target="_blank" href="<?= $post->panelUrl() ?>">Edit</a>
                         </td>
                     </tr>
-                <?php endforeach; ?>
+                <?php endforeach ?>
 
             </table>
 
         </section>
-    <?php endforeach; ?>
+    <?php endforeach ?>
 
 </main>
 

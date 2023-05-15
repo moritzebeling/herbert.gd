@@ -1,3 +1,3 @@
 <div id="frontend"></div>
 
-<?= js('assets/frontend/bundle.js'); ?>
+<?= js('assets/frontend/bundle.js') ?>

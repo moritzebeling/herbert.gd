@@ -9,7 +9,7 @@
 	</header>
 
 	<section class="content">
-		<?= $page->body()->kirbytext(); ?>
+		<?= $page->body()->kirbytext() ?>
 	</section>
 
 </main>

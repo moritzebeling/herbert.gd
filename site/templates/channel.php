@@ -1,11 +1,10 @@
 <?php snippet('header') ?>
 
 <main>
-
-  <?php snippet('channel/header'); ?>
-
-  <?php snippet('frontend'); ?>
-
+    <?php
+    snippet('channel/header');
+    snippet('frontend');
+    ?>
 </main>
 
 <?php snippet('footer');

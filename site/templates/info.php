@@ -7,31 +7,31 @@
 		<header>
 
 			<div class="about">
-				<?php if( $page->body()->isNotEmpty() ): ?>
-					<?= $page->body()->kirbytext(); ?>
+				<?php if ($page->body()->isNotEmpty()) : ?>
+					<?= $page->body()->kirbytext() ?>
 				<?php endif ?>
 			</div>
 
-			<?php snippet('fields/links',[
+			<?php snippet('fields/links', [
 				'links' => $site->links()
-			]); ?>
+			]) ?>
 
 		</header>
 
 		<aside>
-		<?php snippet('info/keywords'); ?>
-	</aside>
+			<?php snippet('info/keywords') ?>
+		</aside>
 
 		<section class="team">
-			<?php foreach( $page->team()->toStructure() as $person ): ?>
+			<?php foreach ($page->team()->toStructure() as $person) : ?>
 				<div>
 
-					<?php snippet('info/person',[
+					<?php snippet('info/person', [
 						'person' => $person
-					]); ?>
+					]) ?>
 
 				</div>
-			<?php endforeach; ?>
+			<?php endforeach ?>
 		</section>
 
 	</div>

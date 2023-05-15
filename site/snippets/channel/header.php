@@ -1,16 +1,16 @@
 <?php
 
-$channel = isset( $channel ) ? $channel : $page;
+$channel = isset($channel) ? $channel : $page;
 
 ?>
 <header>
-	<?php if( $channel->showDescription()->isTrue() || $channel->description()->isNotEmpty() ): ?>
+    <?php if ($channel->showDescription()->isTrue() || $channel->description()->isNotEmpty()) : ?>
 
-		<div class="about">
-			<?= $channel->description()->kirbytext(); ?>
-		</div>
+        <div class="about">
+            <?= $channel->description()->kirbytext() ?>
+        </div>
 
-		<?php snippet('fields/links'); ?>
+        <?php snippet('fields/links') ?>
 
-	<?php endif; ?>
+    <?php endif ?>
 </header>

@@ -1,14 +1,14 @@
 <figure>
-    <?php if( $image = $person->image()->toFile() ): ?>
-        <?= $image->tag(); ?>
-        <figcaption><span>&copy; <?= $image->credits(); ?></span></figcaption>
-    <?php endif; ?>
+    <?php if ($image = $person->image()->toFile()) : ?>
+        <?= $image->tag() ?>
+        <figcaption><span>&copy; <?= $image->credits() ?></span></figcaption>
+    <?php endif ?>
 </figure>
 
-<h3 class="name"><?= $person->name()->html(); ?></h3>
+<h3 class="name"><?= $person->name()->html() ?></h3>
 
-<div class="about"><?= $person->text()->kirbytext(); ?></div>
+<div class="about"><?= $person->text()->kirbytext() ?></div>
 
-<?php if( $person->link()->isNotEmpty() ): ?>
-    <div class="link"><?= $person->link()->toAnchor(); ?></div>
-<?php endif; ?>
+<?php if ($person->link()->isNotEmpty()) : ?>
+    <div class="link"><?= $person->link()->toAnchor() ?></div>
+<?php endif ?>
