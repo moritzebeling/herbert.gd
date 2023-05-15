@@ -1,9 +1,5 @@
 <?php
 
-/**
- * @todo make filters work with alpine js
- */
-
 $layout = $layout ?? 'grid';
 $categories = [];
 
@@ -22,14 +18,14 @@ arsort( $categories );
 
 ?>
 
-<section class="posts">
+<section class="posts" x-data=" { filter: false } ">
 	<?php if($pages->count()): ?>
 
 		<div class="result-options">
 			<ul class="keywords filters">
 				<?php foreach( $categories as $category => $count ): ?>
 					<li>
-						<button title="Filter by <?= $category ?>">
+						<button title="Filter by <?= $category ?>" @click=" filter = '<?= $category ?>' " :class=" filter == '<?= $category ?>' ? 'active' : '' ">
                             <?= $category ?>
                             <span class="count"><?= $count ?></span>
                         </button>
@@ -40,7 +36,7 @@ arsort( $categories );
 
 		<ol class="container <?= $layout ?>">
             <?php foreach( $pages as $item ): ?>
-                <li>
+                <li x-show=" filter == false || '<?= $item->categories() ?>'.includes( filter ) ">
                     <?php snippet('channel/post',[
                         'item' => $item
                     ]) ?>

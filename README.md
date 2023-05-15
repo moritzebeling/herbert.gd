@@ -12,17 +12,19 @@ CSS is not bundled by Svelte, but compiled with Sass.
 All content is lives on the live server. Get in touch to get a copy of that.
 
 ## System requirements for development
-- php 7.3
+- php 8.1
 - imagemagick
 - sass
 - npm
 
 ## Development setup
+
 Clone repo including submodules
 ```
-git clone --recursive https://github.com/moritzebeling/herbert.gd
+git clone git@github.com:moritzebeling/herbert.gd.git
 cd hebert.gd
 ```
+
 Install svelte
 ```
 cd assets/frontend/app
@@ -30,25 +32,29 @@ npm install
 ```
 
 ## Updates
-Update submodules
+Update composer dependencies
 ```
-git submodule foreach git pull origin master
+composer update
 ```
 
 ## Run website locally
+
 To run a php server on localhost:8000
 ```
-php -S localhost:8000 kirby/router.php
+composer start
 ```
+
 Compile sass on save
 ```
 sass --watch --style=compressed assets/scss:assets/css
 ```
+
 Compile Svelte frontend
 ```
 cd assets/frontend/app
 npm run dev
 ```
+
 Build Svelte frontend before shipping it
 ```
 npm run build
@@ -63,7 +69,6 @@ npm run build
 - [Kirby](https://getkirby.com) (v3) CMS
 - [Bettersearch](https://github.com/bvdputte/kirby-bettersearch) Kirby plugin for an enhanced search algorithm
 - [Sitemapper](https://gitlab.com/kirbyzone/sitemapper) Kirby plugin to create a sitemap.xml for searchengines
-- [Pagetable](https://github.com/sylvainjule/kirby-pagetable) Kirby plugin for table-like display of posts in panel
 - [sass](https://sass-lang.com) CSS Preprocessor
 - [Svelte](https://svelte.dev) (v3) JS framework
 - [Swiper.js](https://swiperjs.com) Image slider gallery

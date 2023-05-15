@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <?= css('assets/css/global.css') ?>
+    <?= css('assets/css/index.css') ?>
 
     <?php if ($page->isHomePage()) : ?>
         <title><?= $site->title() ?></title>
@@ -20,6 +20,7 @@
     } ?>
 
     <?php snippet('header/favicon') ?>
+    <?= js('assets/dist/index.js', true) ?>
 
     <link rel="sitemap" href="/sitemap.xml" />
 
