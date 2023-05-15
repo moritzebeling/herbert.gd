@@ -1,11 +1,11 @@
     <footer>
         <div>
 
-            <ul class="credits">
-                <?php if ($page->intendedTemplate()->name() === 'info') {
-                    snippet('info/credits');
-                } ?>
-            </ul>
+            <?php if ($page->intendedTemplate()->name() === 'info'): ?>
+                <ul class="credits">
+                    <?php snippet('info/credits'); ?>
+                </ul>
+            <?php endif ?>
 
             <div class="buw-logo-container">
                 <?php if ($info = page('info')) : ?>

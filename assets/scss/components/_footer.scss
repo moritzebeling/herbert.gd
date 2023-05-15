@@ -5,7 +5,8 @@ body > footer {
 	padding-bottom: $space-top;
 
 	.credits {
-		flex: 0;
+		width: 100%;
+		flex: 1;
 		li + li {
 			padding-top: 0.5em;
 		}
@@ -20,9 +21,10 @@ body > footer {
 		// margin-top: $space-top-l;
 	}
 
-	> div {
-		display: flex;
-	}
+	// > div {
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// }
 
 	#sitemap-footer-link {
 		opacity: 0;
