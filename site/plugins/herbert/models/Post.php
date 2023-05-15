@@ -64,36 +64,4 @@ class PostPage extends Page
         return $this->date()->toDate($dateFormat);
     }
 
-    public function json(bool $full = true): array
-    {
-
-        $return = parent::json();
-
-        $return = array_merge($return, [
-            'channel' => $this->channel()->uid(),
-            'date' => $this->displayDate(),
-            'year' => $this->date()->toDate('Y'),
-            'subtitle' => $this->subtitle()->value(),
-            'categories' => $this->categories()->split(),
-            'keywords' => $this->keywords()->split(),
-        ]);
-
-        if ($image = $this->image()) {
-            $return['image'] = $image->json();
-        }
-
-        if ($full !== true) {
-            return $return;
-        }
-
-        if ($this->body()->isNotEmpty()) {
-            $return['content'] = $this->body()->kirbytext()->value();
-        }
-
-        if ($this->hasImages()) {
-            $return['gallery'] = $this->gallery()->json();
-        }
-
-        return $return;
-    }
 }

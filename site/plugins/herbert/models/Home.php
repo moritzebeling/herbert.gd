@@ -21,15 +21,4 @@ class HomePage extends Page
         return $this->site()->content()->featured()->toPages();
     }
 
-    public function json(bool $full = true): array
-    {
-
-        $data = parent::json();
-
-        if ($full === true) {
-            $data['posts'] = $this->kirby()->collection('featured')->json();
-        }
-
-        return $data;
-    }
 }

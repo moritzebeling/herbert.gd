@@ -47,7 +47,6 @@ Str::$language = [
 require_once __DIR__ . '/models/Channel.php';
 require_once __DIR__ . '/models/Home.php';
 require_once __DIR__ . '/models/Search.php';
-require_once __DIR__ . '/models/Info.php';
 require_once __DIR__ . '/models/Post.php';
 
 Kirby::plugin('moritzebeling/herbert', [
@@ -56,7 +55,6 @@ Kirby::plugin('moritzebeling/herbert', [
         'channel' => 'ChannelPage',
         'home' => 'HomePage',
         'search' => 'SearchPage',
-        'info' => 'InfoPage',
         'post' => 'PostPage',
     ],
 
@@ -72,20 +70,6 @@ Kirby::plugin('moritzebeling/herbert', [
                 return $this->content()->layout()->value();
             }
             return 'cards';
-        },
-        'json' => function (bool $full = true): array {
-            $json = [
-                'title' => $this->title()->value(),
-                'href' => $this->url(),
-                'logo' => asset('assets/image/herbert-logo.svg')->url()
-            ];
-            if ($info = $this->page('info')) {
-                $json['info'] = $info->json();
-            }
-            if ($channels = $this->kirby()->collection('channels')) {
-                $json['channels'] = $channels->json(true);
-            }
-            return $json;
         }
     ],
 
@@ -100,53 +84,10 @@ Kirby::plugin('moritzebeling/herbert', [
                 return $this->date()->toDate('d-m-Y');
             }
             return '';
-        },
-        'json' => function (bool $full = true): array {
-            return [
-                'title' => $this->title()->value(),
-                'href' => $this->url()
-            ];
-        }
-    ],
-
-    'pagesMethods' => [
-        'pluckStructure' => function ($structureField, $innerField = false) {
-            /*
-			* needed to suggest autocompletes for fields within structures
-			* $field: name of the structure field you want to pluck
-			* $innerField: field within the structure field, that you actually want to recieve
-			*/
-            $structures = $this->pluck($structureField);
-            $return = [];
-            foreach ($structures as $structure) {
-                foreach ($structure->{$structureField}()->yaml() as $row) {
-                    if (!$innerField && array_filter($row)) {
-                        $return[] = $row;
-                    } else if (isset($row[$innerField])) {
-                        $return[] = $row[$innerField];
-                    }
-                }
-            }
-            return array_unique($return);
-        },
-        'json' => function (bool $full = false): array {
-            $json = [];
-            foreach ($this as $page) {
-                $json[] = $page->json($full);
-            }
-            return $json;
         }
     ],
 
     'fieldMethods' => [
-        'toCategoryLabel' => function ($field) {
-            $values = $field->split(',');
-            $return = '';
-            foreach ($values as $v) {
-                $return .= '<span class="category-label">' . $v . '</span>';
-            }
-            return $return;
-        },
         'toSemester' => function ($field) {
             return dateToSemester(strtotime($field->value));
         },
@@ -172,16 +113,6 @@ Kirby::plugin('moritzebeling/herbert', [
             $text = str_replace('www.', '', $text);
             return Html::a($field->value, $text, $attr ?? []);
         },
-    ],
-
-    'filesMethods' => [
-        'json' => function (bool $full = false): array {
-            $json = [];
-            foreach ($this as $page) {
-                $json[] = $page->json($full);
-            }
-            return $json;
-        }
     ],
 
     'fileMethods' => [
@@ -254,22 +185,6 @@ Kirby::plugin('moritzebeling/herbert', [
             }
 
             return $alt;
-        },
-        'json' => function (bool $full = true): array {
-
-            $return = [
-                'ratio' => round($this->height() / $this->width(), 4),
-                'alt' => $this->alt(),
-                'placeholder' => $this->resize(32, null, 50)->url(),
-                'src' => $this->resize(2000)->url(),
-                'srcset' => $this->srcset('large'),
-            ];
-
-            if ($this->videoUrl()->isNotEmpty()) {
-                $return['video'] = video($this->videoUrl()->value(), option('video'));
-            }
-
-            return $return;
         }
     ]
 

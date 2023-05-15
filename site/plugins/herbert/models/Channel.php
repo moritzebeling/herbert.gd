@@ -37,35 +37,4 @@ class ChannelPage extends Page
         return $this->children()->listed()->flip();
     }
 
-    public function json(bool $full = true): array
-    {
-
-        $data = parent::json();
-        $data['id'] = $this->num();
-
-        if ($full === true) {
-            $data['posts'] = $this->posts()->json();
-        }
-
-        return $data;
-
-        if ($full === true && $this->showDescription()->isTrue()) {
-
-            $data['description'] = $this->description()->kirbytext()->value();
-
-            /* links */
-            foreach ($this->links()->toStructure() as $item) {
-                $link = [
-                    'text' => linkText($item->title(), $item->url()->value()),
-                    'url' => $item->url()->value(),
-                    'layout' => $this->layout(),
-                ];
-
-                if (!isset($data['links'])) {
-                    $data['links'] = [];
-                }
-                $data['links'][] = $link;
-            }
-        }
-    }
 }
