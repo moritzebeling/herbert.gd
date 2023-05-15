@@ -2,7 +2,6 @@
 
 /**
  * general site configuration
- *
  */
 
 return [

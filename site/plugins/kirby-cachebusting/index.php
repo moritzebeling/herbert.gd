@@ -1,43 +1,61 @@
 <?php
 
-/**
- * create fingerprint for cache busting
- * 
- * as suggested by https://forum.getkirby.com/t/plugin-assets-timestamp/13975/27
- */
+namespace Kirby\Cdn;
 
 use Kirby\Cms\App;
-use Kirby\Cms\Url;
+use Kirby\Cms\App as Kirby;
+use Kirby\Toolkit\Str;
+
+class Cachebuster {
+    
+    /*
+    https://github.com/getkirby/getkirby.com/blob/main/site/plugins/cdn/src/Cachebuster.php
+    */
+
+    protected static function version(string $root, string $path): string
+    {
+        return dechex(filemtime($root));
+    }
+
+    public static function path(string $path): string
+    {
+        if (strpos($path, url()) === 0) {
+            $path = ltrim(substr($path, strlen(url())), '/');
+        }
+
+        $kirby = App::instance();
+        $root  = $kirby->root('index') . '/' . $path;
+
+        if (file_exists($root)) {
+            $version = static::version($root, $path);
+            $path = $path . '?v=' . $version;
+        }
+
+        return $path;
+    }
+
+}
 
 Kirby::plugin('moritzebeling/kirby-cachebusting', [
+    
+    /*
+    https://getkirby.com/docs/cookbook/extensions/kirby-loves-cdn#cache-busting
+    */
 
-	'components' => [
+    'options' => [
+        'host' => false
+    ],
+    'components' => [
+        'url' => function ($kirby, $path, $options) {
+            if (Str::startsWith($path, 'assets') && option('moritzebeling.kirby-cachebusting', true) !== false) {
+                $path = Cachebuster::path($path);
 
-		'css' => function (Kirby $kirby, string $url, $options = null): string {
-		  $relative_url = Url::path($url, false);
-          $file_root = $kirby->root('index') . DS . $relative_url;
-
-          if (F::exists($file_root)) {
-              return url($relative_url . '?' . F::modified($file_root));
-          }
-
-		  return $url;
-
-		},
-
-		'js' => function (Kirby $kirby, string $url, $options = null): string {
-
-			$relative_url = Url::path($url, false);
-			$file_root = $kirby->root('index') . DS . $relative_url;
-
-			if (F::exists($file_root)) {
-				return url($relative_url . '?' . F::modified($file_root));
-			}
-
-			return $url;
-
-		},
-
-	],
-
+                if ( $host = option('moritzebeling.kirby-cachebusting.host', false) ){
+                    return trim($host,'/') . '/' . $path;
+                }
+            }
+            $original = $kirby->nativeComponent('url');
+            return $original($kirby, $path, $options);
+        },
+    ]
 ]);

@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+
+#local
+.vscode
+/design/*
+/kirby
+
+# npm modules
+/node_modules
+
+# Composer files
+/vendor
+composer.lock

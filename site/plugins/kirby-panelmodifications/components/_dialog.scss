@@ -1,7 +1,0 @@
-// make dialog box wider to improve visibility of long filenames or page titles
-.k-dialog-box {
-  &[data-size=small],
-  &[data-size=medium] {
-    width: 75vw;
-  }
-}

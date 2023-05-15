@@ -1,8 +1,9 @@
-content
-content/
-/content/
+kirby
+vendor
 content/*
-/content/*
+storage
+node_modules
+assets/dist
 
 # System files
 # ------------
@@ -15,6 +16,18 @@ Icon
 
 /media/*
 !/media/index.html
+
+# Lock files
+# ---------------
+
+.lock
+
+# Editors
+# (sensitive workspace files)
+# ---------------------------
+*.sublime-workspace
+/.vscode
+/.idea
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
@@ -40,4 +53,5 @@ Icon
 
 # License
 # ---------------
+
 /site/config/.license

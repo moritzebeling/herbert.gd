@@ -2,26 +2,42 @@
     "name": "getkirby/plainkit",
     "description": "Kirby Plainkit",
     "type": "project",
-    "keywords": ["kirby", "cms", "starterkit"],
-    "homepage": "https://getkirby.com",
-    "authors": [
-        {
-            "name": "Bastian Allgeier",
-            "email": "bastian@getkirby.com",
-            "homepage": "https://getkirby.com"
-        }
+    "keywords": [
+      "kirby",
+      "cms",
+      "starterkit"
     ],
+    "authors": [
+      {
+        "name": "Bastian Allgeier",
+        "email": "bastian@getkirby.com",
+        "homepage": "https://getkirby.com"
+      }
+    ],
+    "homepage": "https://getkirby.com",
     "support": {
-        "email": "support@getkirby.com",
-        "issues": "https://github.com/getkirby/starterkit/issues",
-        "forum": "https://forum.getkirby.com",
-        "source": "https://github.com/getkirby/starterkit"
+      "email": "support@getkirby.com",
+      "issues": "https://github.com/getkirby/starterkit/issues",
+      "forum": "https://forum.getkirby.com",
+      "source": "https://github.com/getkirby/starterkit"
     },
     "require": {
-        "php": ">=7.1.0",
-        "getkirby/cms": "^3.0"
+      "php": ">=7.4.0 <8.2.0",
+      "getkirby/cms": "^3.6",
+      "moritzebeling/kirby-cachebusting": "^2.0",
+        "isaactopo/xmlsitemap": "^0.2.2",
+        "bvdputte/kirby-bettersearch": "^2.0"
     },
     "config": {
-        "optimize-autoloader": true
+      "allow-plugins": {
+        "getkirby/composer-installer": true
+      },
+      "optimize-autoloader": true
+    },
+    "scripts": {
+      "start": [
+        "Composer\\Config::disableProcessTimeout",
+        "@php -S localhost:8000 kirby/router.php"
+      ]
     }
-}
+  }

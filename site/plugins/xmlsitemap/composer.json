@@ -1,0 +1,21 @@
+{
+	"name": "isaactopo/xmlsitemap",
+	"description": "Kirby 3 Multilanguage XML Sitemap",
+	"license": "MIT",
+	"type": "kirby-plugin",
+	"authors": [
+		{
+			"name": "Isaac Bordons Soler",
+			"email": "isaac@topo.bz"
+		}
+	],
+	"require": {
+    	"getkirby/composer-installer": "^1.2"
+	},
+	"config": {
+        "optimize-autoloader": true,
+		"allow-plugins": {
+			"getkirby/composer-installer": true
+		}
+    }
+}
