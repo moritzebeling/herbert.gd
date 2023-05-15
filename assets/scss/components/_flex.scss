@@ -1,6 +1,9 @@
+@use "sass:math";
+
 @function columnWidth( $c, $w ) {
-	@return ( $c / $w ) * 100%;
+	@return math.div($c, $w) * 100%;
 }
+
 .flex {
 	display: flex;
 	flex-wrap: wrap;

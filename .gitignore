@@ -4,6 +4,7 @@ content/*
 storage
 node_modules
 assets/dist
+assets/css
 
 # System files
 # ------------

@@ -1,8 +1,4 @@
-// https://sass-lang.com/documentation
-// sass --watch --style=compressed assets/scss:assets/css
-
 @import 'reset';
-
 
 @font-face {
 	font-family: 'Inter';
@@ -11,7 +7,7 @@
 	font-display: swap;
 	src: url("../fonts/inter/Inter-Medium.woff2?v=3.13") format("woff2"),
 		 url("../fonts/inter/Inter-Medium.woff?v=3.13") format("woff");
-}
+} 
 @font-face {
 	font-family: 'Inter';
 	font-style:  normal;

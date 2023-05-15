@@ -1,17 +1,14 @@
 # [herbert.gd](https://herbert.gd)
-An archive website for the graphic design and visual communication department at Bauhaus-University Weimar, Germany.
+An archive website for the graphic design and visual communication department at Bauhaus-University Weimar, Germany. Made with Kirby CMS.
 
 ## Contributions welcome
+
 If you want to contribute to the website design and functionality or fix problems, feel free to get in touch, open an issue or create a pull request. Read more below at branching.
 
 If you want to contribute to the page content, please get in touch with the editors aka. the staff of the graphic design chair at Marienstraße 1, Weimar. Read more at [herbert.gd/info](https://herbert.gd/info).
 
-## Setup
-The website runs on PHP and uses Kirby as CMS, framework and templating engine. On top of that, there is a Svelte frontend JS framework to dynamically render and manipulate lists of posts on client side. It fetches json data from a public api that can be accessed by appending `.json` at the end of any page url.
-CSS is not bundled by Svelte, but compiled with Sass.
-All content is lives on the live server. Get in touch to get a copy of that.
-
 ## System requirements for development
+
 - php 8.1
 - imagemagick
 - sass
@@ -25,16 +22,17 @@ git clone git@github.com:moritzebeling/herbert.gd.git
 cd hebert.gd
 ```
 
-Install svelte
+Install dependencies
 ```
-cd assets/frontend/app
+composer install
 npm install
 ```
 
 ## Updates
-Update composer dependencies
+
 ```
 composer update
+npm update
 ```
 
 ## Run website locally
@@ -49,13 +47,12 @@ Compile sass on save
 sass --watch --style=compressed assets/scss:assets/css
 ```
 
-Compile Svelte frontend
+Compile js
 ```
-cd assets/frontend/app
 npm run dev
 ```
 
-Build Svelte frontend before shipping it
+Build for production
 ```
 npm run build
 ```
@@ -64,13 +61,11 @@ npm run build
 `master` branch is only for the currently stable live version. Development happens within `develop`, which is the only branch ever to be pulled to `master`. If you are fixing an issue or working on a new feature, please start from `develop` and call your new branch `yymmdd-issue-name` or `yymmdd-feature-name`. Send pull requests only to `develop`.
 
 ## Stack and tools used
-- php (v7.4) Server
+- php
 - [imagemagick](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-install-imagemagick-for-php-on-ubuntu-18-04/)
 - [Kirby](https://getkirby.com) (v3) CMS
 - [Bettersearch](https://github.com/bvdputte/kirby-bettersearch) Kirby plugin for an enhanced search algorithm
-- [Sitemapper](https://gitlab.com/kirbyzone/sitemapper) Kirby plugin to create a sitemap.xml for searchengines
 - [sass](https://sass-lang.com) CSS Preprocessor
-- [Svelte](https://svelte.dev) (v3) JS framework
 - [Swiper.js](https://swiperjs.com) Image slider gallery
 - [Lazysizes](https://github.com/aFarkas/lazysizes) Image lazyloading
 

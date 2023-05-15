@@ -1,34 +1,23 @@
 headline: Posts
+type: pages
+sortBy: date desc
+template: post
+layout: table
+
 image:
   cover: true
-headline: Posts
-sortBy: date desc
-type: pagetable
-empty: No Posts created yet
-translations:
-  empty: No Posts created yet
-template: post
-showStatus: true
-limit: 25
-limitOptions:
-  - 10
-  - 25
-  - 50
+
 columns:
-  title:
-    label: Title
-    text: '{{ page.title }}'
-    width: 1/4
+
   subtitle:
     label: Subtitle
-    text: '{{ page.subtitle }}'
+
   categories:
     label: Category
-    text: '{{ page.categories.toCategoryLabel }}'
-    width: 1/6
-    class: small
+    value: '{{ page.categories }}'
+    type: tags
+
   date:
-    label: Date
     type: text
-    text: '{{ page.date.toDate("d-m-Y") }}'
-    width: 1/6
+    value: '{{ page.date.toDate("d-m-Y") }}'
+    width: 1/7
