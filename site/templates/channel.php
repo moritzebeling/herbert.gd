@@ -3,7 +3,9 @@
 <main>
     <?php
     snippet('channel/header');
-    snippet('frontend');
+    snippet('channel/posts',[
+        'pages' => $page->children()->listed()->sortBy('date','desc')
+    ]);
     ?>
 </main>
 
