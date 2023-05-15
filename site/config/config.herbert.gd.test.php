@@ -1,9 +1,5 @@
 <?php
 
-/**
- * general site configuration
- */
-
 return [
 
     'debug' => true,

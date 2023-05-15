@@ -4,29 +4,40 @@ Title: Herbert.gd
 
 Featured:
 
-- page://9rNVzyyhYEg6dZdk
-- page://NXcEqgB9vOmIemsb
-- page://w8I5cTNdrlyk7olU
-- page://N3C5uaTNVUvFENv7
-- page://yIYEs1GZxO7QcMpE
-- page://wBKyrGr7Nstvy5Gn
-- page://X3BKe6tPBGeIKiGe
-- page://tc021EmCVodYfoKJ
-- page://iNJD2M2f5U2Yl53Y
-- page://H39opxiWwCuVau6l
-- page://qMhyHIqBhfMzeg0M
-- page://3HaFCy5zkynS3rfK
-- page://7Y4zw1a4vVOMw6Oa
-- page://szOFKZQhqZwjDHwk
-- page://AqCWc7yiTmdWKBsD
-- page://MhP1pOSAXqLbNpk6
-- page://rWyQdMgusBYdWXQm
-- page://BA4JH7zPLZwF3TxB
-- page://HTKlkQQBmWntPzpX
-- page://tiPAYAh1sPmf2dNA
-- page://QFrFVvxWz7sd4LI8
-- page://u5L4tLuRJej4stp3
-- page://uqkSfnAn5JMbvRry
+- >
+  grafik-design/trust-your-graphical-system-exhibition
+- activities/ambiguous-aesthetics
+- >
+  space-for-visual-research/mixtured-spaces
+- grafik-design/rhizome-typeface
+- >
+  space-for-visual-research/visual-exploration-fundamentals
+- grafik-design/forming-senses
+- grafik-design/swish
+- grafik-design/inevitable-forms
+- grafik-design/wachstum-und-form
+- >
+  grafik-design/trust-your-graphical-system
+- space-for-visual-research/space-matter
+- grafik-design/das-offene-archiv
+- grafik-design/reprise
+- >
+  space-for-visual-research/segments-of-a-cell
+- activities/ca-design-magazine-feature
+- activities/practical-guide
+- grafik-design/dance-with-oskar-na-kim
+- >
+  space-for-visual-research/space-for-visual-research-visual-data
+- >
+  activities/ueber-den-aggregatzustand-der-grafik
+- >
+  grafik-design/archiv-der-aspekte-fachkurs-sose-2021
+- >
+  activities/iterationen-aspekte-des-rasters
+- >
+  activities/die-schlange-verkoerperung-der-ultradimensionalitaet
+- activities/forms-of-the-formless
+- activities
 
 ----
 
@@ -42,7 +53,9 @@ Keywords: Herbert, Weimar, Gestaltung, Bauhaus, Universität, Markus Weisbeck, G
 
 ----
 
-Image: - file://erpn6659dXNDqYxH
+Image:
+
+- gd.jpg
 
 ----
 

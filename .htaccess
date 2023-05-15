@@ -1,16 +1,5 @@
-### charset
-AddDefaultCharset UTF-8
-
-### directory index
-DirectoryIndex index.php
-
-### avoid directory listing
-Options -Indexes
-
-### default language
-DefaultLanguage en
-
 # Kirby .htaccess
+# revision 2022-09-15
 
 # rewrite rules
 <IfModule mod_rewrite.c>
@@ -20,15 +9,15 @@ DefaultLanguage en
   RewriteEngine on
 
   # make sure to set the RewriteBase correctly
-  # if you are running the site in a subfolder.
-  # Otherwise links or the entire site will break.
+  # if you are running the site in a subfolder;
+  # otherwise links or the entire site will break.
   #
-  # If your homepage is http://yourdomain.com/mysite
-  # Set the RewriteBase to:
+  # If your homepage is http://yourdomain.com/mysite,
+  # set the RewriteBase to:
   #
   # RewriteBase /mysite
 
-  # In some enviroments it's necessary to
+  # In some environments it's necessary to
   # set the RewriteBase to:
   #
   RewriteBase /
@@ -41,24 +30,17 @@ DefaultLanguage en
   RewriteCond %{HTTP_HOST} ^www.herbert.gd$ [NC]
   RewriteRule ^(.*)$ https://herbert.gd/$1 [R=301,L]
 
-  # favicon
-  RewriteRule ^favicon\.ico$ /assets/favicon/favicon.ico [L]
-
   # block files and folders beginning with a dot, such as .git
   # except for the .well-known folder, which is used for Let's Encrypt and security.txt
   RewriteRule (^|/)\.(?!well-known\/) index.php [L]
 
-  # block text files in the content folder from being accessed directly
-  RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
+  # block all files in the content folder from being accessed directly
+  RewriteRule ^content/(.*) index.php [L]
 
   # block all files in the site folder from being accessed directly
-  # except for requests to plugin assets files
   RewriteRule ^site/(.*) index.php [L]
 
-  # Enable authentication header
-  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
-
-  # block direct access to kirby and the panel sources
+  # block direct access to Kirby and the Panel sources
   RewriteRule ^kirby/(.*) index.php [L]
 
   # make site links work
@@ -68,23 +50,8 @@ DefaultLanguage en
 
 </IfModule>
 
-<IfModule mod_mime.c>
-  AddType text/html .html
-  AddType application/json .json
-  AddType application/xml .xml
-
-  AddType text/css .css
-  AddType text/javascript .js
-
-  AddType image/jpeg .jpeg .jpg .JPG
-  AddType image/png .png
-  AddType image/svg+xml .svg
-  AddType image/gif .gif
-  AddType image/x-icon .ico
-
-  AddType application/x-font-woff .woff
-  AddType application/x-font-woff .woff2
-</IfModule>
+# pass the Authorization header to PHP
+SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 
 # compress text file responses
 <IfModule mod_deflate.c>
@@ -96,43 +63,3 @@ DefaultLanguage en
   AddOutputFilterByType DEFLATE application/javascript
   AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
-
-<IfModule mod_deflate.c>
-  <FilesMatch "\.(txt|html|md|css|js|json|xml)$" >
-    SetOutputFilter DEFLATE
-  </FilesMatch>
-  <FilesMatch "\.(woff|woff2|ttf|otf|eot|svg)$" >
-    SetOutputFilter DEFLATE
-  </FilesMatch>
-</IfModule>
-
-<IfModule mod_expires.c>
-  ExpiresActive On
-
-  ExpiresByType text/html "access 5 minutes"
-  ExpiresByType application/json "access 5 minutes"
-  ExpiresByType application/xml "access 5 minutes"
-
-  ExpiresByType text/css "access 1 year"
-  ExpiresByType text/javascript "access 1 year"
-
-  ExpiresByType image/jpeg "access 1 year"
-  ExpiresByType image/png "access 1 year"
-  ExpiresByType image/svg+xml "access 1 year"
-  ExpiresByType image/x-icon "access 1 year"
-  ExpiresByType image/gif "access 1 year"
-
-  ExpiresByType application/x-font-woff "access 1 year"
-  ExpiresDefault "access 1 month"
-</IfModule>
-
-# disable caching
-<IfModule mod_headers.c>
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
-  Header set Pragma "no-cache"
-  Header set Expires 0
-</IfModule>
-
-<ifModule mod_headers.c>
-  Header set Connection keep-alive
-</ifModule>
